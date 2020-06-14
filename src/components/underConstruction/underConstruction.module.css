@@ -1,0 +1,13 @@
+.Layout {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 2.5rem 0 5rem 0;
+  font-size: 2rem;
+}
+
+.Under_contruction {
+  width: 50%;
+  height: 50%;
+  margin: 2.5rem 0 2.5rem 0;
+}

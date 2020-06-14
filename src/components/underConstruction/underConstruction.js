@@ -1,12 +1,18 @@
 import React from "react"
 import under from "../../assets/images/under_construction.png"
+import classes from "../underConstruction/underConstruction.module.css"
 
 const UnderConstruction = () => {
   return (
-    <>
-    <h1>Tworcy emigracji: website under construction</h1>
-    <img style={{width: "20%", height:"20%"}}src={under} alt=""/>
-    </>
+    <div className={classes.Layout}>
+      <h1>Twórcy emigracji: Strona w budowie!!!</h1>
+      <img className={classes.Under_contruction} src={under} alt="" />
+      <p>
+        Ruszamy od: <b>01.01.2020</b>
+      </p>
+      <br />
+      <p>Kontakt: dawid.dziedziczak@gmail.com</p>
+    </div>
   )
 }
 
