@@ -5,7 +5,7 @@ import SVGContainer from "../../SVGContainer/SVGContainer"
 
 import classes from "../navigation/navigation.module.css"
 
-const Navigation = () => {
+const Navigation = ({open}) => {
   return (
     <nav className={classes.Navigation__layout}>
       <SVGContainer />
@@ -17,7 +17,7 @@ const Navigation = () => {
           <Link>o mnie</Link>
         </li>
         <li>
-          <Link>kontakt</Link>
+          <Link onClick={open}>kontakt</Link>
         </li>
       </ul>
     </nav>

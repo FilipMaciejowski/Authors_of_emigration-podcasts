@@ -1,13 +1,14 @@
 .Position {
-  width: 15vw;
+  width: 12rem;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   
 }
 
 .SVG {
   position: relative;
-  top: 3px;
+  top: 12px;
   left: 0; 
+  
 }

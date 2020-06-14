@@ -6,10 +6,10 @@ import Navigation from "../header/navigation/navigation"
 import classes from "./header.module.css"
 import ship from "../../assets/images/Ship_Polonia.png"
 
-const Header = () => (
+const Header = ({open}) => (
   <header className={classes.Header__layout}>
-    <Navigation />
-    <img src={ship} title="Statek_Polonia" alt="Statek_polonia" className={classes.Banner}/>
+    <Navigation open={open} />
+    <img src={ship} title="Statek_Polonia" alt="Statek_polonia"/>
   </header>
 )
 

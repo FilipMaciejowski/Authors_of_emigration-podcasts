@@ -1,8 +1,8 @@
 .Navigation__layout {
-  margin: 0 auto;
+  margin: 0 0 1rem auto;
   display: flex;
   height: 20vh;
-  padding: 1.25rem 4rem;
+  padding: 1.25rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

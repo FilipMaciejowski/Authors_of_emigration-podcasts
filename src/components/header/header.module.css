@@ -3,7 +3,6 @@
   width: 100vw;
 }
 
-.Banner {
+.Header__layout img {
   width: 100%;
-  height: auto;
 }
