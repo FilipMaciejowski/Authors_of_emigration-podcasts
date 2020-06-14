@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Twórcy Emigracji`,
     description: `Podcasty `,
-    author: `filip.maciejowski@gmail.com`,
+    author: `Dawid Dziedziczak`,
+    developer: `filip.maciejowski@gmail.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
