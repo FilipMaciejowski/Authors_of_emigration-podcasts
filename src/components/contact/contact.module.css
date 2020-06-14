@@ -1,10 +1,10 @@
 .Contact__layout {
   position: fixed;
-  width: 75%;
-  height: 75vh;
+  width: 50%;
+  height: 50vh;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -75%);
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -12,7 +12,8 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; 
- 
-} 
-
+  justify-content: center;
+  -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+}
