@@ -1,0 +1,29 @@
+.Navigation__layout {
+  margin: 0 auto;
+  display: flex;
+  width: 92.5%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+
+.Navigation__list {
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.Navigation__list li {
+  letter-spacing: .5px;
+}
+
+.Navigation__list li a {
+  text-decoration: none;
+  color: var(--main_black);
+  font-size: 1.125rem;
+  font-weight: 500;
+}

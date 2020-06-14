@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header/header"
-import "./layout.module.css"
+import Footer from "../footer/footer"
+import classes from "./layout.module.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,13 +18,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className={classes.Center}>
       <Header />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built by {data.site.siteMetadata.developer}
-        </footer>
-    </>
+      <main>{children}</main>
+      <Footer data={data.site.siteMetadata.developer} />
+    </div>
   )
 }
 

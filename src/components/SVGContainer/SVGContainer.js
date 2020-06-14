@@ -1,15 +1,17 @@
 import React from  "react"
 
+import classes from "./SVGContainer.module.css"
 
-
-const SVGContainer = ({styles}) => {
+const SVGContainer = () => {
   return (
-    <div>
+    <div className={classes.Position}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="158"
-        height="95"
+   
+        preverseAspectratio="xMidYMid meet"
         fill="none"
+        width="5rem%"
+        height="5rem"
       >
         <defs />
         <path

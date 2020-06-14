@@ -1,16 +1,15 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import SVGContainer from "../SVGContainer"
+
 import Navigation from "../header/navigation/navigation"
+import classes from "./header.module.css"
+import ship from "../../assets/images/Ship_Polonia.png"
 
 const Header = () => (
-  <header>
-    <nav>
-      <SVGContainer />
-      <Navigation />
-    </nav>
+  <header className={classes.Header__layout}>
+    <Navigation />
+    <img src={ship} title="Statek_Polonia" alt="Statek_polonia" />
   </header>
 )
 
