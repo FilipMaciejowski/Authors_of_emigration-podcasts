@@ -1,17 +1,15 @@
 .Navigation__layout {
   margin: 0 auto;
   display: flex;
-  width: 87.5%;
-  height: 17.5vh;
+  height: 20vh;
+  padding: 1.25rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
-  
 }
 
 .Navigation__list {
-  width: 25%;
+  width: 30%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -26,6 +24,6 @@
 .Navigation__list li a {
   text-decoration: none;
   color: var(--main_black);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }

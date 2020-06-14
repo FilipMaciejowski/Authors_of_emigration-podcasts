@@ -5,6 +5,8 @@ module.exports = {
     author: `Dawid Dziedziczak`,
     developer: `filip.maciejowski@gmail.com`
   },
+
+  pathPrefix: `/Tworcy_emigracji`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

@@ -6,6 +6,27 @@
   font-size: 2rem;
 }
 
+.Layout::before {
+  content: "";
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+  height: 1px;
+  position: relative;
+  top: -1rem;
+  opacity: 0.1;
+  background-image: linear-gradient(-90deg,rgba(0, 0, 0, 0) 0,rgb(0, 0, 0) 5%,rgb(0, 0, 0) 90%,rgba(0, 0, 0, 0) 100%);
+
+}
+
+.Layout span {
+  margin: 0 auto;
+  width: 85%;
+  height: .15px;
+  background: rgb(148, 148, 148);
+  
+}
+
 .Under_contruction {
   width: 50%;
   height: 50%;
