@@ -1,24 +1,26 @@
 .Navigation__layout {
   margin: 0 auto;
   display: flex;
-  width: 92.5%;
-  height: 15vh;
+  width: 90%;
+  height: 17.5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid blue;
+  margin-bottom: 2rem;
+  
 }
 
 .Navigation__list {
-  width: 30%;
+  width: 25%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   list-style: none;
+  
 }
 
 .Navigation__list li {
-  letter-spacing: .5px;
+  letter-spacing: none;
 }
 
 .Navigation__list li a {

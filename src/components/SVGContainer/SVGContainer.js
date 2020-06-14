@@ -6,12 +6,13 @@ const SVGContainer = () => {
   return (
     <div className={classes.Position}>
       <svg
+        className={classes.SVG}
         xmlns="http://www.w3.org/2000/svg"
-   
+        viewBox="1 43 200 10"
         preverseAspectratio="xMidYMid meet"
         fill="none"
-        width="5rem%"
-        height="5rem"
+        width="85%"
+        height="85%"
       >
         <defs />
         <path

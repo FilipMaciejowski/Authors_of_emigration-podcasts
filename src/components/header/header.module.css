@@ -1,6 +1,9 @@
 .Header__layout {
   height: auto;
   width: 100vw;
-  border: 1px solid red;
-  
+}
+
+.Banner {
+  width: 100%;
+  height: auto;
 }

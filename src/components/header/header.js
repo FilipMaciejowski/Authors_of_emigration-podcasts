@@ -9,7 +9,7 @@ import ship from "../../assets/images/Ship_Polonia.png"
 const Header = () => (
   <header className={classes.Header__layout}>
     <Navigation />
-    <img src={ship} title="Statek_Polonia" alt="Statek_polonia" />
+    <img src={ship} title="Statek_Polonia" alt="Statek_polonia" className={classes.Banner}/>
   </header>
 )
 

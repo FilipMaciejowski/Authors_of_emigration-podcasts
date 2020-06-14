@@ -8,9 +8,7 @@ import classes from "../navigation/navigation.module.css"
 const Navigation = () => {
   return (
     <nav className={classes.Navigation__layout}>
-      
-        <SVGContainer />
-    
+      <SVGContainer />
       <ul className={classes.Navigation__list}>
         <li>
           <Link>podcasty</Link>
