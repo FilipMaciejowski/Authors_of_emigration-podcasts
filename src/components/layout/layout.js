@@ -6,6 +6,7 @@ import Header from "../header/header"
 import Footer from "../footer/footer"
 import classes from "./layout.module.css"
 import Contact from "../contact/contact"
+import Context from "../context"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const openModalHandler = () => {
@@ -25,12 +28,14 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className={classes.Center}>
-      {isOpen ? <Contact/> : null}
-      <Header open={openModalHandler}/>
-      <main>{children}</main>
-      <Footer data={data.site.siteMetadata.developer} />
-    </div>
+    <Context.Provider value={{modal: isOpen, open: openModalHandler}}>
+      <div className={classes.Center}>
+        {isOpen? <Contact /> : null}
+        <Header />
+        <main>{children}</main>
+        <Footer data={data.site.siteMetadata.developer} />
+      </div>
+    </Context.Provider>
   )
 }
 

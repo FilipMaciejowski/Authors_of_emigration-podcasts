@@ -2,10 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 import SVGContainer from "../../SVGContainer/SVGContainer"
-
 import classes from "../navigation/navigation.module.css"
+import Context from "../../context"
 
-const Navigation = ({open}) => {
+const Navigation = () => {
   return (
     <nav className={classes.Navigation__layout}>
       <SVGContainer />
@@ -16,9 +16,13 @@ const Navigation = ({open}) => {
         <li>
           <Link>o mnie</Link>
         </li>
-        <li>
-          <Link onClick={open}>kontakt</Link>
-        </li>
+        <Context.Consumer>
+          {context => (
+            <li>
+              <Link onClick={context.open}>kontakt</Link>
+            </li>
+          )}
+        </Context.Consumer>
       </ul>
     </nav>
   )
