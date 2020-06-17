@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,9 +27,9 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{modal: isOpen, open: openModalHandler}}>
+    <Context.Provider value={{isOpen: isOpen, open: openModalHandler}}>
       <div className={classes.Center}>
-        {isOpen? <Contact /> : null}
+        {isOpen ? <Contact /> : null}
         <Header />
         <main>{children}</main>
         <Footer data={data.site.siteMetadata.developer} />
