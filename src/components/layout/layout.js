@@ -26,8 +26,12 @@ const Layout = ({ children }) => {
     setIsOpen(!isOpen)
   }
 
+  const closeModalHandler = () => {
+    setIsOpen(false)
+  }
+
   return (
-    <Context.Provider value={{isOpen: isOpen, open: openModalHandler}}>
+    <Context.Provider value={{isOpen: isOpen, open: openModalHandler, close:closeModalHandler}}>
       <div className={classes.Center}>
         {isOpen ? <Contact /> : null}
         <Header />

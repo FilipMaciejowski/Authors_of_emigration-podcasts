@@ -1,7 +1,7 @@
 .Content__main {
   margin: 3.75rem 0 2.75rem 0;
   height: auto;
-  max-width: 95%;
+  max-width: 100%;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;

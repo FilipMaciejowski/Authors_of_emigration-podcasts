@@ -1,9 +1,9 @@
 .Contact__layout {
   position: fixed;
-  width: 25%;
-  height: 25vh;
-  top: 50%;
-  left: 50%;
+  width: 25vw;
+  height: 20vh;
+  top: 45%;
+  left: 45%;
   transform: translate(50%, -150%);
   border: 2px solid black;
   border-radius: 5px;
@@ -11,11 +11,68 @@
   z-index: 10;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
 }
+
+.Contact__layout div:nth-of-type(1){
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+  padding: .5rem;
+}
+
+.Contact__layout div:nth-of-type(2){
+  height: 85%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact__layout div.Close {
+  width: 15%;
+  height: 100%;
+  opacity: 0.3;
+  transition: linear 0.2s;
+}
+
+div.Close:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: linear 0.2s;
+}
+
+.Close:before, .Close:after {
+  position: absolute;
+  right: .75rem;
+  top: .25rem;
+  content: ' ';
+  height: 1rem;
+  width: 2px;
+  background-color: black;
+}
+.Close:before {
+  transform:rotate(45deg);
+}
+.Close:after {
+  transform: rotate(-45deg);
+}
+
+.Contact__layout div:nth-of-type(2) p {
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+p span {
+  font-weight: 600;
+}
+
 
 

@@ -1,13 +1,13 @@
 import React from  'react'
 
-import classes from "./main.module.css"
+import classes from "./mainSection.module.css"
 import PodcastElement from "../podcastElement/podcastElement"
 
 const description =
   "Kot Jeleński, żołnierz, intelektualista, przyjaciel Gombrowicza, Miłosza i Czapskiego, krnąbrny niekiedy współpracownik paryskiej „Kultury”, człowiek światowy. "
 
 
-const Main = () => {
+const MainSection = () => {
   return (
     <>
       <div className={classes.Line}></div>
@@ -15,7 +15,7 @@ const Main = () => {
       <div className={classes.Line}></div>
       <main className={classes.Content__main}>
         <PodcastElement
-          status="new"
+          status="nowy"
           date="01.07.2020"
           title="Konstantym A. Jeleńskim"
           description={description}
@@ -37,4 +37,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default MainSection

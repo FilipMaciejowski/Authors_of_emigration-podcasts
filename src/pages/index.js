@@ -3,13 +3,13 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layout/layout"
 
-import Main from "../components/main/main"
+import MainSection from "../components/mainSection/mainSection"
 
 const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Tworcy Emigracji" />
-      <Main />
+      <MainSection />
     </Layout>
   )
 }

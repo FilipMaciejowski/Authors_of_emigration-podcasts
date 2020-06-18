@@ -1,8 +1,10 @@
 import React from "react"
 
+
+
 const Podcast1 = () => {
   return (
-    <div>
+    <div style={{margin: "0 16vw 0 16vw", padding: "0 2.5vw 0 2.5vw"}}>
       <p>
         Kot Jeleński, żołnierz, intelektualista, przyjaciel Gombrowicza, Miłosza
         i Czapskiego, krnąbrny niekiedy współpracownik paryskiej „Kultury”,

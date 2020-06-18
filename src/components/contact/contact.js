@@ -1,6 +1,7 @@
 import React from "react"
 
 import classes from "./contact.module.css"
+import Context from "../context"
 
 
  
@@ -8,7 +9,18 @@ import classes from "./contact.module.css"
 const Contact = () => {
   return (
     <div className={classes.Contact__layout}>
-      <p className={classes.Contact__text}>Kontakt: dawid.dziedziczak@gmail.com</p>
+      <div>
+        <Context.Consumer>
+          {context => (
+            <div onClick={context.close} className={classes.Close}></div>
+          )}
+        </Context.Consumer>
+      </div>
+      <div>
+        <p className={classes.Contact__text}>
+          <span>Kontakt:</span> dawid.dziedziczak@gmail.com
+        </p>
+      </div>
     </div>
   )
 }
