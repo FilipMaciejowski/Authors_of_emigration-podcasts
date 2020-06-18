@@ -1,6 +1,8 @@
 .PodcastElement__container {
   width: 27.5%;
   height: auto;
+  border-bottom: 1.5px solid var(--main_black);
+  padding-bottom: .75rem;
 }
 
 .PodcastElement__image {
@@ -77,6 +79,10 @@
   margin: 0 .75rem 0 0;
 }
 
-.PodcastElement__content_listen svg:nth-of-type(2) {
+.PodcastElement__content_listen svg:nth-of-type(2)  {
   cursor: pointer;
+}
+
+.PodcastElement__content_listen a  {
+  transform: translateY(6.25%);
 }

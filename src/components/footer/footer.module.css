@@ -2,12 +2,15 @@
   width: 100%;
   height: 12.5vh;
   background-color: var(--main_black);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .Text {
   color: rgb(185, 185, 185); 
   font-size: .75rem;
-  margin: .75rem;
+  margin: .125rem;
 }
 
 
