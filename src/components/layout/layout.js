@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       <div className={classes.Center}>
         {isOpen ? <Contact /> : null}
         <Header />
-        <main>{children}</main>
+        <div>{children}</div>
         <Footer data={data.site.siteMetadata.developer} />
       </div>
     </Context.Provider>

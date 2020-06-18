@@ -7,7 +7,7 @@ const Footer = ({data}) => {
     <div className={classes.Style}>
       <footer>
         <p className={classes.Text}>
-          © {new Date().getFullYear()}, Built by {data}
+          © {new Date().getFullYear()}, Designed and built by {data}
         </p>
       </footer>
     </div>

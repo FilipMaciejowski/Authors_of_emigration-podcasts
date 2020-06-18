@@ -2,7 +2,9 @@
 
 :root {
 --main_black: #272727;
---main_font: 'Roboto', 'sans-serif'
+--main_font: 'Roboto', 'sans-serif';
+--button_border: #BE0000;
+--button_background: #FF7C7C;
 }
 
 
