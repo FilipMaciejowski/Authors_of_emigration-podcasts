@@ -14,11 +14,11 @@ const Navigation = () => {
           <Link>podcasty</Link>
         </li>
         <li>
-          <Link>o mnie</Link>
+          <Link>o projekcie</Link>
         </li>
         <Context.Consumer>
           {context => (
-            <li>
+            <li className={classes.Different}>
               <Link onClick={context.open}>kontakt</Link>
             </li>
           )}

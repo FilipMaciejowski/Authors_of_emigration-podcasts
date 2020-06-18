@@ -6,4 +6,6 @@
 
 .Text {
   color: rgb(254, 254, 254); 
+  font-size: .75rem;
+  margin: .75rem;
 }

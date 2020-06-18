@@ -1,29 +1,40 @@
 .Navigation__layout {
-  margin: 0 0 1rem auto;
   display: flex;
-  height: 20vh;
-  padding: 1.25rem 5rem;
+  height: 17.5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .Navigation__list {
-  width: 30%;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
   list-style: none;
   
 }
 
-.Navigation__list li {
+.Navigation__list li  {
   letter-spacing: none;
+  padding: .75rem .75rem;
 }
+
+li:last-child  {
+  padding: .75rem 0 .75rem .75rem;
+}
+
+li:first-child {
+  padding: .75rem .75rem .75rem 0;
+}
+
 
 .Navigation__list li a {
   text-decoration: none;
   color: var(--main_black);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
 }
+
+
+
