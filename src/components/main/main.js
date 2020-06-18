@@ -10,6 +10,9 @@ const description =
 const Main = () => {
   return (
     <>
+      <div className={classes.Line}></div>
+      <div className={classes.Line}></div>
+      <div className={classes.Line}></div>
       <main className={classes.Content__main}>
         <PodcastElement
           status="new"

@@ -1,7 +1,6 @@
 .PodcastElement__container {
-  width: 30%;
+  width: 25%;
   height: auto;
-  border: 1px solid grey;
 }
 
 .PodcastElement__image {
@@ -16,7 +15,7 @@
 .PodcastElement__content {
   text-transform: capitalize;
   font-weight: 600;
-  margin-bottom: .125rem;
+  margin-bottom: 0.125rem;
 }
 
 .PodcastElement__content p:first-of-type {
@@ -25,10 +24,22 @@
 
 .PodcastElement__content h1 {
   font-size: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.PodcastElement__content p {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  line-height: 1.125rem;
+}
+
+.PodcastElement__content h1 span {
+  text-transform: lowercase;
 }
 
 .PodcastElement__content_top {
+  height: 1.85rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,16 +48,35 @@
 
 .New {
   background-color: var(--button_background);
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: white;
-  border:3px solid var(--button_border);
-  padding: 0 .75rem;
+  border: 3px solid var(--button_border);
+  padding: 0 0.75rem;
 }
 
-
-
 .PodcastElement__content_top p {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
   margin-bottom: 0;
+}
+
+.PodcastElement__content_listen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PodcastElement__content_listen div {
+  width: 65%;
+  display: flex;
+  align-items: center;
+}
+
+.PodcastElement__content_listen div p {
+  margin: 0 .75rem 0 0;
+}
+
+.PodcastElement__content_listen svg:nth-of-type(2) {
+  cursor: pointer;
 }
