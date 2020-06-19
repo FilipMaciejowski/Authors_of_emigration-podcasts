@@ -2,13 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 
 import podcastImage from "../../assets/images/MS_ChrobryTrans 3.png"
+import Jelenski from "../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg"
 import classes from "./podcastElement.module.css"
 
 
 const PodcastElement = ({date, title, description, status}) => {
   return (
     <div className={classes.PodcastElement__container}>
-      <img src={podcastImage} className={classes.PodcastElement__image} />
+      <div className={classes.PodcastElement__image_container}>
+        <img src={Jelenski} className={classes.PodcastElement__image} />
+      </div>
       <div className={classes.PodcastElement__content}>
         <div className={classes.PodcastElement__content_top}>
           <p>{date}</p>

@@ -1,10 +1,10 @@
 .Contact__layout {
   position: fixed;
   width: 25vw;
-  height: 20vh;
-  top: 45%;
-  left: 45%;
-  transform: translate(50%, -150%);
+  height: 12.5vh;
+  top: 45vh;
+  left: 45vw;
+  transform: translate(47.5%, -250%);
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -73,6 +73,17 @@ div.Close:hover {
 p span {
   font-weight: 600;
 }
+
+.Contact__layout div p a{
+  text-decoration: none;
+  color: grey;
+}
+
+.Contact__layout div p a:hover {
+  color: var(--main_black);;
+}
+
+
 
 
 

@@ -4,28 +4,32 @@ import { Link } from "gatsby"
 import SVGContainer from "../../SVGContainer/SVGContainer"
 import classes from "../navigation/navigation.module.css"
 import Context from "../../context"
+import AboutProject from "../../../pages/aboutProject"
 
 const Navigation = () => {
   return (
-    <nav className={classes.Navigation__layout}>
+    <div className={classes.Navigation__container}>
       <SVGContainer />
-      <ul className={classes.Navigation__list}>
-        <li>
-          <Link>podcasty</Link>
-        </li>
-        <li>
-          <Link>o projekcie</Link>
-        </li>
-        <Context.Consumer>
-          {context => (
-            <li className={classes.Different}>
-              <Link onClick={context.open}>kontakt</Link>
-            </li>
-          )}
-        </Context.Consumer>
-      </ul>
-    </nav>
+      <nav className={classes.Navigation__main}>
+        <ul className={classes.Navigation__list}>
+          <li>
+            <Link>podcasty</Link>
+          </li>
+          <li>
+            <Link to="aboutProject">o projekcie</Link>
+          </li>
+          <Context.Consumer>
+            {context => (
+              <li className={classes.Different}>
+                <Link onClick={context.open}>kontakt</Link>
+              </li>
+            )}
+          </Context.Consumer>
+        </ul>
+      </nav>
+    </div>
   )
 }
 
 export default Navigation
+

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -19,8 +19,7 @@ const Layout = ({ children }) => {
     }
   `)
 
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const openModalHandler = () => {
     setIsOpen(!isOpen)
@@ -31,8 +30,14 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{isOpen: isOpen, open: openModalHandler, close:closeModalHandler}}>
-      <div className={classes.Center}>
+    <Context.Provider
+      value={{
+        isOpen,
+        open: openModalHandler,
+        close: closeModalHandler,
+      }}
+    >
+      <div className={classes.Layout__main}>
         {isOpen ? <Contact /> : null}
         <Header />
         <div>{children}</div>

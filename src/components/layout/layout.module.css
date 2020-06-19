@@ -1,5 +1,3 @@
-.Center {
-  margin: 0 16vw 0 16vw;
-  padding: 0 2.5vw 0 2.5vw;
-  background-color: white;
+.Layout__main {
+  margin: 0 auto;
 }

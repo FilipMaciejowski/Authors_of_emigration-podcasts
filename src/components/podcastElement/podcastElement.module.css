@@ -1,17 +1,22 @@
 .PodcastElement__container {
-  width: 27.5%;
+  width:12vw;
   height: auto;
   border-bottom: 1.5px solid var(--main_black);
   padding-bottom: .75rem;
 }
 
-.PodcastElement__image {
+.PodcastElement__image_container {
   width: 100%;
+  height: 15rem;
+}
+
+.PodcastElement__image {
   margin-bottom: 0;
+  object-fit: cover;
 }
 
 .PodcastElement__content {
-  height: auto;
+  height:auto;
 }
 
 .PodcastElement__content {

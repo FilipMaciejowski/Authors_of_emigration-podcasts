@@ -18,7 +18,10 @@ const Contact = () => {
       </div>
       <div>
         <p className={classes.Contact__text}>
-          <span>Kontakt:</span> dawid.dziedziczak@gmail.com
+          <span>Kontakt: </span>
+          <a href="mailto: dawid.dziedziczak@gmail.com">
+            dawid.dziedziczak@gmail.com
+          </a>
         </p>
       </div>
     </div>

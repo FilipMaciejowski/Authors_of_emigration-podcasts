@@ -1,8 +1,13 @@
-.Header__layout {
-  height: auto;
-  width: 100%;
+.Header__main {
+  min-height: auto;
+  margin: 0 auto .5rem auto;
+  border: 1px solid red;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .Header__layout img {
-  width: 100%;
+  max-width: 100%;
 }
