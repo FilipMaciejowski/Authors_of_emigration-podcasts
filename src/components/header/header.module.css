@@ -2,7 +2,7 @@
   min-height: auto;
   margin: 0 auto .5rem auto;
   border: 1px solid red;
-  max-width: 800px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
 

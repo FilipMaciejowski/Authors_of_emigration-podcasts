@@ -8,25 +8,27 @@ import AboutProject from "../../../pages/aboutProject"
 
 const Navigation = () => {
   return (
-    <div className={classes.Navigation__container}>
-      <SVGContainer />
-      <nav className={classes.Navigation__main}>
-        <ul className={classes.Navigation__list}>
-          <li>
-            <Link>podcasty</Link>
-          </li>
-          <li>
-            <Link to="aboutProject">o projekcie</Link>
-          </li>
-          <Context.Consumer>
-            {context => (
-              <li className={classes.Different}>
-                <Link onClick={context.open}>kontakt</Link>
-              </li>
-            )}
-          </Context.Consumer>
-        </ul>
-      </nav>
+    <div className={classes.Navigation__main}>
+      <div className={classes.Navigation__container}>
+        <SVGContainer />
+        <nav className={classes.Navigation__nav_main}>
+          <ul className={classes.Navigation__list}>
+            <li>
+              <Link>podcasty</Link>
+            </li>
+            <li>
+              <Link to="aboutProject">o projekcie</Link>
+            </li>
+            <Context.Consumer>
+              {context => (
+                <li className={classes.Different}>
+                  <Link onClick={context.open}>kontakt</Link>
+                </li>
+              )}
+            </Context.Consumer>
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }
