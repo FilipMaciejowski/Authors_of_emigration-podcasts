@@ -14,15 +14,15 @@ const Navigation = () => {
         <nav className={classes.Navigation__nav_main}>
           <ul className={classes.Navigation__list}>
             <li>
-              <Link>podcasty</Link>
+              <Link>Podcasty</Link>
             </li>
             <li>
-              <Link to="aboutProject">o projekcie</Link>
+              <Link to="aboutProject">O projekcie</Link>
             </li>
             <Context.Consumer>
               {context => (
                 <li className={classes.Different}>
-                  <Link onClick={context.open}>kontakt</Link>
+                  <Link onClick={context.open}>Kontakt</Link>
                 </li>
               )}
             </Context.Consumer>

@@ -1,14 +1,19 @@
-.Header__layout {
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
-
 .Template__layout {
   margin: 0 22.5vw 0 22.5vw;
   padding: 0 2.5vw 0 2.5vw;
 }
+
+.Template__layout a {
+  margin: 2rem 0;
+}
+
+.Header__layout {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .Template__text {
   margin: 0 auto;

@@ -41,7 +41,9 @@ const Layout = ({ children }) => {
         {isOpen ? <Contact /> : null}
         <Header />
         <div>{children}</div>
-        <Footer data={data.site.siteMetadata.developer} />
+        <Footer data={data.site.siteMetadata.developer}>
+          © {new Date().getFullYear()}, Designed and built by
+        </Footer>
       </div>
     </Context.Provider>
   )

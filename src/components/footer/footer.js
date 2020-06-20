@@ -2,12 +2,12 @@ import React from "react"
 
 import classes from "./footer.module.css"
 
-const Footer = ({data}) => {
+const Footer = ({data, children}) => {
   return (
     <div className={classes.Style}>
       <footer>
         <p className={classes.Text}>
-          © {new Date().getFullYear()}, Designed and built by {data}
+          {children} {data}
         </p>
       </footer>
     </div>

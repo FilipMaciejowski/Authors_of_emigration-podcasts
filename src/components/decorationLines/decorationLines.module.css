@@ -1,0 +1,32 @@
+.Lines {
+  height: 1.25rem;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+}
+
+.Line:nth-of-type(1) {
+  margin: 0 auto;
+  width: 90%;
+  height: .25px;
+  background-color: rgb(199, 199, 199);
+  
+}
+
+.Line:nth-of-type(2){
+  margin: 0 auto;
+  width: 95%;
+  height: .25px;
+  background-color: rgb(199, 199, 199);
+ 
+}
+
+.Line:nth-of-type(3){
+  margin: 0 auto;
+  width: 90%;
+  height: .25px;
+  background-color: rgb(199, 199, 199);
+}
