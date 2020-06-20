@@ -7,6 +7,7 @@ import classes from "./podcastTemplate.module.css"
 
 const PodcastTemplate = ({children}) => {
   return (
+    <>
     <div className={classes.Template__layout}>
       <header className={classes.Header__layout}>
         <Link to="/">
@@ -14,9 +15,10 @@ const PodcastTemplate = ({children}) => {
         </Link>
       </header>
       <main className={classes.Template__text}>{children}</main>
+    </div>
       <Footer data="">
       </Footer>
-    </div>
+    </>
   )
 }
 

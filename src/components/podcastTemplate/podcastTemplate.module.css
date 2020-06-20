@@ -1,6 +1,7 @@
 .Template__layout {
-  margin: 0 22.5vw 0 22.5vw;
+  max-width: 800px;
   padding: 0 2.5vw 0 2.5vw;
+  margin: 0 auto 4rem auto;
 }
 
 .Template__layout a {
