@@ -8,6 +8,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 
 .Navigation__container {
