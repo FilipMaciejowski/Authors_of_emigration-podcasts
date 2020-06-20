@@ -7,9 +7,20 @@
 
 .Content__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+}
+
+@media(min-width: 320px){
+  .Content__container {
+    justify-content: space-around;
+  }
+}
+@media(min-width: 800px){
+  .Content__container {
+    justify-content: space-between;
+  }
 }
 
 
