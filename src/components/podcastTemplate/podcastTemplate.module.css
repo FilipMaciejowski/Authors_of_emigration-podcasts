@@ -11,9 +11,8 @@
   height: 20vh;
   display: flex;
   justify-content: center;
+  margin-bottom: 6rem;
 }
-
-
 
 .Template__text {
   margin: 0 auto;
