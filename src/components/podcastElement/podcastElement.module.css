@@ -22,13 +22,20 @@ justify-content: center;
 
 .PodcastElement__content {
   height:auto;
-}
-
-.PodcastElement__content {
   text-transform: capitalize;
   font-weight: 600;
   margin-bottom: 0.125rem;
 }
+
+.PodcastElement__content a {
+  text-decoration: none;
+  color: var(--man_black);
+}
+
+.PodcastElement__content a:hover {
+  text-decoration: underline;
+}
+
 
 .PodcastElement__content p:first-of-type {
   margin-top: 0;

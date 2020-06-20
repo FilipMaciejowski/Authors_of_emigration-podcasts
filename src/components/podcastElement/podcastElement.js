@@ -20,9 +20,11 @@ const PodcastElement = ({date, title, description, status}) => {
               {status && status.toUpperCase()}
             </div>
           </div>
-          <h1>
-            Podcast <span>o</span> {title}
-          </h1>
+          <Link to="/podcast1/">
+            <h1>
+              Podcast <span>o</span> {title}
+            </h1>
+          </Link>
           <p className={classes.PodcastElement__content_description}>
             {description}
           </p>
