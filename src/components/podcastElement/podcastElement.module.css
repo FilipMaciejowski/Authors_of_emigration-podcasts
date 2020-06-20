@@ -1,18 +1,23 @@
-.PodcastElement__container {
-  width:12vw;
-  height: auto;
-  border-bottom: 1.5px solid var(--main_black);
-  padding-bottom: .75rem;
+.PodcastElement__main {
+  width: 10rem;
+  margin-bottom: 1rem;
 }
+
+.PodcastElement__container  {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
 
 .PodcastElement__image_container {
-  width: 100%;
-  height: 15rem;
-}
-
-.PodcastElement__image {
-  margin-bottom: 0;
-  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: .5rem;
+  background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .PodcastElement__content {
@@ -72,6 +77,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--main_black);
 }
 
 .PodcastElement__content_listen div {
@@ -89,5 +96,5 @@
 }
 
 .PodcastElement__content_listen a  {
-  transform: translateY(6.25%);
-}
+  transform: translateY(-1%);
+} 
