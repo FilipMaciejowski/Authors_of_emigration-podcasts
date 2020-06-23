@@ -1,6 +1,12 @@
 .MainSection__layout {
-  padding-top: 2rem;
+  padding-top: 8.5rem;
   height: 100%;
   width: 100%;
   background-color: var(--main__white);
+}
+
+@media(min-width: 600px){
+  .MainSection__layout {
+    padding-top: 2rem;
+  }
 }
