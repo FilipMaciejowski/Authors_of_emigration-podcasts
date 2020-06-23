@@ -3,6 +3,21 @@
   height: 3.75rem;
   display: flex; 
   align-items: center;
+  transition: linear .15s;
+}
+
+.Resize {
+  width: 7.25rem;
+  height: 2.75rem;
+  display: flex; 
+  align-items: center;
+  transition: linear .3s;
+}
+
+.Resize img {
+  max-width: 100%;
+  height: 100%;
+  transition: linear .3s;
 }
 
 
@@ -10,6 +25,8 @@
   max-width: 100%;
   height: 100%;
   transform: translateY(7.5%);
+  transition: linear .15s;
+  
 }
 
 

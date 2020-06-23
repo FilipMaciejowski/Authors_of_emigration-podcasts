@@ -54,7 +54,7 @@ justify-content: center;
 }
 
 .PodcastElement__content h1 span {
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .PodcastElement__content_top {
@@ -104,4 +104,8 @@ justify-content: center;
 
 .PodcastElement__content_listen a  {
   transform: translateY(-1%);
+}
+
+.PodcastElement__content_listen a p {
+text-transform: lowercase;
 } 

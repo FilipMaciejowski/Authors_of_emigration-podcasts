@@ -6,7 +6,7 @@ import Jelenski from "../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.j
 import classes from "./podcastElement.module.css"
 
 
-const PodcastElement = ({date, title, description, status}) => {
+const PodcastElement = ({date, title, description, episode}) => {
   return (
     <div className={classes.PodcastElement__main}>
       <div className={classes.PodcastElement__container}>
@@ -16,14 +16,17 @@ const PodcastElement = ({date, title, description, status}) => {
         <div className={classes.PodcastElement__content}>
           <div className={classes.PodcastElement__content_top}>
             <p>{date}</p>
-            <div className={status ? classes.New : null}>
+            {/* <div className={status ? classes.New : null}>
               {status && status.toUpperCase()}
+            </div> */}
+            <div>
+              <h5>Odc. {episode}</h5>
             </div>
           </div>
           <Link to="/podcast1/">
-            <h1>
-              Podcast <span>o</span> {title}
-            </h1>
+            <h4>
+              <span>O </span> {title}
+            </h4>
           </Link>
           <p className={classes.PodcastElement__content_description}>
             {description}

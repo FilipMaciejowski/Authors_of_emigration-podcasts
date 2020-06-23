@@ -3,9 +3,6 @@ import React from  'react'
 import classes from "./podcastSection.module.css"
 import PodcastElement from "../podcastElement/podcastElement"
 
-const description =
-  "Kot Jeleński, żołnierz, intelektualista, przyjaciel Gombrowicza, Miłosza i Czapskiego, krnąbrny niekiedy współpracownik paryskiej „Kultury”, człowiek światowy. "
-
 
 const PodcastsSection = () => {
   return (
@@ -13,28 +10,28 @@ const PodcastsSection = () => {
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           <PodcastElement
-            status="nowy"
+            episode="1"
             date="01.07.2020"
-            title="Konstantym A. Jeleńskim"
-            description={description}
+            title="dziecinstwie i dorastaniu w przedwojennej Polsce"
+            
           />
           <PodcastElement
-            status={null}
+            episode={2}
             date="01.07.2020"
-            title="Konstantym A. Jeleńskim"
-            description={description}
+            title="dziecinstwie i dorastaniu w przedwojennej Polsce"
+            
           />
           <PodcastElement
-            status={null}
+            episode={3}
             date="01.07.2020"
-            title="Konstantym A. Jeleńskim"
-            description={description}
+            title="dziecinstwie i dorastaniu w przedwojennej Polsce"
+            
           />
           <PodcastElement
-            status={null}
+            episode={4}
             date="01.07.2020"
-            title="Konstantym A. Jeleńskim"
-            description={description}
+            title="dziecinstwie i dorastaniu w przedwojennej Polsce"
+            
           />
         </div>
       </main>

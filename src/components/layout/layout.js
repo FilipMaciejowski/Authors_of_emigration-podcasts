@@ -8,6 +8,7 @@ import classes from "./layout.module.css"
 import Contact from "../contact/contact"
 import Context from "../context"
 import MainSection from "../mainSection/mainSection"
+import Navigation from "../navigation/navigation"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -41,6 +42,7 @@ const Layout = ({ children }) => {
       <div className={classes.Layout__main}>
         {isOpen ? <Contact /> : null}
         <div>{children}</div>
+        <Navigation />
         <MainSection />
       </div>
       <Footer data={data.site.siteMetadata.developer}>

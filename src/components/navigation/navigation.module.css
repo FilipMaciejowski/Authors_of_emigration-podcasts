@@ -1,21 +1,23 @@
 
 .Navigation__nav_main {
-  width: 100%;
-  height: auto;
+  
+  width: 840px;
+  height: 12.5vh;
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  margin-left: -420px;
   z-index: 2;
+  background-color: var(--main_white);
 }
 
 .Navigation__container {
-  width: 840px; 
-  padding:0 20px;
+  height: 12.5vh;
+  padding: 1rem 1.25rem 0 1.25rem;
+  width: 100%; 
   background-color: var(--main_white);
-  min-height: 15vh;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,12 +27,12 @@
 }
 
 .Navigation__container.Scroll {
--webkit-box-shadow: 0px 7px 8px -1.95px rgba(189, 189, 189, 0.75);
--moz-box-shadow: 0px 7px 8px -1.95px rgba(189, 189, 189, 0.75);
-box-shadow: 0px 7px 8px -1.95px rgba(189, 189, 189, 0.75);
+height: 10vh;
+padding: .25rem 1.25rem 0 1.25rem;
+-webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+-moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 }
-
-
 
 .Navigation__nav_main ul {
   height: auto;
@@ -49,7 +51,7 @@ box-shadow: 0px 7px 8px -1.95px rgba(189, 189, 189, 0.75);
 .Navigation__nav_main a {
   text-decoration: none;
   color: var(--main_black);
-  font-size: 1rem;
+  font-size: .85rem;
   font-weight: 500;
   display: inline-block;
 }

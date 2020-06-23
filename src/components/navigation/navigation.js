@@ -11,6 +11,7 @@ const Navigation = () => {
 const [assignedClasses, setAssignedClasses] = useState([
   classes.Navigation__container
 ])
+const [resize, setResize] = useState(false)
 
 
 
@@ -23,20 +24,19 @@ const scrollHandler = () => {
   const windowHeight = window.pageYOffset
  if (windowHeight > 0) {
    setAssignedClasses([classes.Navigation__container, classes.Scroll])
+   setResize(!resize)
  } else {
    setAssignedClasses([classes.Navigation__container])
+   setResize(resize)
  }
 }
-
-
-
 
   return (
     <Context.Consumer>
       {context => (
         <nav className={classes.Navigation__nav_main}>
           <div className={assignedClasses.join(' ')}>
-            <SVGContainer />
+            <SVGContainer scroll={resize}/>
             <ul className={classes.Navigation__list}>
               <li>
                 <Link>Podcasty</Link>
