@@ -8,9 +8,12 @@ import Context from "../context"
 
 const Navigation = () => {
 
-const [assignedClasses, setAssignedClasses] = useState([
-  classes.Navigation__container
+const [assignedClasses, setAssignedClasses] = useState(
+[
+  classes.Navigation__container, 
 ])
+
+
 const [resize, setResize] = useState(false)
 
 
@@ -21,8 +24,8 @@ useEffect(() => {
 }, [])
 
 const scrollHandler = () => {
-  const windowHeight = window.pageYOffset
- if (windowHeight > 0) {
+  const windowHeight = window.pageYOffset;
+ if (windowHeight > 1) {
    setAssignedClasses([classes.Navigation__container, classes.Scroll])
    setResize(!resize)
  } else {
@@ -35,17 +38,27 @@ const scrollHandler = () => {
     <Context.Consumer>
       {context => (
         <nav className={classes.Navigation__nav_main}>
-          <div className={assignedClasses.join(' ')}>
-            <SVGContainer scroll={resize}/>
+          <div className={assignedClasses.join(" ")}>
+            <SVGContainer scroll={resize} />
             <ul className={classes.Navigation__list}>
               <li>
-                <Link>Podcasty</Link>
+                <Link className={classes.Navigation__list_link}>Podcasty</Link>
               </li>
               <li>
-                <Link to="aboutProject">O projekcie</Link>
+                <Link
+                  className={classes.Navigation__list_link}
+                  to="aboutProject"
+                >
+                  O projekcie
+                </Link>
               </li>
               <li className={classes.Different}>
-                <Link onClick={context.open}>Kontakt</Link>
+                <Link
+                  className={classes.Navigation__list_link}
+                  onClick={context.open}
+                >
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </div>

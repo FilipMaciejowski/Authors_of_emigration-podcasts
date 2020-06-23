@@ -1,6 +1,7 @@
 .PodcastElement__main {
   width: 12.5rem;
   margin-bottom: 1rem;
+  
 }
 
 .PodcastElement__container  {
@@ -12,15 +13,18 @@ justify-content: center;
 
 
 .PodcastElement__image_container {
-  width: 12.5rem;
-  height: 12.5rem;
+  width: 10rem;
+  height: 10rem;
   margin-bottom: .5rem;
   background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");
-  background-size: cover;
-  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  
+  background-position: 45% 42.5%;
 }
 
 .PodcastElement__content {
+  width: 10rem;
   height:auto;
   text-transform: capitalize;
   font-weight: 600;
@@ -62,15 +66,7 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.New {
-  background-color: var(--button_background);
-  font-size: 0.75rem;
-  color: white;
-  border: 3px solid var(--button_border);
-  padding: 0 0.75rem;
+  margin-bottom: .35rem;
 }
 
 .PodcastElement__content_top p {

@@ -3,6 +3,7 @@
   max-width: 100%;
   margin: 3rem auto 0 auto;
   height: auto;
+  
 }
 
 .Content__container {
@@ -11,6 +12,7 @@
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 2rem;
+  
 }
 
 @media(min-width: 320px){

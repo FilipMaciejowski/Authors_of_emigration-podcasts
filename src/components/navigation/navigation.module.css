@@ -1,20 +1,19 @@
 
 .Navigation__nav_main {
-  
   width: 840px;
-  height: 12.5vh;
+  height: 17.5vh;
   display: flex;
+  align-items:flex-start;
   justify-content: center;
   position: fixed;
   top: 0;
   left: 50%;
   margin-left: -420px;
   z-index: 2;
-  background-color: var(--main_white);
 }
 
 .Navigation__container {
-  height: 12.5vh;
+  height: 100%;
   padding: 1rem 1.25rem 0 1.25rem;
   width: 100%; 
   background-color: var(--main_white);
@@ -27,7 +26,7 @@
 }
 
 .Navigation__container.Scroll {
-height: 10vh;
+height: 10.5vh;
 padding: .25rem 1.25rem 0 1.25rem;
 -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
@@ -48,12 +47,24 @@ box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   padding: .75rem 0;
 }
 
-.Navigation__nav_main a {
+.Navigation__list_link {
   text-decoration: none;
   color: var(--main_black);
   font-size: .85rem;
   font-weight: 500;
   display: inline-block;
+  
+}
+
+.Navigation__list_link:hover {
+  font-weight: 600;
+  
+}
+
+
+
+.Navigation__list_link.Link_scroll {
+  font-size: .875rem;
 }
 
 @media (min-width: 1005px) {
