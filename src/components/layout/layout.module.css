@@ -1,3 +1,5 @@
 .Layout__main {
   margin: 0 auto;
+  max-width: 840px;
+  background-color: var(--main_white);
 }

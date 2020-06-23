@@ -1,5 +1,5 @@
 .Style {
-  width: 100%;
+  width: 100vw;
   height: 12.5vh;
   background-color: var(--main_black);
   display: flex;

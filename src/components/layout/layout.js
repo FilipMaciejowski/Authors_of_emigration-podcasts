@@ -1,12 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../header/header"
+
 import Footer from "../footer/footer"
 import classes from "./layout.module.css"
 import Contact from "../contact/contact"
 import Context from "../context"
+import MainSection from "../mainSection/mainSection"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,8 +20,8 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [isOpen, setIsOpen] = useState(false)
-
+  const [isOpen, setIsOpen] = useState(false);
+  
   const openModalHandler = () => {
     setIsOpen(!isOpen)
   }
@@ -39,12 +40,12 @@ const Layout = ({ children }) => {
     >
       <div className={classes.Layout__main}>
         {isOpen ? <Contact /> : null}
-        <Header />
         <div>{children}</div>
-        <Footer data={data.site.siteMetadata.developer}>
-          © {new Date().getFullYear()}, Designed and built by
-        </Footer>
+        <MainSection />
       </div>
+      <Footer data={data.site.siteMetadata.developer}>
+        © {new Date().getFullYear()}, Designed and built by
+      </Footer>
     </Context.Provider>
   )
 }

@@ -1,0 +1,6 @@
+.MainSection__layout {
+  padding-top: 2rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main__white);
+}

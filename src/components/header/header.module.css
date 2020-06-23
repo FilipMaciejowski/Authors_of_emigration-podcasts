@@ -1,6 +1,6 @@
 .Header__main {
   min-height: auto;
-  margin: 0 auto;
+  margin: 7.625rem auto 0 auto;
   max-width: 800px;
   display: flex;
   flex-direction: column;
