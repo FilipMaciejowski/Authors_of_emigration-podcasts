@@ -31,6 +31,7 @@ padding: .25rem 1.25rem 0 1.25rem;
 -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+border-bottom: .5px solid rgb(201, 201, 201);
 }
 
 .Navigation__nav_main ul {

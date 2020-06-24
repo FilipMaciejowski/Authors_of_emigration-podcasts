@@ -13,14 +13,14 @@ justify-content: center;
 
 
 .PodcastElement__image_container {
-  width: 10rem;
-  height: 10rem;
-  margin-bottom: .5rem;
+  width: 100%;
+  height: 8rem;
+  margin-bottom: .25rem;
   background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");
   background-origin: content-box;
   background-repeat: no-repeat;
-  
-  background-position: 45% 42.5%;
+  background-size: cover;
+  background-position: right center;
 }
 
 .PodcastElement__content {

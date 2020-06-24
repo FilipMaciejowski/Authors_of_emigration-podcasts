@@ -27,13 +27,12 @@ const scrollHandler = () => {
 
   return (
     <>
-      <header className={assignedClasses.join(" ")}>
-        <Link to="/">
-          <SVGContainer newClass="Image_resize" />
-        </Link>
-      </header>
       <div className={classes.Template__layout}>
-        <div></div>
+        <header className={assignedClasses.join(" ")}>
+          <Link to="/">
+            <SVGContainer newClass="Image_resize" />
+          </Link>
+        </header>
         <main className={classes.Template__text}>{children}</main>
       </div>
       <Footer data=""></Footer>
