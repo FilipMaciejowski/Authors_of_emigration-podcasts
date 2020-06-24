@@ -2,9 +2,9 @@ import React from  "react"
 
 import classes from "./SVGContainer.module.css"
 
-const SVGContainer = ({scroll, newClass}) => {
+const SVGContainer = ({scroll, mainClass, newClass}) => {
   return (
-    <div className={scroll ? classes.Resize : classes.Logo}>
+    <div className={scroll ? classes.Resize : classes[mainClass]}>
       <img
         className={classes[newClass]}
         src={require("../../assets/images/Logo.svg")}

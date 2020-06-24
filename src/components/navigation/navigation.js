@@ -2,11 +2,13 @@ import React, {useState, useEffect} from "react"
 import { Link } from "gatsby"
 
 import SVGContainer from "../SVGContainer/SVGContainer"
+import Contact from "../contact/contact"
 import classes from "./navigation.module.css"
 import Context from "../context"
 
 
-const Navigation = () => {
+
+const Navigation = ({open}) => {
 
 const [assignedClasses, setAssignedClasses] = useState(
 [
@@ -39,7 +41,7 @@ const scrollHandler = () => {
       {context => (
         <nav className={classes.Navigation__nav_main}>
           <div className={assignedClasses.join(" ")}>
-            <SVGContainer class="Image" scroll={resize} />
+            <SVGContainer mainClass="Logo"  scroll={resize} />
             <ul className={classes.Navigation__list}>
               <li>
                 <Link className={classes.Navigation__list_link}>Podcasty</Link>
@@ -61,6 +63,7 @@ const scrollHandler = () => {
                 </Link>
               </li>
             </ul>
+            <div className={classes.Modal__contact}>{open ? <Contact /> : null}</div>
           </div>
         </nav>
       )}

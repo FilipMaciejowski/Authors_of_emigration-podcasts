@@ -30,7 +30,7 @@ const scrollHandler = () => {
       <div className={classes.Template__layout}>
         <header className={assignedClasses.join(" ")}>
           <Link to="/">
-            <SVGContainer newClass="Image_resize" />
+            <SVGContainer mainClass="Logo__template" newClass="Image_resize" />
           </Link>
         </header>
         <main className={classes.Template__text}>{children}</main>

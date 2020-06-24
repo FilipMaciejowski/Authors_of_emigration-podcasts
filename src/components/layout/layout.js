@@ -40,9 +40,9 @@ const Layout = ({ children }) => {
       }}
     >
       <div className={classes.Layout__main}>
-        {isOpen ? <Contact /> : null}
+       
         <div>{children}</div>
-        <Navigation />
+        <Navigation open={isOpen}/>
         <MainSection />
       </div>
       <Footer data={data.site.siteMetadata.developer}>

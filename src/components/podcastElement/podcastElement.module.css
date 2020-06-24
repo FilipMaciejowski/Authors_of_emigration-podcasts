@@ -113,3 +113,7 @@
 .PodcastElement__content_listen a p {
   text-transform: lowercase;
 }
+
+.Arrow__container{
+  transform: translateY(20%);
+}

@@ -1,14 +1,10 @@
 .Contact__layout {
-  position: fixed;
-  width: 25vw;
-  height: 12.5vh;
-  top: 45vh;
-  left: 45vw;
-  transform: translate(47.5%, -250%);
-  border: 2px solid black;
-  border-radius: 5px;
+  width: 15rem;
+  height: 3rem;
+  border: 1px solid var(--main_black);
+  border-radius: 1px;
   background-color: white;
-  z-index: 10;
+  z-index: 4;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -25,7 +21,7 @@
   display: flex;
   align-items: center; 
   justify-content: flex-end;
-  padding: .5rem;
+  padding: .25rem;
 }
 
 .Contact__layout div:nth-of-type(2){
@@ -66,12 +62,13 @@ div.Close:hover {
 }
 
 .Contact__layout div:nth-of-type(2) p {
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   margin: 0;
 }
 
-p span {
-  font-weight: 600;
+p {
+  font-weight: 500;
+  font-size: .85rem;
 }
 
 .Contact__layout div p a{
@@ -80,7 +77,8 @@ p span {
 }
 
 .Contact__layout div p a:hover {
-  color: var(--main_black);;
+  color: var(--main_black);
+  text-decoration:underline;
 }
 
 
