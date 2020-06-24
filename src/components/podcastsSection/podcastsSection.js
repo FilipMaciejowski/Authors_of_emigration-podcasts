@@ -10,7 +10,7 @@ const PodcastsSection = () => {
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           <PodcastElement
-            episode="1"
+            episode={1}
             date="01.07.2020"
             title="dziecinstwie i dorastaniu w przedwojennej Polsce"
             

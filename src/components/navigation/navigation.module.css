@@ -57,11 +57,9 @@ box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 }
 
 .Navigation__list_link:hover {
-  font-weight: 600;
+  color: black;
   
 }
-
-
 
 .Navigation__list_link.Link_scroll {
   font-size: .875rem;

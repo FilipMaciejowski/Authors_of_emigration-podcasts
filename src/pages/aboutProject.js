@@ -3,11 +3,14 @@ import React from "react"
 import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 
 const AboutProject = () => {
+
+  const styles=[{fontSize: "1.25rem"}, {fontSize: ".85rem"}, {fontWeight: "bold"}]
+
   return (
     <>
       <PodcastTemplate>
-        <h1>O projekcie:</h1>
-        <p>
+        <h1 style={styles[0]}>O projekcie:</h1>
+        <p style={styles[1]}>
           Strona została stworzona na potrzeby realizacji trzymiesięcznego
           programu stypendialnego Ministerstwa Kultury i Dziedzictwa Narodowego
           „Kultura w sieci”. Zamieszczane w kolejnych tygodniach podcasty, które
@@ -21,16 +24,16 @@ const AboutProject = () => {
           Pawła Jocza, Macieja Niemca, Tadeusza Brudzyńskiego. Celem projektu
           jest popularyzacja wiedzy o polskiej kulturze emigracyjnej.
         </p>
-        <h1>O autorze:</h1>
-        <p>
-          Dawid Dziedziczak – absolwent edytorstwa na Wydziale Polonistyki i
-          historii sztuki na Wydziale Historycznym na Uniwersytecie
-          Jagiellońskim w Krakowie. Przez ostatnie 9 lat do kwietnia tego roku,
-          dziennikarz, reporter, prowadzący Programu II Polskiego Radia w
-          Warszawie. Autor programów w pasmach „Notatnik Dwójki”, „Spotkania po
-          zmroku”, „Kwadrans bez muzyki”, „Zapiski ze współczesności”, „O
-          wszystkim z kulturą”, wydawca „Poranka Dwójki” oraz popołudniowego
-          „Wybieram Dwójkę”.
+        <h1 style={styles[0]}>O autorze:</h1>
+        <p style={styles[1]}>
+          <span style={styles[2]}>Dawid Dziedziczak</span> – absolwent edytorstwa na Wydziale
+          Polonistyki i historii sztuki na Wydziale Historycznym na
+          Uniwersytecie Jagiellońskim w Krakowie. Przez ostatnie 9 lat do
+          kwietnia tego roku, dziennikarz, reporter, prowadzący Programu II
+          Polskiego Radia w Warszawie. Autor programów w pasmach „Notatnik
+          Dwójki”, „Spotkania po zmroku”, „Kwadrans bez muzyki”, „Zapiski ze
+          współczesności”, „O wszystkim z kulturą”, wydawca „Poranka Dwójki”
+          oraz popołudniowego „Wybieram Dwójkę”.
         </p>
       </PodcastTemplate>
     </>

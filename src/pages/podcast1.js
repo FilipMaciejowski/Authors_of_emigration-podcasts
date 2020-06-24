@@ -1,12 +1,14 @@
 import React from "react"
 
 import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
+import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast1 = () => {
+  const styles = [{ fontSize: "1.25rem" }, { fontSize: ".85rem" }]
   return (
     <PodcastTemplate>
-      <h1>Konstany Jeleński</h1>
-      <p>
+      <h1 style={styles[0]}>Konstany Jeleński</h1>
+      <p style={styles[1]}>
         Kot Jeleński, żołnierz, intelektualista, przyjaciel Gombrowicza, Miłosza
         i Czapskiego, krnąbrny niekiedy współpracownik paryskiej „Kultury”,
         człowiek światowy, wyłamuje się ze wszystkich znanych nam szablonów
@@ -17,7 +19,7 @@ const Podcast1 = () => {
         Anny Arno świetnie uchwyciła tę proteuszową postać w stu migawkach, ze
         stu punktów widzenia.
       </p>
-      <p>
+      <p style={styles[1]}>
         Konstanty Jeleński był jednym z najciekawszych, najbardziej
         błyskotliwych, wielkodusznych i utalentowanych ludzi, jakich spotkałam w
         życiu. I najbardziej tajemniczym. Książka Anny Arno jest najlepszym
@@ -25,7 +27,7 @@ const Podcast1 = () => {
         Europejczyk, rozdawał swoje dary szczodrze i bez ostentacji. Warto je
         pozbierać.
       </p>
-      <section>
+      <section className={classes.Podcast__player}>
         <iframe
           src="https://widget.spreaker.com/player?episode_id=30033366&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
           width="100%"

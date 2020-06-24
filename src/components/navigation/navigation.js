@@ -39,7 +39,7 @@ const scrollHandler = () => {
       {context => (
         <nav className={classes.Navigation__nav_main}>
           <div className={assignedClasses.join(" ")}>
-            <SVGContainer scroll={resize} />
+            <SVGContainer class="Image" scroll={resize} />
             <ul className={classes.Navigation__list}>
               <li>
                 <Link className={classes.Navigation__list_link}>Podcasty</Link>
