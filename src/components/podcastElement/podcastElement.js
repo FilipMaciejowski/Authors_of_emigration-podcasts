@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import podcastImage from "../../assets/images/MS_ChrobryTrans 3.png"
+
 import Jelenski from "../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg"
 import classes from "./podcastElement.module.css"
 
@@ -16,21 +16,21 @@ const PodcastElement = ({date, title, description, episode}) => {
         <div className={classes.PodcastElement__content}>
           <div className={classes.PodcastElement__content_top}>
             <p>{date}</p>
-            {/* <div className={status ? classes.New : null}>
-              {status && status.toUpperCase()}
-            </div> */}
+          </div>
+
+          <div className={classes.Podcast__content_title}>
+            <Link to="/podcast1/">
+              <h5>{title}</h5>
+            </Link>
             <div>
-              <h5>Odc. {episode}</h5>
+              <h5>odc. {episode}</h5>
             </div>
           </div>
-          <Link to="/podcast1/">
-            <h4>
-              <span>O </span> {title}
-            </h4>
-          </Link>
+
           <p className={classes.PodcastElement__content_description}>
             {description}
           </p>
+
           <div className={classes.PodcastElement__content_listen}>
             <div>
               <p>Posłuchaj</p>
