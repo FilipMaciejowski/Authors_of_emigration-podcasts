@@ -4,7 +4,7 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast1 = () => {
-  const styles = [{ fontSize: "1.25rem" }, { fontSize: ".85rem" }]
+  const styles = [{ fontSize: "calc(1.25rem - 15%)" }, { fontSize: "calc(.85rem - 15%)" }]
   return (
     <PodcastTemplate>
       <h1 style={styles[0]}>Konstany Jeleński</h1>

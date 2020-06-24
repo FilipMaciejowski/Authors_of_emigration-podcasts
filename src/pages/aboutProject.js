@@ -4,7 +4,7 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 
 const AboutProject = () => {
 
-  const styles=[{fontSize: "1.25rem"}, {fontSize: ".85rem"}, {fontWeight: "bold"}]
+  const styles=[{fontSize: "calc(1.25rem - 15%)"}, {fontSize: "calc(.85rem - 15%)"}, {fontWeight: "bold"}]
 
   return (
     <>
