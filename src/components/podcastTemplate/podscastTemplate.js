@@ -35,7 +35,7 @@ const scrollHandler = () => {
         </header>
         <main className={classes.Template__text}>{children}</main>
       </div>
-      <Footer data=""></Footer>
+      <Footer data="" containerSize="Footer__container_narrow"></Footer>
     </>
   )
 }

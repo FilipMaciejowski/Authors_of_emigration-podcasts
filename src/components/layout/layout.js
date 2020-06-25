@@ -39,12 +39,14 @@ const Layout = ({ children }) => {
       }}
     >
       <div className={classes.Layout__main}>
-       
         <div>{children}</div>
-        <Navigation open={isOpen}/>
+        <Navigation open={isOpen} />
         <MainSection />
       </div>
-      <Footer data={data.site.siteMetadata.developer}>
+      <Footer
+        data={data.site.siteMetadata.developer}
+        containerSize="Footer__container_normal"
+      >
         © {new Date().getFullYear()}, Designed and built by
       </Footer>
     </Context.Provider>

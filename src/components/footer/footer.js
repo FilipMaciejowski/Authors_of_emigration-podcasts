@@ -2,10 +2,10 @@ import React from "react"
 
 import classes from "./footer.module.css"
 
-const Footer = ({data, children}) => {
+const Footer = ({data, children, containerSize}) => {
   return (
     <footer className={classes.Footer__main}>
-      <div className={classes.Footer__container}>
+      <div className={classes[containerSize]}>
         <div className={classes.Footer__logo}>
           <img
             src={require("../../assets/images/logo_ministry_of_culture.png")}

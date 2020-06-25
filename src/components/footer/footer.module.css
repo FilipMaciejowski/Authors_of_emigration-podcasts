@@ -8,7 +8,7 @@
   justify-content: space-between;
 }
 
-.Footer__container {
+.Footer__container_normal {
   width: 840px;
   height: 75%;
   display: flex; 
@@ -17,7 +17,17 @@
   border: 1.75px solid white;
   border-top: none;
   padding: .4rem 0 0.4rem .4rem;
- 
+}
+
+.Footer__container_narrow {
+  width: 640px;
+  height: 75%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border: 1.75px solid white;
+  border-top: none;
+  padding: .4rem 0 0.4rem .4rem;
 }
 
 .Footer__logo {
