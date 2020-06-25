@@ -26,6 +26,13 @@
   position: absolute;
 }
 
+.Navigation__container svg {
+  position: relative;
+  top:0;
+  left: 0;
+}
+
+
 .Modal__contact {
   position: absolute;
   top: 72.5%;
