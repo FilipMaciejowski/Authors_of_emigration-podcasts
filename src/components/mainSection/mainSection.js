@@ -3,6 +3,7 @@ import React from "react"
 import Header from "../header/header"
 import PodcastsSection from "../podcastsSection/podcastsSection"
 import DecorationLines from "../decorationLines/decorationLines"
+import Ministry from "../ministry/ministry"
 import classes from "./mainSection.module.css"
 
 const MainSection = () => {
@@ -11,6 +12,7 @@ const MainSection = () => {
       <Header />
       <DecorationLines />
       <PodcastsSection />
+      {/* <Ministry /> */}
     </section>
   )
 }

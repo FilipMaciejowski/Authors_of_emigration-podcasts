@@ -4,7 +4,7 @@
   display: flex; 
   align-items: center;
   transition: linear .3s;
-  transform: translateY(7.75%);
+  transform: translateY(7%);
 }
 
 .Resize {
@@ -27,6 +27,7 @@
   max-width: 100%;
   height: 100%;
   transition: linear .3s;
+  
 }
 
 

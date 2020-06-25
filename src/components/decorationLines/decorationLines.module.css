@@ -1,5 +1,5 @@
 .Lines {
-  height: 1.25rem;
+  height: .9rem;
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   margin: 1.5rem auto;
 }
 
-.Line:nth-of-type(1) {
+.Line:nth-of-type(1n) {
   margin: 0 auto;
   width: 90%;
   height: .25px;
@@ -16,7 +16,7 @@
   
 }
 
-.Line:nth-of-type(2){
+.Line:nth-of-type(2n){
   margin: 0 auto;
   width: 95%;
   height: .25px;
@@ -24,7 +24,7 @@
  
 }
 
-.Line:nth-of-type(3){
+.Line:nth-of-type(3n){
   margin: 0 auto;
   width: 90%;
   height: .25px;
