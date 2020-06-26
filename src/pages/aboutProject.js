@@ -8,7 +8,7 @@ const AboutProject = () => {
 
   return (
     <>
-      <PodcastTemplate>
+      <PodcastTemplate project={true}>
         <h1 style={styles[0]}>O projekcie:</h1>
         <p style={styles[1]}>
           Strona została stworzona na potrzeby realizacji trzymiesięcznego

@@ -3,14 +3,24 @@ import React from "react"
 import classes from "./footer.module.css"
 
 const Footer = ({data, children, containerSize}) => {
+
+  let logoMinistry;
+  if (containerSize === "Footer__container_normal") {
+    logoMinistry = (
+      <img
+        src={require("../../assets/images/logo_ministry_of_culture.png")}
+        alt="Ministerstwo_kultury_logo"
+      />
+    )
+  } else {
+    logoMinistry = null
+  }
+
   return (
     <footer className={classes.Footer__main}>
       <div className={classes[containerSize]}>
         <div className={classes.Footer__logo}>
-          <img
-            src={require("../../assets/images/logo_ministry_of_culture.png")}
-            alt="Ministerstwo_kultury_logo"
-          />
+          {logoMinistry}
           <div className={classes.Footer__logo_socialMedia}>
             <svg
               viewBox="0 0 53 97"

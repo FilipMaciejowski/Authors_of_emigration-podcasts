@@ -9,6 +9,10 @@ const Ministry = () => {
         src={require("../../assets/images/logo_ministry_of_culture.png")}
         alt="Ministerstwo_kultury_logo"
       />
+      <p>
+        Zrealizowano w ramach programu stypendialnego Ministra Kultury i
+        Dziedzictwa Narodowego – Kultura w sieci.
+      </p>
     </div>
   )
 }
