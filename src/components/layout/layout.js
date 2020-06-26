@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "../footer/footer"
 import classes from "./layout.module.css"
-import Contact from "../contact/contact"
 import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"

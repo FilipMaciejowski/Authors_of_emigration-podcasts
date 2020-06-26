@@ -44,22 +44,7 @@ const scrollHandler = () => {
             <SVGContainer mainClass="Logo" scroll={resize} />
 
             <ul className={classes.Navigation__list}>
-              <svg
-                width="21"
-                height="21"
-                viewBox="0 0 21 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="10.5"
-                  cy="10.5"
-                  r="9.5"
-                  fill="white"
-                  stroke="#272727"
-                  stroke-width="2"
-                />
-              </svg>
+              
               <li>
                 <Link className={classes.Navigation__list_link}>Podcasty</Link>
               </li>

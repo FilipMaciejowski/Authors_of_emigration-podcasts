@@ -13,10 +13,10 @@
   height: 75%;
   display: flex; 
   align-items: center;
-  justify-content: center;
-  border: 1.75px solid white;
+  justify-content: flex-end;
   border-top: none;
   padding: .4rem 0 0.4rem .4rem;
+  
 }
 
 .Footer__container_narrow {
@@ -31,7 +31,7 @@
 }
 
 .Footer__logo {
-  width: 25%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center; 
@@ -39,10 +39,11 @@
 
 .Footer__logo img {
   width: 5rem;
+  order: 1;
 }
 
 .Footer__logo svg {
-  width: .5rem;
+  width: .45rem;
   height:auto;
   cursor:pointer;
   transition: ease 0.1s;
@@ -55,7 +56,7 @@
 
 
 .Footer__logo svg:nth-of-type(2n) {
-  width: .935rem;
+  width: .975rem;
 }
 
 .Footer__logo_socialMedia {
@@ -63,6 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateX(-50%);
 }
 
 
