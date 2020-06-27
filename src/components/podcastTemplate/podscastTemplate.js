@@ -3,10 +3,9 @@ import { Link } from "gatsby"
 
 import Footer from "../footer/footer"
 import SVGContainer from "../SVGContainer/SVGContainer"
-import Ministry from "../ministry/ministry"
 import classes from "./podcastTemplate.module.css"
 
-const PodcastTemplate = ({ children, project }) => {
+const PodcastTemplate = ({ children}) => {
 
   const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
 
@@ -33,7 +32,6 @@ const scrollHandler = () => {
           </Link>
         </header>
         <main className={classes.Template__text}>{children}</main>
-        {project ? <Ministry /> : null}
       </div>
       <Footer data="" containerSize="Footer__container_narrow"></Footer>
     </>

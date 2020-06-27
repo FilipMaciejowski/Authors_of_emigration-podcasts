@@ -1,7 +1,7 @@
 .Template__layout {
   max-width: 640px;
   height: 100%;
-  padding: 11rem 1rem 3.5rem 1rem;
+  padding: 11rem 1rem 1.5rem 1rem;
   margin: 0 auto;
   background-color: var(--main_white);
 }
