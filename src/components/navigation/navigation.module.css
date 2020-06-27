@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   transition: 0.2s;
-  position: absolute;
+  
 }
 
 .Navigation__container svg {
@@ -35,9 +35,10 @@
 
 .Modal__contact {
   position: absolute;
-  top: 72.5%;
-  left: 65.5%;
+  top: 75%;
+  left: -2.5%;
 }
+
 
 .Navigation__container.Scroll {
 height: 10.5vh;
@@ -54,6 +55,7 @@ border-bottom: .5px solid rgb(201, 201, 201);
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
+  position: relative;
 }
 
 .Navigation__nav_main ul li  {
@@ -73,7 +75,6 @@ border-bottom: .5px solid rgb(201, 201, 201);
 
 .Navigation__list_link:hover {
   color: black;
-  
 }
 
 .Navigation__list_link.Link_scroll {

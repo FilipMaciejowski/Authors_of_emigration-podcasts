@@ -15,7 +15,7 @@
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
 }
 
-.Contact__layout div:nth-of-type(1){
+.Contact__layout div:nth-of-type(1n){
   height: 15%;
   width: 100%;
   display: flex;
@@ -24,7 +24,7 @@
   padding: .25rem;
 }
 
-.Contact__layout div:nth-of-type(2){
+.Contact__layout div:nth-of-type(2n){
   height: 85%;
   width: 100%;
   display: flex;

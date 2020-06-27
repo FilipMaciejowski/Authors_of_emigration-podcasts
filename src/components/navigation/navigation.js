@@ -44,7 +44,6 @@ const scrollHandler = () => {
             <SVGContainer mainClass="Logo" scroll={resize} />
 
             <ul className={classes.Navigation__list}>
-              
               <li>
                 <Link className={classes.Navigation__list_link}>Podcasty</Link>
               </li>
@@ -64,10 +63,10 @@ const scrollHandler = () => {
                   Kontakt
                 </Link>
               </li>
+              <div className={classes.Modal__contact}>
+                {open ? <Contact /> : null}
+              </div>
             </ul>
-            <div className={classes.Modal__contact}>
-              {open ? <Contact /> : null}
-            </div>
           </div>
         </nav>
       )}
