@@ -1,80 +1,62 @@
 .Footer__main {
   width: 100%;
   height: auto;
-  min-height: 3rem;
   background-color: var(--main_black);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .Footer__container_normal {
   width: 840px;
-  height: 75%;
+  max-width: 100%;
+  min-height: 4rem;
   display: flex; 
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  border-top: none;
-  padding: .4rem 0 0.4rem .4rem;
-  
+  justify-content: space-between;
+  padding: .6rem 0 .4rem 0;
 }
 
 .Footer__container_narrow {
   width: 640px;
-  height: 75%;
+  height: 2.5rem;
   display: flex; 
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   border-top: none;
-  padding: .4rem 0 0.4rem .4rem;
 }
 
 
-
-.Footer__logo {
-  width: 50%;
+.Footer__logo_socialMedia {
+  padding: .5rem auto;
+  width: 2.5rem;
+  height: 50%;
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: flex-start;
 }
 
-.Footer__logo img {
-  width: 5rem;
-  order: 1;
-}
-
-.Footer__logo svg {
-  width: .45rem;
+ .Footer__logo_socialMedia svg {
+  width: .522rem;
   height:auto;
   cursor:pointer;
   transition: ease 0.1s;
 }
 
-.Footer__logo svg:hover path {
+.Footer__logo_socialMedia svg:nth-of-type(2n) {
+  width: 1rem;
+}
+
+.Footer__logo_socialMedia svg:hover path {
   fill: var(--main_white);
 }
 
-
-
-.Footer__logo svg:nth-of-type(2n) {
-  width: .975rem;
-}
-
-.Footer__logo_socialMedia {
-  padding: .5rem auto;
-  width: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateX(-50%);
-}
-
-
-.Footer__text {
+.Footer__text  {
   color: rgb(173, 173, 173); 
-  font-size: .75rem;
-  margin: .125rem;
+  font-size: .7rem;
+  margin-bottom: 0;
 }
+
+
 
 

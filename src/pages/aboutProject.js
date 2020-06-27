@@ -17,10 +17,10 @@ const AboutProject = () => {
           „Kultura w sieci”. Zamieszczane w kolejnych tygodniach podcasty będą
           dotyczyć ważnych postaci polskiej kultury emigracyjnej, o których
           opowiedzą badacze ich twórczości oraz najbliżsi. Dowiemy się jaki
-          wpływ miało doświadczenie emigracji m. in dla Gustawa
+          wpływ miało doświadczenie emigracji m. in. dla Gustawa
           Herlinga-Grudzińskiego, Jana Lebensteina, Zbigniewa Herberta, Józefa
           Czapskiego, Jacka Bierezina, Konstantego Jeleńskiego, Romana
-          Cieślewicza i wielu innych szerzej nieznanych polskiemu odbiorcy
+          Cieślewicza oraz wielu innych szerzej nieznanych polskiemu odbiorcy
           artystów, np. Pawła Jocza, Macieja Niemca, Tadeusza Brudzyńskiego.
         </p>
         <p style={styles[1]}>
@@ -28,20 +28,20 @@ const AboutProject = () => {
           komunikatorów, niekiedy z gośćmi, którzy wciąż przebywają poza
           granicami Polski. W kontekście panującej pandemii ten bardzo ostatnio
           popularny sposób porozumiewania się zyskuje wymiar poniekąd
-          symboliczny projektu – emigracja oddalała od siebie przyjaciół,
+          symboliczny – emigracja oddalała bowiem od siebie przyjaciół,
           rodziny, zmuszała do kontaktu jednymi możliwymi kanałami. Celem
-          przedsięwzięcia jest jednak przede wszystkim popularyzacja wiedzy o
+          przedsięwzięcia jest przede wszystkim popularyzacja wiedzy o
           polskiej kulturze emigracyjnej i dokumentacja wspomnień na temat
-          wspomnianych wcześniej osób.
+          wymienionych osób.
         </p>
         <Ministry />
         <h1 style={styles[0]}>O autorze:</h1>
         <p style={styles[1]}>
           <span style={styles[2]}>Dawid Dziedziczak</span> – absolwent
           edytorstwa na Wydziale Polonistyki i historii sztuki na Wydziale
-          Historycznym na Uniwersytecie Jagiellońskim w Krakowie. Przez ostatnie
-          9 lat do kwietnia tego roku, dziennikarz, reporter, prowadzący
-          Programu II Polskiego Radia w Warszawie. Autor programów w pasmach
+          Historycznym Uniwersytetu Jagiellońskiego w Krakowie. Przez ostatnie
+          9 lat do kwietnia tego roku dziennikarz, reporter, prowadzący
+          Programu II Polskiego Radia w Warszawie. Autor audycji w pasmach
           „Notatnik Dwójki”, „Spotkania po zmroku”, „Kwadrans bez muzyki”,
           „Zapiski ze współczesności”, „O wszystkim z kulturą”, wydawca „Poranka
           Dwójki” oraz popołudniowego „Wybieram Dwójkę”.

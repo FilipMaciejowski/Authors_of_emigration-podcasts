@@ -5,6 +5,17 @@
   background-color: var(--main__white);
 }
 
+.MainSection__ministry {
+  text-align: center;
+  height: 5.5rem;
+  width: 100%;
+  background-color: #919BA2;
+}
+
+.MainSection__ministry img {
+  height: 100%;
+}
+
 @media(min-width: 600px){
   .MainSection__layout {
     padding-top: 1rem;

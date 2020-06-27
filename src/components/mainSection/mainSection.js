@@ -3,7 +3,6 @@ import React from "react"
 import Header from "../header/header"
 import PodcastsSection from "../podcastsSection/podcastsSection"
 import DecorationLines from "../decorationLines/decorationLines"
-import Ministry from "../ministry/ministry"
 import classes from "./mainSection.module.css"
 
 const MainSection = () => {
@@ -12,7 +11,12 @@ const MainSection = () => {
       <Header />
       <DecorationLines />
       <PodcastsSection />
-      {/* <Ministry /> */}
+      <div className={classes.MainSection__ministry}>
+        <img
+          src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
+          alt="Ministerstwo_kultury_logo"
+        />
+      </div>
     </section>
   )
 }
