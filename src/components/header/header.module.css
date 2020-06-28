@@ -1,6 +1,7 @@
 .Header__main {
   min-height: auto;
   margin: 7.625rem auto 0 auto;
+  
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,5 +9,11 @@
 
 .Header__main img {
   width: 100%;
+}
+
+@media(min-width: 1005px){
+  .Header__main {
+    padding: 0 1rem 0 1rem;
+  }
 }
 
