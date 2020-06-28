@@ -14,8 +14,6 @@ const [assignedClasses, setAssignedClasses] = useState(
 [
   classes.Navigation__container, 
 ])
-
-
 const [resize, setResize] = useState(false)
 
 
@@ -64,9 +62,10 @@ const scrollHandler = () => {
                 </Link>
               </li>
               <div className={classes.Modal__contact}>
-                {open ? <Contact /> : null}
-              </div>
-            </ul>
+              {context.isOpen ? <Contact /> : null}
+            </div>
+            </ul> 
+        
           </div>
         </nav>
       )}

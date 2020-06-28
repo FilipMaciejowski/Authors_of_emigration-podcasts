@@ -1,7 +1,7 @@
 
 .Navigation__nav_main {
   width: 840px;
-  height: 17.5vh;
+  height: auto;
   display: flex;
   align-items:flex-start;
   justify-content: center;
@@ -13,43 +13,44 @@
 }
 
 .Navigation__container{
+  margin-top: 1rem;
   height: 100%;
-  padding: 1rem 1.25rem 0 1.25rem;
   width: 100%; 
+  padding: .5rem 1rem .1rem 1rem;
   background-color: var(--main_white);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-  transition: 0.2s;
-  
+  transition: .2s;
 }
 
 .Navigation__container svg {
   position: relative;
-  top:0;
-  left: 0;
+  margin-right: 10rem;
 }
-
 
 .Modal__contact {
   position: absolute;
-  top: 75%;
-  left: -2.5%;
+  top: 77.5%;
+  right: -2.5%;
+  transition: ease 1s;
 }
 
 
+
 .Navigation__container.Scroll {
-height: 10.5vh;
-padding: .25rem 1.25rem 0 1.25rem;
+margin-top: 0;
+height: 40%;
+padding: .25rem 1rem .5rem 1rem;
 -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
 border-bottom: .5px solid rgb(201, 201, 201);
+transition: .1s;
 }
 
 .Navigation__nav_main ul {
+  display: none;
   height: auto;
   text-align: center;
   display: flex;
@@ -102,13 +103,14 @@ border-bottom: .5px solid rgb(201, 201, 201);
 padding: .75rem .75rem;
 }
 
-.Navigation__nav_main ul li:last-child  {
+.Navigation__nav_main ul li:nth-of-type(1n) {
+  padding: .75rem .75rem .75rem .75rem;
+}
+
+.Navigation__nav_main ul li:nth-of-type(3n)  {
   padding: .75rem 0 .75rem .75rem;
 }
 
-.Navigation__nav_main ul li:first-child {
-  padding: .75rem .75rem .75rem .75rem;
-}
 }
 
 

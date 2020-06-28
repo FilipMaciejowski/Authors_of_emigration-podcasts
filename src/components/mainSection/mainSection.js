@@ -11,12 +11,6 @@ const MainSection = () => {
       <Header />
       <DecorationLines />
       <PodcastsSection />
-      <div className={classes.MainSection__ministry}>
-        <img
-          src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
-          alt="Ministerstwo_kultury_logo"
-        />
-      </div>
     </section>
   )
 }

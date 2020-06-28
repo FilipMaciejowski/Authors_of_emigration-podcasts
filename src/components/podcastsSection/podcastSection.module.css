@@ -1,16 +1,15 @@
 .Content__main {
-  width: 800px;
+  width: 100%;
   max-width: 100%;
   margin: 3rem auto 0 auto;
   height: auto;
-  
 }
 
 .Content__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
   padding-bottom: 2rem;
   
 }
@@ -20,7 +19,7 @@
     justify-content: space-around;
   }
 }
-@media(min-width: 800px){
+@media(min-width: 715px){
   .Content__container {
     justify-content: space-between;
   }

@@ -1,5 +1,19 @@
 .Layout__main {
   margin: 0 auto;
   max-width: 840px;
+  padding: 0 1rem 0 1rem;
   background-color: var(--main_white);
+}
+
+.MainSection__ministry {
+  max-width: 840px;
+  height: 5.5rem;
+  background-color: #919BA2;
+  z-index: 100;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.MainSection__ministry img {
+  height: 100%;
 }

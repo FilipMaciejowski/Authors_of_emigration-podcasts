@@ -20,14 +20,17 @@ const Layout = ({ children }) => {
     }
   `)
   const [isOpen, setIsOpen] = useState(false);
-  
+
+
   const openModalHandler = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(true)
   }
 
   const closeModalHandler = () => {
     setIsOpen(false)
   }
+
+
 
   return (
     <Context.Provider
@@ -39,8 +42,14 @@ const Layout = ({ children }) => {
     >
       <div className={classes.Layout__main}>
         <div>{children}</div>
-        <Navigation open={isOpen} />
+        <Navigation />
         <MainSection />
+      </div>
+      <div className={classes.MainSection__ministry}>
+        <img
+          src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
+          alt="Ministerstwo_kultury_logo"
+        />
       </div>
       <Footer
         data={data.site.siteMetadata.developer}

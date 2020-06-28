@@ -1,13 +1,12 @@
 .Header__main {
   min-height: auto;
   margin: 7.625rem auto 0 auto;
-  max-width: 800px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
-.Header__layout img {
-  max-width: 100%;
+.Header__main img {
+  width: 100%;
 }
 
