@@ -8,6 +8,7 @@ import classes from "./layout.module.css"
 import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
+import NavigationMobile from "../navigationMobile/navigationMobile"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,7 +21,8 @@ const Layout = ({ children }) => {
     }
   `)
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isShown, setIsShown] = useState(false);
+  
 
   const openModalHandler = () => {
     setIsOpen(true)
@@ -30,16 +32,23 @@ const Layout = ({ children }) => {
     setIsOpen(false)
   }
 
+  const toggleNavHandler = () => {
+    setIsShown(!isShown)
+    setIsOpen(false)
+  }
 
 
   return (
     <Context.Provider
       value={{
         isOpen,
+        isShown,
         open: openModalHandler,
         close: closeModalHandler,
+        toggleNav: toggleNavHandler,
       }}
     >
+      <NavigationMobile />
       <div className={classes.Layout__main}>
         <div>{children}</div>
         <Navigation />

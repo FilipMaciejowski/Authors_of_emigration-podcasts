@@ -3,27 +3,34 @@ import React from "react"
 import classes from "./contact.module.css"
 import Context from "../context"
 
-
- 
-
-const Contact = () => {
+const Contact = ({ mobile }) => {
   return (
-    <div className={classes.Contact__layout}>
-      <div>
-        <Context.Consumer>
-          {context => (
-            <div onClick={context.close} className={classes.Close}></div>
-          )}
-        </Context.Consumer>
-      </div>
-      <div>
-        <p className={classes.Contact__text}>
-          <a href="mailto: dawid.dziedziczak@gmail.com">
-            dawid.dziedziczak@gmail.com
-          </a>
-        </p>
-      </div>
-    </div>
+    <Context.Consumer>
+      {context =>
+        mobile ? (
+          <div className={classes.Contact__text_container}>
+            <p className={classes.Contact__text}>
+              <a href="mailto: dawid.dziedziczak@gmail.com">
+                dawid.dziedziczak@gmail.com
+              </a>
+            </p>
+          </div>
+        ) : (
+          <div className={classes.Contact__layout}>
+            <div>
+              <div onClick={context.close} className={classes.Close}></div>
+            </div>
+            <div className={classes.Contact__text_container}>
+              <p className={classes.Contact__text}>
+                <a href="mailto: dawid.dziedziczak@gmail.com">
+                  dawid.dziedziczak@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        )
+      }
+    </Context.Consumer>
   )
 }
 

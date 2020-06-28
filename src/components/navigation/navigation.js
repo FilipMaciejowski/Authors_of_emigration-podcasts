@@ -16,8 +16,6 @@ const [assignedClasses, setAssignedClasses] = useState(
 ])
 const [resize, setResize] = useState(false)
 
-
-
 useEffect(() => {
   window.addEventListener('scroll', scrollHandler
 )
@@ -37,41 +35,49 @@ const scrollHandler = () => {
   return (
     <Context.Consumer>
       {context => (
-        <nav className={classes.Navigation__nav_main}>
-          <div className={assignedClasses.join(" ")}>
-            <SVGContainer mainClass="Logo" scroll={resize} />
-
-            <ul className={classes.Navigation__list}>
-              <li>
-                <Link className={classes.Navigation__list_link}>Podcasty</Link>
-              </li>
-              <li>
-                <Link
-                  className={classes.Navigation__list_link}
-                  to="aboutProject"
-                >
-                  O projekcie
-                </Link>
-              </li>
-              <li className={classes.Different}>
-                <Link
-                  className={classes.Navigation__list_link}
-                  onClick={context.open}
-                >
-                  Kontakt
-                </Link>
-              </li>
-              <div className={classes.Modal__contact}>
-              {context.isOpen ? <Contact /> : null}
+          <nav className={classes.Navigation__nav_main}>
+            <div className={assignedClasses.join(" ")}>
+              <SVGContainer mainClass="Logo" scroll={resize} />
+              <ul className={classes.Navigation__list}>
+                <li>
+                  <Link className={classes.Navigation__list_link}>
+                    Podcasty
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={classes.Navigation__list_link}
+                    to="aboutProject"
+                  >
+                    O projekcie
+                  </Link>
+                </li>
+                <li className={classes.Different}>
+                  <Link
+                    className={classes.Navigation__list_link}
+                    onClick={context.open}
+                  >
+                    Kontakt
+                  </Link>
+                </li>
+                <div className={classes.Modal__contact}>
+                  {context.isOpen ? <Contact /> : null}
+                </div>
+              </ul>
+              <div
+                onClick={context.toggleNav}
+                className={
+                  context.isShown
+                    ? classes.Navigation__hamburger_close
+                    : classes.Navigation__hamburger
+                }
+              ></div>
             </div>
-            </ul> 
-        
-          </div>
-        </nav>
+          </nav>
       )}
     </Context.Consumer>
   )
-}
+              }
 
 export default Navigation
 

@@ -14,7 +14,7 @@
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
   top: 60%;
-  right: 1.25%;
+  right: 1.2%;
 }
 
 .Contact__layout div:nth-of-type(1n){
@@ -73,12 +73,12 @@ p {
   font-size: .85rem;
 }
 
-.Contact__layout div p a{
+.Contact__text_container p a{
   text-decoration: none;
   color: grey;
 }
 
-.Contact__layout div p a:hover {
+.Contact__text_container p a:hover {
   color: var(--main_black);
   text-decoration:underline;
 }
