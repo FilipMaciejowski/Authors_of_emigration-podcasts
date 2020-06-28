@@ -53,9 +53,18 @@
 
 .Footer__text  {
   color: rgb(173, 173, 173); 
-  font-size: .7rem;
+  font-size: .5rem;
   margin-bottom: 0;
 }
+
+@media(min-width: 300px){
+  .Footer__text{
+font-size: .7rem;
+  }
+}
+
+
+
 
 
 
