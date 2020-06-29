@@ -8,7 +8,7 @@ import Context from "../context"
 
 
 
-const Navigation = ({open}) => {
+const Navigation = () => {
 
 const [assignedClasses, setAssignedClasses] = useState(
 [
@@ -35,7 +35,9 @@ const scrollHandler = () => {
   return (
     <Context.Consumer>
       {context => (
-          <nav className={classes.Navigation__nav_main}>
+      context.isShown ? null : (
+        <>
+        <nav className={classes.Navigation__nav_main}>
             <div className={assignedClasses.join(" ")}>
               <SVGContainer mainClass="Logo" scroll={resize} />
               <ul className={classes.Navigation__list}>
@@ -64,20 +66,16 @@ const scrollHandler = () => {
                   {context.isOpen ? <Contact /> : null}
                 </div>
               </ul>
-              <div
-                onClick={context.toggleNav}
-                className={
-                  context.isShown
-                    ? classes.Navigation__hamburger_close
-                    : classes.Navigation__hamburger
-                }
-              ></div>
             </div>
-          </nav>
-      )}
+        </nav>
+          </>
+      ))
+    }
+         
+
     </Context.Consumer>
-  )
-              }
+      )}
+  
 
 export default Navigation
 

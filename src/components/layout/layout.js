@@ -9,6 +9,7 @@ import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
 import NavigationMobile from "../navigationMobile/navigationMobile"
+import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -48,6 +49,7 @@ const Layout = ({ children }) => {
         toggleNav: toggleNavHandler,
       }}
     >
+      <HamburgerMenu />
       <NavigationMobile />
       <div className={classes.Layout__main}>
         <div>{children}</div>

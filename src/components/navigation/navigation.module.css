@@ -76,27 +76,6 @@ transition: ease .1s;
   font-size: .875rem;
 }
 
-.Navigation__hamburger {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: white;
-  border:1px solid black;
-  left: 0;
-  z-index: 5;
-}
-
-.Navigation__hamburger_close {
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: black;
-  z-index: 5;
-  left: 0;
-}
-
 
 @media (min-width: 1005px) {
   .Navigation__container {

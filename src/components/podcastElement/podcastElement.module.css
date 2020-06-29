@@ -1,9 +1,10 @@
 .PodcastElement__main {
-  width: 12.5rem;
+  width: 15rem;
   margin-bottom: 2rem;
   border: .25px solid var(--main_grey);
   border-bottom: 1.5px solid var(--main_black);
   transition: ease .2s;
+  background-color: var(--main_white);
 }
 
 .PodcastElement__main:hover {
@@ -128,4 +129,10 @@ transition: ease .2s;
 
 .Arrow__container{
   transform: translateY(20%);
+}
+
+@media(min-width: 440px) {
+  .PodcastElement__main {
+    width: 12.5rem;
+  }
 }
