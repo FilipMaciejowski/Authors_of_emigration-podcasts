@@ -11,6 +11,7 @@ import Navigation from "../navigation/navigation"
 import NavigationMobile from "../navigationMobile/navigationMobile"
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteAuthorQuery {
@@ -49,7 +50,7 @@ const Layout = ({ children }) => {
         toggleNav: toggleNavHandler,
       }}
     >
-      <HamburgerMenu />
+      {/* <HamburgerMenu /> */}
       <NavigationMobile />
       <div className={classes.Layout__main}>
         <div>{children}</div>

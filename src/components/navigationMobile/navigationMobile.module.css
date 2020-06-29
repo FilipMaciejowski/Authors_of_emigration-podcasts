@@ -1,17 +1,17 @@
 .NavigationMobile__layout {
   width: 100%;
-  height: 30%;
-  background-color: white;
+  height: 35%;
+  background-color: var(--main_white);
   position: fixed;
-  top: 0;
+  top: 11%;
   left: 0;
-  border: 1px solid black;
+  border-bottom: 2px solid var(--main_black);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index:3;
-  transition: linear .2s;
+  transition: all .2s linear;
   transform-origin: left;
 }
 
@@ -32,18 +32,18 @@
 
 .NavigationMobile__layout_close {
   width: 100%;
-  height: 30%;
+  height: 35%;
   background-color: white;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 0;
+  top: 11%;
   left: -100%;
   border: 1px solid black;
   z-index:3;
-  transition: linear .2s;
+  transition: all .1s linear;
 }
 
 .NavigationMobile__layout_close ul {

@@ -1,0 +1,55 @@
+.Modal__contact {
+  position: absolute;
+  top: 77.5%;
+  right: -2.5%;
+  transition: all .2s ease;
+}
+
+.Navigation__list {
+  display: none;
+}
+
+.Navigation__list li  {
+  list-style: none;
+  letter-spacing: none;
+  padding: .75rem 0;
+}
+
+.Navigation__list_link {
+  text-decoration: none;
+  color: var(--main_black);
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.Navigation__list_link:hover {
+  color: black;
+}
+
+.Navigation__list_link.Link_scroll {
+  font-size: .875rem;
+}
+
+@media(min-width: 600px) {
+  .Navigation__list  {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+  height: auto;
+  }
+
+.Navigation__list li {
+padding: .75rem .75rem;
+}
+
+.Navigation__list li:nth-of-type(1n) {
+  padding: .75rem .75rem .75rem .75rem;
+}
+
+.Navigation__list li:nth-of-type(3n)  {
+  padding: .75rem 0 .75rem .75rem;
+}
+
+}

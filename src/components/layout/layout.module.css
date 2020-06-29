@@ -1,10 +1,9 @@
-
 .Layout__main {
   margin: 0 auto;
+  padding-top: 1rem;
   max-width: 840px;
   background-color: var(--main_white);
 }
-
 
 .MainSection__ministry {
   max-width: 840px;

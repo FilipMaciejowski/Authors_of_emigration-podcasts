@@ -1,18 +1,18 @@
 .Navigation__hamburger {
-  position: absolute;
-  width: 3.5rem;
-  height: 3.5rem;
-  z-index: 5;
-  top: 10%;
-  left: 75%;
+  width: 2.25rem;
+  height: 2rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .BurgerLine {
   position: absolute;
-  width: 2.5rem;
-  height: 0.25rem;
+  width: 2.25rem;
+  height: 0.225rem;
   background-color: var(--main_black);
   border-radius: 2.5px;
   transition: all 0.2s ease-in-out;
@@ -22,8 +22,8 @@
 .BurgerLine::after {
   content: '';
   position: absolute;
-  width: 2.5rem;
-  height: 0.25rem;
+  width: 2.25rem;
+  height: 0.225rem;
   background-color: var(--main_black);
   border-radius: 2.5px;
   transition: all 0.3s ease-in-out;
@@ -52,8 +52,10 @@
 
 
 
+
+
 @media (min-width: 600px) {
-  .Navigation__hamburger {
+  .Navigation__hamburger_container {
     display: none;
   }
 

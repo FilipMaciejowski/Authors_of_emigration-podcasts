@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react"
-import { Link } from "gatsby"
 
 import SVGContainer from "../SVGContainer/SVGContainer"
-import Contact from "../contact/contact"
+import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
+import Navbar from "../navbar/navbar"
 import classes from "./navigation.module.css"
 import Context from "../context"
+
 
 
 
@@ -33,48 +34,25 @@ const scrollHandler = () => {
 }
 
   return (
-    <Context.Consumer>
-      {context => (
-      context.isShown ? null : (
-        <>
-        <nav className={classes.Navigation__nav_main}>
-            <div className={assignedClasses.join(" ")}>
-              <SVGContainer mainClass="Logo" scroll={resize} />
-              <ul className={classes.Navigation__list}>
-                <li>
-                  <Link className={classes.Navigation__list_link}>
-                    Podcasty
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className={classes.Navigation__list_link}
-                    to="aboutProject"
-                  >
-                    O projekcie
-                  </Link>
-                </li>
-                <li className={classes.Different}>
-                  <Link
-                    className={classes.Navigation__list_link}
-                    onClick={context.open}
-                  >
-                    Kontakt
-                  </Link>
-                </li>
-                <div className={classes.Modal__contact}>
-                  {context.isOpen ? <Contact /> : null}
-                </div>
-              </ul>
-            </div>
-        </nav>
-          </>
-      ))
-    }
-         
-
-    </Context.Consumer>
-      )}
+    <>
+      <Context.Consumer>
+        {context => (
+          <nav
+            className={
+              context.isShown
+                ? classes.Navigation__container
+                : assignedClasses.join(" ")
+            }
+          >
+            <SVGContainer mainClass="Logo" scroll={resize} />
+            <Navbar />
+            <HamburgerMenu />
+          </nav>
+        )}
+      </Context.Consumer>
+    </>
+  )
+}
   
 
 export default Navigation
