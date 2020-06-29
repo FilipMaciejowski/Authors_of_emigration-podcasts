@@ -1,37 +1,31 @@
-.Logo {
+
+@media(min-width: 600px) {
+  .Logo {
   width: 10.25rem;
   height: 3.5rem;
   display: flex; 
   align-items: center;
-  transition: all .1s ease;
+  transition: ease .15s;
 }
-
-
-.Image_resize {
-  max-width: 100%;
-  height: 100%;
-  transition: all .1s ease;
-}
-
 
 .Image {
   max-width: 100%;
   height: 100%;
-  transition: all .1s ease;
-  
+    transition: ease .15s;
 }
-
-
-@media(min-width: 600px) {
-  .Resize {
+.Image_resize {
+  max-width: 100%;
+  height: 100%;
+   transition: ease .15s;
+}
+.Resize {
   width: 7.25rem;
   height: 2.75rem;
   display: flex; 
   align-items: center;
-  transition: all .1s ease;
+  transition: ease .15s;
 }
 }
-
 
 
 

@@ -9,7 +9,7 @@ import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
 import NavigationMobile from "../navigationMobile/navigationMobile"
-import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
+
 
 
 const Layout = ({ children }) => {
@@ -24,10 +24,12 @@ const Layout = ({ children }) => {
   `)
   const [isOpen, setIsOpen] = useState(false);
   const [isShown, setIsShown] = useState(false);
+  const [openList, setOpenList] = useState(false);
   
 
   const openModalHandler = () => {
     setIsOpen(true)
+    setOpenList(false)
   }
 
   const closeModalHandler = () => {
@@ -39,20 +41,32 @@ const Layout = ({ children }) => {
     setIsOpen(false)
   }
 
+  const openListHandler = () => {
+    setOpenList(true)
+    setIsOpen(false)
+  }
+
+  const closeListHandler = () => {
+    setOpenList(false)
+  }
+
 
   return (
     <Context.Provider
       value={{
         isOpen,
         isShown,
+        openList,
         open: openModalHandler,
         close: closeModalHandler,
         toggleNav: toggleNavHandler,
+        openPodcastsList: openListHandler,
+        closePodcastsList: closeListHandler
       }}
     >
       {/* <HamburgerMenu /> */}
       <NavigationMobile />
-      <div className={classes.Layout__main}>
+      <div className={classes.Layout__main} onClickCapture={closeListHandler}>
         <div>{children}</div>
         <Navigation />
         <MainSection />

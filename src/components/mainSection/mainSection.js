@@ -7,7 +7,7 @@ import classes from "./mainSection.module.css"
 
 const MainSection = () => {
   return (
-    <section className={classes.MainSection__layout}>
+    <section  lassName={classes.MainSection__layout}>
       <Header />
       <DecorationLines />
       <PodcastsSection />

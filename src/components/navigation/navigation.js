@@ -37,17 +37,19 @@ const scrollHandler = () => {
     <>
       <Context.Consumer>
         {context => (
-          <nav
-            className={
-              context.isShown
-                ? classes.Navigation__container
-                : assignedClasses.join(" ")
-            }
-          >
-            <SVGContainer mainClass="Logo" scroll={resize} />
-            <Navbar />
-            <HamburgerMenu />
-          </nav>
+          <>
+            <nav
+              className={
+                context.isShown
+                  ? classes.Navigation__container
+                  : assignedClasses.join(" ")
+              }
+            >
+              <SVGContainer mainClass="Logo" scroll={resize} />
+              <Navbar />
+              <HamburgerMenu />
+            </nav>
+          </>
         )}
       </Context.Consumer>
     </>

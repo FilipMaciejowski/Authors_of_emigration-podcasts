@@ -18,7 +18,7 @@
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
   top: 60%;
-  right: 1.2%;
+  right: 2%;
 }
 
 .Contact__layout div:nth-of-type(1n){
@@ -58,7 +58,7 @@ div.Close:hover {
   content: ' ';
   height: .75rem;
   width: 2px;
-  background-color: black;
+  background-color: var(--main_black);
 }
 .Close:before {
   transform:rotate(45deg);

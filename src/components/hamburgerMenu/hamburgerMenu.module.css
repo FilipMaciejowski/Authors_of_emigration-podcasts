@@ -1,3 +1,14 @@
+.Navigation__hamburger_container {
+  max-width: 840px;
+  height: 6.5rem;
+  padding: .5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+
 .Navigation__hamburger {
   width: 2.25rem;
   height: 2rem;
@@ -49,9 +60,6 @@
 .Navigation__hamburger.closeBurger .BurgerLine::after {
   transform: rotate(-45deg) translate(15px, 15px);
 }
-
-
-
 
 
 @media (min-width: 600px) {
