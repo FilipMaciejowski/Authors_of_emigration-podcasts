@@ -38,10 +38,15 @@ const Podcast1 = () => {
           frameborder="0"
         ></iframe>
         <p style={{ fontSize: "calc(.85rem - 25%)" }}>
-          Fot. Krzysztofa Jung, źródło:{" "}
+          Fot. Krzysztof Jung, źródło:{" "}
           <a
-            style={{ fontSize: "calc(.85rem - 25%)", textDecoration: "none", color: "var(--main_black" }}
+            style={{
+              fontSize: "calc(.85rem - 30%)",
+              textDecoration: "none",
+              color: "var(--main_black",
+            }}
             href="http://www.wojciechkarpinski.com"
+            target="_blank"
           >
             www.wojciechkarpinski.com
           </a>

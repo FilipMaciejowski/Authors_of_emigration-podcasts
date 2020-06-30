@@ -18,7 +18,7 @@
   overflow-y: auto;
   -webkit-overflow-y-scrolling: touch;
   -webkit-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
-  height: 7rem;
+  height: auto;
 }
 
 .PodcastsList__list li{
