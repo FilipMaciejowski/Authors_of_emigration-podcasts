@@ -23,7 +23,17 @@ transform: translateY(-.75%);
 }
 
 
-.PodcastElement__image_container {
+.PodcastElement__image_container.Episode1{
+  width: 100%;
+  height: 8rem;
+  margin-bottom: 0;
+  background-image: url("../../assets/images/1985_jelenski\ 1.png");
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: 100% 40%;
+}
+
+.PodcastElement__image_container.Episode2 {
   width: 100%;
   height: 8rem;
   margin-bottom: 0;
@@ -32,6 +42,10 @@ transform: translateY(-.75%);
   background-repeat: no-repeat;
   background-position: 100% 40%;
 }
+
+
+
+
 
 .PodcastElement__content {
   width: 100%;

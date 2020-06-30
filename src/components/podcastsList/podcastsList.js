@@ -5,9 +5,9 @@ import { TITLE_JELENSKI } from "../../assets/constans/constans"
 import classes from "./podcastsList.module.css"
 
 
-const PodcastsList = () => {
+const PodcastsList = ({mobile}) => {
   return (
-    <div className={classes.PodcastsList_main}>
+    <div className={mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main}>
       <ul className={classes.PodcastsList__list}>
         <li>
           <Link to="/podcast1">

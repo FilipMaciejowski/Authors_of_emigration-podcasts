@@ -27,7 +27,8 @@ const Layout = ({ children }) => {
   const [openList, setOpenList] = useState(false);
   
 
-  const openModalHandler = () => {
+  const openModalHandler = (event) => {
+    event.stopPropagation()
     setIsOpen(true)
     setOpenList(false)
   }

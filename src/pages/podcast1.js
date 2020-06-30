@@ -29,11 +29,10 @@ const Podcast1 = () => {
       </p>
       <section className={classes.Podcast__player}>
         <iframe
-          src="https://widget.spreaker.com/player?episode_id=30033366&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+          src="https://widget.spreaker.com/player?show_id=4477308&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
           width="100%"
-          height="150px"
+          height="200px"
           frameborder="0"
-          title="Podcast_Jelenski"
         ></iframe>
       </section>
     </PodcastTemplate>

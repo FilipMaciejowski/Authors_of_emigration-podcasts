@@ -1,4 +1,4 @@
-.PodcastsList_main {
+.PodcastsList__main {
   width: 13.5rem;
   height: 9rem;
   margin-top: .5rem;
@@ -14,11 +14,17 @@
   right: 40%;
 }
 
+.PodcastList__main_mobile {
+  overflow-y: scroll;
+  height: 9rem;
+}
+
 .PodcastsList__list {
   list-style: none;
   width: 100%;
   background-color: var(--main_white)
 }
+
 .PodcastsList__list li {
   width: 100%;
   border-bottom: .25px solid var(--main_grey);

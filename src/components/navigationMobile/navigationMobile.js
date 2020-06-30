@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import classes from "./navigationMobile.module.css"
 import Context from "../context.js"
 import Contact from "../contact/contact"
+import PodcastsList from "../podcastsList/podcastsList"
 
 
 const NavigationMobile = () => {
@@ -19,8 +20,9 @@ const NavigationMobile = () => {
         >
           <ul>
             <li>
-              <Link>Podcasty</Link>
+              <Link onClick={context.openPodcastsList}>Podcasty</Link>
             </li>
+            {context.openList ? <PodcastsList mobile={true}/> : null}
             <li>
               <Link to="aboutProject">O projekcie</Link>
             </li>
@@ -28,7 +30,7 @@ const NavigationMobile = () => {
               <Link onClick={context.open}>Kontakt</Link>
             </li>
             <div className={classes.Modal__contact}>
-              {context.isOpen ? <Contact mobile={true}/> : null}
+              {context.isOpen ? <Contact mobile={true} /> : null}
             </div>
           </ul>
         </nav>

@@ -87,6 +87,51 @@ p {
   text-decoration:underline;
 }
 
+.Contact__text {
+  position: relative;
+}
+
+.Contact__text span {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  cursor: pointer;
+  transform: translate(46%, 46%);
+}
+
+.Contact__text span::before {
+  content: '';
+  height: .1rem;
+  width: 1rem;
+  border-radius: 1px;
+  background-color: var(--main_black);
+  position: absolute;
+  cursor: pointer;
+  
+  
+}
+
+.Contact__text span::after {
+  content: '';
+  height: .1rem;
+  width: 1rem;
+  border-radius: 1px;
+  background-color: var(--main_black);
+  position: absolute;
+  cursor: pointer;
+}
+
+.Contact__text span::before {
+  transform: rotate(-45deg);
+}
+
+.Contact__text span::after {
+  transform: rotate(45deg);
+  
+}
+
+
+
 
 
 

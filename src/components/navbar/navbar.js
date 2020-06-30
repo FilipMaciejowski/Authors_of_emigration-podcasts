@@ -28,7 +28,8 @@ const Navbar = () => {
           <li className={classes.Different}>
             <Link
               className={classes.Navigation__list_link}
-              onClick={context.open}
+              onClick={(event) => context.open(event)}
+            
             >
               Kontakt
             </Link>

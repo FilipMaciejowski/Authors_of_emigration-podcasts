@@ -10,12 +10,11 @@
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  transition: ease 0.15s;
+  transition: all 0.15s ease;
   -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   border-bottom: 0.5px solid rgb(201, 201, 201);
-  transition: ease 0.15s;
 }
 
 /* .Overlay__click {
@@ -60,6 +59,6 @@
     -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     border-bottom: 0.5px solid rgb(201, 201, 201);
-    transition: ease 0.15s;
+    transition: ease 0.15s ;
   }
 }
