@@ -17,7 +17,7 @@
 
 .Line:nth-of-type(2n){
   margin: 0 auto;
-  width: 98.5%;
+  width: 99.5%;
   height: 1px;
   background:linear-gradient(90deg, rgba(250,250,250,1) 3%, rgba(189,189,189,0.7525385154061625) 7%, rgba(125,125,125,1) 36%, rgba(125,125,125,1) 61%, rgba(189,189,189,0.7469362745098039) 85%, rgba(250,250,250,1) 97%);
  

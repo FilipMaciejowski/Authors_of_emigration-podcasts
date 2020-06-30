@@ -36,20 +36,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15rem;
-  height: auto;
+  width: 16rem;
+  height: 2rem;
   }
 
-.Navigation__list li {
-padding: .75rem .75rem;
-}
-
-.Navigation__list li:nth-of-type(1n) {
-  padding: .75rem .75rem .75rem .75rem;
+/* .Navigation__list li {
+ padding: .75rem
 }
 
 .Navigation__list li:nth-of-type(3n)  {
   padding: .75rem 0 .75rem .75rem;
-}
+} */
 
 }

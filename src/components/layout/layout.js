@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
   const openModalHandler = (event) => {
     event.stopPropagation()
-    setIsOpen(true)
+    setIsOpen(!isOpen)
     setOpenList(false)
   }
 
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
   }
 
   const openListHandler = () => {
-    setOpenList(true)
+    setOpenList(!openList)
     setIsOpen(false)
   }
 

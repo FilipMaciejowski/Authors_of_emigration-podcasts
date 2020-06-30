@@ -126,7 +126,10 @@ background-position: 80% 16%;
   font-weight: 500;
 }
 
-.PodcastElement__content_listen svg:nth-of-type(2) {
+
+
+
+.PodcastElement__content_listen svg:nth-of-type(2n) {
   cursor: pointer;
 }
 
