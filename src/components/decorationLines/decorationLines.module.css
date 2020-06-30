@@ -1,32 +1,32 @@
 .Lines {
-  height: .9rem;
+  height: 1rem;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 1.5rem auto;
+  margin: 2rem auto;
 }
 
 .Line:nth-of-type(1n) {
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
   height: 1px;
-  background-color: rgb(199, 199, 199);
-  
+  background:linear-gradient(90deg, rgba(250,250,250,1) 3%, rgba(189,189,189,0.7525385154061625) 7%, rgba(125,125,125,1) 36%, rgba(125,125,125,1) 61%, rgba(189,189,189,0.7469362745098039) 85%, rgba(250,250,250,1) 97%);
 }
 
 .Line:nth-of-type(2n){
   margin: 0 auto;
-  width: 95%;
+  width: 98.5%;
   height: 1px;
-  background-color: rgb(199, 199, 199);
+  background:linear-gradient(90deg, rgba(250,250,250,1) 3%, rgba(189,189,189,0.7525385154061625) 7%, rgba(125,125,125,1) 36%, rgba(125,125,125,1) 61%, rgba(189,189,189,0.7469362745098039) 85%, rgba(250,250,250,1) 97%);
  
 }
 
 .Line:nth-of-type(3n){
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
   height: 1px;
-  background-color: rgb(199, 199, 199);
+  background:linear-gradient(90deg, rgba(250,250,250,1) 3%, rgba(189,189,189,0.7525385154061625) 7%, rgba(125,125,125,1) 36%, rgba(125,125,125,1) 61%, rgba(189,189,189,0.7469362745098039) 85%, rgba(250,250,250,1) 97%);
+
 }
