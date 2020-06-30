@@ -33,6 +33,7 @@ width: 100%;
 }
 .PodcastElement__image_container.Episode1{
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
+  background-position: 100% 60%;
 }
 .PodcastElement__image_container.Episode2 {
   background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");

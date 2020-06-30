@@ -10,25 +10,38 @@ const Podcast1 = () => {
   ]
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Konstany Jeleński</h1>
-      <p style={styles[1]}>
-        Kot Jeleński, żołnierz, intelektualista, przyjaciel Gombrowicza, Miłosza
-        i Czapskiego, krnąbrny niekiedy współpracownik paryskiej „Kultury”,
-        człowiek światowy, wyłamuje się ze wszystkich znanych nam szablonów
-        polskiej emigracji. Trudno go sobie wyobrazić na pomniku. Błyskotliwy,
-        zmienny – ale bezkompromisowy w sprawach zasadniczych – ukrywający swoje
-        życie prywatne przed wzrokiem emigracyjnych plotkarzy; nawet ci, którzy
-        go długo znali, nie mogą być pewni, że go naprawdę poznali. Biografia
-        Anny Arno świetnie uchwyciła tę proteuszową postać w stu migawkach, ze
-        stu punktów widzenia.
+      <h1 style={styles[0]}>Konstany Jeleński odc.1</h1>
+      <p style={{ fontStyle: "italic", fontSize: "calc(.85rem - 15%)" }}>
+        To, co robiłem i myślałem, nie miało właściwie nigdy głębokiego,
+        realnego związku. Byłem może (w przypadkowym porządku): liberałem,
+        synem, humanistą, czytelnikiem, sumiennym urzędnikiem, Polakiem,
+        przyjacielem, kochankiem, pederastą itd. „Kot Jeleński” – postać nieco
+        proteuszowska, zależnie od tego, przez kogo odzwierciedlana.
       </p>
       <p style={styles[1]}>
-        Konstanty Jeleński był jednym z najciekawszych, najbardziej
-        błyskotliwych, wielkodusznych i utalentowanych ludzi, jakich spotkałam w
-        życiu. I najbardziej tajemniczym. Książka Anny Arno jest najlepszym
-        możliwym kluczem do tej tajemnicy. Intelektualista, wielki Polak, wielki
-        Europejczyk, rozdawał swoje dary szczodrze i bez ostentacji. Warto je
-        pozbierać.
+        Pisał z Rzymu w sierpniu 1952 roku do Józefa Czapskiego, Konstanty
+        Jeleński. Znakomity eseista, krytyk, żołnierz I Dywizji Pancernej,
+        współtwórca środowiska paryskiej „Kultury” podobno odznaczał się dużym
+        wdziękiem, trudno nie wierzyć w te słowa, kiedy patrzy się na jego
+        zdjęcia. Urodził się w 1922 roku w Warszawie. Od dzieciństwa podróżował
+        po Europie razem z rodzicami – ojcem dyplomatą (Konstantym Jeleńskim) i
+        matką Teresą „Reną” Jeleńską (tłumaczką). Polskę opuścił na stałe w
+        grudniu 1939 roku i nigdy do niej nie powrócił, choć jego życiorys nie
+        musiał tego zakładać. Bez przeszkód przemieszczał się między Paryżem a
+        Rzymem, spędzając wakacje na Korsyce z malarką Leonor Fini. Konstanty
+        Jeleński był kimś, kogo można by nazwać światowcem, inteligentem, ale i
+        ambasadorem polskich spraw oraz polskiej kultury za granicą. Jak podają
+        źródła, wiele wskazuje na to, że jego biologicznym ojcem był Carlo
+        Sforza, minister spraw zagranicznych Włoch, następnie ambasador w
+        Paryżu.
+      </p>
+      <p style={styles[1]}>
+        „Fotografie nie oddają urody, którą zapamiętali przyjaciele. To musiało
+        być coś więcej niż regularne rysy: dystynkcja, godność, szlachetność
+        zapisane w ruchach, w spojrzeniu, rytmie mowy, przechyleniu głowy” –
+        pisze o jednym ze zdjęć Jeleńskiego Anna Arno, ostatnio autorka niedawno
+        wydanej książki „Kot. Opowieść o Konstantym A. Jeleńskim”. Posłuchajmy
+        pierwszego odcinka opowieści.
       </p>
       <section className={classes.Podcast__player}>
         <iframe

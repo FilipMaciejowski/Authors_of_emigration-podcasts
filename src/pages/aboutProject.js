@@ -5,7 +5,7 @@ import Ministry from "../components/ministry/ministry"
 
 const AboutProject = () => {
 
-  const styles=[{fontSize: "calc(1.25rem - 15%)"}, {fontSize: "calc(.85rem - 15%)"}, {fontWeight: "bold"}]
+  const styles=[{fontSize: "calc(1.25rem - 20%)"}, {fontSize: "calc(.85rem - 15%)"}, {fontWeight: "bold"}]
   const styles2 = [
     { fontSize: "calc(1.25rem - 7.5%)" },
     { fontSize: "calc(.85rem - 7.5%)" },
@@ -46,7 +46,7 @@ const AboutProject = () => {
           <span style={styles[2]}>Dawid Dziedziczak</span> – absolwent
           edytorstwa na Wydziale Polonistyki oraz historii sztuki na Wydziale
           Historycznym Uniwersytetu Jagiellońskiego w Krakowie. Przez ostatnie
-          9 lat dziennikarz, reporter, prowadzący
+          9 lat dziennikarz, reporter, wydawca
           Programu II Polskiego Radia w Warszawie. Autor audycji w pasmach
           „Notatnik Dwójki”, „Spotkania po zmroku”, „Kwadrans bez muzyki”,
           „Zapiski ze współczesności”, „O wszystkim z kulturą”, wydawca „Poranka
