@@ -16,18 +16,21 @@ const PodcastsSection = () => {
             date="01.07.2020"
             title={TITLE_JELENSKI}
             description={DESCRIPTION_JELENSKI}
+            page="podcast1"
           />
           <PodcastElement
             episode={2}
             date="01.07.2020"
             title={TITLE_JELENSKI}
             description={DESCRIPTION_JELENSKI}
+            page="podcast2"
           />
           <PodcastElement
             episode={3}
             date="01.07.2020"
             title={TITLE_JELENSKI}
             description={DESCRIPTION_JELENSKI}
+            page="podcast3"
           />
           <PodcastElement
             episode={4}

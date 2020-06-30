@@ -4,7 +4,10 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast1 = () => {
-  const styles = [{ fontSize: "calc(1.25rem - 15%)" }, { fontSize: "calc(.85rem - 15%)" }]
+  const styles = [
+    { fontSize: "calc(1.25rem - 15%)" },
+    { fontSize: "calc(.85rem - 15%)" },
+  ]
   return (
     <PodcastTemplate>
       <h1 style={styles[0]}>Konstany Jeleński</h1>
@@ -29,7 +32,7 @@ const Podcast1 = () => {
       </p>
       <section className={classes.Podcast__player}>
         <iframe
-          src="https://widget.spreaker.com/player?episode_id=33893438&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+          src="https://widget.spreaker.com/player?show_id=4477308&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
           width="100%"
           height="200px"
           frameborder="0"
@@ -39,4 +42,4 @@ const Podcast1 = () => {
   )
 }
 
-export default Podcast1 
+export default Podcast1

@@ -11,19 +11,22 @@
   position: absolute;
   top: 60%;
   right: 40%;
+  overflow-y: auto;
 }
 
 .PodcastList__main_mobile {
   overflow-y: auto;
-  overflow-x: hidden;
-  webkit-overflow-Y-scrolling: touch;
-  webkit-box-align: stretch;
-  -webkit-box-orient: vertical;
+  -webkit-overflow-y-scrolling: touch;
   -webkit-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   height: 7rem;
 }
 
-.PodcastsList__list {
+.PodcastList__main_mobile {
+
+}
+
+.PodcastsList__list li{
+  padding-right: .75rem !important;
   list-style: none;
   width: 100%;
   background-color: var(--main_white)
@@ -38,9 +41,6 @@
   padding: .25rem .25rem;
 }
 
-.PodcastsList__list_different {
-  padding-right: .75rem !important;
-}
 
 .PodcastsList__list li a {
   text-decoration: none;

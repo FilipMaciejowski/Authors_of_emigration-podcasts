@@ -4,19 +4,23 @@ import { Link } from "gatsby"
 import classes from "./podcastElement.module.css"
 
 
-const PodcastElement = ({date, title, description, episode}) => {
+const PodcastElement = ({date, title, description, episode, page}) => {
   return (
     <div className={classes.PodcastElement__main}>
       <div className={classes.PodcastElement__container}>
-        <div className={[classes.PodcastElement__image_container, classes[`Episode${episode}`]].join(' ')}>
-        </div>
+        <div
+          className={[
+            classes.PodcastElement__image_container,
+            classes[`Episode${episode}`],
+          ].join(" ")}
+        ></div>
         <div className={classes.PodcastElement__content}>
           <div className={classes.PodcastElement__content_top}>
             <p>{date}</p>
           </div>
 
           <div className={classes.Podcast__content_title}>
-            <Link to="/podcast1/">
+            <Link to={`/${page}`}>
               <h5>{title}</h5>
             </Link>
             <div>
@@ -46,7 +50,7 @@ const PodcastElement = ({date, title, description, episode}) => {
                 </svg>
               </div>
             </div>
-            <Link to="/podcast1/">
+            <Link to={`/${page}`}>
               <div className={classes.Headphones__container}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

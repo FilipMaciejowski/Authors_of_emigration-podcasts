@@ -1,13 +1,16 @@
 import React from "react"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import { TITLE_JELENSKI } from "../../assets/constans/constans"
 
 import classes from "./podcastsList.module.css"
 
-
-const PodcastsList = ({mobile}) => {
+const PodcastsList = ({ mobile }) => {
   return (
-    <div className={mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main}>
+    <div
+      className={
+        mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
+      }
+    >
       <ul className={classes.PodcastsList__list}>
         <li>
           <Link to="/podcast1">
@@ -16,24 +19,21 @@ const PodcastsList = ({mobile}) => {
           </Link>
         </li>
         <li>
-          <Link to="/podcast1">
-            {" "}
+          <Link to="/podcast2">
             🎧 {"\u00A0"}
-            {TITLE_JELENSKI}, Odc.1
+            {TITLE_JELENSKI}, Odc.2
           </Link>
         </li>
         <li className={classes.PodcastsList__list_different}>
-          <Link to="/podcast1">
-            {" "}
+          <Link to="/podcast3">
             🎧 {"\u00A0"}
-            {TITLE_JELENSKI}, Odc.1
+            {TITLE_JELENSKI}, Odc.3
           </Link>
         </li>
         <li>
-          <Link to="/podcast1">
-            {" "}
+          <Link to="/podcast4">
             🎧 {"\u00A0"}
-            {TITLE_JELENSKI}, Odc.1
+            {TITLE_JELENSKI}, Odc.4
           </Link>
         </li>
       </ul>

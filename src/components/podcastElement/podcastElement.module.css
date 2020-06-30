@@ -23,28 +23,25 @@ transform: translateY(-.75%);
 }
 
 
+.PodcastElement__image_container {
+width: 100%;
+  height: 8rem;
+  margin-bottom: 0;
+  background-image: transparent;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: 100% 40%;
+}
 .PodcastElement__image_container.Episode1{
-  width: 100%;
-  height: 8rem;
-  margin-bottom: 0;
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: 100% 40%;
 }
-
 .PodcastElement__image_container.Episode2 {
-  width: 100%;
-  height: 8rem;
-  margin-bottom: 0;
   background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: 100% 40%;
 }
-
-
-
+.PodcastElement__image_container.Episode3 {
+background-image: url("../../assets/images/1985_kajiwkpary1985fotkrzyj-35jl-49\ 1.png");
+background-position: 80% 16%;
+}
 
 
 .PodcastElement__content {
