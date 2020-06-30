@@ -4,7 +4,10 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast1 = () => {
-  const styles = [{ fontSize: "calc(1.25rem - 15%)" }, { fontSize: "calc(.85rem - 15%)" }]
+  const styles = [
+    { fontSize: "calc(1.25rem - 15%)" },
+    { fontSize: "calc(.85rem - 15%)" }
+  ]
   return (
     <PodcastTemplate>
       <h1 style={styles[0]}>Konstany Jeleński</h1>
@@ -34,6 +37,15 @@ const Podcast1 = () => {
           height="200px"
           frameborder="0"
         ></iframe>
+        <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+          Fot. Krzysztofa Jung, źródło:{" "}
+          <a
+            style={{ fontSize: "calc(.85rem - 25%)", textDecoration: "none", color: "var(--main_black" }}
+            href="http://www.wojciechkarpinski.com"
+          >
+            www.wojciechkarpinski.com
+          </a>
+        </p>
       </section>
     </PodcastTemplate>
   )

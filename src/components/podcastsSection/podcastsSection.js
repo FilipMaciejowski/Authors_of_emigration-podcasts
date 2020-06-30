@@ -18,7 +18,7 @@ const PodcastsSection = () => {
             description={DESCRIPTION_JELENSKI}
             page="podcast1"
           />
-          <PodcastElement
+          {/* <PodcastElement
             episode={2}
             date="01.07.2020"
             title={TITLE_JELENSKI}
@@ -37,7 +37,7 @@ const PodcastsSection = () => {
             date="01.07.2020"
             title={TITLE_JELENSKI}
             description={DESCRIPTION_JELENSKI}
-          />
+          /> */}
         </div>
       </main>
     </>

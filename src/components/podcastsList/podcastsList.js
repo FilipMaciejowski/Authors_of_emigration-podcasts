@@ -18,7 +18,7 @@ const PodcastsList = ({ mobile }) => {
             {TITLE_JELENSKI}, Odc.1
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/podcast2">
             🎧 {"\u00A0"}
             {TITLE_JELENSKI}, Odc.2
@@ -35,7 +35,7 @@ const PodcastsList = ({ mobile }) => {
             🎧 {"\u00A0"}
             {TITLE_JELENSKI}, Odc.4
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   )
