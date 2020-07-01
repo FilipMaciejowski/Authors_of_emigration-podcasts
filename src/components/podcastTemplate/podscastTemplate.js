@@ -35,7 +35,7 @@ const PodcastTemplate = ({ children}) => {
         </header>
         <main className={classes.Template__text}>{children}</main>
       </div>
-      <Footer data="" containerSize="Footer__container_narrow"></Footer>
+      <Footer data="" containerSize="Footer__container_narrow" narrow={true}></Footer>
     </>
   )
 }

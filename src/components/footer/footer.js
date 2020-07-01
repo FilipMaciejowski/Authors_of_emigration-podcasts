@@ -3,12 +3,27 @@ import React from "react"
 import classes from "./footer.module.css"
 
 
-const Footer = ({data, children, containerSize}) => {
+const Footer = ({data, children, containerSize, narrow}) => {
+
+let line;
+if (containerSize === "Footer__container_narrow") {
+  line = null;
+} else {
+  line = <span className={classes.Footer_line}></span>
+}
   return (
     <footer className={classes.Footer__main}>
       <div className={classes[containerSize]}>
-        <div className={classes.Footer__logo_socialMedia}>
+        <div
+          className={
+            narrow
+              ? [classes.Footer__logo_socialMedia, classes.Narrow].join(" ")
+              : classes.Footer__logo_socialMedia
+          }
+        >
+          <a href="www.facebook.com">
             <svg
+              className={classes.Faceboo}
               viewBox="0 0 53 97"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -18,15 +33,14 @@ const Footer = ({data, children, containerSize}) => {
                 fill="#ADADAD"
               />
             </svg>
-        
-          
+          </a>
+          <a href="www.instagram.com">
             <svg
-             className={classes.Instagram}
+              className={classes.Instagram}
               viewBox="0 0 256 256"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
-              preserveAspectRatio="xMidYMid"
             >
               <g>
                 <path
@@ -35,8 +49,9 @@ const Footer = ({data, children, containerSize}) => {
                 ></path>
               </g>
             </svg>
-          
+          </a>
         </div>
+        {line}
         <p className={classes.Footer__text}>
           {children} {data}
         </p>

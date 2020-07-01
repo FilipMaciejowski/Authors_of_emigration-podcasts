@@ -16,9 +16,7 @@ const [assignedClasses, setAssignedClasses] = useState(
   classes.Navigation__container, 
 ])
 
-
 const [resize, setResize] = useState(false)
-
 
 const scrollHandler = () => {
   const windowHeight = window.scrollY;
