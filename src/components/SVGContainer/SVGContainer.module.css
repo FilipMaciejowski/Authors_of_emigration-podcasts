@@ -5,7 +5,7 @@
   height: auto;
   display: flex; 
   align-items: center;
-  transition: all .5s;
+  transition: all .4s;
   }
 
 .Image {
@@ -23,7 +23,7 @@
   height: auto;
   display: flex; 
   align-items: center;
-  transition: all .5s;
+  transition: all .4s;
 }
 }
 

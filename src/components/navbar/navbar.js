@@ -34,10 +34,8 @@ const Navbar = () => {
               Kontakt
             </Link>
           </li>
-          <div className={classes.Modal__contact}>
             {context.isOpen ? <Contact /> : null}
-          </div>
-          <div>{context.openList ? <PodcastsList /> : null}</div>
+            {context.openList ? <PodcastsList /> : null}
         </ul>
       )}
     </Context.Consumer>

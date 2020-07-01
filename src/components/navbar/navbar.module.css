@@ -1,9 +1,9 @@
-.Modal__contact {
-  position: absolute;
+/* .Modal__contact {
+  position: relative;
   top: 77.5%;
   right: -2.5%;
   transition: all .2s ease ;
-}
+} */
 
 .Navigation__list {
   display: none;
@@ -12,7 +12,6 @@
 .Navigation__list li  {
   list-style: none;
   letter-spacing: none;
-  padding: .75rem 0;
 }
 
 .Navigation__list_link {
@@ -20,6 +19,7 @@
   color: var(--main_black);
   font-size: .85rem;
   font-weight: 500;
+  height: 100%;
 }
 
 .Navigation__list_link:hover {
@@ -31,13 +31,12 @@
 }
 
 @media(min-width: 600px) {
-  .Navigation__list  {
-  position: relative;
+  .Navigation__list{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 16rem;
-  height: 2rem;
+  height: 3rem;
   }
 
 /* .Navigation__list li {
