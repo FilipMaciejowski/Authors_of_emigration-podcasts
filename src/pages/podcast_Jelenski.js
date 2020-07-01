@@ -11,13 +11,18 @@ const Podcast1 = () => {
   return (
     <PodcastTemplate>
       <h1 style={styles[0]}>Konstany Jeleński, odc.1</h1>
-      <p style={{ fontStyle: "italic", fontSize: "calc(.85rem - 15%)" }}>
+      <p style={{ marginBottom: ".25rem", fontStyle: "italic", fontSize: "calc(.85rem - 15%)" }}>
         To, co robiłem i myślałem, nie miało właściwie nigdy głębokiego,
         realnego związku. Byłem może (w przypadkowym porządku): liberałem,
         synem, humanistą, czytelnikiem, sumiennym urzędnikiem, Polakiem,
         przyjacielem, kochankiem, pederastą itd. „Kot Jeleński” – postać nieco
         proteuszowska, zależnie od tego, przez kogo odzwierciedlana.
       </p>
+      <p style={{marginTop: "0", fontSize: "calc(.85rem - 15%)" }}>
+        "Konstanty A. Jeleński. Listy z Korsyki" Fundacja Zeszytów Literackich,
+        Warszawa 2003.
+      </p>
+      <br/>
       <p style={styles[1]}>
         Pisał z Rzymu w sierpniu 1952 roku do Józefa Czapskiego, Konstanty
         Jeleński. Znakomity eseista, krytyk, żołnierz I Dywizji Pancernej,
