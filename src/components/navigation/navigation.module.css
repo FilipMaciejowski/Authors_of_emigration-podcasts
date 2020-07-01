@@ -1,5 +1,5 @@
 .Navigation__container {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 840px;
   max-width: 100%;
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  transition: all 0.1s;
+  transition: all 0.15s;
   -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
@@ -38,7 +38,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 3;
-    transition: ease 0.15s;
+    transition: all 0.15s;
     border-bottom: 1px solid var(--main_black);
     box-shadow: none;
   }
@@ -50,6 +50,6 @@
     -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     border-bottom: 0.5px solid rgb(201, 201, 201);
-    transition: ease 0.15s ;
+    transition: all 0.15s ;
   }
 }
