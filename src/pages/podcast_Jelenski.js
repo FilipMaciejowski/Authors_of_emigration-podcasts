@@ -49,6 +49,7 @@ const Podcast1 = () => {
           width="100%"
           height="200px"
           frameborder="0"
+          title="Podcast__Tworcy_Emigracji_Jelenski_1"
         ></iframe>
         <p style={{ fontSize: "calc(.85rem - 25%)" }}>
           Fot. Krzysztof Jung, źródło:{" "}

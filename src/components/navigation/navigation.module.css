@@ -10,22 +10,12 @@
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  transition: all 0.15s ease;
+  transition: all 0.1s;
   -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   border-bottom: 0.5px solid rgb(201, 201, 201);
 }
-
-/* .Overlay__click {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: transparent;
-  z-index: 10;
-} */
 
 @media (min-width: 600px) {
   .Navigation__hamburger {
@@ -37,7 +27,7 @@
   }
 
   .Navigation__container {
-    position: sticky;
+    position: absolute;
     top: 0;
     width: 840px;
     max-width: 100%;
@@ -49,11 +39,12 @@
     justify-content: space-between;
     z-index: 3;
     transition: ease 0.15s;
-    border-bottom: none;
+    border-bottom: 1px solid var(--main_black);
     box-shadow: none;
   }
 
   .Navigation__container.Scroll {
+    position: fixed;
     height: 4rem;
     -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);

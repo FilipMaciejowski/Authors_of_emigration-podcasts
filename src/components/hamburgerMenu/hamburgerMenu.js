@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 
 
 import Context from "../context.js"
@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
     <Context.Consumer>
       {context => (
         <div className={classes.Navigation__hamburger_container}>
-          <div
+          <div role="button"
             onClick={context.toggleNav}
             className={
               context.isShown

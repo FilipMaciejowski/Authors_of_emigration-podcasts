@@ -1,5 +1,5 @@
 .MainSection__layout {
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: var(--main__white);
 }

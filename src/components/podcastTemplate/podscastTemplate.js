@@ -9,19 +9,21 @@ const PodcastTemplate = ({ children}) => {
 
   const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
 
+
+  const scrollHandler = () => {
+    const windowHeight = window.scrollY
+    if (windowHeight > 1) {
+      setAssignedClasses([classes.Header__layout, classes.Scroll])
+    } else {
+      setAssignedClasses([classes.Header__layout])
+    }
+  }
+  
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler)
   }, [])
 
-const scrollHandler = () => {
-  const windowHeight = window.pageYOffset;
-  if(windowHeight > 1) {
-    setAssignedClasses([classes.Header__layout, classes.Scroll])
-  }
-  else {
-    setAssignedClasses([classes.Header__layout])
-  }
-}
+
 
   return (
     <>

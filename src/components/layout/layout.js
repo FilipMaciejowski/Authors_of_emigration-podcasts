@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -27,6 +27,13 @@ const Layout = ({ children }) => {
   const [openList, setOpenList] = useState(false);
   
 
+  
+
+
+  
+
+
+
   const openModalHandler = (event) => {
     event.stopPropagation()
     setIsOpen(!isOpen)
@@ -51,32 +58,29 @@ const Layout = ({ children }) => {
     setOpenList(false)
   }
 
-
+  const value = {
+    isOpen,
+    isShown,
+    openList,
+    open: openModalHandler,
+    close: closeModalHandler,
+    toggleNav: toggleNavHandler,
+    openPodcastsList: openListHandler,
+    closePodcastsList: closeListHandler,
+  }
   return (
-    <Context.Provider
-      value={{
-        isOpen,
-        isShown,
-        openList,
-        open: openModalHandler,
-        close: closeModalHandler,
-        toggleNav: toggleNavHandler,
-        openPodcastsList: openListHandler,
-        closePodcastsList: closeListHandler
-      }}
-    >
-      {/* <HamburgerMenu /> */}
-      <NavigationMobile />
+    <Context.Provider value={value}>
       <div className={classes.Layout__main} onClickCapture={closeListHandler}>
         <div>{children}</div>
+        <NavigationMobile />
         <Navigation />
         <MainSection />
-      </div>
-      <div className={classes.MainSection__ministry}>
-        <img
-          src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
-          alt="Ministerstwo_kultury_logo"
-        />
+        <div className={classes.MainSection__ministry}>
+          <img
+            src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
+            alt="Ministerstwo_kultury_logo"
+          />
+        </div>
       </div>
       <Footer
         data={data.site.siteMetadata.developer}

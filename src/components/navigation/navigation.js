@@ -15,29 +15,34 @@ const [assignedClasses, setAssignedClasses] = useState(
 [
   classes.Navigation__container, 
 ])
+
+
 const [resize, setResize] = useState(false)
 
-useEffect(() => {
-  window.addEventListener('scroll', scrollHandler
-)
-}, [])
 
 const scrollHandler = () => {
-  const windowHeight = window.pageYOffset;
- if (windowHeight > 1) {
-   setAssignedClasses([classes.Navigation__container, classes.Scroll])
-   setResize(!resize)
- } else {
-   setAssignedClasses([classes.Navigation__container])
-   setResize(resize)
- }
+  const windowHeight = window.scrollY;
+  console.log(windowHeight)
+  if (windowHeight > 5) {
+    setAssignedClasses([classes.Navigation__container, classes.Scroll])
+    setResize(true)
+    
+  } else {
+    setAssignedClasses([classes.Navigation__container])
+    setResize(false)
+  }
 }
+
+useEffect(() => {
+  window.addEventListener("scroll", scrollHandler)
+}, [])
+
 
   return (
     <>
       <Context.Consumer>
         {context => (
-          <>
+          <div className={classes.Navigation__main}>
             <nav
               className={
                 context.isShown
@@ -49,7 +54,7 @@ const scrollHandler = () => {
               <Navbar />
               <HamburgerMenu />
             </nav>
-          </>
+          </div>
         )}
       </Context.Consumer>
     </>
