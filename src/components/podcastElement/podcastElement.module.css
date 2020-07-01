@@ -5,14 +5,15 @@
   border-bottom: 1.5px solid var(--main_black);
   transition: ease .2s;
   background-color: var(--main_white);
+  box-shadow: 1px 3px 13px rgba(100,110,140,.1), 1px 3px 4px rgba(100,110,140,.15);
 }
 
+
 .PodcastElement__main:hover {
--webkit-box-shadow: 1px 1px 12px 1px rgba(189,189,189,0.67);
--moz-box-shadow: 1px 1px 12px 1px rgba(189,189,189,0.67);
-box-shadow: 1px 1px 12px 1px rgba(189,189,189,0.67);
-transition: ease-in-out .2s;
-transform: translateY(-.75%);
+box-shadow: 0 8px 22px rgba(100,110,140,.2), 0 5px 18px rgba(100,110,140,.25);
+transition: ease .2s;
+transform: translate3D(0,-2px,0);
+cursor: pointer;
 }
 
 
@@ -49,7 +50,7 @@ background-position: 80% 16%;
   height: auto;
   font-weight: 600;
   padding: 0 .25rem;
-}
+} 
 
 .PodcastElement__content a {
   text-decoration: none;

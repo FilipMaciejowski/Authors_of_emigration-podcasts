@@ -16,7 +16,7 @@ const PodcastsSection = () => {
             date="01.07.2020"
             title={TITLE_JELENSKI}
             description={DESCRIPTION_JELENSKI}
-            page="podcast1"
+            page="podcast_Jelenski"
           />
           {/* <PodcastElement
             episode={2}

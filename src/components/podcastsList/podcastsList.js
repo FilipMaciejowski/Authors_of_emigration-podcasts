@@ -13,7 +13,7 @@ const PodcastsList = ({ mobile }) => {
     >
       <ul className={classes.PodcastsList__list}>
         <li>
-          <Link to="/podcast1">
+          <Link to="/podcast_Jelenski">
             🎧 {"\u00A0"}
             {TITLE_JELENSKI}, Odc.1
           </Link>
