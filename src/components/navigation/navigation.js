@@ -23,7 +23,7 @@ const [resize, setResize] = useState(false)
 const scrollHandler = () => {
   const windowHeight = window.scrollY;
   console.log(windowHeight)
-  if (windowHeight > 5) {
+  if (windowHeight > 1) {
     setAssignedClasses([classes.Navigation__container, classes.Scroll])
     setResize(true)
     
