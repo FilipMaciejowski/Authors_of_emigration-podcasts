@@ -54,8 +54,6 @@ const PodcastElement = ({date, title, description, episode, page}) => {
               <div className={classes.Headphones__container}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="28"
-                  height="28"
                   viewBox="2 0 20 20"
                 >
                   <defs />

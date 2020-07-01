@@ -21,7 +21,7 @@ if (containerSize === "Footer__container_narrow") {
               : classes.Footer__logo_socialMedia
           }
         >
-          <a href="www.facebook.com">
+          <a href="https://www.facebook.com/Tw%C3%B3rcy-emigracji-101510721629906">
             <svg
               className={classes.Faceboo}
               viewBox="0 0 53 97"

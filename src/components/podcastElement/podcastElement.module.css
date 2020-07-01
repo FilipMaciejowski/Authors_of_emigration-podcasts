@@ -129,8 +129,6 @@ background-position: 80% 16%;
 }
 
 
-
-
 .PodcastElement__content_listen svg:nth-of-type(2n) {
   cursor: pointer;
 }
@@ -146,6 +144,13 @@ background-position: 80% 16%;
 
 .Arrow__container{
   transform: translateY(20%);
+}
+
+
+.Headphones__container svg {
+  width: 55%;
+  height: 55%;
+  transform: translateX(77.5%);
 }
 
 @media(min-width: 440px) {
