@@ -1,21 +1,42 @@
-.Navigation__container {
+
+
+.Navigation__main {
   position: fixed;
-  top: 0;
+    width: 100vw;
+    height: 6.5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main_white);
+    z-index: 3;
+    transition: all 0.15s;
+    -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+    -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+    box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+  }
+
+
+.Navigation__container {
   width: 840px;
   max-width: 100%;
   height: 6.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0 1rem;
+  margin: 0 auto;
   background-color: var(--main_white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
-  transition: all 0.15s;
-  -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-  -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-  box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-  border-bottom: 0.5px solid rgb(201, 201, 201);
 }
+
+.Navigation__line {
+    position: absolute;
+    top: 6.4rem;
+    width: 804px;
+    margin: 0 auto;
+    border: 1px solid var(--main_black);
+  }
+
 
 @media (min-width: 600px) {
   .Navigation__hamburger {
@@ -26,30 +47,54 @@
     display: none;
   }
 
-  .Navigation__container {
-    position: absolute;
-    top: 0;
+  .Navigation__main {
+    
     width: 840px;
     max-width: 100%;
-    height: 6.5rem;
-    padding: 0 1rem;
-    background-color: var(--main_white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 3;
-    transition: all 0.1s;
-    border-bottom: 1px solid var(--main_black);
+    height: 6.5;
     box-shadow: none;
+    border-bottom: none;
   }
 
-  .Navigation__container.Scroll {
+  .Navigation__main.Scroll {
     position: fixed;
+    top:0;
     height: 4rem;
     -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-    border-bottom: 0.5px solid rgb(201, 201, 201);
-    transition: all 0.1s ;
+    transition: all 0.2s;
   }
+
+
+  .Navigation__container {
+    width: 840px;
+    max-width: 100%;
+    height: 6.5rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+    border-bottom: none;
+  }
+
+  .Navigation__container.Scroll {
+    height: 4rem;
+    display: flex;
+    transition: all 0.2s;
+  }
+
+  .Navigation__line {
+    position: absolute;
+    top: 6.4rem;
+    width: 804px;
+    margin: 0 auto;
+    border: 1px solid var(--main_black);
+  }
+
+  .Navigation__line.Scroll {
+    display: none;
+  }
+
 }

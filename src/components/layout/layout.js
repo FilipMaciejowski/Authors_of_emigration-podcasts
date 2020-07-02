@@ -2,7 +2,6 @@ import React, { useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-
 import Footer from "../footer/footer"
 import classes from "./layout.module.css"
 import Context from "../context"
@@ -26,13 +25,6 @@ const Layout = ({ children }) => {
   const [isShown, setIsShown] = useState(false);
   const [openList, setOpenList] = useState(false);
   
-
-  
-
-
-  
-
-
 
   const openModalHandler = (event) => {
     event.stopPropagation()
@@ -58,6 +50,7 @@ const Layout = ({ children }) => {
     setOpenList(false)
   }
 
+
   const value = {
     isOpen,
     isShown,
@@ -68,6 +61,8 @@ const Layout = ({ children }) => {
     openPodcastsList: openListHandler,
     closePodcastsList: closeListHandler,
   }
+
+
   return (
     <Context.Provider value={value}>
       <div className={classes.Layout__main} onClickCapture={closeListHandler}>

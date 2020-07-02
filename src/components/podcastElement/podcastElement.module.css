@@ -24,9 +24,10 @@ cursor: pointer;
 
 
 .PodcastElement__image_container {
-width: 100%;
+  width: 100%;
   height: 8rem;
   margin-bottom: 0;
+  background-size: cover;
   background-image: transparent;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -142,7 +143,7 @@ background-position: 80% 16%;
   text-transform: lowercase;
 }
 
-.Arrow__container{
+.Arrow__container {
   transform: translateY(20%);
 }
 
@@ -152,6 +153,7 @@ background-position: 80% 16%;
   height: 55%;
   transform: translateX(77.5%);
 }
+
 
 @media(min-width: 440px) {
   .PodcastElement__main {
