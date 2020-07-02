@@ -1,21 +1,18 @@
-
-
 .Navigation__main {
   position: fixed;
-    width: 100vw;
-    height: 6.5rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main_white);
-    z-index: 3;
-    transition: all 0.15s;
-    -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-    -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-    box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
-  }
-
+  width: 100vw;
+  height: 6.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main_white);
+  z-index: 3;
+  transition: all 0.15s;
+  -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+  -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+  box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+}
 
 .Navigation__container {
   width: 840px;
@@ -30,13 +27,17 @@
 }
 
 .Navigation__line {
-    position: absolute;
-    top: 6.4rem;
-    width: 804px;
-    margin: 0 auto;
-    border: 1px solid var(--main_black);
-  }
-
+  position: absolute;
+  top: 6.4rem;
+  width: 804px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(39, 39, 39, 1) 30%,
+    rgba(150, 150, 150, 1) 70%
+  );
+}
 
 @media (min-width: 600px) {
   .Navigation__hamburger {
@@ -48,7 +49,6 @@
   }
 
   .Navigation__main {
-    
     width: 840px;
     max-width: 100%;
     height: 6.5;
@@ -58,14 +58,13 @@
 
   .Navigation__main.Scroll {
     position: fixed;
-    top:0;
+    top: 0;
     height: 4rem;
     -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
     transition: all 0.2s;
   }
-
 
   .Navigation__container {
     width: 840px;
@@ -86,8 +85,12 @@
   }
 
   @keyframes lineAnimation {
-    from {opacity: 0}
-    to {opacity: 1}
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .Navigation__line {
@@ -95,14 +98,18 @@
     top: 6.4rem;
     width: 804px;
     margin: 0 auto;
-    height: 1px;
-    background-color: var(--main_black);
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(39, 39, 39, 1) 30%,
+      rgba(150, 150, 150, 1) 70%
+    );
     transition: all 2s;
     animation: lineAnimation 1.5s ease;
+    border: none;
   }
 
   .Navigation__line.Scroll {
     display: none;
   }
-
 }
