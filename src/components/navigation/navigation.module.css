@@ -85,12 +85,20 @@
     transition: all 0.2s;
   }
 
+  @keyframes lineAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
   .Navigation__line {
     position: absolute;
     top: 6.4rem;
     width: 804px;
     margin: 0 auto;
-    border: 1px solid var(--main_black);
+    height: 1px;
+    background-color: var(--main_black);
+    transition: all 2s;
+    animation: lineAnimation 1.5s ease;
   }
 
   .Navigation__line.Scroll {
