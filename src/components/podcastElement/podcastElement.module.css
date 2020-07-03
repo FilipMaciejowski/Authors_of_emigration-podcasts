@@ -12,7 +12,7 @@
 .PodcastElement__main:hover {
 box-shadow: 0 6px 18px rgba(100,110,140,.2), 0 5px 18px rgba(100,110,140,.25);
 transition: ease .2s;
-transform: translate3D(0,-2px,0);
+transform: translateY(-1px);
 cursor: pointer;
 }
 
@@ -38,7 +38,7 @@ cursor: pointer;
   background-position: 100% 60%;
 }
 .PodcastElement__image_container.Episode2 {
-  background-image: url("../../assets/images/kot-opowiesc-o-konstantym-a-jeleskim.jpg");
+  background-image: url("../../assets/images/1985_jelenski\ 1.png");
 }
 .PodcastElement__image_container.Episode3 {
 background-image: url("../../assets/images/1985_kajiwkpary1985fotkrzyj-35jl-49\ 1.png");
@@ -106,6 +106,7 @@ background-position: 80% 16%;
   font-size: calc(0.85rem - 15%);
   line-height: 0.9rem;
   margin-bottom: .25rem;
+  height: 3.5rem;
 }
 
 .PodcastElement__content_listen {
@@ -114,8 +115,6 @@ background-position: 80% 16%;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
-  
-  padding-bottom: .75rem;
 }
 .PodcastElement__content_listen div {
   width: 65%;

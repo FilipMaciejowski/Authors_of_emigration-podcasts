@@ -24,7 +24,6 @@ const PodcastTemplate = ({ children}) => {
   }, [])
 
 
-
   return (
     <>
       <div className={classes.Template__layout}>
