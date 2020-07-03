@@ -9,8 +9,8 @@
   -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
-  top: 60%;
-  right: 40%;
+  top: 2.5rem;
+  right: 7rem;
   overflow-y: auto;
 }
 
@@ -18,6 +18,10 @@
   overflow-y: auto;
   -webkit-overflow-y-scrolling: touch;
   -webkit-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
+  -ms-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
+  -o-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
+  -moz-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
+  mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   height: auto;
 }
 

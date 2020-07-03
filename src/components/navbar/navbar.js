@@ -31,9 +31,9 @@ const Navbar = () => {
             >
               <Link className={classes.Navigation__list_link}>Kontakt</Link>
             </li>
+            {context.isOpen ? <Contact mobile={false} /> : null}
+            {context.openList ? <PodcastsList mobile={false} /> : null}
           </ul>
-          {context.isOpen ? <Contact mobile={false} /> : null}
-          {context.openList ? <PodcastsList mobile={false} /> : null}
         </>
       )}
     </Context.Consumer>

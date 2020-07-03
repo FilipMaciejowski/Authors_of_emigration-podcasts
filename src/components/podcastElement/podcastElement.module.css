@@ -39,6 +39,7 @@ cursor: pointer;
 }
 .PodcastElement__image_container.Episode2 {
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
+  background-position: 100% 60%;
 }
 .PodcastElement__image_container.Episode3 {
 background-image: url("../../assets/images/1985_kajiwkpary1985fotkrzyj-35jl-49\ 1.png");
