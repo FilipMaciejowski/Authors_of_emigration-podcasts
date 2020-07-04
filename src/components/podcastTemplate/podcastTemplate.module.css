@@ -6,6 +6,12 @@
   background-color: var(--main_white);
 }
 
+@media(min-height: 755px){
+  .Template__layout{
+    height: 100vh;
+  }
+}
+
 .Template__layout a {
   margin: 0 auto;
 }
