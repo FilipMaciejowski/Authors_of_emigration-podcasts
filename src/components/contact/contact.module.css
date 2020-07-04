@@ -130,11 +130,11 @@ p {
 }
 
 .Contact__text span::before {
-  transform:translateY(85%) rotate(-45deg);
+  transform:translateY(25%) rotate(-45deg);
 }
 
 .Contact__text span::after {
-  transform: translateY(85%) rotate(45deg);
+  transform: translateY(25%) rotate(45deg);
 }
 
 
