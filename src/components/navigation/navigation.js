@@ -4,7 +4,7 @@ import SVGContainer from "../SVGContainer/SVGContainer"
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
 import Navbar from "../navbar/navbar"
 import classes from "./navigation.module.css"
-import Context from "../context"
+
 
 const Navigation = () => {
   const [assignedClasses, setAssignedClasses] = useState([
@@ -53,7 +53,7 @@ const [lineClasses, setLineClasses] = useState([
             resize ? addedClasses.join(" ") : classes.Navigation__container
           }
         >
-          <SVGContainer mainClass="Logo" scroll={resize} />
+          <SVGContainer mainClass="Logo__container" imageClass="Logo" onScrollClass="Resize" scroll={resize} />
           <Navbar />
           <HamburgerMenu />
         </nav>

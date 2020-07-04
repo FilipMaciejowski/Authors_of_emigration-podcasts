@@ -2,11 +2,11 @@ import React from  "react"
 
 import classes from "./SVGContainer.module.css"
 
-const SVGContainer = ({scroll, mainClass, newClass}) => {
+const SVGContainer = ({scroll, imageClass, mainClass, onScrollClass}) => {
   return (
-    <div className={scroll ? classes.Logo_resize : classes[mainClass]}>
+    <div className={scroll ? [classes[mainClass], classes[onScrollClass]].join(' ') : classes[mainClass]}>
       <img
-        className={classes[newClass]}
+        className={scroll ? [classes[imageClass], classes[onScrollClass]].join(' ') : classes[imageClass]}
         src={require("../../assets/images/Logo.svg")}
         alt="Tworcy_emigracji-Logo"
       />

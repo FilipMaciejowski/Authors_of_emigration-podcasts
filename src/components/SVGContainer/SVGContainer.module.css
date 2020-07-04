@@ -1,31 +1,40 @@
 
-@media(min-width: 600px) {
-  .Logo {
+
+  .Logo__container {
   width: 153px;
   height: auto;
   display: flex; 
   align-items: center;
-  transition: all .4s;
   }
 
-.Image {
-  width: 100%;
-  height: 100%;
+  
+  img.Logo {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transform-origin: center left;
+  -webkit-transition: transform .75s ease; 
+  -ms-transition: transform .75s ease; 
+  -moz-transition: transform .75s ease; 
+  -o-transition: transform .75s ease; 
+  transition: transform .75s ease; 
 }
 
-.Image_resize {
-  width: 100%;
-  height: 100%;
+@media(min-width: 600px) {
+/* .Logo__container.Resize {
+  transform: scale(0.75) */
+  img.Logo.Resize {
+  -webkit-tranform: scale(0.8);
+  transform: scale(0.8);
 }
 
-.Logo_resize {
-  width: 115px;
-  height: auto;
-  display: flex; 
-  align-items: center;
-  transition: all .4s;
 }
-}
+
+
+
+
+
+
+
 
 
 
