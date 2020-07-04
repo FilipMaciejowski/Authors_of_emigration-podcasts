@@ -1,6 +1,7 @@
 .Footer__main {
+  position: absolute;
   width: 100%;
-  height:auto;
+  height: auto;
   background-color: var(--main_black);
   display: flex;
   justify-content: center;

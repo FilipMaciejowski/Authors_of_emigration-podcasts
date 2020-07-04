@@ -97,10 +97,14 @@ p {
   width: 1.5rem;
   position: absolute;
   cursor: pointer;
-  transform: translate(46%, 46%);
+  transform: translateX(46%);
+  
 }
 
 .Contact__text span::before {
+  position: absolute;
+  top: 11px;
+  left: 4px;
   content: '';
   height: .1rem;
   width: 1rem;
@@ -109,10 +113,12 @@ p {
   position: absolute;
   cursor: pointer;
   
-  
 }
 
 .Contact__text span::after {
+  position: absolute;
+  top: 11px;
+  left: 4px;
   content: '';
   height: .1rem;
   width: 1rem;
@@ -120,15 +126,15 @@ p {
   background-color: var(--main_black);
   position: absolute;
   cursor: pointer;
+  transform: translate(-200%);
 }
 
 .Contact__text span::before {
-  transform: rotate(-45deg);
+  transform:translateY(85%) rotate(-45deg);
 }
 
 .Contact__text span::after {
-  transform: rotate(45deg);
-  
+  transform: translateY(85%) rotate(45deg);
 }
 
 
