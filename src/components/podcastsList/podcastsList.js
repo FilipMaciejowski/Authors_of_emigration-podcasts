@@ -30,13 +30,13 @@ const PodcastsList = ({ mobile }) => {
             {TITLE_JELENSKI}, Odc.2
           </Link>
         </li>
-        {/* <li className={classes.PodcastsList__list_different}>
-          <Link to="/podcast3">
+        <li className={classes.PodcastsList__list_different}>
+          <Link to="/podcast_Jelenski_3">
             🎧 {"\u00A0"}
             {TITLE_JELENSKI}, Odc.3
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/podcast4">
             🎧 {"\u00A0"}
             {TITLE_JELENSKI}, Odc.4

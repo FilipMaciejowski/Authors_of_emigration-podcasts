@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
 .Header__main {
-  margin: 0 auto; 
+  position: relative;
+  margin: 0 auto;
   max-width: 100%;
   height: 12.5rem;
   display: flex;
@@ -7,62 +10,280 @@
   justify-content: flex-end;
 }
 
-
-.Header__main img {
+.Header__main picture img {
   width: 100%;
 }
 
-@media(min-width: 1005px){
+@media (min-width: 1005px) {
   .Header__main {
     padding: 0 1rem 0 1rem;
   }
 }
 
-@media(min-width:330px){
+@media (min-width: 330px) {
   .Header__main {
-  margin: 0 auto; 
-  max-width: 100%;
-  height: 15.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
+    margin: 0 auto;
+    max-width: 100%;
+    height: 15.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
-
-@media(min-width:450px){
+@media (min-width: 450px) {
   .Header__main {
-  margin: 0 auto; 
-  max-width: 100%;
-  height: 16.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
+    margin: 0 auto;
+    max-width: 100%;
+    height: 16.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
-
-@media(min-width:600px){
+@media (min-width: 600px) {
   .Header__main {
-  margin: 0 auto; 
-  max-width: 100%;
-  height: 18.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-}
-
-@media(min-width: 750px){
-   .Header__main {
-  margin: 0 auto; 
-  max-width: 100%;
-  height: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
+    margin: 0 auto;
+    max-width: 100%;
+    height: 18.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
+@media (min-width: 750px) {
+  .Header__main {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
 
+.Header__neon {
+  display: none;
+}
+
+@media (min-width: 1005px) {
+  .Header__neon {
+    font-family: 'Doris', Roboto, sans-serif;
+    display: inline;
+    position: absolute;
+    top: 15.65rem;
+    right: 13.75rem;
+    z-index: 2;
+    color: rgb(255, 210, 210);
+    text-align: center;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.125rem;
+    transform: skew(-7deg, -18.25deg);
+    text-shadow: 0px 0px 3px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    animation: pulsating 6s ease-in;
+    -webkit-animation: pulsating 6s ease-in;
+    -ms-animation: pulsating 6s ease-in;
+    -moz-animation: pulsating 6s ease-in;
+    -o-animation: pulsating 6s ease-in;;
+  }
+
+  .Letter_1 {
+    animation: letter_o 2.5s ease-in 6s;
+    -webkit-animation: letter_o 2.5s ease-in 6s;
+    -o-animation: letter_o 2.5s ease-in 6s;
+    -moz-animation: letter_o 2.5s ease-in 6s;
+    -ms-anmation: letter_o 2.5s ease-in 6s;
+  }
+
+  .Letter_2 {
+    animation: letter_n 2s ease-out 8.5s;
+    -webkit-animation: letter_n 2s ease-out 8.5s;
+    -o-animation: letter_n 2s ease-out 8.5s;
+    -ms-animation: letter_n 2s ease-out 8.5s;
+    -moz-animation: letter_n 2s ease-out 8.5s;
+  }
+
+  
+
+}
+ 
+
+@keyframes pulsating {
+  0% {
+    text-shadow: 0px 0px 0px;
+    opacity: 0;
+  }
+
+  15%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: .9;
+  }
+
+  45% {
+    text-shadow: 0px 0px 0px;
+    opacity: .1;
+  }
+
+  46%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: .9;
+  }
+
+  50% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: .1;
+  }
+
+  65%{
+    text-shadow: 0px 0px 0px;
+    opacity: .85;
+  }
+
+  90% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: .8;
+  }
+
+  96% {
+text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: .1;
+  }
+
+  97%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: .9;
+  }
+
+  98% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: 0;
+  }
+
+
+  100%  {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes letter_o {
+  0% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 1;
+  }
+
+  50% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.1;
+  }
+
+  55% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.85;
+  }
+
+  57% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.75;
+  }
+
+  59% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.9;
+  }
+  100% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.1;
+  }
+  }
+
+  @keyframes letter_n {
+    0% {
+      text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.85;
+  }
+
+60% {
+  text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.1;
+  }
+  80% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0.9;
+  }
+  82%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0;
+  }
+  84%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: .85;
+  }
+  85%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 0;
+  }
+
+  86%{
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: .9;
+  }
+
+  100% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+      opacity: 1;
+  }
+  }
+
+  
 

@@ -13,7 +13,7 @@
 
 .Navigation__list_link {
   text-decoration: none;
-  color: var(--main_black);
+  color: rgb(90, 90, 90);
   font-size: .85rem;
   font-weight: 500;
   height: 50%;
@@ -22,7 +22,8 @@
 .Navigation__list_link:hover{
   font-weight: 400;
   color: var(--main-black);
-  padding-bottom: 5px;
+
+  /* padding-bottom: 5px;
   background: url("../../assets/images/Vawe_underline.svg");
   background-repeat: repeat;
   background-position-x: 0%;
@@ -38,10 +39,10 @@
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   animation-play-state: running;
-}
+} */
 }
 
-
+}
 
 @-webkit-keyframes move {
 from {

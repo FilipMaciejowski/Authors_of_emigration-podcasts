@@ -6,6 +6,7 @@ import {
   TITLE_JELENSKI,
   DESCRIPTION_JELENSKI_1,
   DESCRIPTION_JELENSKI_2,
+  DESCRIPTION_JELENSKI_3
 } from "../../assets/constans/constans"
 
 
@@ -29,14 +30,14 @@ const PodcastsSection = () => {
             description={DESCRIPTION_JELENSKI_2}
             page="podcast_Jelenski_2"
           />
-          {/* <PodcastElement
-            episode={3}
-            date="01.07.2020"
-            title={TITLE_JELENSKI}
-            description={DESCRIPTION_JELENSKI}
-            page="podcast3"
-          />
           <PodcastElement
+            episode={3}
+            date="05.07.2020"
+            title={TITLE_JELENSKI}
+            description={DESCRIPTION_JELENSKI_3}
+            page="podcast_Jelenski_3"
+          />
+          {/* <PodcastElement
             episode={4}
             date="01.07.2020"
             title={TITLE_JELENSKI}
