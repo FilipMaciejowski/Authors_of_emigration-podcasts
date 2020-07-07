@@ -10,91 +10,6 @@
   box-shadow: 1px 4px 14px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
 }
 
-.PodcastElement__main span {
-  display: none;
-}
-
-.PodcastElement__main_unpublished {
-  position: relative;
-  height: 19.5rem;
-  width: 12.5rem;
-  margin-bottom: 2rem;
-  overflow: hidden;
-  border: 1px solid var(--main_black);
-  transition: ease .2s;
-  background-color: var(--main_white);
-  box-shadow: 1px 4px 14px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Paragraph__main {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity .4s linear;
-  display: flex;
-  align-items:  center;
-  justify-content: center;
-}
-
-.Paragraph__main img{
-  width: 35%;
-  height: 35%;
-}
-
-.Animated__paragraph {
-  display: none;
-}
-
-
-.PodcastElement__main_unpublished:hover .Animated__paragraph {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-}
-
-.PodcastElement__main_unpublished:hover .Paragraph__main {
-  display: none;
-}
-
-
-.Animated__paragraph_text {
-  font-size: 1.125rem;
-  margin: 0 auto;
-  opacity: 0;
-  transition: opacity .4s linear;
-
-}
-
-.Animated__paragraph:hover .Animated__paragraph_text {
-  color: grey;
-  font-weight: 300;
-  display: block;
-  margin: 0 auto;
-  padding: .25rem 0;
-  opacity: 1;
-  transition: opacity .4s linear;
-  animation: text 1s linear infinite;
-}
-
-
-
-
-@keyframes text {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 
 
 .PodcastElement__main:hover {
@@ -125,12 +40,10 @@ cursor: pointer;
 
 
 
-
 .PodcastElement__image_container.Jelenski{
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
   background-position: 100% 60%;
 }
-
 
 .PodcastElement__image_container.Cieslewicz {
 background-image: url("../../assets/images/Portrait_de_Roman_Cieslewicz\ 1.png");
@@ -148,17 +61,13 @@ background-position: 100% 30%;
 
 
 
-
 .PodcastElement__content {
   width: 100%;
-  height: auto;
+  height: 11.25rem;
   font-weight: 600;
   padding: 0 .25rem;
+  
 } 
-
-/* .PodcastElement__content.Unpublished {
-  filter: blur(2px);
-} */
 
 
 .PodcastElement__content a {
@@ -267,9 +176,69 @@ background-position: 100% 30%;
     width: 14rem;
     height: 19.5rem;
   }
-  .PodcastElement__main_unpublished{
-    width: 14rem;
-    height: 19.5rem;
+}
+
+.PodcastElement__content_unpublished {
+  padding: 0 .25rem;
+  height: 11.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+.Paragraph__main {
+  opacity: 1;
+  margin-bottom: 0;
+  transition: opacity .4s linear;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+}
+
+.Paragraph__main img{
+  width: 65%;
+  height: 65%;
+}
+
+.Animated__paragraph_text {
+  font-size: 1.125rem;
+  text-decoration-thickness: 4px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity .3s linear;
+  display: none;
+}
+
+.PodcastElement__main:hover .Paragraph__main{
+  opacity: 0;
+}
+
+.PodcastElement__main:hover .Animated__paragraph_text {
+  display: block;
+  padding: .275rem 0;
+  font-size: 1.125rem;
+  color: rgb(150, 151, 151);
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity .3s linear;
+  animation: text .85s linear infinite;
+}
+
+
+
+
+
+@keyframes text {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 
