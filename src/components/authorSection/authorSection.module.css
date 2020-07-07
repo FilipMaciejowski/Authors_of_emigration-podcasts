@@ -1,0 +1,36 @@
+.AuthorSection__layout {
+  width: 100%;
+  margin: 1rem auto 0 auto;
+  height: auto;
+}
+
+.AuthorSection__layout h1 {
+  font-size: 1.125rem;
+  color: var(--main_black);
+  text-decoration:underline;
+  text-decoration-color: var(--main_grey);
+  text-decoration-skip: 5px;
+}
+
+.AuthorSection__layout_container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem .75rem 0 .75rem;
+  background-color: var(--main_white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(246, 246, 246);
+}
+
+@media(min-width: 320px){
+  .AuthorSection__layout_container {
+    justify-content: space-around;
+  }
+}
+@media(min-width: 715px){
+  .AuthorSection__layout_container {
+    justify-content: space-between;
+  }
+}

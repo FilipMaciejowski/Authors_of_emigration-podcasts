@@ -1,12 +1,102 @@
 .PodcastElement__main {
-  width: 15rem;
+  position: relative;
+  height: 19.5rem;
+  width: 12.5rem;
   margin-bottom: 2rem;
   border: .25px solid var(--main_grey);
   border-bottom: 1.5px solid var(--main_black);
   transition: ease .2s;
   background-color: var(--main_white);
-  box-shadow: 1px 3px 13px rgba(100,110,140,.1), 1px 3px 4px rgba(100,110,140,.15);
+  box-shadow: 1px 4px 14px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
 }
+
+.PodcastElement__main span {
+  display: none;
+}
+
+.PodcastElement__main_unpublished {
+  position: relative;
+  height: 19.5rem;
+  width: 12.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--main_black);
+  transition: ease .2s;
+  background-color: var(--main_white);
+  box-shadow: 1px 4px 14px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Paragraph__main {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .4s linear;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+}
+
+.Paragraph__main img{
+  width: 35%;
+  height: 35%;
+}
+
+.Animated__paragraph {
+  display: none;
+}
+
+.PodcastElement__main_unpublished:hover .Animated__paragraph {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.PodcastElement__main_unpublished:hover .Paragraph__main {
+  display: none;
+}
+
+
+.Animated__paragraph_text {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity .4s linear;
+
+}
+
+.Animated__paragraph:hover .Animated__paragraph_text {
+  color: grey;
+  font-weight: 300;
+  display: block;
+  margin: 0 auto;
+  padding: .25rem 0;
+  opacity: 1;
+  transition: opacity .4s linear;
+  animation: text 1s linear infinite;
+}
+
+
+
+
+@keyframes text {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
 
 
 .PodcastElement__main:hover {
@@ -19,6 +109,7 @@ cursor: pointer;
 
 .PodcastElement__container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -33,16 +124,22 @@ cursor: pointer;
   background-repeat: no-repeat;
   background-position: 100% 40%;
 }
-.PodcastElement__image_container.Episode1{
+
+.PodcastElement__image_container.Jelenski_Episode1{
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
   background-position: 100% 60%;
 }
-.PodcastElement__image_container.Episode2 {
+.PodcastElement__image_container.Jelenski_Episode2 {
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
   background-position: 100% 60%;
 }
-.PodcastElement__image_container.Episode3 {
+.PodcastElement__image_container.Jelenski_Episode3 {
 background-image: url("../../assets/images/1985_jelenski\ 1.png");
+background-position: 100% 60%;
+}
+
+.PodcastElement__image_container.Cieslewicz_Episode1 {
+background-image: url("../../assets/images/Portrait_de_Roman_Cieslewicz\ 1.png");
 background-position: 100% 60%;
 }
 
@@ -53,6 +150,11 @@ background-position: 100% 60%;
   font-weight: 600;
   padding: 0 .25rem;
 } 
+
+/* .PodcastElement__content.Unpublished {
+  filter: blur(2px);
+} */
+
 
 .PodcastElement__content a {
   text-decoration: none;
@@ -107,7 +209,7 @@ background-position: 100% 60%;
   font-size: calc(0.85rem - 15%);
   line-height: 0.9rem;
   margin-bottom: .25rem;
-  height: 3.5rem;
+  height: 5rem;
 }
 
 .PodcastElement__content_listen {
@@ -158,5 +260,7 @@ background-position: 100% 60%;
 @media(min-width: 440px) {
   .PodcastElement__main {
     width: 12.5rem;
+    height: 19.5rem;
   }
 }
+

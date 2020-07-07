@@ -1,6 +1,6 @@
 .PodcastsList__main {
   width: 13.5rem;
-  height: auto;
+  height: 6rem;
   margin-top: .5rem;
   border: 1px solid var(--main_black);
   border-radius: 1px;
@@ -14,6 +14,7 @@
   overflow-y: auto;
 }
 
+
 .PodcastList__main_mobile {
   overflow-y: auto;
   -webkit-overflow-y-scrolling: touch;
@@ -22,7 +23,7 @@
   -o-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   -moz-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
-  height: auto;
+  height: 4.5rem;
 }
 
 .PodcastsList__list li{

@@ -21,9 +21,9 @@ const [lineClasses, setLineClasses] = useState([
 )
   const [resize, setResize] = useState(false)
 
-  const scrollHandler = () => {
+  const scrollHandler = (event) => {
+    event.stopPropagation();
     const windowHeight = window.scrollY
-    console.log(windowHeight)
     if (windowHeight > 1) {
       setAssignedClasses([classes.Navigation__main, classes.Scroll])
       setAddedClasses([classes.Navigation__container, classes.Scroll])

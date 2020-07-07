@@ -33,10 +33,10 @@
   height: 2px;
   margin: 0 auto;
   background: linear-gradient(
-    90deg,
-    rgba(39, 39, 39, 1) 30%,
-    rgba(150, 150, 150, 1) 70%
-  );
+      90deg,
+      rgb(82, 82, 82) 30%,
+      rgb(177, 177, 177) 70%
+    );
 }
 
 @media (min-width: 600px) {
@@ -101,8 +101,8 @@
     height: 2px;
     background: linear-gradient(
       90deg,
-      rgba(39, 39, 39, 1) 30%,
-      rgba(150, 150, 150, 1) 70%
+      rgb(82, 82, 82) 30%,
+      rgb(177, 177, 177) 70%
     );
     transition: all 2s;
     animation: lineAnimation 1.5s ease;

@@ -22,12 +22,12 @@ const Navbar = () => {
                 className={classes.Navigation__list_link}
                 to="/aboutProject"
               >
-                O projekcie
+                <span>O projekcie</span>
               </Link>
             </li>
             <li
               className={classes.Different}
-              onClick={event => context.open(event)}
+              onClick={(event) => context.open(event)}
             >
               <Link className={classes.Navigation__list_link}>Kontakt</Link>
             </li>

@@ -4,6 +4,8 @@ import classes from "./contact.module.css"
 import Context from "../context"
 
 const Contact = ({ mobile }) => {
+
+  
   return (
     <Context.Consumer>
       {context =>
