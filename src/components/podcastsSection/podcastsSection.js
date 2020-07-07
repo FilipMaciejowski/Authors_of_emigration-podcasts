@@ -3,9 +3,6 @@ import React from  'react'
 import classes from "./podcastSection.module.css"
 import PodcastElement from "../podcastElement/podcastElement"
 import AuthorSection from "../authorSection/authorSection"
-
-
-
 import {
   TITLE_JELENSKI,
   TITLE_CIESLEWICZ,
@@ -29,6 +26,7 @@ const PodcastsSection = () => {
               title={TITLE_CIESLEWICZ}
               description={DESCRIPTION_CIESLEWICZ_1}
               page="podcast_Cieslewicz_1"
+              unpublished={false}
             />
             <PodcastElement
               episode={1}
@@ -58,6 +56,7 @@ const PodcastsSection = () => {
               title={TITLE_JELENSKI}
               description={DESCRIPTION_JELENSKI_1}
               page="podcast_Jelenski_1"
+              unpublished={false}
             />
             <PodcastElement
               episode={2}
@@ -66,6 +65,7 @@ const PodcastsSection = () => {
               title={TITLE_JELENSKI}
               description={DESCRIPTION_JELENSKI_2}
               page="podcast_Jelenski_2"
+              unpublished={false}
             />
             <PodcastElement
               episode={3}
@@ -74,6 +74,7 @@ const PodcastsSection = () => {
               title={TITLE_JELENSKI}
               description={DESCRIPTION_JELENSKI_3}
               page="podcast_Jelenski_3"
+              unpublished={false}
             />
           </AuthorSection>
         </div>
