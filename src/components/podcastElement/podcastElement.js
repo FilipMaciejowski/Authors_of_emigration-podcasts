@@ -69,29 +69,6 @@ const PodcastElement = ({
               Nowy odcinek wkrótce!
             </span>
           </p>
-          {/* <p
-            className={[
-              classes.Animated__paragraph,
-              classes.Animated__paragraph_2,
-            ].join(" ")}
-          >
-            {" "}
-            <span className={classes.Animated__paragraph_text}>
-              Comming soon!
-            </span>
-            <span className={classes.Animated__paragraph_text}>
-              Comming soon!
-            </span>
-            <span className={classes.Animated__paragraph_text}>
-              Comming soon!
-            </span>
-            <span className={classes.Animated__paragraph_text}>
-              Comming soon!
-            </span>
-            <span className={classes.Animated__paragraph_text}>
-              Comming soon!
-            </span>
-          </p> */}
         </div>
       ) : (
         <div className={classes.PodcastElement__main}>
@@ -102,12 +79,12 @@ const PodcastElement = ({
                 unpublished
                   ? [
                       classes.PodcastElement__image_container,
-                      classes[`${author}_Episode${episode}`],
+                      classes[`${author}`],
                       classes.Unpublished,
                     ].join(" ")
                   : [
                       classes.PodcastElement__image_container,
-                      classes[`${author}_Episode${episode}`],
+                      classes[`${author}`],
                     ].join(" ")
               }
             ></div>
