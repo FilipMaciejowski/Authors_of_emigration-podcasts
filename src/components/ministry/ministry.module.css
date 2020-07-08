@@ -3,16 +3,12 @@
   height: auto;
   display: flex;
   align-items: flex-end;
-  
 }
-
-
 
 .Ministry__layout img {
   width: 10rem;
   margin-right: 1rem;
 }
-
 .Ministry__layout p {
   max-width: 40%;
   margin-bottom: 0;

@@ -29,22 +29,24 @@ const PodcastsSection = () => {
               unpublished={false}
             />
             <PodcastElement
-              episode={1}
+              episode={2}
               date="07.07.2020"
               author="Cieslewicz"
               title={TITLE_CIESLEWICZ}
               description={DESCRIPTION_CIESLEWICZ_1}
               page="podcast_Cieslewicz_1"
               unpublished={true}
+              unpublished_episode="Drugi"
             />
             <PodcastElement
-              episode={1}
+              episode={3}
               date="07.07.2020"
               author="Cieslewicz"
               title={TITLE_CIESLEWICZ}
               description={DESCRIPTION_CIESLEWICZ_1}
               page="podcast_Cieslewicz_1"
               unpublished={true}
+              unpublished_episode="Trzeci"
             />
           </AuthorSection>
 

@@ -11,6 +11,7 @@ const PodcastElement = ({
   episode,
   page,
   unpublished,
+  unpublished_episode
 }) => {
   let content;
   if (unpublished) {
@@ -20,50 +21,57 @@ const PodcastElement = ({
           <img src={require("../../assets/images/Logo_grey.svg")}></img>
         </p>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
           <span className={classes.Animated__paragraph_text}>
-            Nowy odcinek wkrótce!
+            {unpublished_episode} odcinek wkrótce!
           </span>
+          <span className={classes.Animated__paragraph_text}>
+            {unpublished_episode} odcinek wkrótce!
+          </span>
+          <span className={classes.Animated__paragraph_text}>
+            {unpublished_episode} odcinek wkrótce!
+          </span>
+          
 </div>
     )
   } else {

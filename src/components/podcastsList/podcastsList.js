@@ -8,10 +8,9 @@ const PodcastsList = ({ mobile }) => {
   return (
     <div
       className={
-        mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
-      }
+        mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main}
     >
-      <ul className={classes.PodcastsList__list}>
+      <ul className={mobile ? classes.PodcastsList__list_mobile : classes.PodcastsList__list}>
         <li>
           <Link to="/podcast_Jelenski_1">
             <span role="img" aria-label="Headphones">

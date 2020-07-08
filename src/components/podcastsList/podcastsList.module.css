@@ -1,5 +1,5 @@
 .PodcastsList__main {
-  width: 13.5rem;
+  width: 15rem;
   height: 4.5rem;
   margin-top: .5rem;
   border: 1px solid var(--main_black);
@@ -15,7 +15,6 @@
   background-color: var(--main_white);
 }
 
-
 .PodcastList__main_mobile {
   overflow-y: auto;
   -webkit-overflow-y-scrolling: touch;
@@ -24,33 +23,71 @@
   -o-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   -moz-mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
   mask-image: linear-gradient(to top, transparent, black 20px, black 90%, transparent);
-  height: 4.5rem;
+  height: 5rem;
+  width: auto;
+ 
 }
 
-.PodcastsList__list {
-  margin: .25rem auto;
+.PodcastsList__list_mobile{
+  margin: 0 auto;
   display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: auto;
+  
 }
+
+.PodcastsList__list_mobile li {
+  list-style: none;
+  height: 2rem;
+  background-color: var(--main_white);
+  
+  display: flex;
+  justify-content: flex-start;
+  width: 12rem;
+}
+
+.PodcastsList__list_mobile li a {
+  text-decoration: none;
+  color: grey;
+  font-size: .75rem;
+  font-weight: 500;
+  
+}
+
+
+
+
+
+.PodcastsList__list {
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  border: 1px solid red;
+}
+
 
 .PodcastsList__list li {
   list-style: none;
-  height: 4rem;
-  width: 75%;
+  height: 2rem;
+  width: auto;
+  padding: 0 .5rem;
   background-color: var(--main_white);
-  display: flex;
-  justify-content: flex-start;
+  float: left;
+  border:1px solid blue;
 }
-
-
 
 .PodcastsList__list li a {
   text-decoration: none;
   color: grey;
   font-size: .75rem;
   font-weight: 500;
+  border: 1px solid green;
+  width: 10rem;
 }
 
 .PodcastsList__list li a:hover {

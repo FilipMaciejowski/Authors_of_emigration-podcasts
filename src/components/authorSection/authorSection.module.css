@@ -8,8 +8,7 @@
   font-size: 1.125rem;
   color: var(--main_black);
   text-decoration:underline;
-  text-decoration-color: var(--main_grey);
-  text-decoration-skip: 5px;
+  text-decoration-color: #919BA2;
 }
 
 .AuthorSection__layout_container {

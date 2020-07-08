@@ -29,9 +29,9 @@ const NavigationMobile = () => {
             <li>
               <Link onClick={context.open}>Kontakt</Link>
             </li>
-            <div className={classes.Modal__contact}>
+            
               {context.isOpen ? <Contact mobile={true} /> : null}
-            </div>
+            
           </ul>
         </nav>
       )}
