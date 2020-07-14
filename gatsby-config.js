@@ -3,12 +3,13 @@ module.exports = {
     title: `Twórcy Emigracji`,
     description: `Podcasty `,
     author: `Dawid Dziedziczak`,
-    developer: `filip.maciejowski@gmail.com`
+    developer: `filip.maciejowski@gmail.com`,
   },
 
   pathPrefix: `/Tworcy_emigracji`,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,6 +17,28 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Jelenski`,
+        path: `${__dirname}/src/pages/Jelenski`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Cieslewicz`,
+        path: `${__dirname}/src/pages/Cieslewicz`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Brudzynski`,
+        path: `${__dirname}/src/pages/Brudzynski`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

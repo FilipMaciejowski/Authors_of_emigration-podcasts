@@ -1,4 +1,5 @@
-import React from  'react'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import classes from "./podcastSection.module.css"
 import PodcastElement from "../podcastElement/podcastElement"
@@ -6,20 +7,117 @@ import AuthorSection from "../authorSection/authorSection"
 import {
   TITLE_JELENSKI,
   TITLE_CIESLEWICZ,
-  DESCRIPTION_JELENSKI_1,
-  DESCRIPTION_JELENSKI_2,
-  DESCRIPTION_JELENSKI_3,
-  DESCRIPTION_CIESLEWICZ_1
+  TITLE_BRUDZYNSKI,
+  DESCRIPTION_CIESLEWICZ_1,
+  DESCRIPTION_CIESLEWICZ_2,
+  DESCRIPTION_CIESLEWICZ_3,
 } from "../../assets/constans/constans"
 
-
 const PodcastsSection = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      Cieslewicz: allMarkdownRemark(
+        filter: { frontmatter: { author: { eq: "Cieslewicz" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              page
+              unpublished
+            }
+          }
+        }
+      }
+      Jelenski: allMarkdownRemark(
+        filter: { frontmatter: { author: { eq: "Jelenski" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              page
+              unpublished
+            }
+          }
+        }
+      }
+   Brudzynski: allMarkdownRemark(
+        filter: { frontmatter: { author: { eq: "Brudzynski" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              page
+              unpublished
+              unpublished_episode
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // const files = useStatticQuery(graql`
+  // query {
+  //   allFile {
+
+  //   }
+  // }
+  // `)
+
   return (
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
+          <AuthorSection author={TITLE_BRUDZYNSKI}>
+            {data.Brudzynski.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.frontmatter.page}
+                unpublished={node.frontmatter.unpublished}
+                unpublished_episode={node.frontmatter.unpublished_episode}
+              />
+            ))}
+          </AuthorSection>
+
           <AuthorSection author={TITLE_CIESLEWICZ}>
-            <PodcastElement
+            {data.Cieslewicz.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.frontmatter.page}
+                unpublished={node.frontmatter.unpublished}
+              />
+            ))}
+          </AuthorSection>
+          {/* <PodcastElement
               episode={1}
               date="07.07.2020"
               author="Cieslewicz"
@@ -30,28 +128,40 @@ const PodcastsSection = () => {
             />
             <PodcastElement
               episode={2}
-              date="07.07.2020"
+              date="09.07.2020"
               author="Cieslewicz"
               title={TITLE_CIESLEWICZ}
-              description={DESCRIPTION_CIESLEWICZ_1}
-              page="podcast_Cieslewicz_1"
-              unpublished={true}
+              description={DESCRIPTION_CIESLEWICZ_2}
+              page="podcast_Cieslewicz_2"
+              unpublished={false}
               unpublished_episode="Drugi"
             />
             <PodcastElement
               episode={3}
-              date="07.07.2020"
+              date="11.07.2020"
               author="Cieslewicz"
               title={TITLE_CIESLEWICZ}
-              description={DESCRIPTION_CIESLEWICZ_1}
-              page="podcast_Cieslewicz_1"
-              unpublished={true}
+              description={DESCRIPTION_CIESLEWICZ_3}
+              page="podcast_Cieslewicz_3"
+              unpublished={false}
               unpublished_episode="Trzeci"
-            />
-          </AuthorSection>
+            /> */}
 
           <AuthorSection author={TITLE_JELENSKI}>
-            <PodcastElement
+            {data.Jelenski.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.frontmatter.page}
+                unpublished={node.frontmatter.unpublished}
+              />
+            ))}
+          </AuthorSection>
+          {/* <PodcastElement
               episode={1}
               date="01.07.2020"
               author="Jelenski"
@@ -77,8 +187,7 @@ const PodcastsSection = () => {
               description={DESCRIPTION_JELENSKI_3}
               page="podcast_Jelenski_3"
               unpublished={false}
-            />
-          </AuthorSection>
+            /> */}
         </div>
       </main>
     </>

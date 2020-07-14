@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql} from "gatsby"
 
 import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import Ministry from "../components/ministry/ministry"
@@ -11,11 +12,21 @@ const AboutProject = () => {
     { fontSize: "calc(.85rem - 7.5%)" },
     { fontWeight: "bold" },
   ]
-  
-  
+
   return (
-    <>
-      <PodcastTemplate project={true}>
+    <StaticQuery 
+    query={graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+    `
+}
+
+    render={data => (<PodcastTemplate project={true}>
         <h1 style={styles[0]}>O projekcie:</h1>
         <p style={styles2[1]}>
           Strona została stworzona na potrzeby realizacji trzymiesięcznego
@@ -43,7 +54,7 @@ const AboutProject = () => {
         <Ministry />
         <h1 style={styles[0]}>O autorze:</h1>
         <p style={styles[1]}>
-          <span style={styles[2]}>Dawid Dziedziczak</span> – absolwent
+          <span style={styles[2]}>{data.site.siteMetadata.author}</span> – absolwent
           edytorstwa na Wydziale Polonistyki oraz historii sztuki na Wydziale
           Historycznym Uniwersytetu Jagiellońskiego w Krakowie. Przez ostatnie
           9 lat dziennikarz, reporter, wydawca
@@ -52,8 +63,8 @@ const AboutProject = () => {
           „Zapiski ze współczesności”, „O wszystkim z kulturą”, wydawca „Poranka
           Dwójki” oraz popołudniowego „Wybieram Dwójkę”.
         </p>
-      </PodcastTemplate>
-    </>
+      </PodcastTemplate>)}
+      />
   )
 }
 

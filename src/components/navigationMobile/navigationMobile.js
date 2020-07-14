@@ -20,14 +20,14 @@ const NavigationMobile = () => {
         >
           <ul>
             <li>
-              <Link onClick={context.openPodcastsList}>Podcasty</Link>
+              <a onClick={context.openPodcastsList}>Podcasty</a>
             </li>
             {context.openList ? <PodcastsList mobile={true}/> : null}
             <li>
-              <Link to="aboutProject">O projekcie</Link>
+              <Link to="/aboutProject">O projekcie</Link>
             </li>
             <li>
-              <Link onClick={context.open}>Kontakt</Link>
+              <a onClick={context.open}>Kontakt</a>
             </li>
             
               {context.isOpen ? <Contact mobile={true} /> : null}

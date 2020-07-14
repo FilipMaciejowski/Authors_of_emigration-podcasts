@@ -15,8 +15,8 @@ const Header = () => {
           <span className={classes.Letter_2}>n</span>ia
         </p>
         <picture>
-          <source media="(min-width: 1005px)" srcset={ship} />
-          <source media="(max-width: 1004px)" srcset={ship2} />
+          <source media="(min-width: 1005px)" srcSet={ship} />
+          <source media="(max-width: 1004px)" srcSet={ship2} />
           <img src={ship} title="Statek_Polonia" alt="Statek_polonia" />
         </picture>
       </header>

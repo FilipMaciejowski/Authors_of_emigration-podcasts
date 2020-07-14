@@ -50,6 +50,14 @@ background-image: url("../../assets/images/Portrait_de_Roman_Cieslewicz\ 1.png")
 background-position: 100% 30%;
 }
 
+.PodcastElement__image_container.Brudzynski {
+  background-image: url("../../assets/images/Tadeusz_Brudzyński.png");
+  background-position: 100% 25%;
+  background-size: cover;
+}
+
+
+
 @media(max-width: 700px){
   .PodcastElement__image_container.Jelenski{
     background-position: 100% 45%;

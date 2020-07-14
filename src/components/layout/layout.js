@@ -80,7 +80,7 @@ const Layout = ({ children }) => {
         data={data.site.siteMetadata.developer}
         containerSize="Footer__container_normal"
       >
-        © {new Date().getFullYear()}, Designed and built by
+        © {new Date().getFullYear()}, Designed and developed by
       </Footer>
     </Context.Provider>
   )

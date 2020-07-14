@@ -89,7 +89,6 @@ from {
   }
 }
 
-
 .Navigation__list_link.Link_scroll {
   font-size: .875rem;
 }
@@ -102,5 +101,6 @@ from {
   justify-content: space-between;
   width: 16rem;
   height: 3rem;
+  overflow-anchor: none;
   }
 }

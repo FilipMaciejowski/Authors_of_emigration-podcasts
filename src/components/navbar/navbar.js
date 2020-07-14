@@ -15,7 +15,7 @@ const Navbar = () => {
         <>
           <ul className={classes.Navigation__list}>
             <li onClick={context.openPodcastsList}>
-              <Link className={classes.Navigation__list_link}>Podcasty</Link>
+              <a href="#" className={classes.Navigation__list_link}>Podcasty</a>
             </li>
             <li>
               <Link
@@ -29,7 +29,7 @@ const Navbar = () => {
               className={classes.Different}
               onClick={(event) => context.open(event)}
             >
-              <Link className={classes.Navigation__list_link}>Kontakt</Link>
+              <a href="#" className={classes.Navigation__list_link}>Kontakt</a>
             </li>
             {context.isOpen ? <Contact mobile={false} /> : null}
             {context.openList ? <PodcastsList mobile={false} /> : null}
