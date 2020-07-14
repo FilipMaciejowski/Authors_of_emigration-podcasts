@@ -4,14 +4,11 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast_Brudzynski_1 = () => {
-  const styles = [
-    { fontSize: "calc(1.25rem - 15%)" },
-    { fontSize: "calc(.85rem - 15%)" },
-  ]
+  
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Tadeusz Brudzyński, odc. 1</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading} >Tadeusz Brudzyński, odc. 1</h1>
+      <p className={classes.Podcast__paragraph_main} >
         Urodził się w Warszawie w 1956 roku. W latach 1970-1973 przebywał z
         rodzicami w Kinszasie. Na studia malarskie wyjechał do Tuluzy, ale
         szybko przeniósł się do Warszawy, do pracowni prof. Jacka Sienickiego. W
@@ -20,7 +17,7 @@ const Podcast_Brudzynski_1 = () => {
         znakomitą historią rodzinną, wyjątkową wrażliwością, ale zapewne też
         nadzieją na swobodny rozwój twórczości poza granicami Polski.
       </p>
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_main} >
         „Tadek był dzieckiem bardzo wrażliwym. Być może dlatego, że urodził się
         w okresie przeżyć, między Wypadkami Poznańskimi a Powstaniem w
         Budapeszcie. Imiona wybraliśmy mu Tadeusz – Adam. Pierwsze po dziadku,
@@ -33,7 +30,7 @@ const Podcast_Brudzynski_1 = () => {
         przyczyny mogły być różne, ale wrażenia z dzieciństwa na pewno nie są
         bez znaczenia” – tak pisał ojciec malarza.
       </p>
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_main} >
         W tekście poświęconym synowi dodaje, że obecność śmierci towarzyszyła
         dziecku od najmłodszych lat – przy wspominaniu w domu przez rodziców i
         ich przyjaciół dawnych kompanów walki, przez to, że naprzeciwko
@@ -42,9 +39,17 @@ const Podcast_Brudzynski_1 = () => {
         to, że w dzieciństwie stracił przyjaciela. O Tadeuszu Brudzyńskim i jego
         rodzinie opowiada Małgorzata Brudzyńska, była żona artysty.
       </p>
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_minor}>
         Cytaty i informacje pochodzą z książki wydanej staraniem rodziny
-        malarza, m. in. ojca – Andrzeja Brudzyńskiego (więcej na jego temat <a style={{textDecoration:"none", color: "var(--main_black", fontWeight: "600"}}href="https://www.1944.pl/archiwum-historii-mowionej/andrzej-brudzynski,3357.html">
+        malarza, m. in. ojca – Andrzeja Brudzyńskiego (więcej na jego temat{" "}
+        <a
+          style={{
+            textDecoration: "none",
+            color: "var(--main_black",
+            fontWeight: "600",
+          }}
+          href="https://www.1944.pl/archiwum-historii-mowionej/andrzej-brudzynski,3357.html"
+        >
           tutaj
         </a>
         ).

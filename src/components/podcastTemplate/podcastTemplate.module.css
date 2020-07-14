@@ -46,7 +46,18 @@
   padding: 0;
 }
 
+.Podcast__paragraph_heading {
+  font-size: calc(1.25rem - 15%);
+}
 
+.Podcast__paragraph_main,
+.Podcast__paragraph_minor{
+  font-size: calc(.85rem - 15%);
+}
+
+.Podcast__paragraph_minor:visited {
+  color: var(--main_black);
+}
 
 .Template__text p:nth-of-type(2) {
   margin: 0;
