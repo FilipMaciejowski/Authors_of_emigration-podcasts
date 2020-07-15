@@ -23,6 +23,7 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               title
               date
@@ -41,6 +42,7 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               title
               date
@@ -59,6 +61,7 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               title
               date
@@ -87,7 +90,7 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-          <AuthorSection author={TITLE_BRUDZYNSKI}>
+          <AuthorSection author={TITLE_BRUDZYNSKI} >
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}
@@ -103,7 +106,7 @@ const PodcastsSection = () => {
             ))}
           </AuthorSection>
 
-          <AuthorSection author={TITLE_CIESLEWICZ}>
+          <AuthorSection author={TITLE_CIESLEWICZ} >
             {data.Cieslewicz.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}
@@ -147,7 +150,7 @@ const PodcastsSection = () => {
               unpublished_episode="Trzeci"
             /> */}
 
-          <AuthorSection author={TITLE_JELENSKI}>
+          <AuthorSection author={TITLE_JELENSKI} >
             {data.Jelenski.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}

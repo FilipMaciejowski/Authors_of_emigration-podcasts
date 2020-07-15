@@ -1,3 +1,8 @@
+exports.onCreateNode = ({node}) => {
+  console.log(node);
+} 
+
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
