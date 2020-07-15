@@ -55,7 +55,17 @@
   font-size: calc(.85rem - 15%);
 }
 
-.Podcast__paragraph_minor:visited {
+.Paragraph_link{
+  color:var(--main_black);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.Paragraph_link:hover {
+  text-decoration: underline;
+}
+
+.Paragraph_link:visited {
   color: var(--main_black);
 }
 

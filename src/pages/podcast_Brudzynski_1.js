@@ -43,11 +43,7 @@ const Podcast_Brudzynski_1 = () => {
         Cytaty i informacje pochodzą z książki wydanej staraniem rodziny
         malarza, m. in. ojca – Andrzeja Brudzyńskiego (więcej na jego temat{" "}
         <a
-          style={{
-            textDecoration: "none",
-            color: "var(--main_black",
-            fontWeight: "600",
-          }}
+          className={classes.Paragraph_link}
           href="https://www.1944.pl/archiwum-historii-mowionej/andrzej-brudzynski,3357.html"
         >
           tutaj
