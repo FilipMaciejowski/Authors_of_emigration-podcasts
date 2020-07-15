@@ -4,14 +4,13 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast_Cieslewicz_1 = () => {
-  const styles = [
-    { fontSize: "calc(1.25rem - 15%)" },
-    { fontSize: "calc(.85rem - 15%)" },
-  ]
+  
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Roman Cieślewicz, odc. 1</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Roman Cieślewicz, odc. 1
+      </h1>
+      <p className={classes.Podcast__paragraph_main}>
         Roman Cieślewicz przyjeżdża do Paryża w 1963 roku, mając 33 lata. To
         rok, w którym otworzono m. in. nowoczesną siedzibę francuskiego Radia,
         uruchomiono drugi kanał telewizyjny (cztery lata później pojawiła się
@@ -25,8 +24,8 @@ const Podcast_Cieslewicz_1 = () => {
         w 1963 roku Wojciech Has przygotowywał „Rękopis znaleziony w
         Saragossie”, który nie bez przyczyny można umieścić w tym kontekście.
         Zainteresowanie surrealizmem i fantastyką było bowiem popularne wśród
-        ówczesnych polskich twórców, m.in. Lidii i Jerzego Skarżyńskich
-        (autorów scenografii i kostiumów do wymienionego filmu), którzy w tak
+        ówczesnych polskich twórców, m.in. Lidii i Jerzego Skarżyńskich (autorów
+        scenografii i kostiumów do wymienionego filmu), którzy w tak
         „bezpiecznych” politycznie tematach realizowali fantastyczne wizje
         surrealnego świata, bliskie artystycznym zainteresowaniom Romana
         Cieślewicza. Stylistyka polskich ilustracji książkowych, opraw
@@ -47,7 +46,7 @@ const Podcast_Cieslewicz_1 = () => {
           frameborder="0"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo}>
         Photo owner: chantalpetitcieslewicz{" "}
       </p>
     </PodcastTemplate>

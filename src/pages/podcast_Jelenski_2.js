@@ -10,15 +10,17 @@ const Podcast_Jelenski_2 = () => {
   ]
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Konstany Jeleński, odc. 2</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Konstany Jeleński, odc. 2
+      </h1>
+      <p className={classes.Podcast__paragraph_main}>
         „Jak przekazać tej przyszłej cywilizacji to, co jest najlepszego w
         naszej? Dla katolika odpowiedź na to pytanie jest jasna. Dla liberała –
         niestety nie. Czasem myślę żartobliwie, że przepisanie Eneidy na
         antyatomowej butelce ważniejsze byłoby od tysiąca książek i artykułów” –
         napisał 28-letni Konstanty Jeleński do Józefa Czapskiego.
       </p>
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_main}>
         Sprawy przyszłości środowiska, Polski, świata, cywilizacji wielokrotnie
         były tematem obszernej korespondencji nie tylko tych dwóch zasłużonych
         twórców. Chodziło także o przyszłość i kształt polskiej kultury.

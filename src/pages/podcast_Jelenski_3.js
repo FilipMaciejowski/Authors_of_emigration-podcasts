@@ -10,8 +10,10 @@ const Podcast1 = () => {
   ]
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Konstany Jeleński, odc. 3</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Konstany Jeleński, odc. 3
+      </h1>
+      <p className={classes.Podcast__paragraph_main}>
         „Uświadomiłem sobie, jak wiele miejsca zajął w moim życiu i jak bardzo
         na moją wdzięczność zasłużył. Przez całe lata miałem jednego tylko
         czytelnika, jego […]” – pisał Czesław Miłosz o Konstantym Jeleńskim.
@@ -40,7 +42,7 @@ const Podcast1 = () => {
           frameborder="0"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo}>
         Fot. Krzysztof Jung, źródło:{" "}
         <a
           style={{

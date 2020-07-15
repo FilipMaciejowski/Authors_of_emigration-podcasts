@@ -10,7 +10,9 @@ const Podcast_Jelenski_1 = () => {
   ]
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Konstany Jeleński, odc. 1</h1>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Konstany Jeleński, odc. 1
+      </h1>
       <p
         style={{
           marginBottom: ".25rem",
@@ -29,7 +31,7 @@ const Podcast_Jelenski_1 = () => {
         Warszawa 2003.
       </p>
       <br />
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_main}>
         Pisał z Rzymu w sierpniu 1952 roku do Józefa Czapskiego, Konstanty
         Jeleński. Znakomity eseista, krytyk, żołnierz I Dywizji Pancernej,
         współtwórca środowiska paryskiej „Kultury” podobno odznaczał się dużym
@@ -46,7 +48,7 @@ const Podcast_Jelenski_1 = () => {
         Sforza, minister spraw zagranicznych Włoch, następnie ambasador w
         Paryżu.
       </p>
-      <p style={styles[1]}>
+      <p className={classes.Podcast__paragraph_main}>
         „Fotografie nie oddają urody, którą zapamiętali przyjaciele. To musiało
         być coś więcej niż regularne rysy: dystynkcja, godność, szlachetność
         zapisane w ruchach, w spojrzeniu, rytmie mowy, przechyleniu głowy” –
@@ -63,7 +65,7 @@ const Podcast_Jelenski_1 = () => {
           title="Podcast__Tworcy_Emigracji_Jelenski_1"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo}>
         Fot. Krzysztof Jung, źródło:{" "}
         <a
           style={{

@@ -10,8 +10,10 @@ const Podcast_Cieslewicz_3 = () => {
   ]
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Roman Cieślewicz, odc. 3</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Roman Cieślewicz, odc. 3
+      </h1>
+      <p className={classes.Podcast__paragraph_main}>
         W maju 1968 Roman Cieślewicz pełnił funkcję dyrektora artystycznego
         „Elle”, którą to wkrótce miał porzucić na rzecz działań, które
         uniezależniały go jako grafika. Kryzys polityczny odbił się szerokim
@@ -37,7 +39,7 @@ const Podcast_Cieslewicz_3 = () => {
           frameborder="0"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo}>
         Photo owner: chantalpetitcieslewicz{" "}
       </p>
     </PodcastTemplate>

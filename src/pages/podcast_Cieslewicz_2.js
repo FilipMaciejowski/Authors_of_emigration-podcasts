@@ -4,14 +4,13 @@ import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast_Cieslewicz_2 = () => {
-  const styles = [
-    { fontSize: "calc(1.25rem - 15%)" },
-    { fontSize: "calc(.85rem - 15%)" },
-  ]
+  
   return (
     <PodcastTemplate>
-      <h1 style={styles[0]}>Roman Cieślewicz, odc. 2</h1>
-      <p style={styles[1]}>
+      <h1 className={classes.Podcast__paragraph_heading}>
+        Roman Cieślewicz, odc. 2
+      </h1>
+      <p className={classes.Podcast__paragraph_main}>
         Zakres pracy Romana Cieślewicza we francuskim „Elle” był zupełnie inny
         niż w warszawskiej redakcji „Ty i ja”. Artysta z pozycji kierownika
         artystycznego został grafikiem na zlecenie i szybko awansował w
@@ -40,7 +39,7 @@ const Podcast_Cieslewicz_2 = () => {
           frameborder="0"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo}>
         Photo owner: chantalpetitcieslewicz{" "}
       </p>
     </PodcastTemplate>

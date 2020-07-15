@@ -58,7 +58,7 @@ const Podcast_Brudzynski_1 = () => {
           frameborder="0"
         ></iframe>
       </section>
-      <p style={{ fontSize: "calc(.85rem - 25%)" }}>
+      <p className={classes.Paragraph__photo} >
         Zdjęcie artysty z archiwum rodzinnego.{" "}
       </p>
     </PodcastTemplate>
