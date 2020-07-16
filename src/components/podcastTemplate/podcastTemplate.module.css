@@ -55,6 +55,10 @@
   font-size: calc(.85rem - 15%);
 }
 
+.Italic {
+  font-style: italic;
+}
+
 .Paragraph_link{
   color:var(--main_black);
   font-weight: 600;
