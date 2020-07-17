@@ -37,11 +37,10 @@
 
 
 
-
 @media(min-width: 600px){
 .PodcastsList__main {
-  width: 12.5rem;
-  height: 4.5rem;
+  width: 14.25rem;
+  height: 5.5rem;
   margin-top: .5rem;
   border: 1px solid var(--main_black);
   border-radius: 1px;
