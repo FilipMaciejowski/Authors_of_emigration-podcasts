@@ -3,7 +3,7 @@ import React from "react"
 import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
-const Podcast_Brudzynski_1 = () => {
+const Podcast_Brudzynski_2 = () => {
   return (
     <PodcastTemplate>
       <h1 className={classes.Podcast__paragraph_heading}>
@@ -53,4 +53,4 @@ const Podcast_Brudzynski_1 = () => {
   )
 }
 
-export default Podcast_Brudzynski_1
+export default Podcast_Brudzynski_2
