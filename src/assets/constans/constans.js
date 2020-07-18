@@ -1,9 +1,18 @@
+import img1 from "../images/Brudzynski_gallery/IMG_20200716_082714 1.png"
+import img2 from "../images/Brudzynski_gallery/IMG_20200716_082809 1.png"
+import img3 from "../images/Brudzynski_gallery/IMG_20200716_082835 1.png"
+import img4 from "../images/Brudzynski_gallery/IMG_20200716_082910 1.png"
+import img5 from "../images/Brudzynski_gallery/IMG_20200716_083009 1.png"
+import img6 from "../images/Brudzynski_gallery/IMG_20200716_083031 1.png"
 
- export const TITLE_JELENSKI = "Konstanty Jeleński"
- export const TITLE_CIESLEWICZ = "Roman Cieślewicz"
- export const TITLE_BRUDZYNSKI = "Tadeusz Brudzyński"
 
-//  import img1 from ""
+export const TITLE_JELENSKI = "Konstanty Jeleński"
+export const TITLE_CIESLEWICZ = "Roman Cieślewicz"
+export const TITLE_BRUDZYNSKI = "Tadeusz Brudzyński"
+
+export const gallery = {
+  images: [img1, img2, img3, img4, img5, img6],
+}
 
 //  export const BRUDZYNSKI_GALLERY = {
 //    Img1: ".."
@@ -20,8 +29,3 @@
 //          '„Kiedy zaczął pracować w „Elle", a potem w „Vogue" miał kontakt z naprawdę wybitnymi fotografami” - mówi Anna Grabowska-Konwent, kustosz Galerii Plakatu i Designu Muzeum Narodowego w Poznaniu.'
 // export const DESCRIPTION_CIESLEWICZ_3 =
 //          '„W 1972 roku postanowił, że będzie artystą niezależnym" - mówi Anna Grabowska-Konwent, kustosz Galerii Plakatu i Designu Muzeum Narodowego w Poznaniu.'
-
-
-
-  
-  

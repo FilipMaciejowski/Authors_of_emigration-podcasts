@@ -81,6 +81,14 @@
   font-size: calc(.85rem - 25%);
 }
 
+.Gallery {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 .Podcast__player {
   margin: 1rem 0 0 auto;
 }
+
+

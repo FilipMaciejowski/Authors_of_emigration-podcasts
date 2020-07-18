@@ -2,6 +2,11 @@ import React from "react"
 
 import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
+import { gallery } from "../assets/constans/constans"
+
+
+console.log(gallery.images[0]);
+
 
 const Podcast_Brudzynski_3 = () => {
   return (
@@ -23,16 +28,15 @@ const Podcast_Brudzynski_3 = () => {
         żona Małgorzata Brudzyńska mówi o osobistym odbiorze twórczości jej
         męża, jego inspiracjach, zróżnicowanej tematyce prac, a także sukcesach.
       </p>
-      {/* <div className={classes.Gallery}>
-        <figure>
-          <img src={img1} />
-          <figcaption>Zdj. 1</figcaption>
-        </figure>
-        
-
-      </div> */}
+      <div className={classes.Gallery}>
+        {gallery.images.map(image => (
+          <figure className={classes.Gallery__picture}>
+            <img src={image} />
+          </figure>
+        ))}
+      </div>
       <p className={classes.Podcast__paragraph_minor}>
-        Cytaty i informacje pochodzą z książki wydanej staraniem rodziny
+        Cytaty, informacje oraz obrazy pochodzą z książki wydanej staraniem rodziny
         malarza, m. in. ojca – Andrzeja Brudzyńskiego (więcej na jego temat{" "}
         <a
           className={classes.Paragraph_link}
