@@ -19,6 +19,9 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -26,7 +29,7 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
             }
           }
@@ -38,6 +41,9 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -45,7 +51,7 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
             }
           }
@@ -57,6 +63,9 @@ const PodcastsSection = () => {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -64,7 +73,7 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
               unpublished_episode
             }
@@ -87,7 +96,7 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
                 unpublished_episode={node.frontmatter.unpublished_episode}
               />
@@ -103,7 +112,7 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
               />
             ))}
@@ -147,7 +156,7 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
               />
             ))}

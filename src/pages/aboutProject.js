@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql} from "gatsby"
 
-import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
+import PodcastTemplate from "../templates/podcastTemplate/podscastTemplate"
 import Ministry from "../components/ministry/ministry"
 
 const AboutProject = () => {
