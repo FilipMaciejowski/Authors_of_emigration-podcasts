@@ -2,6 +2,12 @@
  export const TITLE_JELENSKI = "Konstanty Jeleński"
  export const TITLE_CIESLEWICZ = "Roman Cieślewicz"
  export const TITLE_BRUDZYNSKI = "Tadeusz Brudzyński"
+
+//  import img1 from ""
+
+//  export const BRUDZYNSKI_GALLERY = {
+//    Img1: ".."
+//  }
 //  export const DESCRIPTION_JELENSKI_1 =
 //           '„Wszystko wskazuje na to, że jego biologicznym ojcem był Carlo Sforza..." - mówi Anna Arno.'
 //  export const DESCRIPTION_JELENSKI_2 =
