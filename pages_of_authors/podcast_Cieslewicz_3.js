@@ -1,6 +1,6 @@
 import React from "react"
 
-import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
+import PodcastTemplate from "../src/components/podcastTemplate/podscastTemplate"
 import classes from "../components/podcastTemplate/podcastTemplate.module.css"
 
 const Podcast_Cieslewicz_3 = () => {

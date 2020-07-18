@@ -86,27 +86,27 @@
     text-shadow: 0px 0px 3px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-    animation: pulsating 6s ease-in;
-    -webkit-animation: pulsating 6s ease-in;
-    -ms-animation: pulsating 6s ease-in;
-    -moz-animation: pulsating 6s ease-in;
-    -o-animation: pulsating 6s ease-in;;
+    animation: pulsating 6s ease-in 1s;
+    -webkit-animation: pulsating 6s ease-in 1s;
+    -ms-animation: pulsating 6s ease-in 1s;
+    -moz-animation: pulsating 6s ease-in 1s;
+    -o-animation: pulsating 6s ease-in 1s;
   }
 
   .Letter_1 {
-    animation: letter_o 2.5s ease-in 6s;
-    -webkit-animation: letter_o 2.5s ease-in 6s;
-    -o-animation: letter_o 2.5s ease-in 6s;
-    -moz-animation: letter_o 2.5s ease-in 6s;
-    -ms-anmation: letter_o 2.5s ease-in 6s;
+    animation: letter_o 2.5s ease-in 8s;
+    -webkit-animation: letter_o 2.5s ease-in 8s;
+    -o-animation: letter_o 2.5s ease-in 8s;
+    -moz-animation: letter_o 2.5s ease-in 8s;
+    -ms-anmation: letter_o 2.5s ease-in 8s;
   }
 
   .Letter_2 {
-    animation: letter_n 2s ease-out 8.5s;
-    -webkit-animation: letter_n 2s ease-out 8.5s;
-    -o-animation: letter_n 2s ease-out 8.5s;
-    -ms-animation: letter_n 2s ease-out 8.5s;
-    -moz-animation: letter_n 2s ease-out 8.5s;
+    animation: letter_n 2s ease-out 10.5s;
+    -webkit-animation: letter_n 2s ease-out 10.5s;
+    -o-animation: letter_n 2s ease-out 10.5s;
+    -ms-animation: letter_n 2s ease-out 10.5s;
+    -moz-animation: letter_n 2s ease-out 10.5s;
   }
 
   

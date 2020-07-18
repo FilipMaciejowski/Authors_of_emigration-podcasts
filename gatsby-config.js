@@ -28,25 +28,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Jelenski`,
-        path: `${__dirname}/src/pages/Jelenski`,
+        name: `authors`,
+        path: `${__dirname}/src/content/podcasts`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `Cieslewicz`,
-        path: `${__dirname}/src/pages/Cieslewicz`,
+        extensions: [`.mdx`, `.md`],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `Brudzynski`,
-        path: `${__dirname}/src/pages/Brudzynski`,
-      },
-    },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
