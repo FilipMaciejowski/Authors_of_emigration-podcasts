@@ -3,14 +3,15 @@ import { Link, graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import PodcastParagraph from "../../components/podcastParagraph/podcastParagraph"
+
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"
 
-// const shortcodes = { PodcastParagraph }
+const PodcastTemplate = (props) => {
 
-const PodcastTemplate = ({data: {mdx}}) => {
+  const {data} = props
+ 
   const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
   const scrollHandler = () => {
     const windowHeight = window.scrollY
@@ -35,19 +36,16 @@ const PodcastTemplate = ({data: {mdx}}) => {
         </header>
         <main className={classes.Template__text}>
           <h1 className={classes.Podcast__paragraph_heading}>
-            {mdx.frontmatter.title} Odc. {mdx.frontmatter.episode}
+            {data.mdx.frontmatter.title} Odc. {data.mdx.frontmatter.episode}
           </h1>
           <MDXProvider
             components={{
               p: props => (
-                <p {...props} style={{ fontSize: "calc(.85rem - 15%)" }} />
-              ),
-              iframe: props => (
-                <iframe {...props} style={{ marginTop: "1rem" }} />
+                <p {...props} style={{ fontSize: "calc(.85rem - 15%)", marginBottom: "1rem" }} />
               ),
             }}
           >
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
           </MDXProvider>
         </main>
       </div>
@@ -60,18 +58,20 @@ const PodcastTemplate = ({data: {mdx}}) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PodcastQuery($id: String!){
-    mdx(id: {eq: $id}){
-      id
-      body
-      frontmatter {
-      title
-      episode
-      }
-    }
-  }
-`
+ export const myQuery = graphql`
+   query PodcastQuery($id: String!) {
+     mdx(id: { eq: $id }) {
+       id
+       body
+       frontmatter {
+         title
+         episode
+       }
+     }
+   }
+ `
+
+
 
 
 export default PodcastTemplate

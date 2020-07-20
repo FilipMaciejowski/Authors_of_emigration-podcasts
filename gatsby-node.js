@@ -38,8 +38,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/podcastTemplate/podscastTemplate.js`),
-      // You can use the values in this context in
-      // our page layout component
       context: { id: node.id },
     })
   })
