@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 2.5rem auto;
+  margin: 3.5rem auto 2.5rem auto;
 }
 
 .Line:nth-of-type(1n) {
