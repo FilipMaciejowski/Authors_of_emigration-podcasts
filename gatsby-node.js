@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   
   const podcasts = result.data.allMdx.edges
   
-  podcasts.forEach(({ node }, index) => {
+  podcasts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/podcastTemplate/podscastTemplate.js`),

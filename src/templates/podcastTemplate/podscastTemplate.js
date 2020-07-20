@@ -8,10 +8,8 @@ import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"
 
-const PodcastTemplate = (props) => {
+const PodcastTemplate = ({data, aboutProject, children}) => {
 
-  const {data} = props
- 
   const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
   const scrollHandler = () => {
     const windowHeight = window.scrollY
@@ -35,18 +33,33 @@ const PodcastTemplate = (props) => {
           </Link>
         </header>
         <main className={classes.Template__text}>
-          <h1 className={classes.Podcast__paragraph_heading}>
-            {data.mdx.frontmatter.title} Odc. {data.mdx.frontmatter.episode}
-          </h1>
-          <MDXProvider
-            components={{
-              p: props => (
-                <p {...props} style={{ fontSize: "calc(.85rem - 15%)", marginBottom: "1rem" }} />
-              ),
-            }}
-          >
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
-          </MDXProvider>
+          {aboutProject ? (
+            children
+          ) : (
+            <div>
+              <h1 className={classes.Podcast__paragraph_heading}>
+                {data.mdx.frontmatter.title} Odc. {data.mdx.frontmatter.episode}
+              </h1>
+              <MDXProvider
+                components={{
+                  p: props => (
+                    <p
+                      {...props}
+                      style={{
+                        fontSize: "calc(.85rem - 15%)",
+                        marginBottom: "1rem",
+                      }}
+                    />
+                  ),
+                  a: props => (
+                    <a {...props} style={{fontSize: "calc(.85rem - 15%)", textDecoration: "none", fontWeight: "600", color: "var(--main_black"}} />
+                  ),
+                }}
+              >
+                <MDXRenderer>{data.mdx.body}</MDXRenderer>
+              </MDXProvider>
+            </div>
+          )}
         </main>
       </div>
       <Footer
@@ -71,7 +84,5 @@ const PodcastTemplate = (props) => {
    }
  `
 
-
-
-
+ 
 export default PodcastTemplate
