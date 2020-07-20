@@ -7,22 +7,21 @@ import AuthorSection from "../authorSection/authorSection"
 import {
   TITLE_JELENSKI,
   TITLE_CIESLEWICZ,
-  TITLE_BRUDZYNSKI,
-  DESCRIPTION_CIESLEWICZ_1,
-  DESCRIPTION_CIESLEWICZ_2,
-  DESCRIPTION_CIESLEWICZ_3,
+  TITLE_BRUDZYNSKI
 } from "../../assets/constans/constans"
 
 const PodcastsSection = () => {
-
   const data = useStaticQuery(graphql`
     query {
-      Cieslewicz: allMarkdownRemark(
+      Cieslewicz: allMdx(
         filter: { frontmatter: { author: { eq: "Cieslewicz" } } }
         sort: { fields: frontmatter___episode }
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -30,18 +29,21 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
             }
           }
         }
       }
-      Jelenski: allMarkdownRemark(
+      Jelenski: allMdx(
         filter: { frontmatter: { author: { eq: "Jelenski" } } }
         sort: { fields: frontmatter___episode }
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -49,18 +51,21 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
             }
           }
         }
       }
-   Brudzynski: allMarkdownRemark(
+      Brudzynski: allMdx(
         filter: { frontmatter: { author: { eq: "Brudzynski" } } }
         sort: { fields: frontmatter___episode }
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             id
             frontmatter {
               title
@@ -68,7 +73,7 @@ const PodcastsSection = () => {
               author
               description
               episode
-              page
+
               unpublished
               unpublished_episode
             }
@@ -78,19 +83,11 @@ const PodcastsSection = () => {
     }
   `)
 
-  // const files = useStatticQuery(graql`
-  // query {
-  //   allFile {
-
-  //   }
-  // }
-  // `)
-
   return (
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-          <AuthorSection author={TITLE_BRUDZYNSKI} >
+          <AuthorSection author={TITLE_BRUDZYNSKI}>
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}
@@ -99,14 +96,14 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
                 unpublished_episode={node.frontmatter.unpublished_episode}
               />
             ))}
           </AuthorSection>
 
-          <AuthorSection author={TITLE_CIESLEWICZ} >
+          <AuthorSection author={TITLE_CIESLEWICZ}>
             {data.Cieslewicz.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}
@@ -115,7 +112,7 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
               />
             ))}
@@ -150,7 +147,7 @@ const PodcastsSection = () => {
               unpublished_episode="Trzeci"
             /> */}
 
-          <AuthorSection author={TITLE_JELENSKI} >
+          <AuthorSection author={TITLE_JELENSKI}>
             {data.Jelenski.edges.map(({ node }) => (
               <PodcastElement
                 key={node.id}
@@ -159,7 +156,7 @@ const PodcastsSection = () => {
                 author={node.frontmatter.author}
                 title={node.frontmatter.title}
                 description={node.frontmatter.description}
-                page={node.frontmatter.page}
+                page={node.fields.slug}
                 unpublished={node.frontmatter.unpublished}
               />
             ))}

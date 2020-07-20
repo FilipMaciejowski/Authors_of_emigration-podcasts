@@ -1,10 +1,10 @@
 import React from "react"
 import { StaticQuery, graphql} from "gatsby"
 
-import PodcastTemplate from "../components/podcastTemplate/podscastTemplate"
+import PodcastTemplate from "../templates/podcastTemplate/podscastTemplate"
 import Ministry from "../components/ministry/ministry"
 
-const AboutProject = () => {
+const AboutProject = (data) => {
 
   const styles=[{fontSize: "calc(1.25rem - 20%)"}, {fontSize: "calc(.85rem - 15%)"}, {fontWeight: "bold"}]
   const styles2 = [
@@ -26,7 +26,7 @@ const AboutProject = () => {
     `
 }
 
-    render={data => (<PodcastTemplate project={true}>
+    render={ data => (<PodcastTemplate aboutProject={true}>
         <h1 style={styles[0]}>O projekcie:</h1>
         <p style={styles2[1]}>
           Strona została stworzona na potrzeby realizacji trzymiesięcznego

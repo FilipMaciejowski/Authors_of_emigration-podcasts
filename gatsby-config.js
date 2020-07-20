@@ -16,39 +16,29 @@ module.exports = {
         anonymize: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
         path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Jelenski`,
-        path: `${__dirname}/src/pages/Jelenski`,
+        name: `authors`,
+        path: `${__dirname}/src/content/podcasts`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `Cieslewicz`,
-        path: `${__dirname}/src/pages/Cieslewicz`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `Brudzynski`,
-        path: `${__dirname}/src/pages/Brudzynski`,
-      },
-    },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
