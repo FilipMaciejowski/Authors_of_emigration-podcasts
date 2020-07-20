@@ -8,7 +8,7 @@ import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"
 
-const shortcodes = { PodcastParagraph }
+// const shortcodes = { PodcastParagraph }
 
 const PodcastTemplate = ({data: {mdx}}) => {
   const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
@@ -37,11 +37,17 @@ const PodcastTemplate = ({data: {mdx}}) => {
           <h1 className={classes.Podcast__paragraph_heading}>
             {mdx.frontmatter.title} Odc. {mdx.frontmatter.episode}
           </h1>
-
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>
-              {mdx.body}
-            </MDXRenderer>
+          <MDXProvider
+            components={{
+              p: props => (
+                <p {...props} style={{ fontSize: "calc(.85rem - 15%)" }} />
+              ),
+              iframe: props => (
+                <iframe {...props} style={{ marginTop: "1rem" }} />
+              ),
+            }}
+          >
+            <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
         </main>
       </div>

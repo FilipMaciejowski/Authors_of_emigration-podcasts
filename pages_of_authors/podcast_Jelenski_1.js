@@ -64,6 +64,7 @@ const Podcast_Jelenski_1 = () => {
       </section>
       <p className={classes.Paragraph__photo}>
         Fot. Krzysztof Jung, źródło:{" "}
+      </p>
         <a
           style={{
             fontSize: "calc(.85rem - 30%)",
@@ -76,7 +77,7 @@ const Podcast_Jelenski_1 = () => {
         >
           www.wojciechkarpinski.com
         </a>
-      </p>
+      
     </PodcastTemplate>
   )
 }
