@@ -7,8 +7,7 @@ import Img from "gatsby-image"
 
 
 import classes from "./header.module.css"
-// import ship from "../../assets/images/Ship_noName.png"
-// import ship2 from "../../assets/images/Ship_Polonia.png"
+
 
 const Header = () => {
 
