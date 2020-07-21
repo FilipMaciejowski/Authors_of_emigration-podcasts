@@ -110,7 +110,6 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-
           <AuthorSection author={TITLE_HERLING}>
             {data.Herling.edges.map(({ node }) => (
               <PodcastElement

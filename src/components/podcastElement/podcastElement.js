@@ -14,12 +14,12 @@ const PodcastElement = ({
   unpublished_episode,
   small
 }) => {
-  let content;
+  let unpublishedContent;
   if (unpublished) {
-    content = (
-      <div className={classes.PodcastElement__content_unpublished}>
-        <p className={classes.Paragraph__main}>
-          <img src={require("../../assets/images/Logo_grey.svg")}></img>
+    unpublishedContent = (
+      <div className={classes.PodcastElement_unpublished}>
+        <p className={classes.Paragraph__main_unpublished}>
+          {unpublished_episode} odcinek wkrótce!
         </p>
         <span className={classes.Animated__paragraph_text}>
           {unpublished_episode} odcinek wkrótce!
@@ -75,27 +75,9 @@ const PodcastElement = ({
       </div>
     )
   } else {
-    content = (
-      <div className={classes.PodcastElement__content}>
-        <div className={classes.PodcastElement__content_top}>
-          <p>{date}</p>
-        </div>
-
-        <div
-          className={
-            small
-              ? classes.Podcast__content_title
-              : [classes.Podcast__content_title, classes.Small].join(' ')
-          }
-        >
-          <Link to={`/${page}`}>
-            <h5>{title}</h5>
-          </Link>
-          <div>
-            <h5>odc. {episode}</h5>
-          </div>
-        </div>
-
+    unpublishedContent = (
+    
+      <div>
         <p className={classes.PodcastElement__content_description}>
           {description}
         </p>
@@ -142,7 +124,27 @@ const PodcastElement = ({
               classes[`${author}`],
             ].join(" ")}
           ></div>
-          {content}
+          <div className={classes.PodcastElement__content}>
+            <div className={classes.PodcastElement__content_top}>
+               <p>{date}</p>
+            </div>
+
+            <div
+              className={
+                small
+                  ? classes.Podcast__content_title
+                  : [classes.Podcast__content_title, classes.Small].join(" ")
+              }
+            >
+              <Link to={`/${page}`}>
+                <h5>{title}</h5>
+              </Link>
+              <div>
+                <h5>odc. {episode}</h5>
+              </div>
+            </div>
+            {unpublishedContent}
+          </div>
         </div>
       </div>
     </>
