@@ -1,4 +1,5 @@
 const { createFilePath } = require("gatsby-source-filesystem")
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === "Mdx") {
@@ -14,6 +15,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 const path = require("path")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+
   const result = await graphql(`
     query {
       allMdx {
@@ -28,6 +30,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
+
+  
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }

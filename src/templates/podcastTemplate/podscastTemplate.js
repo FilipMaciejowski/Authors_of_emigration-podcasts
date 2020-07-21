@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 
+
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"

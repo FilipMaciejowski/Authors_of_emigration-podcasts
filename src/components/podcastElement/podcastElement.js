@@ -76,7 +76,7 @@ const PodcastElement = ({
     )
   } else {
     unpublishedContent = (
-    
+  
       <div>
         <p className={classes.PodcastElement__content_description}>
           {description}

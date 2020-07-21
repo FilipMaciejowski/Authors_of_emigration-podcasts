@@ -31,7 +31,6 @@ const PodcastsSection = () => {
               author
               description
               episode
-
               unpublished
             }
           }
