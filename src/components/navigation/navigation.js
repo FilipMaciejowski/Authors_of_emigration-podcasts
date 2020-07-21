@@ -6,54 +6,62 @@ import Navbar from "../navbar/navbar"
 import classes from "./navigation.module.css"
 
 
-const Navigation = () => {
-  const [assignedClasses, setAssignedClasses] = useState([
-    classes.Navigation__main,
-  ])
-  const [addedClasses, setAddedClasses] = useState([
-    classes.Navigation__container,
-  ])
+const Navigation = ({inView}) => {
 
-const [lineClasses, setLineClasses] = useState([
-  classes.Navigation__line,
-]
+//   const [assignedClasses, setAssignedClasses] = useState([
+//     classes.Navigation__main,
+//   ])
+//   const [addedClasses, setAddedClasses] = useState([
+//     classes.Navigation__container,
+//   ])
 
-)
-  const [resize, setResize] = useState(false)
+// const [lineClasses, setLineClasses] = useState([
+//   classes.Navigation__line,
+// ]
+// )
 
-  const scrollHandler = (event) => {
-    event.stopPropagation();
-    const windowHeight = window.scrollY
-    if (windowHeight > 1) {
-      setAssignedClasses([classes.Navigation__main, classes.Scroll])
-      setAddedClasses([classes.Navigation__container, classes.Scroll])
-      setLineClasses([classes.Navigation__line, classes.Scroll])
-      setResize(true)
-    } else {
-      setAssignedClasses([classes.Navigation__main])
-      setAddedClasses([classes.Navigation__container])
-      setLineClasses([classes.Navigation__line])
-      setResize(false)
-    }
-  }
+const assignedClasses = [classes.Navigation__main, classes.Scroll]
+const addedClasses = [classes.Navigation__container, classes.Scroll]
+const lineClasses = [classes.Navigation__line, classes.Scroll]
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler)
-  }, [])
+  // const [resize, setResize] = useState(false)
+
+  // const scrollHandler = (event) => {
+  //   event.stopPropagation();
+  //   const windowHeight = window.scrollY
+  //   if (windowHeight > 1) {
+  //     setAssignedClasses([classes.Navigation__main, classes.Scroll])
+  //     setAddedClasses([classes.Navigation__container, classes.Scroll])
+  //     setLineClasses([classes.Navigation__line, classes.Scroll])
+  //     setResize(true)
+  //   } else {
+  //     setAssignedClasses([classes.Navigation__main])
+  //     setAddedClasses([classes.Navigation__container])
+  //     setLineClasses([classes.Navigation__line])
+  //     setResize(false)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler)
+  // }, [])
+
+
+
+
 
   return (
-    
       <div
         className={
-          resize ? assignedClasses.join(" ") : classes.Navigation__main
+          inView ? assignedClasses.join(" ") : classes.Navigation__main
         }
       >
         <nav
           className={
-            resize ? addedClasses.join(" ") : classes.Navigation__container
+          inView ? addedClasses.join(" ") : classes.Navigation__container
           }
         >
-          <SVGContainer mainClass="Logo__container" imageClass="Logo" onScrollClass="Resize" scroll={resize} />
+          <SVGContainer mainClass="Logo__container" imageClass="Logo" onScrollClass="Resize" scroll={inView} />
           <Navbar />
           <HamburgerMenu />
         </nav>

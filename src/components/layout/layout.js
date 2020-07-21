@@ -1,6 +1,8 @@
 import React, { useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { useInView } from "react-intersection-observer"
+
 
 import Footer from "../footer/footer"
 import classes from "./layout.module.css"
@@ -21,6 +23,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [openList, setOpenList] = useState(false);
@@ -61,14 +65,17 @@ const Layout = ({ children }) => {
     closePodcastsList: closeListHandler,
   }
 
+  const [ref, inView] = useInView({
+    threshold: 0,
+  })
 
   return (
     <Context.Provider value={value}>
       <div className={classes.Layout__main} onClickCapture={closeListHandler}>
         <div>{children}</div>
         <NavigationMobile />
-        <Navigation />
-        <MainSection />
+        <Navigation inView={inView}/>
+        <MainSection ref={ref} />
         <div className={classes.MainSection__ministry}>
           <img
             src={require("../../assets/images/logo_ministry_of_culture_alt.png")}
