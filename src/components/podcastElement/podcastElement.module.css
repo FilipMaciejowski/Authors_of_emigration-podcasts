@@ -55,6 +55,11 @@ background-position: 100% 30%;
   background-position: 100% 25%;
 }
 
+.PodcastElement__image_container.Herling {
+  background-image: url("../../assets/images/GHG_Lublin\ maj\ 1997_fot\ Z_Kudelski_a\ 1.png");
+  background-position: 100% 25%;
+}
+
 
 
 @media(max-width: 700px){
@@ -92,6 +97,12 @@ background-position: 100% 30%;
 .Podcast__content_title h5 {
   font-size: calc(0.9rem - 15%);
 }
+
+.Podcast__content_title.Small h5{
+  font-size: calc(0.9rem - 22.5%);
+}
+
+
 
 .Podcast__content_title a {
   margin-right: 0.5rem;

@@ -7,10 +7,12 @@ import AuthorSection from "../authorSection/authorSection"
 import {
   TITLE_JELENSKI,
   TITLE_CIESLEWICZ,
-  TITLE_BRUDZYNSKI
+  TITLE_BRUDZYNSKI,
+  TITLE_HERLING
 } from "../../assets/constans/constans"
 
 const PodcastsSection = () => {
+
   const data = useStaticQuery(graphql`
     query {
       Cieslewicz: allMdx(
@@ -51,7 +53,6 @@ const PodcastsSection = () => {
               author
               description
               episode
-
               unpublished
             }
           }
@@ -73,9 +74,31 @@ const PodcastsSection = () => {
               author
               description
               episode
-
               unpublished
               unpublished_episode
+            }
+          }
+        }
+      }
+      Herling: allMdx(
+        filter: { frontmatter: { author: { eq: "Herling" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            id
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              unpublished
+              unpublished_episode
+              small_heading
             }
           }
         }
@@ -87,6 +110,24 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
+
+          <AuthorSection author={TITLE_HERLING}>
+            {data.Herling.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.fields.slug}
+                unpublished={node.frontmatter.unpublished}
+                unpublished_episode={node.frontmatter.unpublished_episode}
+                small={node.frontmatter.small}
+              />
+            ))}
+          </AuthorSection>
+
           <AuthorSection author={TITLE_BRUDZYNSKI}>
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement

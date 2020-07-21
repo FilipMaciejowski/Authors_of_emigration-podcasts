@@ -9,6 +9,7 @@ import img6 from "../images/Brudzynski_gallery/IMG_20200716_083031 1.png"
 export const TITLE_JELENSKI = "Konstanty Jeleński"
 export const TITLE_CIESLEWICZ = "Roman Cieślewicz"
 export const TITLE_BRUDZYNSKI = "Tadeusz Brudzyński"
+export const TITLE_HERLING = "Gustaw Herling-Grudziński"
 
 export const gallery = {
   images: [img1, img2, img3, img4, img5, img6],

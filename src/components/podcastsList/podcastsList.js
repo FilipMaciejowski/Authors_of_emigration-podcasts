@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { TITLE_JELENSKI, TITLE_CIESLEWICZ, TITLE_BRUDZYNSKI } from "../../assets/constans/constans"
+import { TITLE_JELENSKI, TITLE_CIESLEWICZ, TITLE_BRUDZYNSKI, TITLE_HERLING } from "../../assets/constans/constans"
 
 import classes from "./podcastsList.module.css"
 
@@ -24,7 +24,7 @@ const PodcastsList = ({ mobile }) => {
         <li>
           <Link to="/podcast_Jelenski_2">{TITLE_JELENSKI}, Odc.2</Link>
         </li>
-        <li className={classes.PodcastsList__list_different}>
+        <li>
           <Link to="/podcast_Jelenski_3">{TITLE_JELENSKI}, Odc.3</Link>
         </li>
         <li>
@@ -43,7 +43,10 @@ const PodcastsList = ({ mobile }) => {
           <Link to="/podcast_Brudzynski_2">{TITLE_BRUDZYNSKI}, Odc.2</Link>
         </li>
         <li>
-          <Link to="/podcast_Brudzynski_2">{TITLE_BRUDZYNSKI}, Odc.3</Link>
+          <Link to="/podcast_Brudzynski_3">{TITLE_BRUDZYNSKI}, Odc.3</Link>
+        </li>
+        <li>
+          <Link to="/podcast_Herling_1">{TITLE_HERLING}, Odc.1</Link>
         </li>
       </ul>
     </div>
