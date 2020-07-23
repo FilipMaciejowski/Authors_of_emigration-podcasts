@@ -68,6 +68,11 @@ const PodcastsList = ({ mobile }) => {
             {TITLE_HERLING}, Odc.1
           </Link>
         </li>
+        <li>
+          <Link to="/podcasts/Herling-Grudzinski/podcast_Herling_2/">
+            {TITLE_HERLING}, Odc.2
+          </Link>
+        </li>
       </ul>
     </div>
   )
