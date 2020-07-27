@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
   const [isOpen, setIsOpen] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [openList, setOpenList] = useState(false);
