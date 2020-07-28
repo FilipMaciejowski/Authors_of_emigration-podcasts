@@ -3,16 +3,25 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
-
+import PodcastElement from "../podcastElement/podcastElement"
 
 const PodcastsSection = () => {
-
   const data = useStaticQuery(graphql`
-   query {
-    Sections: allContentfulSection{
-              nodes{
+    query {
+      allContentfulPodcastElement {
+        edges {
+          node {
+            podcastSection{
+              author
+            }
             author
-      }
+            episode
+            date
+            unpublished
+            description
+            unpublishedEpisode
+          }
+        }
       }
     }
   `)
@@ -42,8 +51,21 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-        {data.Section.nodes.map(node => (
-          <AuthorSection author={node.author} />
+          {data.allContentfulPodcastElement.edges.map(node => (
+            <AuthorSection author={node.episode}>
+              {/* <PodcastElement
+                key={node.id}
+                episode={node.episode}
+                date={node.date}
+                author={node.author}
+                title={node.frontmatter.title}
+                description={node.heading}
+                page={node.fields.slug}
+                unpublished={node.unpublished}
+                unpublished_episode={node.unpublished_episode}
+                small={node.frontmatter.small}
+              /> */}
+            </AuthorSection>
           ))}
 
           {/* <AuthorSection author={TITLE_BRUDZYNSKI}>
