@@ -59,6 +59,10 @@ background-position: 100% 30%;
   background-image: url("../../assets/images/GHG_Lublin\ maj\ 1997_fot\ Z_Kudelski_a\ 1.png");
   background-position: 100% 25%;
 }
+.PodcastElement__image_container.Jocz {
+  background-image: url("../../assets/images/Jocz\ 1.png");
+  background-position: 50% 40%;
+}
 
 
 

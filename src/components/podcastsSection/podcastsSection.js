@@ -8,13 +8,36 @@ import {
   TITLE_JELENSKI,
   TITLE_CIESLEWICZ,
   TITLE_BRUDZYNSKI,
-  TITLE_HERLING
+  TITLE_HERLING,
+  TITLE_JOCZ
 } from "../../assets/constans/constans"
 
 const PodcastsSection = () => {
 
   const data = useStaticQuery(graphql`
     query {
+      Jocz : allMdx(
+        filter: { frontmatter: { author: { eq: "Jocz" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            id
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              unpublished
+              unpublished_episode
+            }
+          }
+        }
+      }
       Cieslewicz: allMdx(
         filter: { frontmatter: { author: { eq: "Cieslewicz" } } }
         sort: { fields: frontmatter___episode }
@@ -109,6 +132,23 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
+        <AuthorSection author={TITLE_JOCZ}>
+            {data.Jocz.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.fields.slug}
+                unpublished={node.frontmatter.unpublished}
+                unpublished_episode={node.frontmatter.unpublished_episode}
+                small={node.frontmatter.small}
+              />
+            ))}
+          </AuthorSection>
+
           <AuthorSection author={TITLE_HERLING}>
             {data.Herling.edges.map(({ node }) => (
               <PodcastElement
