@@ -4,10 +4,11 @@
   width: 12.5rem;
   margin-bottom: 2rem;
   border: .25px solid var(--main_grey);
-  border-bottom: 1.5px solid var(--main_black);
+  
   transition: ease .2s;
   background-color: var(--main_white);
   box-shadow: 1px 4px 14px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
+  
 }
 
 
@@ -29,7 +30,7 @@ cursor: pointer;
 
 .PodcastElement__image_container {
   width: 100%;
-  height: 8rem;
+  height: 8.5rem;
   margin-bottom: 0;
   display: flex;
   align-items: center;
@@ -37,8 +38,7 @@ cursor: pointer;
   
 }
 .Image_wrapper {
-  height: 125%;
-  
+  height: 105%;
 }
 /* .PodcastElement__image_container img {
   height: 100%;
@@ -67,21 +67,13 @@ background-position: 100% 30%;
 } */
 
 
-
-@media(max-width: 700px){
-  .PodcastElement__image_container.Jelenski{
-    background-position: 100% 45%;
-  }
-.PodcastElement__image_container.Cieslewicz{
-  background-position: 100% 25%;
-}
-}
-
 .PodcastElement__content {
   width: 100%;
   height: 11.25rem;
   padding: 0 .25rem;
   background-color: var(--main_white);
+  border-bottom: 1.5px solid var(--main_black);
+  padding-bottom: 0.5rem;
 } 
 
 .PodcastElement__content a {
@@ -200,7 +192,7 @@ background-position: 100% 30%;
 
 .PodcastElement_unpublished {
   padding: 0 .25rem;
-  height: 8.275rem;
+  height: 7.875rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -210,6 +202,7 @@ background-position: 100% 30%;
   overflow: hidden;
   border: 1px solid var(--main_grey);
   font-weight: 300;
+  margin-bottom: .5rem;
 }
 
 .Paragraph__main_unpublished {
