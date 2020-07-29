@@ -100,7 +100,7 @@ const PodcastElement = ({
               </svg>
             </div>
           </div>
-          <Link to={`/${page}`}>
+          <Link to={`/podcasts/${page}`}>
             <div className={classes.Headphones__container}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 20 20">
                 <defs />

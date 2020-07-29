@@ -1,13 +1,26 @@
 import React, {useState, useEffect} from "react"
 import { Link, graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+/* import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx" */
 
 
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"
+
+
+export const myQuery = graphql`
+  query($slug: String!){
+      PodcastContent: contentfulPodcastElement(slug: {eq: $slug}){
+            title
+            episode
+            body{
+              json
+            }
+          }
+        }
+    `
 
 const PodcastTemplate = ({data, aboutProject, children}) => {
 
@@ -25,6 +38,9 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
     window.addEventListener('scroll', scrollHandler)
   }, [])
 
+
+
+
   return (
     <>
       <div className={classes.Template__layout}>
@@ -39,8 +55,12 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
           ) : (
             <div>
               <h1 className={classes.Podcast__paragraph_heading}>
-                {data.mdx.frontmatter.title} Odc. {data.mdx.frontmatter.episode}
+                {data.PodcastContent.title} Odc. {data.PodcastContent.episode}
               </h1>
+              
+              
+              {
+            /* 
               <MDXProvider
                 components={{
                   p: props => (
@@ -58,7 +78,7 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
                 }}
               >
                 <MDXRenderer>{data.mdx.body}</MDXRenderer>
-              </MDXProvider>
+              </MDXProvider> */}
             </div>
           )}
         </main>
@@ -72,18 +92,18 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
   )
 }
 
- export const myQuery = graphql`
-   query PodcastQuery($id: String!) {
-     mdx(id: { eq: $id }) {
-       id
-       body
-       frontmatter {
-         title
-         episode
-       }
-     }
-   }
- `
+//  export const myQuery = graphql`
+//    query PodcastQuery($id: String!) {
+//      mdx(id: { eq: $id }) {
+//        id
+//        body
+//        frontmatter {
+//          title
+//          episode
+//        }
+//      }
+//    }
+//  `
 
  
 export default PodcastTemplate
