@@ -12,8 +12,7 @@ const PodcastElement = ({
   episode,
   page,
   unpublished,
-  unpublished_episode,
-  small
+  unpublished_episode
 }) => {
   let unpublishedContent;
   if (unpublished) {

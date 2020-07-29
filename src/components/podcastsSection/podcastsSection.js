@@ -29,6 +29,7 @@ const PodcastsSection = () => {
                   src
                 }
               }
+              slug
             }
           }
         }
@@ -55,7 +56,7 @@ const PodcastsSection = () => {
                   title={element.title}
                   description={element.description.description}
                   image={element.photo.fluid.src}
-                  /*  page={node.fields.slug} */
+                  page={element.slug}
                   unpublished={element.unpublished}
                   unpublished_episode={element.unpublishedEpisode}
                 />
