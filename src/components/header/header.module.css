@@ -14,8 +14,6 @@
   justify-content: flex-end;
 }
 
-
-
 @media (min-width: 1005px) {
   .Header__main {
     padding: 0 1rem 0 1rem;

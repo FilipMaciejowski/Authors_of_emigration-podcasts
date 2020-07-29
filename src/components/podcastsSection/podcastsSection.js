@@ -7,57 +7,62 @@ import PodcastElement from "../podcastElement/podcastElement"
 
 const PodcastsSection = () => {
 
-  const data = useStaticQuery(graphql` 
-  query Author_of_emigration{
-    Section: allContentfulAuthorSection(sort:{ fields: date order: DESC}){
-     edges{
-       node{
-         id
-         name
-         podcastelement{
-          id
-          title
-          authorLastname
-          episode
-          publishDate
-          unpublishedEpisode
-          unpublished
-          description{
-            description
+  const data = useStaticQuery(graphql`
+    query Author_of_emigration {
+      Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
+            id
+            name
+            podcastelement {
+              id
+              title
+              episode
+              publishDate
+              unpublishedEpisode
+              unpublished
+              description {
+                description
+              }
+              photo{
+                fluid{
+                  src
+                }
+              }
+            }
           }
         }
-       }
-     }
-   }
-  }`)
+      }
+    }
+  `)
 
-const sortEpisodeElements = (ep1, ep2) => {
-  return ep1 + ep2
-}
-    
-
+  const sortEpisodeElements = (podcastA, podcastB) => {
+    return podcastA.episode - podcastB.episode
+  }
 
   return (
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-          {data.Section.edges.map( ({node}) => (<AuthorSection key={node.id} author={node.name}>
-            {node.podcastelement.sort((podcastA, podcastB) => podcastA.episode - podcastB.episode).map((element) => (<PodcastElement
-                key={element.id}
-                episode={element.episode}
-                date={element.publishDate}
-                author={element.authorLastname}
-                title={element.title}
-                description={element.description.description}
-               /*  page={node.fields.slug} */
-                unpublished={element.unpublished}
-                unpublished_episode={element.unpublishedEpisode}
-              />)).sort(sortEpisodeElements)
-            }
-            </AuthorSection>))
-            
-}
-              
+          {data.Section.edges.map(({ node }) => (
+            <AuthorSection key={node.id} author={node.name}>
+              {node.podcastelement.sort(sortEpisodeElements).map(element => (
+                <PodcastElement
+                  key={element.id}
+                  episode={element.episode}
+                  date={element.publishDate}
+                  image={element.image}
+                  title={element.title}
+                  description={element.description.description}
+                  image={element.photo.fluid.src}
+                  /*  page={node.fields.slug} */
+                  unpublished={element.unpublished}
+                  unpublished_episode={element.unpublishedEpisode}
+                />
+              ))}
+            </AuthorSection>
+          ))}
+
           {/* <AuthorSection author={TITLE_BRUDZYNSKI}>
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement

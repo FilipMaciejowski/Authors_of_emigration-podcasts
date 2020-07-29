@@ -31,15 +31,21 @@ cursor: pointer;
   width: 100%;
   height: 8rem;
   margin-bottom: 0;
-  background-size: cover;
-  background-image: transparent;
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: 100% 40%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
+.Image_wrapper {
+  height: 125%;
+  
+}
+/* .PodcastElement__image_container img {
+  height: 100%;
+  z-index: -8;
+} */
 
-
+/* 
 .PodcastElement__image_container.Jelenski{
   background-image: url("../../assets/images/1985_jelenski\ 1.png");
   background-position: 100% 60%;
@@ -58,7 +64,7 @@ background-position: 100% 30%;
 .PodcastElement__image_container.Herling {
   background-image: url("../../assets/images/GHG_Lublin\ maj\ 1997_fot\ Z_Kudelski_a\ 1.png");
   background-position: 100% 25%;
-}
+} */
 
 
 
@@ -75,6 +81,7 @@ background-position: 100% 30%;
   width: 100%;
   height: 11.25rem;
   padding: 0 .25rem;
+  background-color: var(--main_white);
 } 
 
 .PodcastElement__content a {
