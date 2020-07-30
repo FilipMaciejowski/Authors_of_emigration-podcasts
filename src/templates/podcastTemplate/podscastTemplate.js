@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { Link, graphql } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 /* import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" */
 
@@ -17,6 +18,9 @@ export const myQuery = graphql`
             episode
             body{
               json
+              }
+            playerPodcast{
+              playerPodcast
             }
           }
         }
@@ -57,11 +61,13 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
               <h1 className={classes.Podcast__paragraph_heading}>
                 {data.PodcastContent.title} Odc. {data.PodcastContent.episode}
               </h1>
-              
-              
-              {
-            /* 
-              <MDXProvider
+
+              {documentToReactComponents(data.PodcastContent.body.json)}
+              <div>
+                
+              <iframe src={`${data.PodcastContent.playerPodcast.playerPodcast}`}width="100%" height="200px" frameborder="0"></iframe>
+              </div>
+              {/* <MDXProvider
                 components={{
                   p: props => (
                     <p
@@ -78,7 +84,7 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
                 }}
               >
                 <MDXRenderer>{data.mdx.body}</MDXRenderer>
-              </MDXProvider> */}
+              </MDXProvider>  */}
             </div>
           )}
         </main>
