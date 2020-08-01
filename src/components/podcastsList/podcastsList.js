@@ -88,6 +88,11 @@ const PodcastsList = ({ mobile }) => {
             {TITLE_JOCZ}, Odc.2
           </Link>
         </li>
+        <li>
+          <Link to="/podcasts/Jocz/podcast_Jocz_3/">
+            {TITLE_JOCZ}, Odc.3
+          </Link>
+        </li>
       </ul>
     </div>
   )
