@@ -18,10 +18,7 @@ export const myQuery = graphql`
             episode
             body{
               json
-              }
-            playerPodcast{
-              playerPodcast
-            }
+           }
           }
         }
     `
@@ -43,7 +40,10 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
   }, [])
 
 
-
+  const options = {
+    'iframe': <iframe></iframe>,
+    src: '',
+  }
 
   return (
     <>
@@ -62,11 +62,8 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
                 {data.PodcastContent.title} Odc. {data.PodcastContent.episode}
               </h1>
 
-              {documentToReactComponents(data.PodcastContent.body.json)}
-              <div>
-                
-              <iframe src={`${data.PodcastContent.playerPodcast.playerPodcast}`}width="100%" height="200px" frameborder="0"></iframe>
-              </div>
+              {documentToReactComponents(data.PodcastContent.body.json, options)}
+
               {/* <MDXProvider
                 components={{
                   p: props => (
