@@ -87,9 +87,10 @@ const PodcastElement = ({
             <p>Posłuchaj</p>
             <div className={classes.Arrow__container}>
               <svg
+                className={classes.Arrow}
                 xmlns="http://www.w3.org/2000/svg"
-                width="39"
-                height="8"
+                width="39px"
+                height="8px"
                 fill="none"
               >
                 <defs />

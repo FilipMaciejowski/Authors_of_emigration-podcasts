@@ -14,7 +14,7 @@
 .PodcastElement__main:hover {
 box-shadow: 0 10px 22px rgba(82, 87, 104, 0.2), 0 5px 18px rgba(86, 91, 105, 0.25);
 transition: ease .25s;
-transform: translateY(-2px);
+transform: translateY(-1px);
 cursor: pointer;
 }
 
@@ -168,9 +168,7 @@ background-position: 100% 30%;
   text-transform: lowercase;
 }
 
-.Arrow__container {
-  transform: translateY(20%);
-}
+
 
 
 .Headphones__container svg {
@@ -225,7 +223,7 @@ background-position: 100% 30%;
   opacity: 0;
 }
 
-.PodcastElement__main:hover .Animated__paragraph_text {
+.PodcastElement__main:hover .Animated__paragraph_text{
   display: block;
   padding: 0 0;
   color: rgb(114, 114, 114);
@@ -234,6 +232,11 @@ background-position: 100% 30%;
   transition: opacity .3s linear;
   animation: text .85s linear infinite;
 }
+
+
+
+
+
 
 @keyframes text {
   0% {
