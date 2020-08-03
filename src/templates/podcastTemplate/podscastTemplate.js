@@ -43,7 +43,7 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
 
   const options = {
     renderNode: {
-      [INLINES.HYPERLINK]: (node) => {
+  [INLINES.HYPERLINK]: (node) => {
   if((node.data.uri).includes("https://widget.spreaker.com/")){
     return <iframe src={node.data.uri} width="100%" height="200px" frameBorder="0"></iframe>
   }else {
