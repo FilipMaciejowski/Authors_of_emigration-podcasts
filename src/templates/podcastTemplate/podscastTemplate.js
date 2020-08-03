@@ -1,32 +1,30 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { Link, graphql } from "gatsby"
-import { INLINES } from '@contentful/rich-text-types'
+import { INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 /* import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" */
-
-
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
 import classes from "./podcastTemplate.module.css"
 
-
 export const myQuery = graphql`
-  query($slug: String!){
-      PodcastContent: contentfulPodcastElement(slug: {eq: $slug}){
-            title
-            episode
-            body{
-              json
-           }
-          }
-        }
-    `
+  query($slug: String!) {
+    PodcastContent: contentfulPodcastElement(slug: { eq: $slug }) {
+      title
+      episode
+      body {
+        json
+      }
+    }
+  }
+`
 
-const PodcastTemplate = ({data, aboutProject, children}) => {
-
-  const [assignedClasses, setAssignedClasses] = useState([classes.Header__layout])
+const PodcastTemplate = ({ data, aboutProject, children }) => {
+  const [assignedClasses, setAssignedClasses] = useState([
+    classes.Header__layout,
+  ])
   const scrollHandler = () => {
     const windowHeight = window.scrollY
     if (windowHeight > 1) {
@@ -35,25 +33,32 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
       setAssignedClasses([classes.Header__layout])
     }
   }
-  
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler)
-  }, [])
 
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler)
+  }, [])
 
   const options = {
     renderNode: {
-  [INLINES.HYPERLINK]: (node) => {
-  if((node.data.uri).includes("https://widget.spreaker.com/")){
-    return <iframe src={node.data.uri} width="100%" height="200px" frameBorder="0"></iframe>
-  }else {
-    return
-  }
-      }
-    }
+      [INLINES.HYPERLINK]: node => {
+        if (node.data.uri.includes("https://widget.spreaker.com/")) {
+          return (
+            <iframe
+              src={node.data.uri}
+              width="100%"
+              height="200px"
+              frameBorder="0"
+            ></iframe>
+          )
+        } else if (
+          (typeof node.data.uri === "string")
+        ) {
+          return <a className={classes.Paragraph_link} href={node.data.uri}>{node.content[0].value}</a>
+        }
+      },
+    },
   }
 
-  
   return (
     <>
       <div className={classes.Template__layout}>
@@ -70,8 +75,12 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
               <h1 className={classes.Podcast__paragraph_heading}>
                 {data.PodcastContent.title} Odc. {data.PodcastContent.episode}
               </h1>
-
-              {documentToReactComponents(data.PodcastContent.body.json, options)}
+              <p className={classes.Podcast__paragraph_main}>
+                {documentToReactComponents(
+                  data.PodcastContent.body.json,
+                  options
+                )}
+              </p>
 
               {/* <MDXProvider
                 components={{
@@ -117,5 +126,4 @@ const PodcastTemplate = ({data, aboutProject, children}) => {
 //    }
 //  `
 
- 
 export default PodcastTemplate
