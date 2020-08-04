@@ -9,7 +9,8 @@ import {
   TITLE_CIESLEWICZ,
   TITLE_BRUDZYNSKI,
   TITLE_HERLING,
-  TITLE_JOCZ
+  TITLE_JOCZ,
+  TITLE_NOWAKOWSKI
 } from "../../assets/constans/constans"
 
 const PodcastsSection = () => {
@@ -125,6 +126,29 @@ const PodcastsSection = () => {
           }
         }
       }
+      Nowakowski: allMdx(
+        filter: { frontmatter: { author: { eq: "Nowakowski" } } }
+        sort: { fields: frontmatter___episode }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            id
+            frontmatter {
+              title
+              date
+              author
+              description
+              episode
+              unpublished
+              unpublished_episode
+              small_heading
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -132,6 +156,22 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
+        <AuthorSection author={TITLE_NOWAKOWSKI}>
+            {data.Nowakowski.edges.map(({ node }) => (
+              <PodcastElement
+                key={node.id}
+                episode={node.frontmatter.episode}
+                date={node.frontmatter.date}
+                author={node.frontmatter.author}
+                title={node.frontmatter.title}
+                description={node.frontmatter.description}
+                page={node.fields.slug}
+                unpublished={node.frontmatter.unpublished}
+                unpublished_episode={node.frontmatter.unpublished_episode}
+                small={node.frontmatter.small}
+              />
+            ))}
+          </AuthorSection>
         <AuthorSection author={TITLE_JOCZ}>
             {data.Jocz.edges.map(({ node }) => (
               <PodcastElement

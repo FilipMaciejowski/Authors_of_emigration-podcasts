@@ -64,6 +64,11 @@ background-position: 100% 30%;
   background-position: 50% 40%;
 }
 
+.PodcastElement__image_container.Nowakowski {
+  background-image: url("../../assets//images/Zygmunt_Nowakowski\ 1\ \(5\).png");
+  background-position: 50% 45%;
+  background-size: cover;
+}
 
 
 @media(max-width: 700px){
