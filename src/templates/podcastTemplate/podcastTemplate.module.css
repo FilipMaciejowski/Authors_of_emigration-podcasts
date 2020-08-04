@@ -50,8 +50,8 @@
   font-size: calc(1.25rem - 15%);
 }
 
-.Podcast__paragraph_main{
-  font-size: calc(.5rem - 15%);
+.Podcast__paragraph_main {
+  font-size: calc(7.5rem - 15%);
 }
 
 .Podcast__paragraph_minor{
@@ -64,8 +64,10 @@
 
 .Paragraph_link{
   color:var(--main_black);
+  font-size: calc(.85rem - 15%);
   font-weight: 600;
   text-decoration: none;
+  
 }
 
 .Paragraph_link:hover {
