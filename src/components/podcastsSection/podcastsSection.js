@@ -16,7 +16,7 @@ const PodcastsSection = () => {
             name
             podcastelement {
               id
-              title
+              authorName
               episode
               publishDate
               unpublishedEpisode
@@ -53,7 +53,7 @@ const PodcastsSection = () => {
                   episode={element.episode}
                   date={element.publishDate}
                   image={element.image}
-                  title={element.title}
+                  title={element.authorName}
                   description={element.description.description}
                   image={element.photo.fluid.src}
                   page={element.slug}

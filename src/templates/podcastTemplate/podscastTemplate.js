@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, graphql } from "gatsby"
-import { INLINES } from "@contentful/rich-text-types"
+import { INLINES, BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 /* import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" */
@@ -12,9 +12,9 @@ import classes from "./podcastTemplate.module.css"
 export const myQuery = graphql`
   query($slug: String!) {
     PodcastContent: contentfulPodcastElement(slug: { eq: $slug }) {
-      title
+      authorName
       episode
-      body {
+      body{
         json
       }
     }
@@ -57,6 +57,15 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
         }
       },
     },
+    renderOptions: {
+      [BLOCKS.PARAGRAPH]: (node, children) => {
+        return (
+          <p className={classes.Podcast__paragraph_main}>
+            {children}
+          </p>
+        )
+      }
+    }
   }
 
   return (
@@ -73,15 +82,12 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
           ) : (
             <div>
               <h1 className={classes.Podcast__paragraph_heading}>
-                {data.PodcastContent.title} Odc. {data.PodcastContent.episode}
+                {data.PodcastContent.authorName} Odc. {data.PodcastContent.episode}
               </h1>
-              <p className={classes.Podcast__paragraph_main}>
                 {documentToReactComponents(
                   data.PodcastContent.body.json,
                   options
                 )}
-              </p>
-
               {/* <MDXProvider
                 components={{
                   p: props => (

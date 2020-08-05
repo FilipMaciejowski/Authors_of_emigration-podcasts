@@ -51,23 +51,20 @@
 }
 
 .Podcast__paragraph_main {
-  font-size: calc(7.5rem - 15%);
+  font-size: calc(3.95rem - 15%);
 }
 
-.Podcast__paragraph_minor{
-  font-size: calc(.85rem - 15%);
-}
 
 .Italic {
   font-style: italic;
 }
+
 
 .Paragraph_link{
   color:var(--main_black);
   font-size: calc(.85rem - 15%);
   font-weight: 600;
   text-decoration: none;
-  
 }
 
 .Paragraph_link:hover {

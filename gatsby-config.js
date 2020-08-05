@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`, // or '.env'
 });
 
+/* const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
+ */
 module.exports = {
   siteMetadata: {
     title: `Twórcy Emigracji`,
@@ -26,6 +28,32 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
+    },
+    {resolve: `@contentful/gatsby-transformer-contentful-richtext`,
+    options: {
+      /* renderNode: {
+        [BLOCKS.PARAGRAPH]: node => {
+          return `<p classes..Podcast__paragraph_main>${node.data.PodcastContent.body.value}</p>`
+        }
+      } */
+      /* renderNode: {
+        [INLINES.HYPERLINK]: node => {
+          if (node.data.uri.includes("https://widget.spreaker.com/")) {
+            return 
+              `<iframe
+                src={node.data.uri}
+                width="100%"
+                height="200px"
+                frameBorder="0"
+              ></iframe>`
+          } else if (
+            (typeof node.data.uri === "string")
+          ) {
+            return `<a className={classes.Paragraph_link} href={node.data.uri}>{node.content[0].value}</a>`
+          }
+        },
+      }, */
+    }
     },
     {
       resolve: `gatsby-source-filesystem`,
