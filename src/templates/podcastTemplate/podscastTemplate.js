@@ -43,17 +43,22 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
 
   const options = {
     renderNode: {
-      [INLINES.ENTRY_HYPERLINK]: node => {
+      [INLINES.HYPERLINK]: (node, children) => {
         if (node.data.uri.includes("https://widget.spreaker.com/")) {
-          
+          return (
+            <iframe
+            src={node.data.uri}
+            width="100%"
+            height="200px"
+            frameBorder="0"
+          ></iframe>
+          )
         } else if (
           (typeof node.data.uri === "string")
         ) {
           return <a className={classes.Paragraph_link} href={node.data.uri}>{node.content[0].value}</a>
         }
       },
-    }, 
-    renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => {
         return <Text>{children}</Text>
       },

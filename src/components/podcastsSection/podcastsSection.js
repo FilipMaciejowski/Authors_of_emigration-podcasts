@@ -26,7 +26,7 @@ const PodcastsSection = () => {
               }
               photo{
                 fluid{
-                  src
+                 src
                 }
               }
               slug
@@ -47,7 +47,7 @@ const PodcastsSection = () => {
         <div className={classes.Content__container}>
           {data.Section.edges.map(({ node }) => (
             <AuthorSection key={node.id} author={node.name}>
-              {node.podcastelement.sort(sortEpisodeElements).map(element => (
+            {node.podcastelement.sort(sortEpisodeElements).map(element => (
                 <PodcastElement
                   key={element.id}
                   episode={element.episode}

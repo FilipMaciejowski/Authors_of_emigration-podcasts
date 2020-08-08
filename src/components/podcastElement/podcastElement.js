@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 import classes from "./podcastElement.module.css"
+import ParagraphUnpublished from "../paragraphUnpublished/paragraphUnpublished"
 
 const PodcastElement = ({
   date,
@@ -12,15 +13,17 @@ const PodcastElement = ({
   episode,
   page,
   unpublished,
-  unpublished_episode
+  unpublished_episode,
 }) => {
-  let unpublishedContent;
+  
+  
+  let unpublishedContent
   if (unpublished) {
     unpublishedContent = (
       <div className={classes.PodcastElement_unpublished}>
-        <p className={classes.Paragraph__main_unpublished}>
+        <span className={classes.Paragraph__main_unpublished}>
           {unpublished_episode} odcinek wkrótce!
-        </p>
+        </span>
         <span className={classes.Animated__paragraph_text}>
           {unpublished_episode} odcinek wkrótce!
         </span>
@@ -76,7 +79,6 @@ const PodcastElement = ({
     )
   } else {
     unpublishedContent = (
-  
       <div>
         <p className={classes.PodcastElement__content_description}>
           {description}
@@ -119,24 +121,19 @@ const PodcastElement = ({
     <>
       <div className={classes.PodcastElement__main}>
         <div className={classes.PodcastElement__container}>
-          <div
-            className={
-              classes.PodcastElement__image_container}
-          >
+          <div className={classes.PodcastElement__image_container}>
             <div className={classes.Image_wrapper}>
-
-          <img src={image}></img>
-          </div>
+              <img src={image}></img>
+            </div>
           </div>
           <div className={classes.PodcastElement__content}>
             <div className={classes.PodcastElement__content_top}>
-               <p>{date}</p>
+              <p>{date}</p>
             </div>
             <div
-              className={
-                
-                  [classes.Podcast__content_title, classes.Small].join(" ")
-              }
+              className={[classes.Podcast__content_title, classes.Small].join(
+                " "
+              )}
             >
               <Link to={`/${page}`}>
                 <h5>{title}</h5>
