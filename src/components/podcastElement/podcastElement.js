@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import classes from "./podcastElement.module.css"
 import ParagraphUnpublished from "../paragraphUnpublished/paragraphUnpublished"
 
+
 const PodcastElement = ({
   date,
   title,
@@ -15,13 +16,18 @@ const PodcastElement = ({
   unpublished,
   unpublished_episode,
 }) => {
-  
+
+
   
   let unpublishedContent
   if (unpublished) {
     unpublishedContent = (
       <div className={classes.PodcastElement_unpublished}>
-        <span className={classes.Paragraph__main_unpublished}>
+        {new Array(20).fill(`${unpublished_episode} odcinek wkrótce!`).map((textEl, idx) => (<span key={idx} className={classes.Animated__paragraph_text}>
+          {textEl}
+        </span>))
+        }
+        {/* <span className={classes.Animated__paragraph_text}>
           {unpublished_episode} odcinek wkrótce!
         </span>
         <span className={classes.Animated__paragraph_text}>
@@ -71,10 +77,7 @@ const PodcastElement = ({
         </span>
         <span className={classes.Animated__paragraph_text}>
           {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
+        </span> */}
       </div>
     )
   } else {
