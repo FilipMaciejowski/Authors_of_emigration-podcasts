@@ -92,7 +92,6 @@ const PodcastElement = ({
               ) : (
                 
                   <h5><Link to={`/podcasts/${page}`}>{title}</Link></h5>
-                
               )}
               <div>
                 <h5>odc. {episode}</h5>
