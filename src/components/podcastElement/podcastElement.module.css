@@ -91,16 +91,13 @@ background-position: 100% 30%;
 
 .Podcast__content_title h5 {
   font-size: calc(0.9rem - 15%);
+  margin-right: 0.5rem;
 }
 
 .Podcast__content_title.Small h5{
   font-size: calc(0.9rem - 22.5%);
-}
+  margin: 0 0.5rem 0.5rem 0;
 
-
-
-.Podcast__content_title a {
-  margin-right: 0.5rem;
 }
 
 .PodcastElement__content p {
@@ -154,7 +151,6 @@ background-position: 100% 30%;
   font-weight: 500;
 }
 
-
 .PodcastElement__content_listen svg:nth-of-type(2n) {
   cursor: pointer;
 }
@@ -164,11 +160,10 @@ background-position: 100% 30%;
   display: flex;
   justify-content: flex-end;
 }
+
 .PodcastElement__content_listen a p {
   text-transform: lowercase;
 }
-
-
 
 
 .Headphones__container svg {
@@ -232,9 +227,6 @@ background-position: 100% 30%;
   transition: opacity .3s linear;
   animation: text .85s linear infinite;
 }
-
-
-
 
 
 

@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 import classes from "./podcastElement.module.css"
-import ParagraphUnpublished from "../paragraphUnpublished/paragraphUnpublished"
-
 
 const PodcastElement = ({
   date,
@@ -16,9 +14,6 @@ const PodcastElement = ({
   unpublished,
   unpublished_episode,
 }) => {
-
-
-  
   let unpublishedContent
   if (unpublished) {
     unpublishedContent = (
@@ -26,58 +21,13 @@ const PodcastElement = ({
         <p className={classes.Paragraph__main_unpublished}>
           {unpublished_episode} odcinek wkrótce!
         </p>
-        
-        {/* <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span>
-        <span className={classes.Animated__paragraph_text}>
-          {unpublished_episode} odcinek wkrótce!
-        </span> */}
+        {new Array(20)
+          .fill(`${unpublished_episode} odcinek wkrótce!`)
+          .map((textEl, idx) => (
+            <span key={idx} className={classes.Animated__paragraph_text}>
+              {textEl}
+            </span>
+          ))}
       </div>
     )
   } else {
@@ -86,7 +36,6 @@ const PodcastElement = ({
         <p className={classes.PodcastElement__content_description}>
           {description}
         </p>
-
         <div className={classes.PodcastElement__content_listen}>
           <div>
             <p>Posłuchaj</p>
@@ -138,9 +87,13 @@ const PodcastElement = ({
                 " "
               )}
             >
-              <Link to={`/${page}`}>
+              {unpublished ? (
                 <h5>{title}</h5>
-              </Link>
+              ) : (
+                
+                  <h5><Link to={`/podcasts/${page}`}>{title}</Link></h5>
+                
+              )}
               <div>
                 <h5>odc. {episode}</h5>
               </div>
