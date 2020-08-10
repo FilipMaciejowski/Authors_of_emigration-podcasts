@@ -1,4 +1,5 @@
 import React from "react"
+import ReactLoading from "react-loading"
 import { useStaticQuery, graphql } from "gatsby"
 
 import classes from "./podcastSection.module.css"
@@ -14,7 +15,7 @@ const PodcastsSection = () => {
           node {
             id
             name
-            podcastelement {
+            podcastelement{
               id
               authorName
               episode
@@ -45,9 +46,9 @@ const PodcastsSection = () => {
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
-          {data.Section.edges.map(({ node }) => (
+          {data.Section.edges.map(( {node}) => (
             <AuthorSection key={node.id} author={node.name}>
-            {node.podcastelement.sort(sortEpisodeElements).map(element => (
+            {!node.podcastelement ? <ReactLoading type="cubes" color="#919BA2" width='75px' height='35px' ></ReactLoading> : node.podcastelement.sort(sortEpisodeElements).map(element => (
                 <PodcastElement
                   key={element.id}
                   episode={element.episode}
@@ -63,7 +64,6 @@ const PodcastsSection = () => {
               ))}
             </AuthorSection>
           ))}
-
           {/* <AuthorSection author={TITLE_BRUDZYNSKI}>
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement

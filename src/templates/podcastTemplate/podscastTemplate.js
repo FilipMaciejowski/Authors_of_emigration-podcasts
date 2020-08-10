@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import ReactLoading from "react-loading"
+
 import { Link, graphql } from "gatsby"
 import { INLINES, BLOCKS, DOCUMENT } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -44,7 +46,12 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
   const options = {
     renderNode: {
       [INLINES.HYPERLINK]: (node, children) => {
-        if (node.data.uri.includes("https://widget.spreaker.com/")) {
+        if(!node.data.uri){
+          return (
+          <ReactLoading type="cubes" color="#919BA2" width='75px' height='35px' ></ReactLoading>
+          )
+        }
+        if (node.data.uri.includes("https://widget.spreaker.com/") && node.data.uri) {
           return (
             <iframe
             src={node.data.uri}
