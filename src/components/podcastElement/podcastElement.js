@@ -23,6 +23,9 @@ const PodcastElement = ({
   if (unpublished) {
     unpublishedContent = (
       <div className={classes.PodcastElement_unpublished}>
+        <p className={classes.Paragraph__main_unpublished}>
+          {unpublished_episode} odcinek wkrótce!
+        </p>
         {new Array(20).fill(`${unpublished_episode} odcinek wkrótce!`).map((textEl, idx) => (<span key={idx} className={classes.Animated__paragraph_text}>
           {textEl}
         </span>))
