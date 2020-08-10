@@ -26,10 +26,7 @@ const PodcastElement = ({
         <p className={classes.Paragraph__main_unpublished}>
           {unpublished_episode} odcinek wkrótce!
         </p>
-        {new Array(20).fill(`${unpublished_episode} odcinek wkrótce!`).map((textEl, idx) => (<span key={idx} className={classes.Animated__paragraph_text}>
-          {textEl}
-        </span>))
-        }
+        
         {/* <span className={classes.Animated__paragraph_text}>
           {unpublished_episode} odcinek wkrótce!
         </span>
