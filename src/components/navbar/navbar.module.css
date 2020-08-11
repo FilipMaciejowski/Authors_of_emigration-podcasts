@@ -43,7 +43,7 @@
 }
 
 }
-
+/* 
 @-webkit-keyframes move {
 from {
     background-position: 2px 19px;
@@ -87,7 +87,7 @@ from {
   to {
     background-position: 500px 19px;
   }
-}
+} */
 
 .Navigation__list_link.Link_scroll {
   font-size: .875rem;
