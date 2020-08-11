@@ -2,14 +2,14 @@ import React from "react"
 
 import classes from "./EpisodesList.module.css"
 
-const EpisodesList = () => {
+const EpisodesList = ({episodes}) => {
    
     return (
         <div className={classes.EposidesList__main}>
             <ul>
-                <li>
+
+                {episodes.map(({node}) => <li key={node.podcastelement.id}>{node.podcastelement.episode}</li>)}
                 
-                </li>
             </ul>
         </div>
     )

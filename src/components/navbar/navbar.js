@@ -19,8 +19,6 @@ const Navbar = () => {
             <li onClick={context.openPodcastsList}>
               <a className={classes.Navigation__list_link}>Podcasty</a>
               {context.openList ? <PodcastsList mobile={false} /> : null}
-              {context.EpisodesList ? <EpisodesList/> : null}
-              {console.log(context.EpisodesList)}
             </li>
             <li>
               <Link

@@ -1,11 +1,12 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-
+import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
 import Context from "../context"
 
 const PodcastsList = ({ mobile }) => {
+
   const data = useStaticQuery(graphql`
   query list {
     Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -13,10 +14,24 @@ const PodcastsList = ({ mobile }) => {
         node {
           id
           name
+          podcastelement{
+            id
+            slug
+            episode
+          }
         }
       }
     }
   }`)
+
+  const [episodesAuthors, setEpisodes] = useState([])
+
+
+  const showEpisodesHandler = (id) => {
+    setEpisodes(data.Section.edges.node[id])
+  }
+
+
 
   return (
     <Context.Consumer>
@@ -26,6 +41,7 @@ const PodcastsList = ({ mobile }) => {
         mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
       }
     >
+      {console.log(episodesAuthors)}
       <ul
         className={
           mobile
@@ -33,7 +49,9 @@ const PodcastsList = ({ mobile }) => {
             : classes.PodcastsList__list
         }
       >
-        {data.Section.edges.map( ({node}) => <li onClick={context.openEpisodesList} key={node.id}>{node.name}</li>)}
+        {data.Section.edges.map(({node}) => <li onClick={showEpisodesHandler(node.id)} onClick={context.openEpisodesList}  key={node.id}>{node.name}</li>)}
+        {context.EpisodesList ? <EpisodesList episodes={episodesAuthors}/> : null}
+        {console.log(episodesAuthors)}
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1

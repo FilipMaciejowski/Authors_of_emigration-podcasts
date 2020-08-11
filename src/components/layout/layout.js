@@ -53,8 +53,9 @@ const Layout = ({ children }) => {
   }
 
   const openEpisodesListHandler = () => {
-    setOpenEpisodesList(!EpisodesList)
+    setOpenEpisodesList(true)
     setOpenList(true)
+
   }
 
   const value = {
