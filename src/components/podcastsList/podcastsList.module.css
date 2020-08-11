@@ -37,8 +37,8 @@
 
 @media(min-width: 600px){
 .PodcastsList__main {
-  width: 17.25rem;
-  height: 6.5rem;
+  width: 12rem;
+  height: 9.5rem;
   margin-top: .5rem;
   border: 1px solid var(--main_black);
   border-radius: 1px;
@@ -48,7 +48,7 @@
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
   top: 2.5rem;
-  right: 5rem;
+  right: 8.25rem;
   overflow-y: auto;
   background-color: var(--main_white);
 }
@@ -63,25 +63,24 @@
 
 .PodcastsList__list li {
   list-style: none;
-  height: 2rem;
+  height: 4rem;
   width: 100%;
   background-color: var(--main_white);
   display: flex;
-  justify-content: center;
-  
-}
-
-.PodcastsList__list li a {
+  justify-content: flex-start;
   text-decoration: none;
   color: grey;
   font-size: .75rem;
   font-weight: 500;
-  width: auto;
+  padding: 0 0.5rem;
 }
 
 
-.PodcastsList__list li a:hover {
-  color: var(--main_black)
+
+.PodcastsList__list li:hover {
+  color: var(--main_black);
+  cursor: pointer;
+  background-color: var(--main_grey);
 }
 }
 

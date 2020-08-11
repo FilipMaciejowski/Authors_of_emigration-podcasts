@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 
 import classes from "./podcastsList.module.css"
+import Context from "../context"
 
 const PodcastsList = ({ mobile }) => {
   const data = useStaticQuery(graphql`
@@ -10,16 +11,16 @@ const PodcastsList = ({ mobile }) => {
     Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
       edges {
         node {
-          podcastelement{
           id
-          authorName
-          }
+          name
         }
       }
     }
   }`)
 
   return (
+    <Context.Consumer>
+    {context => (
     <div
       className={
         mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
@@ -32,8 +33,7 @@ const PodcastsList = ({ mobile }) => {
             : classes.PodcastsList__list
         }
       >
-        {data.Section.edges.map( ({node}) => <li key={node.podcastelement.id}>{node.podcastelement.authorName}</li>)}
-
+        {data.Section.edges.map( ({node}) => <li onClick={context.openEpisodesList} key={node.id}>{node.name}</li>)}
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1
@@ -95,7 +95,8 @@ const PodcastsList = ({ mobile }) => {
           </Link>
         </li> */}
       </ul>
-    </div>
+    </div>)}
+    </Context.Consumer>
   )
 }
 

@@ -22,6 +22,7 @@
 .Navigation__list_link:hover{
   font-weight: 400;
   color: var(--main-black);
+  cursor: pointer;
 
   /* padding-bottom: 5px;
   background: url("../../assets/images/Vawe_underline.svg");

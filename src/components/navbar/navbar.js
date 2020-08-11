@@ -5,7 +5,9 @@ import { Link } from "gatsby"
 import Context from "../context"
 import PodcastsList from "../podcastsList/podcastsList"
 import Contact from "../contact/contact"
+import EpisodesList from "../episodesList/episodesList"
 import classes from "./navbar.module.css"
+
 
 
 const Navbar = () => {
@@ -16,6 +18,9 @@ const Navbar = () => {
           <ul className={classes.Navigation__list}>
             <li onClick={context.openPodcastsList}>
               <a className={classes.Navigation__list_link}>Podcasty</a>
+              {context.openList ? <PodcastsList mobile={false} /> : null}
+              {context.EpisodesList ? <EpisodesList/> : null}
+              {console.log(context.EpisodesList)}
             </li>
             <li>
               <Link
@@ -30,9 +35,8 @@ const Navbar = () => {
               onClick={(event) => context.open(event)}
             >
               <a className={classes.Navigation__list_link}>Kontakt</a>
+              {context.isOpen ? <Contact mobile={false} /> : null}
             </li>
-            {context.isOpen ? <Contact mobile={false} /> : null}
-            {context.openList ? <PodcastsList mobile={false} /> : null}
           </ul>
         </>
       )}
