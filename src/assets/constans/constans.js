@@ -12,6 +12,7 @@ export const TITLE_BRUDZYNSKI = "Tadeusz Brudzyński"
 export const TITLE_HERLING = "Gustaw Herling-Grudziński"
 export const TITLE_JOCZ = "Paweł Jocz"
 export const TITLE_NOWAKOWSKI = "Zygmunt Nowakowski"
+export const TITLE_NIEMIEC = "Maciej Niemiec"
 
 export const gallery = {
   images: [img1, img2, img3, img4, img5, img6],
