@@ -10,8 +10,10 @@ const PodcastsList = ({ mobile }) => {
     Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
       edges {
         node {
+          podcastelement{
           id
-          name
+          authorName
+          }
         }
       }
     }
@@ -30,7 +32,7 @@ const PodcastsList = ({ mobile }) => {
             : classes.PodcastsList__list
         }
       >
-        {data.Section.edges.map( ({node}) => <li key={node.id}>{node.name}</li>)}
+        {data.Section.edges.map( ({node}) => <li key={node.podcastelement.id}>{node.podcastelement.authorName}</li>)}
 
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
