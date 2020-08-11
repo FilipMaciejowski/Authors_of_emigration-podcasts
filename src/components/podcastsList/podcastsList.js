@@ -1,10 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
-import { TITLE_JELENSKI, TITLE_CIESLEWICZ, TITLE_BRUDZYNSKI, TITLE_HERLING } from "../../assets/constans/constans"
+import { Link, useStaticQuery, graphql } from "gatsby"
+
 
 import classes from "./podcastsList.module.css"
 
 const PodcastsList = ({ mobile }) => {
+  const data = useStaticQuery(graphql`
+  query list {
+    Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }`)
+
   return (
     <div
       className={
@@ -18,7 +30,9 @@ const PodcastsList = ({ mobile }) => {
             : classes.PodcastsList__list
         }
       >
-        <li>
+        {data.Section.edges.map( ({node}) => <li key={node.id}>{node.name}</li>)}
+
+     {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1
           </Link>
@@ -77,7 +91,7 @@ const PodcastsList = ({ mobile }) => {
           <Link to="/podcasts/Herling-Grudzinski/podcast_Herling_3/">
             {TITLE_HERLING}, Odc.3
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   )
