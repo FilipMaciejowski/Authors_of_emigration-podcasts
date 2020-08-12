@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect} from "react"
 import ReactLoading from "react-loading"
 import { useStaticQuery, graphql } from "gatsby"
 import Pagination from "react-js-pagination"
@@ -8,6 +8,10 @@ import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
 const PodcastsSection = () => {
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  },[])
+
   const [activePage, setActivePage] = useState(1)
 
   const data = useStaticQuery(graphql`
@@ -146,7 +150,8 @@ const PodcastsSection = () => {
         <div className={classes.Pagination__container}>
           <Pagination
             {...pagination}
-            onChange={e => setActivePage(e)}
+            onChange={activePage => setActivePage(activePage)}
+            getPageUrl={(i) => `/the-url/${i}`}
           />
         </div>
       </main>
