@@ -24,12 +24,15 @@ const PodcastsList = ({ mobile }) => {
     }
   }`)
 
-  const [episodesAuthors, setEpisodes] = useState([])
+  const [episodesAuthors, setEpisodes] = useState(data.Section.edges.node)
 
 
   const showEpisodesHandler = (id) => {
-    setEpisodes(data.Section.edges.node[id])
+    setEpisodes(episodesAuthors.map(({node}) => node[id].podcastelement.episode))
+
   }
+
+  console.log(episodesAuthors)
 
 
 
@@ -50,8 +53,8 @@ const PodcastsList = ({ mobile }) => {
         }
       >
         {data.Section.edges.map(({node}) => <li onClick={showEpisodesHandler(node.id)} onClick={context.openEpisodesList}  key={node.id}>{node.name}</li>)}
-        {context.EpisodesList ? <EpisodesList episodes={episodesAuthors}/> : null}
-        {console.log(episodesAuthors)}
+        {/* {context.EpisodesList ? <EpisodesList episodes={episodesAuthors}/> : null} */}
+        
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1
