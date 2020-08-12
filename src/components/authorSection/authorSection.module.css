@@ -2,13 +2,15 @@
   width: 100%;
   margin: 1rem auto 0 auto;
   height: auto;
+  
 }
 
 .AuthorSection__layout h1 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--main_black);
   text-decoration:underline;
   text-decoration-color: #919BA2;
+  text-align: center;
 }
 
 .AuthorSection__layout_container {

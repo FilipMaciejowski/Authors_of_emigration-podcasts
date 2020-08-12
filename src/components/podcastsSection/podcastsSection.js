@@ -2,14 +2,14 @@ import React, { useState } from "react"
 import ReactLoading from "react-loading"
 import { useStaticQuery, graphql } from "gatsby"
 import Pagination from "react-js-pagination"
- 
+
 import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
- 
+
 const PodcastsSection = () => {
   const [activePage, setActivePage] = useState(1)
- 
+
   const data = useStaticQuery(graphql`
     query Author_of_emigration {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -39,26 +39,30 @@ const PodcastsSection = () => {
       }
     }
   `)
- 
+
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
   }
- 
+
   const pagination = {
     activePage,
     itemsCountPerPage: 4,
     totalItemsCount: data.Section.edges.length,
-    pageRangeDisplayed: 2,
+    pageRangeDisplayed: 4,
     hideFirstLastPages: true,
-    innerClass: "",
     prevPageText: "‹",
     nextPageText: "›",
+    innerClass: classes.Pagination,
+    linkClass:classes.Pagination__element,
+    activeLinkClass: classes.Active,
+    linkClassPrev: classes.Previous,
+    linkClassNext: classes.Next
   }
- 
+
   const indexOfLastEl = activePage * 4
   const indexOfFirstEl = indexOfLastEl - 4
   const currentEls = data.Section.edges.slice(indexOfFirstEl, indexOfLastEl)
- 
+
   return (
     <>
       <main className={classes.Content__main}>
@@ -139,10 +143,15 @@ const PodcastsSection = () => {
           </AuthorSection>
  */}
         </div>
-        <Pagination {...pagination} onChange={e => setActivePage(e)} />
+        <div className={classes.Pagination__container}>
+          <Pagination
+            {...pagination}
+            onChange={e => setActivePage(e)}
+          />
+        </div>
       </main>
     </>
   )
 }
- 
+
 export default PodcastsSection

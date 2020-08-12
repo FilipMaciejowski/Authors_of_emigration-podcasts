@@ -31,6 +31,44 @@
   }
 }
 
+.Pagination__container{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 3rem;
+  margin: 0 auto;
+}
+
+.Pagination{
+  list-style: none;
+  display: flex; 
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Pagination__element {
+  font-family: var(--main_font);
+  font-size: .75rem;
+  font-weight: 200;
+  text-decoration: none;
+  color:var(--second_grey);
+  margin: 0 0.5rem;
+}
+
+.Active {
+  font-size: .75rem;
+  color: var(--main_black);
+  font-weight: 900;
+}
+
+.Previous, .Next {
+  color: var(--second_grey);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 
 
 
