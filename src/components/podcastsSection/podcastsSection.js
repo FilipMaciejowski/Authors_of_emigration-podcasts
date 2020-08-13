@@ -50,9 +50,9 @@ const PodcastsSection = () => {
 
   const handlePageClick = () => {
     const scrollOptions = {
-      top: 0,
+      top: 325,
       left: 0,
-      behavior: 'auto'
+      behavior: 'smooth'
     }
     window.scrollTo(scrollOptions);
   };

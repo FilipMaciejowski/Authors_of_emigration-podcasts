@@ -3,8 +3,8 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
-import Context from "../context"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
+
 
 const PodcastsList = ({ mobile }) => {
 
@@ -20,6 +20,7 @@ const PodcastsList = ({ mobile }) => {
             episode
             authorName
             slug
+            unpublished
           }
         }
       }
@@ -29,21 +30,13 @@ const PodcastsList = ({ mobile }) => {
   const [episodesAuthors, setEpisodesAuthors] = useState([])
   const [EpisodesListOpen, setOpenEpisodesList] = useState(false)
   
-  /* const showEpisodesHandler = (id) => {
-    setEpisodes(episodesAuthors)
-  } */
-  
   const openEpisodesListHandler = (e) => {
     const id = e.target.getAttribute('data-id') 
-    /* setEpisodesAuthors([data.Section.edges.node[id]]) */
     const filerEdges = data.Section.edges.filter(el => {
       return el.node.id === id
     })
     setEpisodesAuthors(filerEdges[0])
     setOpenEpisodesList(true)
-    /* setEpisodesAuthors(data.Section.edges.node[idx])
-    const episodes = [data.Section.edges]
-    setEpisodes([episodes]) */
   }
 
   const authors = data.Section.edges.map(({node}) => {
