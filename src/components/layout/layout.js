@@ -42,6 +42,10 @@ const Layout = ({ children }) => {
     setIsOpen(false)
   }
 
+  const closeNavHandler = () => {
+    setIsShown(false)
+  }
+
   const openListHandler = () => {
     setOpenList(true)
     setIsOpen(false)
@@ -58,6 +62,7 @@ const Layout = ({ children }) => {
     open: openModalHandler,
     close: closeModalHandler,
     toggleNav: toggleNavHandler,
+    closeNav: closeNavHandler,
     openPodcastsList: openListHandler,
     closePodcastsList: closeListHandler,
   }

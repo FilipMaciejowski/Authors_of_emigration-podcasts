@@ -7,11 +7,9 @@ import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
-const PodcastsSection = () => {
-  /* useEffect(()=> {
-    window.scrollTo(0, 0);
-  },[]) */
 
+const PodcastsSection = ({closeNavMobile}) => {
+  
   const [activePage, setActivePage] = useState(1)
 
   const data = useStaticQuery(graphql`
@@ -50,11 +48,12 @@ const PodcastsSection = () => {
 
   const handlePageClick = () => {
     const scrollOptions = {
-      top: 325,
+      top: 200,
       left: 0,
       behavior: 'smooth'
     }
     window.scrollTo(scrollOptions);
+    closeNavMobile(false)
   };
 
   const pagination = {
@@ -161,7 +160,7 @@ const PodcastsSection = () => {
           <Pagination
             {...pagination}
             onChange={activePage => {setActivePage(activePage)
-              handlePageClick()}}
+              handlePageClick() }}
             /* getPageUrl={(i) => `/the-url/${i}`} */
           />
         </div>

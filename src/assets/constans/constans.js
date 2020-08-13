@@ -1,9 +1,4 @@
-import img1 from "../images/Brudzynski_gallery/IMG_20200716_082714 1.png"
-import img2 from "../images/Brudzynski_gallery/IMG_20200716_082809 1.png"
-import img3 from "../images/Brudzynski_gallery/IMG_20200716_082835 1.png"
-import img4 from "../images/Brudzynski_gallery/IMG_20200716_082910 1.png"
-import img5 from "../images/Brudzynski_gallery/IMG_20200716_083009 1.png"
-import img6 from "../images/Brudzynski_gallery/IMG_20200716_083031 1.png"
+
 
 
 /* export const TITLE_JELENSKI = "Konstanty Jeleński"
