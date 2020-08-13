@@ -41,7 +41,7 @@ const PodcastsList = ({ mobile }) => {
 
   const authors = data.Section.edges.map(({node}) => {
     return (<li onClick={(e) => openEpisodesListHandler(e)}  
-    key={node.id} data-id={node.id} >{node.name}</li>)
+    key={node.id} data-id={node.id} >{node.name} <span className={classes.Indicator}>›</span></li>)
   })
 
     

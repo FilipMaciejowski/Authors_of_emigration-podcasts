@@ -4,7 +4,7 @@
   right: 0;
   width: 15rem;
   height: 3rem;
-  border: 1px solid var(--main_black);
+  border: 1px solid grey;
   border-radius: 1px;
   background-color: var(--main_white);
   z-index: 4;

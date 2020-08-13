@@ -48,7 +48,7 @@ const PodcastsSection = ({closeNavMobile}) => {
 
   const handlePageClick = () => {
     const scrollOptions = {
-      top: 200,
+      top: 0,
       left: 0,
       behavior: 'smooth'
     }
