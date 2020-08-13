@@ -46,15 +46,23 @@
   text-align: center;
   justify-content: space-between;
   width: 100%;
+  scroll-behavior: auto;
 }
 
-.Pagination__element {
+.Pagination__link {
   font-family: var(--main_font);
   font-size: .75rem;
   font-weight: 200;
   text-decoration: none;
   color:var(--second_grey);
   margin: 0 0.5rem;
+}
+
+
+.Pagination__element:hover {
+  background-color: var(--main_grey);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .Active {

@@ -1,18 +1,24 @@
 import React from "react"
+import {Link} from "gatsby"
 
 import classes from "./EpisodesList.module.css"
 
-const EpisodesList = ({episodes}) => {
-   
-    return (
-        <div className={classes.EposidesList__main}>
-            <ul>
+const EpisodesList = ({ episodes }) => {
 
-                {episodes.map(({node}) => <li key={node.podcastelement.id}>{node.podcastelement.episode}</li>)}
-                
-            </ul>
-        </div>
-    )
+    const sortEpisodeElements = (podcastA, podcastB) => {
+        return podcastA.episode - podcastB.episode
+      }
+
+  return (
+    <div className={classes.EposidesList__main}>
+      <ul>
+        {console.log(episodes)}
+        {episodes.node.podcastelement.sort(sortEpisodeElements).map((element) => (
+          <li key={element.id}><Link to={`/podcasts/${element.slug}`}>{` Odcinek ${element.episode}`}</Link></li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default EpisodesList

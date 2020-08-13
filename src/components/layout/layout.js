@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [openList, setOpenList] = useState(false);
-  const [EpisodesList, setOpenEpisodesList] = useState(false)
+  
   
 
   const openModalHandler = () => {
@@ -49,26 +49,17 @@ const Layout = ({ children }) => {
 
   const closeListHandler = () => {
     setOpenList(false)
-    setOpenEpisodesList(false)
-  }
-
-  const openEpisodesListHandler = () => {
-    setOpenEpisodesList(true)
-    setOpenList(true)
-
   }
 
   const value = {
     isOpen,
     isShown,
     openList,
-    EpisodesList,
     open: openModalHandler,
     close: closeModalHandler,
     toggleNav: toggleNavHandler,
     openPodcastsList: openListHandler,
     closePodcastsList: closeListHandler,
-    openEpisodesList: openEpisodesListHandler
   }
 
 

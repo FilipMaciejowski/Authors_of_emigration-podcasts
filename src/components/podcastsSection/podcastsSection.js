@@ -8,9 +8,9 @@ import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
 const PodcastsSection = () => {
-  useEffect(()=> {
+  /* useEffect(()=> {
     window.scrollTo(0, 0);
-  },[])
+  },[]) */
 
   const [activePage, setActivePage] = useState(1)
 
@@ -48,6 +48,15 @@ const PodcastsSection = () => {
     return podcastA.episode - podcastB.episode
   }
 
+  const handlePageClick = () => {
+    const scrollOptions = {
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    }
+    window.scrollTo(scrollOptions);
+  };
+
   const pagination = {
     activePage,
     itemsCountPerPage: 4,
@@ -57,7 +66,8 @@ const PodcastsSection = () => {
     prevPageText: "‹",
     nextPageText: "›",
     innerClass: classes.Pagination,
-    linkClass:classes.Pagination__element,
+    itemClass: classes.Pagination__element,
+    linkClass: classes.Pagination__link,
     activeLinkClass: classes.Active,
     linkClassPrev: classes.Previous,
     linkClassNext: classes.Next
@@ -150,8 +160,9 @@ const PodcastsSection = () => {
         <div className={classes.Pagination__container}>
           <Pagination
             {...pagination}
-            onChange={activePage => setActivePage(activePage)}
-            getPageUrl={(i) => `/the-url/${i}`}
+            onChange={activePage => {setActivePage(activePage)
+              handlePageClick()}}
+            /* getPageUrl={(i) => `/the-url/${i}`} */
           />
         </div>
       </main>

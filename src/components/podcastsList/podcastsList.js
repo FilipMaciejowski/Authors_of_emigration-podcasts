@@ -4,6 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
 import Context from "../context"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 const PodcastsList = ({ mobile }) => {
 
@@ -16,29 +17,42 @@ const PodcastsList = ({ mobile }) => {
           name
           podcastelement{
             id
-            slug
             episode
+            authorName
+            slug
           }
         }
       }
     }
   }`)
 
-  const [episodesAuthors, setEpisodes] = useState(data.Section.edges.node)
-
-
-  const showEpisodesHandler = (id) => {
-    setEpisodes(episodesAuthors.map(({node}) => node[id].podcastelement.episode))
-
+  const [episodesAuthors, setEpisodesAuthors] = useState([])
+  const [EpisodesListOpen, setOpenEpisodesList] = useState(false)
+  
+  /* const showEpisodesHandler = (id) => {
+    setEpisodes(episodesAuthors)
+  } */
+  
+  const openEpisodesListHandler = (e) => {
+    const id = e.target.getAttribute('data-id') 
+    /* setEpisodesAuthors([data.Section.edges.node[id]]) */
+    const filerEdges = data.Section.edges.filter(el => {
+      return el.node.id === id
+    })
+    setEpisodesAuthors(filerEdges[0])
+    setOpenEpisodesList(true)
+    /* setEpisodesAuthors(data.Section.edges.node[idx])
+    const episodes = [data.Section.edges]
+    setEpisodes([episodes]) */
   }
 
-  console.log(episodesAuthors)
+  const authors = data.Section.edges.map(({node}) => {
+    return (<li onClick={(e) => openEpisodesListHandler(e)}  
+    key={node.id} data-id={node.id} >{node.name}</li>)
+  })
 
-
-
+    
   return (
-    <Context.Consumer>
-    {context => (
     <div
       className={
         mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
@@ -52,8 +66,8 @@ const PodcastsList = ({ mobile }) => {
             : classes.PodcastsList__list
         }
       >
-        {data.Section.edges.map(({node}) => <li onClick={showEpisodesHandler(node.id)} onClick={context.openEpisodesList}  key={node.id}>{node.name}</li>)}
-        {/* {context.EpisodesList ? <EpisodesList episodes={episodesAuthors}/> : null} */}
+        {authors}
+        {EpisodesListOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
         
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
@@ -116,8 +130,8 @@ const PodcastsList = ({ mobile }) => {
           </Link>
         </li> */}
       </ul>
-    </div>)}
-    </Context.Consumer>
+    </div>
+    
   )
 }
 
