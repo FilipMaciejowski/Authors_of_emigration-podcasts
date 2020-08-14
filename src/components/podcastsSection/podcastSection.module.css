@@ -91,10 +91,10 @@
 }
 
 .Link__prev  {
- transform: translateX(-6.25%) translateY(2.85%);
+ transform: translateX(-15.25%) translateY(-1.85%);
 }
 .Link__next {
-  transform: translateX(6.25%) translateY(2.25%);
+  transform: translateX(6.25%) translateY(-1.85%);
 }
 
 .Disabled{
