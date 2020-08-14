@@ -68,6 +68,8 @@ const PodcastsSection = ({closeNavMobile}) => {
     nextPageText: <svg width="12.5" height="12.5" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M16.9353 16.4852L4.03579 29.3843C3.21522 30.2052 1.88481 30.2052 1.06464 29.3843C0.244404 28.564 0.244404 27.2337 1.06464 26.4135L12.4787 14.9998L1.06497 3.58643C0.244736 2.76586 0.244736 1.43566 1.06497 0.615424C1.88521 -0.205141 3.21555 -0.205141 4.03612 0.615424L16.9357 13.5147C17.3458 13.9251 17.5506 14.4623 17.5506 14.9997C17.5506 15.5374 17.3454 16.075 16.9353 16.4852Z" fill="#767676"/>
     </svg>,
+    
+    disabledClass: classes.Disabled,
     innerClass: classes.Pagination,
     itemClass: classes.Pagination__element,
     linkClass: classes.Pagination__link,

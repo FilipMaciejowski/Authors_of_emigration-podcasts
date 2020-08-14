@@ -90,12 +90,18 @@
   color: var(--second_grey);
 }
 
-.Link__prev {
+.Link__prev  {
  transform: translateX(-6.25%) translateY(2.85%);
 }
+.Link__next {
+  transform: translateX(6.25%) translateY(2.25%);
+}
 
-.Link__next{
-  transform: translateX(6.25%) translateY(2.85%);
+.Disabled{
+  opacity: 0.2;
+}
+.Disabled:hover {
+  background-color: transparent;
 }
 
 
