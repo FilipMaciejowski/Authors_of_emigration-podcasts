@@ -45,6 +45,7 @@ const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => 
   })
 
   return (
+    <>
     <div
       className={
         mobile ? classes.PodcastList__main_mobile : openClass ? [classes.PodcastsList__main, classes.Open].join(" ") : classes.PodcastsList__main
@@ -59,8 +60,6 @@ const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => 
         }
       >
         {authors}
-        {episodesOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
-        
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1
@@ -122,8 +121,10 @@ const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => 
           </Link>
         </li> */}
       </ul>
+     
     </div>
-    
+     {episodesOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
+    </>
   )
 }
 

@@ -1,16 +1,80 @@
 .EposidesList__main{
- width: 7.25rem;
-  height: 4.5rem;
+  width: 7.25rem;
+  height: auto;
   margin-top: .5rem;
-  border: 1px solid var(--main_black);
-  border-radius: 1px;
-  z-index: 2;
+  border: 1px solid grey;
+  border-radius: 3px;
   -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
-  top: 2.5rem;
+  top: 12.95rem;
   right: 1.05rem;
   overflow-y: auto;
   background-color: var(--main_white);
+  animation: aniamation_episodes linear .1s;
+  -webkit-animation: aniamation_episodes ease-in .1s;;
 }
+
+@keyframes aniamation_episodes{
+  0%{
+    top: 8.55rem;
+  right: 8.25rem;
+  }
+
+  100%{
+  top: 12.95rem;
+  right: 1.05rem;
+  }
+}
+@-webkit-keyframes aniamation_episodes{
+  0%{
+    top: 8.55rem;
+  right: 8.25rem;
+  }
+
+  100%{
+  top: 12.95rem;
+  right: 1.05rem;
+  }
+}
+
+.List {
+ list-style: none;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.List .List__element{
+  padding: 0 .5rem;
+  height: 1.5rem;
+  list-style: none;
+  background-color: var(--main_white);
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: grey;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.List__element a{
+  text-decoration: none;
+  
+  color: grey
+}
+
+.List__element a:hover {
+  color: var(--main_black);
+}
+
+.List__element:hover {
+  color: var(--main_black);
+  cursor: pointer;
+  background-color: var(--main_grey);
+}
+

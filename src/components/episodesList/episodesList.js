@@ -10,10 +10,9 @@ const EpisodesList = ({ episodes }) => {
 
   return (
     <div className={classes.EposidesList__main}>
-      <ul>
-        {console.log(episodes)}
+      <ul className={classes.List}>
         {episodes.node.podcastelement.sort(sortEpisodeElements).map(element => (
-          <li key={element.id}>
+          <li className={classes.List__element} key={element.id}>
             {element.unpublished ? (
               ` Odcinek ${element.episode}`
             ) : (
