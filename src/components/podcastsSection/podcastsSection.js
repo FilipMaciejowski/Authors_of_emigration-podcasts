@@ -69,7 +69,8 @@ const PodcastsSection = ({closeNavMobile}) => {
     linkClass: classes.Pagination__link,
     activeLinkClass: classes.Active,
     linkClassPrev: classes.Previous,
-    linkClassNext: classes.Next
+    linkClassNext: classes.Next,
+    /* itemClassFirst: classes.Indicator */
   }
 
   const indexOfLastEl = activePage * 4

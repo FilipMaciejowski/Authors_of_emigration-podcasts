@@ -35,7 +35,7 @@
   display: flex; 
   align-items: center;
   justify-content: center;
-  width: auto;
+  max-width: 10rem;
   height: 3rem;
   margin: 0 auto;
 }
@@ -56,14 +56,28 @@
   text-decoration: none;
   color:var(--second_grey);
   margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-6.25%);
 }
 
+.Pagination__element{
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
 
 .Pagination__element:hover {
   background-color: var(--main_grey);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color .1s;
 }
+
 
 .Active {
   font-size: .75rem;
@@ -75,6 +89,9 @@
   color: var(--second_grey);
   font-size: 1rem;
   font-weight: 600;
+}
+.Indicator:hover{
+  color: transparent;
 }
 
 
