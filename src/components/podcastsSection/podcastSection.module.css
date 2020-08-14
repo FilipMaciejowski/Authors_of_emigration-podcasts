@@ -59,15 +59,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-6.25%);
+  width: 100%;
+  height: 100%;
 }
 
 .Pagination__element{
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.85rem;
+  height: 1.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  
   
 }
 
@@ -78,21 +80,24 @@
   transition: background-color .1s;
 }
 
-
 .Active {
   font-size: .75rem;
   color: var(--main_black);
-  font-weight: 900;
+  font-weight: 900; 
 }
 
 .Previous, .Next {
   color: var(--second_grey);
-  font-size: 1rem;
-  font-weight: 600;
 }
-.Indicator:hover{
-  color: transparent;
+
+.Link__prev {
+ transform: translateX(-6.25%) translateY(2.85%);
 }
+
+.Link__next{
+  transform: translateX(6.25%) translateY(2.85%);
+}
+
 
 
 
