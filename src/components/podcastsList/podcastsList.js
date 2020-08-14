@@ -6,7 +6,7 @@ import classes from "./podcastsList.module.css"
 
 
 
-const PodcastsList = ({ mobile }) => {
+const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => {
 
   const data = useStaticQuery(graphql`
   query list {
@@ -28,7 +28,7 @@ const PodcastsList = ({ mobile }) => {
   }`)
 
   const [episodesAuthors, setEpisodesAuthors] = useState([])
-  const [EpisodesListOpen, setOpenEpisodesList] = useState(false)
+  /* const [EpisodesListOpen, setOpenEpisodesList] = useState(false) */
   
   const openEpisodesListHandler = (e) => {
     const id = e.target.getAttribute('data-id') 
@@ -36,19 +36,18 @@ const PodcastsList = ({ mobile }) => {
       return el.node.id === id
     })
     setEpisodesAuthors(filerEdges[0])
-    setOpenEpisodesList(true)
+    openEpisodesList(true)
   }
 
   const authors = data.Section.edges.map(({node}) => {
     return (<li onClick={(e) => openEpisodesListHandler(e)}  
-    key={node.id} data-id={node.id} >{node.name} <span className={classes.Indicator}>›</span></li>)
+    key={node.id} data-id={node.id} >{node.name} <span className={classes.Indicator}></span></li>)
   })
 
-    
   return (
     <div
       className={
-        mobile ? classes.PodcastList__main_mobile : classes.PodcastsList__main
+        mobile ? classes.PodcastList__main_mobile : openClass ? [classes.PodcastsList__main, classes.Open].join(" ") : classes.PodcastsList__main
       }
     >
       {console.log(episodesAuthors)}
@@ -60,7 +59,7 @@ const PodcastsList = ({ mobile }) => {
         }
       >
         {authors}
-        {EpisodesListOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
+        {episodesOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
         
      {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">

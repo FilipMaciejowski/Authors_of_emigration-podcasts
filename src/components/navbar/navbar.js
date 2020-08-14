@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 
 
@@ -11,6 +11,9 @@ import classes from "./navbar.module.css"
 
 
 const Navbar = () => {
+
+  
+
   return (
     <Context.Consumer>
       {context => (
@@ -18,7 +21,7 @@ const Navbar = () => {
           <ul className={classes.Navigation__list}>
             <li onClick={context.openPodcastsList}>
               <a className={classes.Navigation__list_link}>Podcasty</a>
-              {context.openList ? <PodcastsList mobile={false} /> : null}
+              {context.openList ? <PodcastsList episodesOpen={context.EpisodesListOpen} openEpisodesList={context.openEpisodesList}openClass={true} mobile={false} /> : <PodcastsList mobile={false} />}
             </li>
             <li>
               <Link

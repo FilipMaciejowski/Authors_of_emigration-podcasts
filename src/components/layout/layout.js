@@ -25,16 +25,17 @@ const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [openList, setOpenList] = useState(false);
-  
+  const [EpisodesListOpen, setOpenEpisodesList] = useState(false);
   
 
   const openModalHandler = () => {
     setIsOpen(!isOpen)
-    setOpenList(false)
+    
   }
 
   const closeModalHandler = () => {
     setIsOpen(false)
+    setOpenEpisodesList(false)
   }
 
   const toggleNavHandler = () => {
@@ -53,18 +54,22 @@ const Layout = ({ children }) => {
 
   const closeListHandler = () => {
     setOpenList(false)
+    setOpenEpisodesList(false)
+
   }
 
   const value = {
     isOpen,
     isShown,
     openList,
+    EpisodesListOpen,
     open: openModalHandler,
     close: closeModalHandler,
     toggleNav: toggleNavHandler,
     closeNav: closeNavHandler,
     openPodcastsList: openListHandler,
     closePodcastsList: closeListHandler,
+    openEpisodesList: setOpenEpisodesList
   }
 
 

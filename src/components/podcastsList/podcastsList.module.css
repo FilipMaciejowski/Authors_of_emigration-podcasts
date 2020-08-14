@@ -36,7 +36,7 @@
 
 
 @media(min-width: 600px){
-.PodcastsList__main {
+.PodcastsList__main.Open {
   width: 12rem;
   height: 9.5rem;
   margin-top: .5rem;
@@ -50,7 +50,66 @@
   top: 2.5rem;
   right: 8.25rem;
   overflow-y: auto;
-  background-color: var(--main_white);
+  opacity: 1;
+  -webkit-animation: list_animation .2s ease-out;
+  animation: list_animation .2s ease-out;
+}
+
+.PodcastsList__main{
+  width: 12rem;
+  height: 0rem;
+  margin-top: .5rem;
+  border-radius: 1px;
+  bordeR: 1px solid grey;
+  z-index: 2;
+  -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  position: absolute;
+  top: 2.5rem;
+  right: 8.25rem;
+  overflow-y: auto;
+  opacity: 1;
+  animation: list_animation_backwards .2s ease-in forwards;
+  -webkit-animation: list_animation_backwards .2s ease-in forwards;
+}
+
+
+@-webkit-keyframes list_animation{
+  0%{
+    height: 0rem;
+  }
+  100%{
+    heigh: 9.5rem;
+  }
+}
+@keyframes list_animation{
+  0%{
+    height: 0rem;
+  }
+  100%{
+    heigh: 9.5rem;
+  }
+}
+@-webkit-keyframes list_animation_backwards{
+  0%{
+    height: 9.5rem;
+    border: 1px solid grey;
+  }
+  100%{
+    heigh: 0rem;
+    border: 1px solid transparent;
+  }
+}
+@keyframes list_animation_backwards {
+  0%{
+    height: 9.5rem;
+    border: 1px solid grey;
+  }
+  100%{
+    heigh: 0rem;
+    border: 1px solid transparent;
+  }
 }
 
 .PodcastsList__list {
@@ -58,7 +117,6 @@
   display: flex; 
   flex-direction: column;
   width: 100%;
-  
 }
 
 .PodcastsList__list li {
