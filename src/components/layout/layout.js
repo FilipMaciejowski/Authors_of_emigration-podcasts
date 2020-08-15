@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -21,16 +21,21 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  
-  const [isOpen, setIsOpen] = useState(false);
-  const [isShown, setIsShown] = useState(false);
-  const [openList, setOpenList] = useState(false);
-  const [EpisodesListOpen, setOpenEpisodesList] = useState(false);
+
   
 
-  const openModalHandler = () => {
-    setIsOpen(!isOpen)
+  const [contactModalIsOpen, setIsOpen] = useState(false);
+  const [isShown, setIsShown] = useState(false);
+  const [openList, setOpenList] = useState();
+  const [EpisodesListOpen, setOpenEpisodesList] = useState(false);
+  
+  
+  
     
+
+
+  const openModalHandler = () => {
+    setIsOpen(!contactModalIsOpen)
   }
 
   const closeModalHandler = () => {
@@ -55,11 +60,10 @@ const Layout = ({ children }) => {
   const closeListHandler = () => {
     setOpenList(false)
     setOpenEpisodesList(false)
-
   }
 
   const value = {
-    isOpen,
+    contactModalIsOpen,
     isShown,
     openList,
     EpisodesListOpen,
@@ -69,7 +73,9 @@ const Layout = ({ children }) => {
     closeNav: closeNavHandler,
     openPodcastsList: openListHandler,
     closePodcastsList: closeListHandler,
-    openEpisodesList: setOpenEpisodesList
+    episodesListHandler: setOpenEpisodesList,
+    podcastListsHandler: setOpenList,
+
   }
 
 

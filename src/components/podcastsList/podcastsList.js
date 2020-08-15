@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
@@ -6,7 +6,7 @@ import classes from "./podcastsList.module.css"
 
 
 
-const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => {
+const PodcastsList = ({ openModalMainList, mobile, openClass, episodesOpen, openEpisodesList}) => {
 
   const data = useStaticQuery(graphql`
   query list {
@@ -26,7 +26,15 @@ const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => 
       }
     }
   }`)
+console.log(openClass)
+  
+/* useEffect(() => {
 
+const modal = document.querySelector('div.PodcastsList__main')
+modal.classList.add()
+
+  
+}, []) */
   const [episodesAuthors, setEpisodesAuthors] = useState([])
   /* const [EpisodesListOpen, setOpenEpisodesList] = useState(false) */
   
@@ -44,14 +52,25 @@ const PodcastsList = ({ mobile, openClass, episodesOpen, openEpisodesList }) => 
     key={node.id} data-id={node.id} >{node.name} <span className={classes.Indicator}></span></li>)
   })
 
+let openModalAuthors;
+
+if(mobile){
+  openModalAuthors = openModalAuthors = classes.PodcastList__main_mobile
+  }else if(openClass){
+    openModalAuthors = [classes.PodcastsList__main, classes.Open].join(" ")
+  }else if(!openClass){
+    openModalAuthors = [classes.PodcastsList__main, classes.Close].join(" ")
+  }else{
+    openModalAuthors = classes.PodcastsList__main
+  }
+
   return (
     <>
     <div
-      className={
-        mobile ? classes.PodcastList__main_mobile : openClass ? [classes.PodcastsList__main, classes.Open].join(" ") : classes.PodcastsList__main
+      className={openModalAuthors
       }
     >
-      {console.log(episodesAuthors)}
+      
       <ul
         className={
           mobile
