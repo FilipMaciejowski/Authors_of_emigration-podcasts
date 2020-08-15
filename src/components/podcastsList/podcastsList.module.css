@@ -51,11 +51,9 @@
   right: 8.25rem;
   overflow-y: auto;
   opacity: 1;
-  transition: height .3s;
-  -webkit-transition: height .3s;
   /* -webkit-animation: list_animation .2s ease-out;
-  animation: list_animation .2s ease-out;
-} */
+  animation: list_animation .2s ease-out; */
+}
 }
 
 .PodcastsList__main.Close{
@@ -68,7 +66,7 @@
 
 .PodcastsList__main{
   width: 12rem;
-  height: 0;
+  height: 10.5rem;
   margin-top: .5rem;
   border: 1px solid grey;
   border-radius: 3px;
@@ -80,7 +78,7 @@
   top: 2.5rem;
   right: 8.25rem;
   overflow-y: auto;
-  opacity: 0;
+  opacity: 1;
 }
 
 
@@ -168,7 +166,7 @@
   color: var(--main_black);
 }
 
-}
+
 
 
 

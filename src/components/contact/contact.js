@@ -15,14 +15,14 @@ const Contact = ({ mobile }) => {
               <a href="mailto: dawid.dziedziczak@gmail.com">
                 dawid.dziedziczak@gmail.com
               </a>
-              <span role="button" onClick={context.close}>
+              <span role="button" onClick={context.closeContactModal}>
               </span>
             </p>
           </div>
         ) : (
           <div className={classes.Contact__layout}>
             <div>
-              <div role="button" onClick={context.close} className={classes.Close}></div>
+              <div role="button" onClick={context.closeContactModal} className={classes.Close}></div>
             </div>
             <div className={classes.Contact__text_container}>
               <p className={classes.Contact__text}>

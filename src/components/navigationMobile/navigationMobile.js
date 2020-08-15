@@ -13,24 +13,24 @@ const NavigationMobile = () => {
       {context => (
         <nav
           className={
-            context.isShown
+            context.mobileNavIsOpen
               ? classes.NavigationMobile__layout
               : classes.NavigationMobile__layout_close
           }
         >
           <ul>
             <li>
-              <a onClick={context.openPodcastsList}>Podcasty</a>
+              <a onClick={context.togglePodcastsModal}>Podcasty</a>
             </li>
-            {context.openList ? <PodcastsList mobile={true}/> : null}
+            {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
             <li>
               <Link to="/aboutProject">O projekcie</Link>
             </li>
             <li>
-              <a onClick={context.open}>Kontakt</a>
+              <a onClick={context.openContactModal}>Kontakt</a>
             </li>
             
-              {context.isOpen ? <Contact mobile={true} /> : null}
+              {context.contactModalIsOpen ? <Contact mobile={true} /> : null}
             
           </ul>
         </nav>

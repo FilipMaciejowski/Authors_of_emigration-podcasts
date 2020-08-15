@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Context from "../context"
@@ -7,24 +7,25 @@ import Contact from "../contact/contact"
 
 import classes from "./navbar.module.css"
 
+
 const Navbar = () => {
+
+  
+
   return (
     <Context.Consumer>
       {context => (
         <>
           <ul className={classes.Navigation__list}>
-            <li onClick={context.openPodcastsList}>
+            <li onClick={context.openPodcastsModal}>
               <a className={classes.Navigation__list_link}>Podcasty</a>
-              {context.openList ? (
+              {context.podcastsModalIsOpen ? (
                 <PodcastsList
-                  episodesOpen={context.EpisodesListOpen}
-                  openEpisodesList={context.episodesListHandler}
+
                   mobile={false}
-                  openClass={true}
                 />)
               : null}
-              {typeof context.open === undefined  && null
-              }
+              
             </li>
             <li>
               <Link
@@ -36,7 +37,7 @@ const Navbar = () => {
             </li>
             <li
               className={classes.Different}
-              onClick={event => context.open(event)}
+              onClick={event => context.openContactModal(event)}
             >
               <a className={classes.Navigation__list_link}>Kontakt</a>
               {context.contactModalIsOpen ? <Contact mobile={false} /> : null}

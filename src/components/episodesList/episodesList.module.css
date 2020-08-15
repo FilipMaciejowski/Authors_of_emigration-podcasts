@@ -1,6 +1,6 @@
 .EposidesList__main{
   width: 7.25rem;
-  height: auto;
+  height: 5rem;
   margin-top: .5rem;
   border: 1px solid grey;
   border-radius: 3px;
@@ -8,13 +8,13 @@
   -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
-  z-index:1;
+  z-index:2;
   top: 12.95rem;
   right: 1.05rem;
   overflow-y: auto;
   background-color: var(--main_white);
-  animation: aniamation_episodes ease-in .1s forwards;
-  -webkit-animation: aniamation_episodes ease-in .1s forwards;
+  /* animation: aniamation_episodes ease-in .1s forwards;
+  -webkit-animation: aniamation_episodes ease-in .1s forwards; */
 }
 
 @keyframes aniamation_episodes{

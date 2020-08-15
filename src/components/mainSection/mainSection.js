@@ -14,7 +14,7 @@ const MainSection = () => {
     <section className={classes.MainSection__layout}>
       <Header />
       <DecorationLines />
-      <PodcastsSection closeNavMobile={context.closeNav}/>
+      <PodcastsSection closeNavMobile={context.closeMobileNav}/>
     </section>
     )}
     </Context.Consumer>

@@ -23,65 +23,56 @@ const Layout = ({ children }) => {
   `)
 
   
-
-  const [contactModalIsOpen, setIsOpen] = useState(false);
-  const [isShown, setIsShown] = useState(false);
-  const [openList, setOpenList] = useState();
-  const [EpisodesListOpen, setOpenEpisodesList] = useState(false);
-  
-  
-  
-    
+  const [contactModalIsOpen, setContactModalIsOpen] = useState(false);
+  const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false);
+  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
 
 
-  const openModalHandler = () => {
-    setIsOpen(!contactModalIsOpen)
+  const openContactModalHandler = () => {
+    setContactModalIsOpen(!contactModalIsOpen)
   }
 
-  const closeModalHandler = () => {
-    setIsOpen(false)
-    setOpenEpisodesList(false)
+  const closeContactModalHandler = () => {
+    setContactModalIsOpen(false)
   }
 
-  const toggleNavHandler = () => {
-    setIsShown(!isShown)
-    setIsOpen(false)
+  const openPodcastsModalHandler = () => {
+    setPodcastsModalIsOpen(true)
+    setContactModalIsOpen(false)
   }
 
-  const closeNavHandler = () => {
-    setIsShown(false)
+  const closePodcastsModalHandler = () => {
+    setPodcastsModalIsOpen(false)
   }
 
-  const openListHandler = () => {
-    setOpenList(true)
-    setIsOpen(false)
+
+  const toggleMobileNavHandler = () => {
+    setMobileNavIsOpen(!mobileNavIsOpen)
   }
 
-  const closeListHandler = () => {
-    setOpenList(false)
-    setOpenEpisodesList(false)
+  const closeMobileNavHandler = () => {
+    setMobileNavIsOpen(false)
   }
+
+ 
+
 
   const value = {
     contactModalIsOpen,
-    isShown,
-    openList,
-    EpisodesListOpen,
-    open: openModalHandler,
-    close: closeModalHandler,
-    toggleNav: toggleNavHandler,
-    closeNav: closeNavHandler,
-    openPodcastsList: openListHandler,
-    closePodcastsList: closeListHandler,
-    episodesListHandler: setOpenEpisodesList,
-    podcastListsHandler: setOpenList,
-
+    podcastsModalIsOpen,
+    mobileNavIsOpen,
+    openContactModal: openContactModalHandler,
+    closeContactModal: closeContactModalHandler,
+    openPodcastsModal: openPodcastsModalHandler,
+    closePodcastsModal: closePodcastsModalHandler,
+    toggleMobileNav: toggleMobileNavHandler,
+    closeMobileNav: closeMobileNavHandler
   }
 
 
   return (
     <Context.Provider value={value}>
-      <div className={classes.Layout__main} onClickCapture={closeListHandler}>
+      <div className={classes.Layout__main} onClickCapture={closePodcastsModalHandler}>
         <div>{children}</div>
         <NavigationMobile />
         <Navigation />

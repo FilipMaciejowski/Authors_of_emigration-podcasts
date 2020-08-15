@@ -6,8 +6,8 @@ import classes from "./podcastsList.module.css"
 
 
 
-const PodcastsList = ({ openModalMainList, mobile, openClass, episodesOpen, openEpisodesList}) => {
-
+const PodcastsList = ({ mobile }) => {
+  
   const data = useStaticQuery(graphql`
   query list {
     Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -26,51 +26,41 @@ const PodcastsList = ({ openModalMainList, mobile, openClass, episodesOpen, open
       }
     }
   }`)
-console.log(openClass)
-  
-/* useEffect(() => {
-
-const modal = document.querySelector('div.PodcastsList__main')
-modal.classList.add()
-
-  
-}, []) */
+  const [episodesListIsOpen, setEpisodesListIsOpen] = useState();
   const [episodesAuthors, setEpisodesAuthors] = useState([])
-  /* const [EpisodesListOpen, setOpenEpisodesList] = useState(false) */
+  
+  
+  /* const openEpisodesListHandler = () => {
+    setEpisodesListIsOpen(true)
+  } */
+
+  /* const closeEpisodesListHandler = () => {
+    setEpisodesListIsOpen(false)
+  } */
   
   const openEpisodesListHandler = (e) => {
     const id = e.target.getAttribute('data-id') 
     const filerEdges = data.Section.edges.filter(el => {
       return el.node.id === id
     })
+    setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
-    openEpisodesList(true)
   }
+
+  
 
   const authors = data.Section.edges.map(({node}) => {
-    return (<li onClick={(e) => openEpisodesListHandler(e)}  
-    key={node.id} data-id={node.id} >{node.name} <span className={classes.Indicator}></span></li>)
+    return (<li onClick={(e) => openEpisodesListHandler(e) }  
+    key={node.id} data-id={node.id} >{node.name}</li>)
   })
-
-let openModalAuthors;
-
-if(mobile){
-  openModalAuthors = openModalAuthors = classes.PodcastList__main_mobile
-  }else if(openClass){
-    openModalAuthors = [classes.PodcastsList__main, classes.Open].join(" ")
-  }else if(!openClass){
-    openModalAuthors = [classes.PodcastsList__main, classes.Close].join(" ")
-  }else{
-    openModalAuthors = classes.PodcastsList__main
-  }
 
   return (
     <>
     <div
-      className={openModalAuthors
+      className={mobile ? classes.PodcastList__main_mobile : [classes.PodcastsList__main, classes.Open].join(" ")
       }
     >
-      
+
       <ul
         className={
           mobile
@@ -142,7 +132,7 @@ if(mobile){
       </ul>
      
     </div>
-     {episodesOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
+     {episodesListIsOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
     </>
   )
 }
