@@ -6,6 +6,7 @@
 --main_white: #fafafa;
 --main_grey: rgb(230, 230, 230);
 --second_grey: rgb(85, 85, 85);
+--main_width: 920px;
 }
 
 html {

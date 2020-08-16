@@ -78,7 +78,7 @@
     z-index: 2;
     color: transparent;
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.125rem;
@@ -91,8 +91,8 @@
 
   .Header__neon_container{
     position: absolute;
-    top: 16.05rem;
-    right: 13.75rem;
+    top: 15.6rem;
+    right: 14.75rem;
     z-index: 1;
     width: auto;
     transform: skew(-7deg, -18.25deg);
