@@ -61,6 +61,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  
 }
 
 .Pagination__element{
@@ -69,8 +70,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
 }
 
 .Pagination__element:hover {
@@ -83,19 +82,19 @@
 .Active {
   font-size: .75rem;
   color: var(--main_black);
-  font-weight: 900; 
+  font-weight: 800; 
 }
 
 .Previous, .Next {
   color: var(--second_grey);
 }
 
-.Link__prev  {
+/* .Link__prev  {
  transform: translateX(-15.25%) translateY(-1.85%);
 }
 .Link__next {
   transform: translateX(6.25%) translateY(-1.85%);
-}
+} */
 
 .Disabled{
   opacity: 0.2;
