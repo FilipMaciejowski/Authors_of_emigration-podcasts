@@ -1,45 +1,37 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
 
-
-
 const PodcastsList = ({ mobile }) => {
-  
   const data = useStaticQuery(graphql`
-  query list {
-    Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
-      edges {
-        node {
-          id
-          name
-          podcastelement{
+    query list {
+      Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
             id
-            episode
-            authorName
-            slug
-            unpublished
+            name
+            podcastelement {
+              id
+              episode
+              authorName
+              slug
+              unpublished
+            }
           }
         }
       }
     }
-  }`)
-  const [episodesListIsOpen, setEpisodesListIsOpen] = useState();
-  const [episodesAuthors, setEpisodesAuthors] = useState([])
-  
-  
-  /* const openEpisodesListHandler = () => {
-    setEpisodesListIsOpen(true)
-  } */
+  `)
 
-  /* const closeEpisodesListHandler = () => {
-    setEpisodesListIsOpen(false)
-  } */
-  
-  const openEpisodesListHandler = (e) => {
-    const id = e.target.getAttribute('data-id') 
+  console.log(mobile)
+
+  const [episodesListIsOpen, setEpisodesListIsOpen] = useState()
+  const [episodesAuthors, setEpisodesAuthors] = useState([])
+
+  const openEpisodesListHandler = e => {
+    const id = e.target.getAttribute("data-id")
     const filerEdges = data.Section.edges.filter(el => {
       return el.node.id === id
     })
@@ -47,29 +39,37 @@ const PodcastsList = ({ mobile }) => {
     setEpisodesAuthors(filerEdges[0])
   }
 
-  
-
-  const authors = data.Section.edges.map(({node}) => {
-    return (<li onClick={(e) => openEpisodesListHandler(e) }  
-    key={node.id} data-id={node.id} >{node.name}</li>)
+  const authors = data.Section.edges.map(({ node }) => {
+    return (
+      <li
+        onClick={e => openEpisodesListHandler(e)}
+        key={node.id}
+        data-id={node.id}
+      >
+        {node.name}
+      </li>
+    )
   })
 
   return (
     <>
-    <div
-      className={mobile ? classes.PodcastList__main_mobile : [classes.PodcastsList__main, classes.Open].join(" ")
-      }
-    >
-
-      <ul
+      <div
         className={
           mobile
-            ? classes.PodcastsList__list_mobile
-            : classes.PodcastsList__list
+            ? classes.PodcastList__main_mobile
+            : [classes.PodcastsList__main, classes.Open].join(" ")
         }
       >
-        {authors}
-     {/*    <li>
+        <ul
+          className={
+            mobile
+              ? classes.PodcastsList__list_mobile
+              : classes.PodcastsList__list
+          }
+          
+        >
+          {authors}
+          {/*    <li>
           <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
             {TITLE_JELENSKI}, Odc.1
           </Link>
@@ -129,10 +129,9 @@ const PodcastsList = ({ mobile }) => {
             {TITLE_HERLING}, Odc.3
           </Link>
         </li> */}
-      </ul>
-     
-    </div>
-     {episodesListIsOpen ? <EpisodesList episodes={episodesAuthors}/> : null}
+        </ul>
+      </div>
+      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false}episodes={episodesAuthors} /> : null}
     </>
   )
 }

@@ -20,7 +20,7 @@ const NavigationMobile = () => {
         >
           <ul>
             <li>
-              <a onClick={context.togglePodcastsModal}>Podcasty</a>
+              <a onClick={context.openPodcastsModal}>Podcasty</a>
             </li>
             {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
             <li>
@@ -31,7 +31,6 @@ const NavigationMobile = () => {
             </li>
             
               {context.contactModalIsOpen ? <Contact mobile={true} /> : null}
-            
           </ul>
         </nav>
       )}
