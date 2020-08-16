@@ -137,7 +137,7 @@
   height: 100%;
 }
 
-.PodcastsList__list li {
+.Author {
   list-style: none;
   height: 4.5rem;
   width: 100%;
@@ -150,6 +150,13 @@
   font-weight: 500;
   padding: 0 0.5rem;
 }
+
+.Author.Clicked{
+  background-color: var(--second_grey);
+  color: var(--main_white);
+}
+
+
 
 .PodcastsList__list li:hover {
   color: var(--main_black);

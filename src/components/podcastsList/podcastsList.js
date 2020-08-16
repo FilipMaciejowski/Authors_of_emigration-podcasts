@@ -25,15 +25,41 @@ const PodcastsList = ({ mobile }) => {
     }
   `)
 
-  console.log(mobile)
+  
+
+ 
 
   const [episodesListIsOpen, setEpisodesListIsOpen] = useState()
   const [episodesAuthors, setEpisodesAuthors] = useState([])
 
+
+  const getSiblings = (elem) => {
+    const siblings = []
+    let sibling = elem.parentNode.firstChild
+    console.log(sibling)
+    while(sibling) {
+      if (sibling.nodeType === 1 && sibling !== elem) {
+        siblings.push(sibling);
+      }
+      sibling = sibling.nextSibling
+    }
+    return siblings;
+  }
+  
   const openEpisodesListHandler = e => {
-    const id = e.target.getAttribute("data-id")
+    const SelectedAuthor = e.target
+    const AuthorsOfEmigration = getSiblings(SelectedAuthor)
+    const id = SelectedAuthor.getAttribute("data-id")
     const filerEdges = data.Section.edges.filter(el => {
       return el.node.id === id
+    })
+
+    AuthorsOfEmigration.forEach(author => {
+      if(author.classList.contains(classes.Clicked)){
+        author.classList.remove(classes.Clicked)
+      }else{
+        SelectedAuthor.classList.add(classes.Clicked)
+      }
     })
     setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
@@ -42,6 +68,7 @@ const PodcastsList = ({ mobile }) => {
   const authors = data.Section.edges.map(({ node }) => {
     return (
       <li
+        className={classes.Author}
         onClick={e => openEpisodesListHandler(e)}
         key={node.id}
         data-id={node.id}
