@@ -48,7 +48,7 @@
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
   top: 2.5rem;
-  right: 8.25rem;
+  right: 8.45rem;
   overflow-y: auto;
   opacity: 1;
   /* -webkit-animation: list_animation .2s ease-out;
@@ -155,7 +155,6 @@
   background-color: var(--second_grey);
   color: var(--main_white);
 }
-
 
 
 .PodcastsList__list li:hover {
