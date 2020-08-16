@@ -12,6 +12,7 @@
   -webkit-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   -moz-box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
   box-shadow: 0px 6px 7px -1.95px rgba(189, 189, 189, 0.75);
+ 
 }
 
 .Navigation__container {
@@ -24,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .Navigation__line {
@@ -69,13 +71,12 @@
   .Navigation__container {
     width: 840px;
     max-width: 100%;
-    height: 6.5rem;
+    height: 100%;
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.2s;
-    border-bottom: none;
   }
 
   .Navigation__container.Scroll {
@@ -112,4 +113,12 @@
   .Navigation__line.Scroll {
     display: none;
   }
+}
+
+.Nav__observer_helper{
+  width: 100vw;
+  height: 6.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

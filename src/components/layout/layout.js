@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react"
+
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -54,8 +55,6 @@ const Layout = ({ children }) => {
     setMobileNavIsOpen(false)
   }
 
- 
-
 
   const value = {
     contactModalIsOpen,
@@ -72,9 +71,11 @@ const Layout = ({ children }) => {
 
   return (
     <Context.Provider value={value}>
+      
       <div className={classes.Layout__main} onClickCapture={closePodcastsModalHandler}>
         <div>{children}</div>
         <NavigationMobile />
+        
         <Navigation />
         <MainSection />
         <div className={classes.MainSection__ministry}>
@@ -85,11 +86,14 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <Footer
+      
+      
         data={data.site.siteMetadata.developer}
         containerSize="Footer__container_normal"
       >
         © {new Date().getFullYear()}, Designed and developed by
       </Footer>
+     
     </Context.Provider>
   )
 }
