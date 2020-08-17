@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap"); */
 
 .Header__main {
   position: relative;
@@ -70,7 +70,7 @@
 
 @media (min-width: 845px) {
   .Header__neon {
-    font-family: 'Doris', Roboto, sans-serif;
+    font-family: "Doris", Roboto, sans-serif;
     display: inline;
     position: relative;
     top: 0;
@@ -82,14 +82,14 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.125rem;
-    animation: pulsating 6s lease-in-out 1s  forwards;
-    -webkit-animation: pulsating 6s ease-in-out 1s  forwards;
+    animation: pulsating 6s lease-in-out 1s forwards;
+    -webkit-animation: pulsating 6s ease-in-out 1s forwards;
     -ms-animation: pulsating 6s ease-in-out 1s forwards;
     -moz-animation: pulsating 6s ease-in-out 1s forwards;
-    -o-animation: pulsating 6s ease-in-out 1s  forwards;
+    -o-animation: pulsating 6s ease-in-out 1s forwards;
   }
 
-  .Header__neon_container{
+  .Header__neon_container {
     position: absolute;
     top: 15.66rem;
     right: 14.75rem;
@@ -97,23 +97,21 @@
     width: auto;
     transform: skew(-7deg, -18.25deg);
   }
-  
-  
+
   .Letter_1 {
     color: rgb(255, 210, 210);
     opacity: 0;
-    animation: letter_o 3s ease-out 7s  forwards;
-    -webkit-animation: letter_o 3s ease-out 7s forwards ;
+    animation: letter_o 3s ease-out 7s forwards;
+    -webkit-animation: letter_o 3s ease-out 7s forwards;
     -o-animation: letter_o 3s ease-out 7s forwards;
     -moz-animation: letter_o 3s ease-out 7s forwards;
     -ms-anmation: letter_o 3s ease-out 7s forwards;
   }
 
-
   .Letter_2 {
-    animation: letter_n 3s ease-out 9.5s;
-    -webkit-animation: letter_n 2s ease-in 9.5s ;
-    -o-animation: letter_n 3s ease-in 9.5s ;
+    animation: letter_n 3s ease-in 9.5s;
+    -webkit-animation: letter_n 2s ease-in 9.5s;
+    -o-animation: letter_n 3s ease-in 9.5s;
     -ms-animation: letter_n 3s ease-in 9.5s;
     -moz-animation: letter_n 3s ease-in 9.5s;
   }
@@ -121,10 +119,8 @@
   .Letter_2.Hover {
     animation: hover_letter_n 2s ease-out forwards;
   }
+}
 
-  }
- 
- 
 @keyframes pulsating {
   0% {
     color: rgb(255, 210, 210);
@@ -133,64 +129,63 @@
 
   40% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-    opacity: .25;
+    opacity: 0.25;
   }
 
-  
   45% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-    opacity: .45;
+    opacity: 0.45;
   }
 
-  46%{
+  46% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-      opacity: .9;
+    opacity: 0.9;
   }
 
   50% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
     opacity: 0;
   }
 
-  65%{
+  65% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-    opacity: .9;
+    opacity: 0.9;
   }
 
   90% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-    opacity: .95;
+    opacity: 0.95;
   }
 
   96% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-    0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0);
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
     color: rgb(255, 210, 210);
-    opacity: .1;
+    opacity: 0.1;
   }
 
-  97%{
+  97% {
     color: rgb(255, 210, 210);
-    opacity: .9;
+    opacity: 0.9;
   }
 
   98% {
@@ -198,12 +193,11 @@
     opacity: 0;
   }
 
-
-  100%  {
+  100% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
+    color: rgb(255, 210, 210);
     opacity: 1;
   }
 }
@@ -213,210 +207,206 @@
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      opacity: 1;
-      color: rgb(255, 210, 210);
+    opacity: 1;
+    color: rgb(255, 210, 210);
   }
 
   50% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
 
   55% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.85;
+    color: rgb(255, 210, 210);
+    opacity: 0.85;
   }
 
   57% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.75;
+    color: rgb(255, 210, 210);
+    opacity: 0.75;
   }
 
   59% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.9;
+    color: rgb(255, 210, 210);
+    opacity: 0.9;
   }
 
-  80%{
+  80% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
-
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
   100% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 1;
+    color: rgb(255, 210, 210);
+    opacity: 1;
   }
-  }
-
-  @keyframes letter_n {
-    0% {
-      text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.85;
-  }
-
-50% {
-  text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
-  }
-55%{
-  text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.9;
 }
-70% {
+
+@keyframes letter_n {
+  0% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
-  }
-  80%{
-    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.85;
-  }
-  90%{
-    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: .1;
-  }
-  92%{
-    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 1;
+    color: rgb(255, 210, 210);
+    opacity: 0.85;
   }
 
-  95%{
+  50% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: .2;
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
-  99%{
+  55% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: .9;
-  }
-
-  100% {
-    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 1;
-  }
-  }
-
-  @keyframes hover_letter_n {
-    0% {
-      text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 1;
-  }
-  10% {
-    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
-  }
-
-15% {
-  text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.85;
-}
-50% {
-  text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
-      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.1;
+    color: rgb(255, 210, 210);
+    opacity: 0.9;
   }
   70% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0.9;
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
-  77%{
+  80% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0;
+    color: rgb(255, 210, 210);
+    opacity: 0.85;
   }
-  85%{
+  90% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: .85;
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
-  90%{
+  92% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 0;
+    color: rgb(255, 210, 210);
+    opacity: 1;
   }
 
-  95%{
+  95% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: .9;
+    color: rgb(255, 210, 210);
+    opacity: 0.2;
+  }
+  99% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.9;
   }
 
   100% {
     text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
       0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
       0px 0px 20px rgb(255, 0, 0);
-      color: rgb(255, 210, 210);
-      opacity: 1;
+    color: rgb(255, 210, 210);
+    opacity: 1;
   }
+}
+
+@keyframes hover_letter_n {
+  0% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 1;
+  }
+  10% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
   }
 
-  
+  15% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.85;
+  }
+  50% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.1;
+  }
+  70% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.9;
+  }
+  77% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0;
+  }
+  85% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.85;
+  }
+  90% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0;
+  }
 
+  95% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 0.9;
+  }
+
+  100% {
+    text-shadow: 0px 0px 5px rgb(255, 0, 0), 0px 0px 8px rgb(255, 0, 0),
+      0px 0px 12px rgb(255, 0, 0), 0px 0px 16px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0);
+    color: rgb(255, 210, 210);
+    opacity: 1;
+  }
+}

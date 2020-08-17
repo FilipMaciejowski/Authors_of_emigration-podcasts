@@ -12,7 +12,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 } */
 
-const path = require("path")
+const path = require("path");
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const podcastTemplate = path.resolve(`./src/templates/podcastTemplate/podscastTemplate.js`)
@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   
+  
   if (result.errors) {
     reporter.panicOnBuild('🚨 ERROR: Loading "createPages" query')
   }
@@ -37,6 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const podcasts = result.data.allContentfulPodcastElement.edges
   
   podcasts.forEach(({ node }) => {
+    
     createPage({
       path: `/podcasts/${node.slug}`,
       component: podcastTemplate,

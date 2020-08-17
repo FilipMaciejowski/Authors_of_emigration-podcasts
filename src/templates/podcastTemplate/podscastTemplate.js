@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import ReactLoading from "react-loading"
 
 import { Link, graphql } from "gatsby"
-import { INLINES, BLOCKS, DOCUMENT } from "@contentful/rich-text-types"
+import { INLINES, BLOCKS} from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 /* import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx" */

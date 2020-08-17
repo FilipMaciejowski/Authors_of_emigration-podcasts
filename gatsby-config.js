@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+  path: `.env`, // or '.env'
 });
 
 const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')

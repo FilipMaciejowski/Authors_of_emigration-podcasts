@@ -43,7 +43,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "MIT",    
   "scripts": {
     "build": "gatsby build",
     "develop": "env-cmd -f .env gatsby develop",
