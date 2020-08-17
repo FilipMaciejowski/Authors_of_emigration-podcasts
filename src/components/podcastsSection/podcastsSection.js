@@ -167,6 +167,7 @@ const PodcastsSection = ({closeNavMobile}) => {
             {...pagination}
             onChange={activePage => {setActivePage(activePage)
               handlePageClick() }}
+            
           />
         </div>
       </main>

@@ -1,8 +1,7 @@
 .AuthorSection__layout{
   width: 100%;
-  margin: 1rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   height: auto;
-  
 }
 
 .AuthorSection__layout h1 {
@@ -19,23 +18,20 @@
   padding: 2rem .75rem 0 .75rem;
   background-color: var(--main_white);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(244, 241, 241);
   border: 1px solid rgb(235, 235, 235);
 }
 
-@media(min-width: 320px){
+
+@media(min-width: 865px){
   .AuthorSection__layout_container {
     justify-content: space-around;
   }
 }
-@media(min-width: 715px){
-  .AuthorSection__layout_container {
-    justify-content: space-between;
-  }
-}
+
 
 @media(max-width: 850px){
   .AuthorSection__layout_container{
@@ -46,3 +42,5 @@
 }
 
 }
+
+
