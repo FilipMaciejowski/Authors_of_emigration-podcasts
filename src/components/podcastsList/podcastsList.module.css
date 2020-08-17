@@ -137,7 +137,7 @@
   height: 100%;
 }
 
-.Author {
+.Author, .Author_mobile {
   list-style: none;
   height: 4.5rem;
   width: 100%;
@@ -149,6 +149,12 @@
   font-size: .75rem;
   font-weight: 500;
   padding: 0 0.5rem;
+}
+
+
+.Author_mobile.Clicked{
+  color: var(main_black);
+  font-weight: 600;
 }
 
 .Author.Clicked{

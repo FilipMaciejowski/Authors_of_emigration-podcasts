@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
 
-const PodcastsList = ({ mobile }) => {
+const PodcastsList = ({ mobile, openModal}) => {
   const data = useStaticQuery(graphql`
     query list {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -25,18 +25,14 @@ const PodcastsList = ({ mobile }) => {
     }
   `)
 
-  
-
- 
-
-  const [episodesListIsOpen, setEpisodesListIsOpen] = useState()
+  const [episodesListIsOpen, setEpisodesListIsOpen] = useState(false)
   const [episodesAuthors, setEpisodesAuthors] = useState([])
 
 
   const getSiblings = (elem) => {
     const siblings = []
     let sibling = elem.parentNode.firstChild
-    console.log(sibling)
+  
     while(sibling) {
       if (sibling.nodeType === 1 && sibling !== elem) {
         siblings.push(sibling);
@@ -63,13 +59,17 @@ const PodcastsList = ({ mobile }) => {
     })
     setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
+    if(mobile){
+    console.log(openModal)
+    }
   }
 
   const authors = data.Section.edges.map(({ node }) => {
     return (
       <li
-        className={classes.Author}
-        onClick={e => openEpisodesListHandler(e)}
+        className={mobile ? classes.Author_mobile : classes.Author}
+        onClick={openEpisodesListHandler}
+        onClickCapture={e => openEpisodesListHandler(e)}
         key={node.id}
         data-id={node.id}
       >
@@ -158,9 +158,12 @@ const PodcastsList = ({ mobile }) => {
         </li> */}
         </ul>
       </div>
-      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false}episodes={episodesAuthors} /> : null}
+      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} episodes={episodesAuthors} /> : null}
+      
     </>
   )
 }
+
+
 
 export default PodcastsList

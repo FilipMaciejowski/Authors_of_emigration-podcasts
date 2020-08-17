@@ -46,7 +46,6 @@ const Layout = ({ children }) => {
     setPodcastsModalIsOpen(false)
   }
 
-
   const toggleMobileNavHandler = () => {
     setMobileNavIsOpen(!mobileNavIsOpen)
   }
@@ -65,17 +64,16 @@ const Layout = ({ children }) => {
     openPodcastsModal: openPodcastsModalHandler,
     closePodcastsModal: closePodcastsModalHandler,
     toggleMobileNav: toggleMobileNavHandler,
-    closeMobileNav: closeMobileNavHandler
+    closeMobileNav: closeMobileNavHandler,
+    openModal: setPodcastsModalIsOpen
   }
 
 
   return (
     <Context.Provider value={value}>
-      
+      <NavigationMobile/>
       <div className={classes.Layout__main} onClickCapture={closePodcastsModalHandler}>
         <div>{children}</div>
-        <NavigationMobile />
-        
         <Navigation />
         <MainSection />
         <div className={classes.MainSection__ministry}>

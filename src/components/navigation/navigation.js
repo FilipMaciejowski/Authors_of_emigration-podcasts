@@ -5,6 +5,7 @@ import SVGContainer from "../SVGContainer/SVGContainer"
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu"
 import Navbar from "../navbar/navbar"
 import classes from "./navigation.module.css"
+import NavigationMobile from "../navigationMobile/navigationMobile"
 
 const Navigation = () => {
    /* const [assignedClasses, setAssignedClasses] = useState([
@@ -41,7 +42,6 @@ const Navigation = () => {
         !inView ? [classes.Navigation__main, classes.Scroll].join(" ") : classes.Navigation__main
       }
     >
-      {console.log(inView)}
       <nav
         className={
           !inView ? [classes.Navigation__container, classes.Scroll].join(" ") :  classes.Navigation__container
@@ -54,6 +54,7 @@ const Navigation = () => {
           scroll={!inView}
         />
         <Navbar />
+        
         <HamburgerMenu />
       </nav>
       <div className={!inView ? [classes.Navigation__line, classes.Scroll].join(" ") : classes.Navigation__line}></div>

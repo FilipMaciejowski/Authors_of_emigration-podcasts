@@ -29,7 +29,6 @@ const NavigationMobile = () => {
             <li>
               <a onClick={context.openContactModal}>Kontakt</a>
             </li>
-            
               {context.contactModalIsOpen ? <Contact mobile={true} /> : null}
           </ul>
         </nav>

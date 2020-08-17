@@ -3,28 +3,31 @@ import { Link } from "gatsby"
 
 import classes from "./EpisodesList.module.css"
 
-const EpisodesList = ({ episodes }) => {
+const EpisodesList = ({ episodes, mobile }) => {
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
   }
 
+  console.log(mobile)
+
+
   return (
-    <div className={classes.EposidesList__main}>
-      <ul className={classes.List}>
+    <div className={mobile ? classes.EposidesList__main_mobile : classes.EposidesList__main}>
+      <ul className={mobile ? classes.List_mobile : classes.List}>
         {episodes.node.podcastelement.sort(sortEpisodeElements).map(element =>
           !element.unpublished ? (
             <Link
-              className={classes.List__element_link}
+              className={mobile ? classes.List__element_link_mobile : classes.List__element_link}
               to={`/podcasts/${element.slug}`}
             >
               <li
-                className={classes.List__element}
+                className={mobile ? classes.List__element_mobile : classes.List__element}
                 key={element.id}
               >{` Odcinek ${element.episode}`}</li>
             </Link>
           ) : (
             <li
-              className={classes.List__element_disabled}
+              className={mobile ? classes.List__element_disabled_mobile : classes.List__element_disabled}
               key={element.id}
             >{` Odcinek ${element.episode}`}</li>
           )
