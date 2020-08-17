@@ -64,7 +64,7 @@ const PodcastElement = ({
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 .5 20 20" className={classes.Headphones} >
                 <defs />
                 <path fill="none" d="M0 0h24v24H0z" opacity="none" />
-                <path fill="" d="M12 1a9 9 0 00-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 00-9-9z" />
+                <path fill="none" d="M12 1a9 9 0 00-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 00-9-9z" />
               </svg>
               </Link>
           </div>
