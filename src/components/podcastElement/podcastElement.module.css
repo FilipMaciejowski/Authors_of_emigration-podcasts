@@ -3,7 +3,7 @@
   height: 21rem;
   width: 14rem;
   margin-bottom: 2rem;
-  border: .25px solid var(--main_grey);
+  
   transition: ease .2s;
   background-color: var(--main_white);
   box-shadow: 2px 6px 16px rgba(100,110,140,.15), 1px 4px 6px rgba(100,110,140,.15);
