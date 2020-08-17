@@ -75,6 +75,19 @@ p {
   font-size: .85rem;
 }
 
+.Contact__text_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin-bottom: 1rem;
+  transform: translateX(5%);
+}
+
+.Contact__text_container p{
+  margin: 0 1rem 0 0;
+}
+
 .Contact__text_container p a{
   text-decoration: none;
   color: grey;
@@ -85,23 +98,22 @@ p {
   text-decoration:underline;
 }
 
-.Contact__text {
-  position: relative;
-}
-
-.Contact__text span {
+ span.Close_button {
   height: 1.5rem;
   width: 1.5rem;
-  position: absolute;
+  margin: 0;
+  position: relative;
   cursor: pointer;
-  transform: translateX(46%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
 
-.Contact__text span::before {
+span.Close_button::before {
   position: absolute;
-  top: 11px;
-  left: 4px;
+  top: 45%;
+  left: 17.5%;
   content: '';
   height: .1rem;
   width: 1rem;
@@ -111,10 +123,10 @@ p {
   cursor: pointer;
 }
 
-.Contact__text span::after {
+span.Close_button::after {
   position: absolute;
-  top: 11px;
-  left: 4px;
+  top: 45%;
+  left: 17.5%;
   content: '';
   height: .1rem;
   width: 1rem;
@@ -122,14 +134,13 @@ p {
   background-color: var(--main_black);
   position: absolute;
   cursor: pointer;
-  transform: translate(-200%);
 }
 
-.Contact__text span::before {
+span.Close_button::before {
   transform:translateY(25%) rotate(-45deg);
 }
 
-.Contact__text span::after {
+span.Close_button::after {
   transform: translateY(25%) rotate(45deg);
 }
 
