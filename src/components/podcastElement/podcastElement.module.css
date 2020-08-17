@@ -119,12 +119,14 @@ background-position: 100% 30%;
   margin-bottom: 0.1rem;
 }
 
-.PodcastElement__content_description {
-  font-size: calc(0.85rem - 15%);
+.Content_wrapper p{
+  font-size: .675rem;
   line-height: 0.9rem;
   margin-bottom: .25rem;
   height: 5rem;
 }
+
+
 
 .PodcastElement__content_listen {
   width: 100%;
@@ -161,7 +163,7 @@ div.Listen__button:hover a{
   
 }
 
-div.Listen__button p {
+div.Listen__button span.Listen {
   font-size: .85rem;
   font-weight: 500;
   margin: 0;

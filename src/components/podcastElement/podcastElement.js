@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import classes from "./podcastElement.module.css"
 
@@ -14,8 +15,6 @@ const PodcastElement = ({
   unpublished,
   unpublished_episode,
 }) => {
-
-  
   let unpublishedContent
   if (unpublished) {
     unpublishedContent = (
@@ -34,15 +33,14 @@ const PodcastElement = ({
     )
   } else {
     unpublishedContent = (
-      <div>
-        <p className={classes.PodcastElement__content_description}
-        >
-          <div dangerouslySetInnerHTML={{__html: description}}></div>
+      <div className={classes.Content_wrapper}>
+  
+        <p  dangerouslySetInnerHTML={{__html:description}} className={classes.PodcastElement__content_description} >
         </p>
         <div className={classes.PodcastElement__content_listen}>
           <div className={classes.Listen__button}>
             <Link to={`/podcasts/${page}`}>
-              <p>Posłuchaj</p>
+              <span className={classes.Listen}>Posłuchaj</span>
               <span className={classes.Dash}> - </span>
               <svg
                 className={classes.Wire}
