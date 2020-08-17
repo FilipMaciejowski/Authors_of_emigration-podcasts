@@ -27,7 +27,9 @@ const PodcastsSection = ({closeNavMobile}) => {
               unpublishedEpisode
               unpublished
               description {
-                description
+                childMarkdownRemark{
+                  html
+                }
               }
               photo {
                 fluid {
@@ -41,6 +43,7 @@ const PodcastsSection = ({closeNavMobile}) => {
       }
     }
   `)
+  
 
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
@@ -81,7 +84,7 @@ const PodcastsSection = ({closeNavMobile}) => {
   const indexOfLastEl = activePage * 4
   const indexOfFirstEl = indexOfLastEl - 4
   const currentEls = data.Section.edges.slice(indexOfFirstEl, indexOfLastEl)
-
+  
   return (
     <>
       <main className={classes.Content__main}>
@@ -105,16 +108,20 @@ const PodcastsSection = ({closeNavMobile}) => {
                       date={element.publishDate}
                       image={element.image}
                       title={element.authorName}
-                      description={element.description.description}
+                      description={element.description.childMarkdownRemark.
+                        html
+                      }
                       image={element.photo.fluid.src}
                       page={element.slug}
                       unpublished={element.unpublished}
                       unpublished_episode={element.unpublishedEpisode}
                     />
+                    
                   ))
               )}
             </AuthorSection>
           ))}
+          
           {/* <AuthorSection author={TITLE_BRUDZYNSKI}>
             {data.Brudzynski.edges.map(({ node }) => (
               <PodcastElement
@@ -161,13 +168,13 @@ const PodcastsSection = ({closeNavMobile}) => {
             ))}
           </AuthorSection>
  */}
+ 
         </div>
         <div className={classes.Pagination__container}>
           <Pagination
             {...pagination}
             onChange={activePage => {setActivePage(activePage)
               handlePageClick() }}
-            
           />
         </div>
       </main>

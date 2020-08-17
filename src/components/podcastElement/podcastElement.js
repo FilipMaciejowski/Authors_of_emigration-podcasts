@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+
 
 import classes from "./podcastElement.module.css"
 
@@ -14,6 +14,8 @@ const PodcastElement = ({
   unpublished,
   unpublished_episode,
 }) => {
+
+  
   let unpublishedContent
   if (unpublished) {
     unpublishedContent = (
@@ -33,43 +35,41 @@ const PodcastElement = ({
   } else {
     unpublishedContent = (
       <div>
-        <p className={classes.PodcastElement__content_description}>
-          {description}
+        <p className={classes.PodcastElement__content_description}
+        >
+          <div dangerouslySetInnerHTML={{__html: description}}></div>
         </p>
         <div className={classes.PodcastElement__content_listen}>
-        
           <div className={classes.Listen__button}>
-          <Link to={`/podcasts/${page}`}>
-            <p>Posłuchaj</p>
-            <span className={classes.Dash}> - </span>
-            {/* <div className={classes.Arrow__container}>
+            <Link to={`/podcasts/${page}`}>
+              <p>Posłuchaj</p>
+              <span className={classes.Dash}> - </span>
               <svg
-                className={classes.Arrow}
-                xmlns="http://www.w3.org/2000/svg"
-                width="39px"
-                height="8px"
+                className={classes.Wire}
+                width="46"
+                height="21"
+                viewBox="0 0 40 21"
                 fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <defs />
                 <path
-                  fill="#000"
-                  d="M38.354 4.354a.5.5 0 000-.708L35.172.464a.5.5 0 10-.707.708L37.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h38v-1H0v1z"
+                  d="M0 12.2524C7.30597 12.2524 6.34227 11.8653 8.5 5.99999C10.6577 0.134723 13.8553 0.0648427 18 9.49999C22.1447 18.9351 24.3867 -0.44566 29.6053 3.07266C34.8238 6.59098 26.0527 20.4123 45 18.8823"
+                  stroke="black"
+                  strokeWidth="2"
                 />
               </svg>
-            </div> */}
-            <svg className={classes.Wire} width="46" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 12.2524C7.30597 12.2524 6.34227 11.8653 8.5 5.99999C10.6577 0.134723 13.8553 0.0648427 18 9.49999C22.1447 18.9351 24.3867 -0.44566 29.6053 3.07266C34.8238 6.59098 26.0527 20.4123 45 18.8823" stroke="black" strokeWidth="2"/>
-</svg>
 
-            
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 .5 20 20" className={classes.Headphones} >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="2 .5 20 20"
+                className={classes.Headphones}
+              >
                 <defs />
                 <path fill="none" d="M0 0h24v24H0z" opacity="none" />
                 <path d="M12 1a9 9 0 00-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 00-9-9z" />
               </svg>
-              </Link>
+            </Link>
           </div>
-          
         </div>
       </div>
     )
@@ -96,8 +96,9 @@ const PodcastElement = ({
               {unpublished ? (
                 <h5>{title}</h5>
               ) : (
-                
-                  <h5><Link to={`/podcasts/${page}`}>{title}</Link></h5>
+                <h5>
+                  <Link to={`/podcasts/${page}`}>{title}</Link>
+                </h5>
               )}
               <div>
                 <h5>odc. {episode}</h5>
