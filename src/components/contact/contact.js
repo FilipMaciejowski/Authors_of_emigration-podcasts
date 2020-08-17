@@ -10,7 +10,7 @@ const Contact = ({ mobile }) => {
     <Context.Consumer>
       {context =>
         mobile ? (
-          <div className={classes.Contact__text_container}>
+          <div className={classes.Contact__text_container_mobile}>
             <p className={classes.Contact__text}>
               <a href="mailto: dawid.dziedziczak@gmail.com">
                 dawid.dziedziczak@gmail.com

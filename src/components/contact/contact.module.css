@@ -75,7 +75,7 @@ p {
   font-size: .85rem;
 }
 
-.Contact__text_container{
+.Contact__text_container_mobile{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,11 +84,19 @@ p {
   transform: translateX(5%);
 }
 
-.Contact__text_container p{
+.Contact__text_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.Contact__text_container p, .Contact__text_container_mobile p{
   margin: 0 1rem 0 0;
 }
 
-.Contact__text_container p a{
+.Contact__text_container p a, .Contact__text_container_mobile p a{
   text-decoration: none;
   color: grey;
 }

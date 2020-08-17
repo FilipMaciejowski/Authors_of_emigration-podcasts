@@ -41,6 +41,7 @@ const PodcastElement = ({
           <div className={classes.Listen__button}>
           <Link to={`/podcasts/${page}`}>
             <p>Posłuchaj</p>
+            <span className={classes.Dash}> - </span>
             {/* <div className={classes.Arrow__container}>
               <svg
                 className={classes.Arrow}
