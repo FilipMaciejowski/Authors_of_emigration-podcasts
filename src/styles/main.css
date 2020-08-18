@@ -1,19 +1,23 @@
 :root {
---main_font: 'Roboto', 'sans-serif';
---main_black: #272727;
---button_border: #BE0000;
---button_background: #FF7C7C;
---main_white: #fafafa;
---main_grey: rgb(230, 230, 230);
---second_grey: rgb(85, 85, 85);
---main_width: 920px;
+  --main_font: "Roboto", "sans-serif";
+  --main_black: #272727;
+  --button_border: #be0000;
+  --button_background: #ff7c7c;
+  --main_white: #fafafa;
+  --primary_white: white;
+  --primary_grey: grey;
+  --ministry_grey: #919ba2;
+  --main_grey: rgb(230, 230, 230);
+  --second_grey: rgb(85, 85, 85);
+  --third_grey: rgb(173, 173, 173);
+  --main_width: 920px;
 }
 
 html {
   font-family: var(--main_font);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color:var(--main_black);
+  background-color: var(--main_black);
   scroll-behavior: auto;
 }
 
@@ -25,7 +29,6 @@ body {
   background-color: var(--main_grey);
   overflow-anchor: none;
 }
-
 
 article,
 aside,

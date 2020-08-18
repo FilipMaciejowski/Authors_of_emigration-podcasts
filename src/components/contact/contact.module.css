@@ -4,8 +4,7 @@
   right: 0;
   width: 15rem;
   height: 3rem;
-  border: 1px solid grey;
-  border-radius: 1px;
+  border: 1px solid var(--primary_grey);
   background-color: var(--main_white);
   z-index: 4;
   opacity: 1;
@@ -98,7 +97,7 @@ p {
 
 .Contact__text_container p a, .Contact__text_container_mobile p a{
   text-decoration: none;
-  color: grey;
+  color: var(--primary_grey);
 }
 
 .Contact__text_container p a:hover {

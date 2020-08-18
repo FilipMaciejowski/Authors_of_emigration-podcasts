@@ -8,7 +8,7 @@
   font-size: 1.25rem;
   color: var(--main_black);
   text-decoration:underline;
-  text-decoration-color: #919BA2;
+  text-decoration-color: var(--ministry_grey);
   text-align: center;
 }
 

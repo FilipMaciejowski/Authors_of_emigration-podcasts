@@ -52,17 +52,22 @@
   
 } 
 
- .Footer__logo_socialMedia svg {
+ .Footer__logo_socialMedia svg  {
    width: 100%;
    height: 100%;
    transform: translateY(-20%);
-   transition: all .4s;
+ }
+
+ .Footer__logo_socialMedia svg path {
+  transition: all .4s;
+  -webkit-transition: all .4s;
  }
   
 
 .Footer__logo_socialMedia svg:hover path {
   fill: var(--main_white);
   transition: all .4s;
+  -webkit-transition: all .4s;
 }
 
 .Footer_line {
@@ -73,7 +78,7 @@
 
 }
 .Footer__text  {
-  color: rgb(173, 173, 173); 
+  color: var(--third_grey); 
   font-size: .5rem;
   margin-bottom: 0;
 }

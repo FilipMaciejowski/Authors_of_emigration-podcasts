@@ -1,41 +1,26 @@
-
-
-  .Logo__container {
+.Logo__container {
   width: 153px;
   height: auto;
-  display: flex; 
+  display: flex;
   align-items: center;
-  }
+}
 
-  
-  img.Logo {
+img.Logo {
   -webkit-transform: scale(1);
   transform: scale(1);
   transform-origin: center left;
-  -webkit-transition: transform .75s ease; 
-  -ms-transition: transform .75s ease; 
-  -moz-transition: transform .75s ease; 
-  -o-transition: transform .75s ease; 
-  transition: transform .75s ease; 
+  -webkit-transition: transform 0.75s ease;
+  -ms-transition: transform 0.75s ease;
+  -moz-transition: transform 0.75s ease;
+  -o-transition: transform 0.75s ease;
+  transition: transform 0.75s ease;
 }
 
-@media(min-width: 600px) {
-/* .Logo__container.Resize {
+@media (min-width: 600px) {
+  /* .Logo__container.Resize {
   transform: scale(0.75) */
   img.Logo.Resize {
-  -webkit-tranform: scale(0.8);
-  transform: scale(0.8);
+    -webkit-tranform: scale(0.8);
+    transform: scale(0.8);
+  }
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-

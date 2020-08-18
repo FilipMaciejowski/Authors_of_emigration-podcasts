@@ -8,7 +8,7 @@
 .MainSection__ministry {
   max-width: var(--main_width);
   height: 5.5rem;
-  background-color: #919BA2;
+  background-color: var(--ministry_grey);
   z-index: 100;
   margin: 0 auto;
   text-align: center;
@@ -18,18 +18,19 @@
   height: 100%;
 }
 .Developer{
-  color: rgb(173, 173, 173); 
+  color: var(--third_grey); 
   font-size: .5rem;
   margin-bottom: 0;
   cursor: pointer;
   font-size: .7rem;
   text-decoration: none;
+  transition: color .4s;
+  -webkit-transition: color .4s;
 }
 
 .Developer:hover{
-  color: white;
+  color: var(--primary_white);
   transition: color .4s;
   -webkit-transition: color .4s;
-  
 }
 
