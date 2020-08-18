@@ -60,7 +60,6 @@ const PodcastsList = ({ mobile, openModal}) => {
     setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
     if(mobile){
-    console.log(openModal)
     }
   }
 
@@ -97,7 +96,7 @@ const PodcastsList = ({ mobile, openModal}) => {
           {authors}
         </ul>
       </div>
-      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} episodes={episodesAuthors} /> : null}
+      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} key={data.Section.edges.id} episodes={episodesAuthors} /> : null}
       
     </>
   )
