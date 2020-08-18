@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect} from "react"
 
 import Header from "../header/header"
 import PodcastsSection from "../podcastsSection/podcastsSection"
@@ -9,7 +9,7 @@ import classes from "./mainSection.module.css"
 
 const MainSection = () => {
 
-  
+
 
   return (
     <Context.Consumer>

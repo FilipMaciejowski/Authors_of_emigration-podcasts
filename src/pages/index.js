@@ -9,7 +9,6 @@ const IndexPage = () => {
   return (
     <>
       <Layout>
-        
         <SEO title="Tworcy Emigracji" />
       </Layout>
     </>

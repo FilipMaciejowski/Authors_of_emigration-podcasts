@@ -56,11 +56,11 @@
 }
 
 
-.Podcast__paragraph_main:first-of-type::first-letter{
+/* .Podcast__paragraph_main:first-of-type::first-letter{
   font-size: 2.5rem;
   float: left;
   margin:.75rem .15em 0 0;
-}
+} */
 
 
 .Italic {

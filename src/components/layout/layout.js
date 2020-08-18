@@ -88,8 +88,7 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <Footer
-      
-      
+    
         data={data.site.siteMetadata.developer}
         containerSize="Footer__container_normal"
       >

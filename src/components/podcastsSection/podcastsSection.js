@@ -40,13 +40,23 @@ const PodcastsSection = ({closeNavMobile}) => {
       }
     }
   `)
-  const [activePage, setActivePage] = useState(+sessionStorage.getItem('currentPage'))
+  
+ 
 
   useEffect(()=>{
-    sessionStorage.setItem('currentPage', activePage)
+    const currentPage =  +sessionStorage.getItem('currentPage', activePage);
+    if(currentPage <= 0){
+      setActivePage(1)
+    }else if(currentPage > 0){
+      setActivePage(+sessionStorage.getItem('currentPage', activePage))
+    }
   }, [])
 
+  const [activePage, setActivePage] = useState()
   
+  
+
+
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
   }
@@ -67,7 +77,7 @@ const PodcastsSection = ({closeNavMobile}) => {
     setActivePage(page)
     handlePageClick()
   }
-  
+
   const pagination = {
     activePage,
     itemsCountPerPage: 4,
