@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import ReactLoading from "react-loading"
 import { useStaticQuery, graphql } from "gatsby"
 import Pagination from "react-js-pagination"
@@ -7,11 +7,8 @@ import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
-
 const PodcastsSection = ({closeNavMobile}) => {
   
-  const [activePage, setActivePage] = useState(1)
-
   const data = useStaticQuery(graphql`
     query Author_of_emigration {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -43,8 +40,13 @@ const PodcastsSection = ({closeNavMobile}) => {
       }
     }
   `)
-  
+  const [activePage, setActivePage] = useState(+sessionStorage.getItem('currentPage'))
 
+  useEffect(()=>{
+    sessionStorage.setItem('currentPage', activePage)
+  }, [])
+
+  
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
   }
@@ -59,6 +61,13 @@ const PodcastsSection = ({closeNavMobile}) => {
     closeNavMobile(false)
   };
 
+  
+  const activePageHandler = (page) => {
+    sessionStorage.setItem('currentPage', page)
+    setActivePage(page)
+    handlePageClick()
+  }
+  
   const pagination = {
     activePage,
     itemsCountPerPage: 4,
@@ -121,60 +130,11 @@ const PodcastsSection = ({closeNavMobile}) => {
               )}
             </AuthorSection>
           ))}
-          
-          {/* <AuthorSection author={TITLE_BRUDZYNSKI}>
-            {data.Brudzynski.edges.map(({ node }) => (
-              <PodcastElement
-                key={node.id}
-                episode={node.frontmatter.episode}
-                date={node.frontmatter.date}
-                author={node.frontmatter.author}
-                title={node.frontmatter.title}
-                description={node.frontmatter.description}
-                page={node.fields.slug}
-                unpublished={node.frontmatter.unpublished}
-                unpublished_episode={node.frontmatter.unpublished_episode}
-              />
-            ))}
-          </AuthorSection>
- 
-          <AuthorSection author={TITLE_CIESLEWICZ}>
-            {data.Cieslewicz.edges.map(({ node }) => (
-              <PodcastElement
-                key={node.id}
-                episode={node.frontmatter.episode}
-                date={node.frontmatter.date}
-                author={node.frontmatter.author}
-                title={node.frontmatter.title}
-                description={node.frontmatter.description}
-                page={node.fields.slug}
-                unpublished={node.frontmatter.unpublished}
-              />
-            ))}
-          </AuthorSection>
-        
-          <AuthorSection author={TITLE_JELENSKI}>
-            {data.Jelenski.edges.map(({ node }) => (
-              <PodcastElement
-                key={node.id}
-                episode={node.frontmatter.episode}
-                date={node.frontmatter.date}
-                author={node.frontmatter.author}
-                title={node.frontmatter.title}
-                description={node.frontmatter.description}
-                page={node.fields.slug}
-                unpublished={node.frontmatter.unpublished}
-              />
-            ))}
-          </AuthorSection>
- */}
- 
         </div>
         <div className={classes.Pagination__container}>
           <Pagination
             {...pagination}
-            onChange={activePage => {setActivePage(activePage)
-              handlePageClick() }}
+            onChange={activePage => activePageHandler(activePage)}
           />
         </div>
       </main>

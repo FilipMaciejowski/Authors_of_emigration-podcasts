@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React, { useState} from "react"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,6 +9,8 @@ import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
 import NavigationMobile from "../navigationMobile/navigationMobile"
+
+
 
 
 
@@ -27,6 +29,7 @@ const Layout = ({ children }) => {
   const [contactModalIsOpen, setContactModalIsOpen] = useState(false);
   const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false);
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
+  
 
 
   const openContactModalHandler = () => {
@@ -66,7 +69,7 @@ const Layout = ({ children }) => {
     closePodcastsModal: closePodcastsModalHandler,
     toggleMobileNav: toggleMobileNavHandler,
     closeMobileNav: closeMobileNavHandler,
-    openModal: setPodcastsModalIsOpen
+    openModal: setPodcastsModalIsOpen,
   }
 
 

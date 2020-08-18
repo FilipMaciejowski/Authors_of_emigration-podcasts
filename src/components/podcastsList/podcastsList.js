@@ -25,6 +25,9 @@ const PodcastsList = ({ mobile, openModal}) => {
     }
   `)
 
+  
+
+
   const [episodesListIsOpen, setEpisodesListIsOpen] = useState(false)
   const [episodesAuthors, setEpisodesAuthors] = useState([])
 
