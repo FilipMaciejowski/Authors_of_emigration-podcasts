@@ -96,7 +96,7 @@ const PodcastsList = ({ mobile, openModal}) => {
           {authors}
         </ul>
       </div>
-      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} key={data.Section.edges.id} episodes={episodesAuthors} /> : null}
+      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false}  episodes={episodesAuthors} /> : null}
       
     </>
   )
