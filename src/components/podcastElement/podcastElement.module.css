@@ -9,7 +9,6 @@
 }
 
 
-
 .PodcastElement__main:hover {
 box-shadow: 0 10px 22px rgba(82, 87, 104, 0.2), 0 5px 18px rgba(86, 91, 105, 0.25);
 transition: ease .25s;
@@ -37,32 +36,6 @@ cursor: pointer;
 .Image_wrapper {
   height: 105%;
 }
-/* .PodcastElement__image_container img {
-  height: 100%;
-  z-index: -8;
-} */
-
-/* 
-.PodcastElement__image_container.Jelenski{
-  background-image: url("../../assets/images/1985_jelenski\ 1.png");
-  background-position: 100% 60%;
-}
-
-.PodcastElement__image_container.Cieslewicz {
-background-image: url("../../assets/images/Portrait_de_Roman_Cieslewicz\ 1.png");
-background-position: 100% 30%;
-}
-
-.PodcastElement__image_container.Brudzynski {
-  background-image: url("../../assets/images/Tadeusz_Brudzyński.png");
-  background-position: 100% 25%;
-}
-
-.PodcastElement__image_container.Herling {
-  background-image: url("../../assets/images/GHG_Lublin\ maj\ 1997_fot\ Z_Kudelski_a\ 1.png");
-  background-position: 100% 25%;
-} */
-
 
 .PodcastElement__content {
   width: 100%;

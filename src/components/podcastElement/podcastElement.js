@@ -35,10 +35,8 @@ const PodcastElement = ({
   } else {
     unpublishedContent = (
       <div className={classes.Content_wrapper}>
-        
-        <p dangerouslySetInnerHTML={{__html:description}} className={classes.PodcastElement__content_description} >
-        </p>
-
+        <div dangerouslySetInnerHTML={{__html:description}} className={classes.PodcastElement__content_description} >
+        </div>
         <div className={classes.PodcastElement__content_listen}>
           <div className={classes.Listen__button}>
             <Link to={`/podcasts/${page}`}>
@@ -81,7 +79,7 @@ const PodcastElement = ({
         <div className={classes.PodcastElement__container}>
           <div className={classes.PodcastElement__image_container}>
             <div className={classes.Image_wrapper}>
-              <Img fixed={image}></Img>
+              <img src={image}></img>
             </div>
           </div>
           <div className={classes.PodcastElement__content}>
