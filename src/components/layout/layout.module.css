@@ -17,4 +17,19 @@
 .MainSection__ministry img {
   height: 100%;
 }
+.Developer{
+  color: rgb(173, 173, 173); 
+  font-size: .5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: .7rem;
+  text-decoration: none;
+}
+
+.Developer:hover{
+  color: white;
+  transition: color .4s;
+  -webkit-transition: color .4s;
+  
+}
 

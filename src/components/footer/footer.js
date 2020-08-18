@@ -3,7 +3,7 @@ import React, {useEffect} from "react"
 import classes from "./footer.module.css"
 
 
-const Footer = ({data, children, containerSize, narrow}) => {
+const Footer = ({children, containerSize, narrow}) => {
 
 let line;
 if (containerSize === "Footer__container_narrow") {
@@ -61,7 +61,7 @@ if (containerSize === "Footer__container_narrow") {
         </div>
         {line}
         <p className={classes.Footer__text}>
-          {children} {data}
+          {children}
         </p>
       </div>
     </footer>

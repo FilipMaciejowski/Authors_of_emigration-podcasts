@@ -88,11 +88,9 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <Footer
-    
-        data={data.site.siteMetadata.developer}
         containerSize="Footer__container_normal"
       >
-        © {new Date().getFullYear()}, Designed and developed by
+        © {new Date().getFullYear()}, Designed and developed by <a href="mailto: filip.maciejowski@gmail.com" className={classes.Developer}>{data.site.siteMetadata.developer}</a>
       </Footer>
      
     </Context.Provider>
