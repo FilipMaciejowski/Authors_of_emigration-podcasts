@@ -55,8 +55,6 @@ const PodcastsSection = ({closeNavMobile}) => {
   const [activePage, setActivePage] = useState()
   
   
-
-
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
   }
