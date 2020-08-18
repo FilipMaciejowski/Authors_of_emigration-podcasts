@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
 
   const openContactModalHandler = () => {
     setContactModalIsOpen(!contactModalIsOpen)
+    setPodcastsModalIsOpen(false)
   }
 
   const closeContactModalHandler = () => {
