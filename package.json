@@ -19,6 +19,7 @@
     "gatsby-plugin-manifest": "^2.4.9",
     "gatsby-plugin-mdx": "^1.2.34",
     "gatsby-plugin-offline": "^3.2.7",
+    "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-sharp": "^2.6.20",
     "gatsby-source-contentful": "^2.3.32",
@@ -43,7 +44,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",    
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "env-cmd -f .env gatsby develop",

@@ -82,7 +82,7 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.125rem;
-    animation: pulsating 6s lease-in-out 1s forwards;
+    animation: pulsating 6s ease-in-out 1s forwards;
     -webkit-animation: pulsating 6s ease-in-out 1s forwards;
     -ms-animation: pulsating 6s ease-in-out 1s forwards;
     -moz-animation: pulsating 6s ease-in-out 1s forwards;

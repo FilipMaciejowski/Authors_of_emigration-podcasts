@@ -32,7 +32,7 @@ const PodcastsSection = ({closeNavMobile}) => {
                 }
               }
               photo {
-                fluid {
+                fixed {
                   src
                 }
               }
@@ -111,7 +111,7 @@ const PodcastsSection = ({closeNavMobile}) => {
                       description={element.description.childMarkdownRemark.
                         html
                       }
-                      image={element.photo.fluid.src}
+                      image={element.photo.fixed.src}
                       page={element.slug}
                       unpublished={element.unpublished}
                       unpublished_episode={element.unpublishedEpisode}

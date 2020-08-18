@@ -93,69 +93,8 @@ const PodcastsList = ({ mobile, openModal}) => {
               ? classes.PodcastsList__list_mobile
               : classes.PodcastsList__list
           }
-          
         >
           {authors}
-          {/*    <li>
-          <Link to="/podcasts/Jelenski/podcast_Jelenski_1/">
-            {TITLE_JELENSKI}, Odc.1
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Jelenski/podcast_Jelenski_2/">
-            {TITLE_JELENSKI}, Odc.2
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Jelenski/podcast_Jelenski_3/">
-            {TITLE_JELENSKI}, Odc.3
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Cieslewicz/podcast_Cieslewicz_1/">
-            {TITLE_CIESLEWICZ}, Odc.1
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Cieslewicz/podcast_Cieslewicz_2/">
-            {TITLE_CIESLEWICZ}, Odc.2
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Cieslewicz/podcast_Cieslewicz_3/">
-            {TITLE_CIESLEWICZ}, Odc.3
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Brudzynski/podcast_Brudzynski_1/">
-            {TITLE_BRUDZYNSKI}, Odc.1
-          </Link>
-        </li>
-        <li>
-          <Link to="podcasts/Brudzynski/podcast_Brudzynski_2/">
-            {TITLE_BRUDZYNSKI}, Odc.2
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Brudzynski/podcast_Brudzynski_3/">
-            {TITLE_BRUDZYNSKI}, Odc.3
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Herling-Grudzinski/podcast_Herling_1/">
-            {TITLE_HERLING}, Odc.1
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Herling-Grudzinski/podcast_Herling_2/">
-            {TITLE_HERLING}, Odc.2
-          </Link>
-        </li>
-        <li>
-          <Link to="/podcasts/Herling-Grudzinski/podcast_Herling_3/">
-            {TITLE_HERLING}, Odc.3
-          </Link>
-        </li> */}
         </ul>
       </div>
       {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} episodes={episodesAuthors} /> : null}

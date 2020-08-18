@@ -51,8 +51,6 @@
   right: 8.45rem;
   overflow-y: auto;
   opacity: 1;
-  /* -webkit-animation: list_animation .2s ease-out;
-  animation: list_animation .2s ease-out; */
 }
 }
 
@@ -81,53 +79,6 @@
   opacity: 1;
 }
 
-
-@-webkit-keyframes list_animation{
-  0%{
-    height: 0rem;
-    
-  }
-  100%{
-    heigh: 10.5rem;
-}
-}
-@keyframes list_animation{
-  0%{
-    height: 0rem;
-  }
-  100%{
-    heigh: 10.5rem;
-  }
-}
-@-webkit-keyframes list_animation_backwards{
-  0%{
-    height: 10.5rem;
-    
-  }
-  95%{
-    heigh: 0rem;
-  
-  }
-  100%{
-    
-    display: none;
-    
-  }
-}
-@keyframes list_animation_backwards {
-  0%{
-    height: 10.5rem;
-    
-  }
-  95%{
-    heigh: 0rem;
-    
-  }
-  100%{
-    heigh: 0rem;
-    display: none;
-  }
-}
 
 .PodcastsList__list {
   margin: 0 auto;

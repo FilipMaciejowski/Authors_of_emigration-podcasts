@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -34,9 +35,10 @@ const PodcastElement = ({
   } else {
     unpublishedContent = (
       <div className={classes.Content_wrapper}>
-  
-        <p  dangerouslySetInnerHTML={{__html:description}} className={classes.PodcastElement__content_description} >
+        
+        <p dangerouslySetInnerHTML={{__html:description}} className={classes.PodcastElement__content_description} >
         </p>
+
         <div className={classes.PodcastElement__content_listen}>
           <div className={classes.Listen__button}>
             <Link to={`/podcasts/${page}`}>
@@ -79,7 +81,7 @@ const PodcastElement = ({
         <div className={classes.PodcastElement__container}>
           <div className={classes.PodcastElement__image_container}>
             <div className={classes.Image_wrapper}>
-              <img src={image}></img>
+              <Img fixed={image}></Img>
             </div>
           </div>
           <div className={classes.PodcastElement__content}>
