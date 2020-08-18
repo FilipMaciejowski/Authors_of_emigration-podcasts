@@ -122,18 +122,4 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     </>
   )
 }
-
-//  export const myQuery = graphql`
-//    query PodcastQuery($id: String!) {
-//      mdx(id: { eq: $id }) {
-//        id
-//        body
-//        frontmatter {
-//          title
-//          episode
-//        }
-//      }
-//    }
-//  `
-
 export default PodcastTemplate
