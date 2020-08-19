@@ -25,8 +25,6 @@ const PodcastsList = ({ mobile, openModal}) => {
     }
   `)
 
-  
-
 
   const [episodesListIsOpen, setEpisodesListIsOpen] = useState(false)
   const [episodesAuthors, setEpisodesAuthors] = useState([])
@@ -65,7 +63,7 @@ const PodcastsList = ({ mobile, openModal}) => {
     if(mobile){
     }
   }
-  
+
   const authors = data.Section.edges.map(({ node }) => {
     return (
       <li

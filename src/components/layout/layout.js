@@ -73,7 +73,6 @@ const Layout = ({ children }) => {
       >
         
         <div>{children}</div>
-        <NavigationMobile />
         <Navigation />
         <MainSection />
         <div className={classes.MainSection__ministry}>

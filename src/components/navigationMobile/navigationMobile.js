@@ -19,10 +19,10 @@ const NavigationMobile = () => {
           }
         >
           <ul>
-            <li>
-              <a onClick={context.openPodcastsModal}>Podcasty</a>
+            <li onClick={context.openPodcastsModal}>
+              <a >Podcasty</a>
+              {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
             </li>
-            {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
             <li>
               <Link to="/aboutProject">O projekcie</Link>
             </li>

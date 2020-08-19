@@ -39,6 +39,7 @@
   height: 5.5rem;
   max-width: 17.5rem;
   text-align: center;
+  margin: 1rem 0;
 }
 
 .PodcastsList__list_mobile {
@@ -47,12 +48,13 @@
 
 .PodcastsList__list_mobile li {
   list-style: none;
-  height: 2rem;
+  height: 2.5rem;
   background-color: var(--main_white);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-size: 0.85rem;
 }
 
 .PodcastsList__list_mobile li a {
@@ -62,6 +64,7 @@
   font-weight: 500;
   width: auto;
   height: auto;
+  
 }
 
 @media (min-width: 600px) {

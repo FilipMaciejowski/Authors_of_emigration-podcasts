@@ -10,8 +10,6 @@ import classes from "./navbar.module.css"
 
 const Navbar = () => {
 
-  
-
   return (
     <Context.Consumer>
       {context => (
@@ -21,11 +19,9 @@ const Navbar = () => {
               <a className={classes.Navigation__list_link}>Podcasty</a>
               {context.podcastsModalIsOpen ? (
                 <PodcastsList
-                  openModal={context.openModal}
                   mobile={false}
                 />)
               : null}
-              
             </li>
             <li>
               <Link
