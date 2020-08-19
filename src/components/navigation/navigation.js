@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useInView } from "react-intersection-observer"
 
 import SVGContainer from "../SVGContainer/SVGContainer"
@@ -7,12 +7,15 @@ import Navbar from "../navbar/navbar"
 import classes from "./navigation.module.css"
 import NavigationMobile from "../navigationMobile/navigationMobile"
 
+
 const Navigation = () => {
   
   const [ref, inView] = useInView({
     rootMargin: "0px 0px 0px 0px",
     threshold: 0.98
   })
+
+
   return (
     <>
     <div ref={ref} className={classes.Nav__observer_helper}></div>

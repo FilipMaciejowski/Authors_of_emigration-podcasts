@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react"
+import { useInView } from "react-intersection-observer"
 import ReactLoading from "react-loading"
-
 import { Link, graphql } from "gatsby"
 import { INLINES, BLOCKS} from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-/* import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx" */
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
+import ObserverHelper from "../../components/observerHelper/observerHelper"
 import classes from "./podcastTemplate.module.css"
 
 export const myQuery = graphql`
@@ -27,21 +26,11 @@ const Text = ({ children }) => (
 )
 
 const PodcastTemplate = ({ data, aboutProject, children }) => {
-  const [assignedClasses, setAssignedClasses] = useState([
-    classes.Header__layout,
-  ])
-  const scrollHandler = () => {
-    const windowHeight = window.scrollY
-    if (windowHeight > 1) {
-      setAssignedClasses([classes.Header__layout, classes.Scroll])
-    } else {
-      setAssignedClasses([classes.Header__layout])
-    }
-  }
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler)
-  }, [])
+  const [ref, inView] = useInView({
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.98
+  })
 
   const options = {
     renderNode: {
@@ -74,8 +63,9 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
 
   return (
     <>
+    <div ref={ref} className={classes.Template__observer_helper}></div>
       <div className={classes.Template__layout}>
-        <header className={assignedClasses.join(" ")}>
+        <header className={inView ? classes.Header__layout : [classes.Header__layout, classes.Scroll].join(" ")}>
           <Link to="/">
             <SVGContainer mainClass="Logo__template" newClass="Image_resize" />
           </Link>
@@ -94,22 +84,6 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
                 data.PodcastContent.body.json,
                 options
               )}
-             {/*  <MDXProvider
-                components={{
-                  p: props => (
-                    <p
-                      {...props}
-                      style={{
-                        fontSize: "calc(.85rem - 15%)",
-                        marginBottom: "1rem",
-                      }}
-                    />
-                  ),
-                  a: props => (
-                    <a {...props} style={{fontSize: "calc(.85rem - 15%)", textDecoration: "none", fontWeight: "600", color: "var(--main_black"}} />
-                  ),
-                }}
-              > */}
             </div>
           )}
         </main>
