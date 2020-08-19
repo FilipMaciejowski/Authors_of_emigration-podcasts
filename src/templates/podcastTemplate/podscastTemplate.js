@@ -7,7 +7,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
-import ObserverHelper from "../../components/observerHelper/observerHelper"
+
 import classes from "./podcastTemplate.module.css"
 
 export const myQuery = graphql`

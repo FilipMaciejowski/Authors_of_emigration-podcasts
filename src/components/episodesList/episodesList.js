@@ -8,20 +8,18 @@ const EpisodesList = ({ episodes, mobile }) => {
     return podcastA.episode - podcastB.episode
   }
 
-
-
   return (
-    <div className={mobile ? classes.EposidesList__main_mobile : classes.EposidesList__main}>
+    <div key={Math.random()}className={mobile ? classes.EposidesList__main_mobile : classes.EposidesList__main}>
       <ul className={mobile ? classes.List_mobile : classes.List}>
         {episodes.node.podcastelement.sort(sortEpisodeElements).map(element =>
           !element.unpublished ? (
             <Link
               className={mobile ? classes.List__element_link_mobile : classes.List__element_link}
               to={`/podcasts/${element.slug}`}
+              key={element.id}
             >
               <li
                 className={mobile ? classes.List__element_mobile : classes.List__element}
-                key={element.id}
               >{` Odcinek ${element.episode}`}</li>
             </Link>
           ) : (

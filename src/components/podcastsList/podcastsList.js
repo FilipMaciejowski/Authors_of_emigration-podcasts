@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
+import { node } from "prop-types"
 
 const PodcastsList = ({ mobile, openModal}) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +25,6 @@ const PodcastsList = ({ mobile, openModal}) => {
       }
     }
   `)
-
 
   const [episodesListIsOpen, setEpisodesListIsOpen] = useState(false)
   const [episodesAuthors, setEpisodesAuthors] = useState([])
@@ -101,7 +101,5 @@ const PodcastsList = ({ mobile, openModal}) => {
     </>
   )
 }
-
-
 
 export default PodcastsList
