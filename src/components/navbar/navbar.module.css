@@ -21,11 +21,11 @@
 
 
 @media(min-width: 600px){
-/* .Navigation__list_link:hover{
+.Navigation__list_link:hover{
   font-weight: 400;
-  color: var(--main-black);
+  color: var(--primary_black);
   cursor: pointer;
-} */
+}
 }
 
 .Navigation__list_link.Link_scroll {
