@@ -65,13 +65,12 @@ const PodcastsList = ({ mobile, openModal}) => {
     if(mobile){
     }
   }
-
+  
   const authors = data.Section.edges.map(({ node }) => {
     return (
       <li
         className={mobile ? classes.Author_mobile : classes.Author}
-        onClick={openEpisodesListHandler}
-        onClickCapture={e => openEpisodesListHandler(e)}
+        onClick={e => openEpisodesListHandler(e)}
         key={node.id}
         data-id={node.id}
       >

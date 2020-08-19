@@ -8,7 +8,6 @@ const EpisodesList = ({ episodes, mobile }) => {
     return podcastA.episode - podcastB.episode
   }
 
-  console.log(mobile)
 
 
   return (

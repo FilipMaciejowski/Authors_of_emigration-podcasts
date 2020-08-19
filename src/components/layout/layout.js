@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useState } from "react"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,10 +9,6 @@ import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
 import NavigationMobile from "../navigationMobile/navigationMobile"
-
-
-
-
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,12 +21,9 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
-  const [contactModalIsOpen, setContactModalIsOpen] = useState(false);
-  const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false);
+  const [contactModalIsOpen, setContactModalIsOpen] = useState(false)
+  const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false)
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
-  
-
 
   const openContactModalHandler = () => {
     setContactModalIsOpen(!contactModalIsOpen)
@@ -58,7 +51,6 @@ const Layout = ({ children }) => {
     setMobileNavIsOpen(false)
   }
 
-
   const value = {
     contactModalIsOpen,
     podcastsModalIsOpen,
@@ -72,12 +64,16 @@ const Layout = ({ children }) => {
     openModal: setPodcastsModalIsOpen,
   }
 
-
   return (
     <Context.Provider value={value}>
-      <NavigationMobile/>
-      <div className={classes.Layout__main} onClickCapture={closePodcastsModalHandler}>
+      
+      <div
+        className={classes.Layout__main}
+        onClickCapture={closePodcastsModalHandler}
+      >
+        
         <div>{children}</div>
+        <NavigationMobile />
         <Navigation />
         <MainSection />
         <div className={classes.MainSection__ministry}>
@@ -87,12 +83,15 @@ const Layout = ({ children }) => {
           />
         </div>
       </div>
-      <Footer
-        containerSize="Footer__container_normal"
-      >
-        © {new Date().getFullYear()}, Designed and developed by <a href="mailto: filip.maciejowski@gmail.com" className={classes.Developer}>{data.site.siteMetadata.developer}</a>
+      <Footer containerSize="Footer__container_normal">
+        © {new Date().getFullYear()}, Designed and developed by{" "}
+        <a
+          href="mailto: filip.maciejowski@gmail.com"
+          className={classes.Developer}
+        >
+          {data.site.siteMetadata.developer}
+        </a>
       </Footer>
-     
     </Context.Provider>
   )
 }
