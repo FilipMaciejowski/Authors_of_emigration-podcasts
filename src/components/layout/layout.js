@@ -21,11 +21,8 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(()=>{
-    setTimeout(() => setIsLoading(false), 3500
-    )})
+ 
+  
 
   const [contactModalIsOpen, setContactModalIsOpen] = useState(false)
   const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false)
@@ -72,7 +69,7 @@ const Layout = ({ children }) => {
 
   return (
     <Context.Provider value={value}>
-      {isLoading ? <Loader /> : (<><div
+      <div
         className={classes.Layout__main}
         onClickCapture={closePodcastsModalHandler}
       >
@@ -94,8 +91,7 @@ const Layout = ({ children }) => {
         >
           {data.site.siteMetadata.developer}
         </a>
-      </Footer></>)}
-  
+      </Footer>
     </Context.Provider>
   )
 }
