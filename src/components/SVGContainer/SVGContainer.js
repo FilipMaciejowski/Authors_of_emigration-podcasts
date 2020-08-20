@@ -1,12 +1,18 @@
-import React from  "react"
+import React,{useState, useEffect} from  "react"
 
 import classes from "./SVGContainer.module.css"
 
+
 const SVGContainer = ({scroll, imageClass, mainClass, onScrollClass}) => {
+  const [assignedmainClass, setAssignedMainClass] = useState()
+  useEffect(()=>{
+    setAssignedMainClass(classes.OnLoad)
+    })
+
   return (
-    <div className={scroll ? [classes[mainClass], classes[onScrollClass]].join(' ') : classes[mainClass]}>
+    <div className={assignedmainClass && !scroll ? assignedmainClass : [classes[mainClass], classes[onScrollClass]].join(' ')}>
       <img
-        className={scroll ? [classes[imageClass], classes[onScrollClass]].join(' ') : classes[imageClass]}
+        className={assignedmainClass && !scroll ? assignedmainClass : [classes[imageClass], classes[onScrollClass]].join(' ')}
         src={require("../../assets/images/Logo.svg")}
         alt="Tworcy_emigracji-Logo"
       />

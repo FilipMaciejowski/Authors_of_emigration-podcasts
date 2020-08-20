@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+.OnLoad{
+  width: 153px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
 img.Logo {
   -webkit-transform: scale(1);
   transform: scale(1);
