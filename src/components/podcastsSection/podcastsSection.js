@@ -16,6 +16,11 @@ const PodcastsSection = ({closeNavMobile}) => {
           node {
             id
             name
+            quote{
+              childMarkdownRemark{
+                  html
+                }
+              }
             podcastelement {
               id
               authorName
@@ -107,7 +112,7 @@ const PodcastsSection = ({closeNavMobile}) => {
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           {currentEls.map(({ node }) => (
-            <AuthorSection key={node.id} author={node.name}>
+            <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}>
               {!node.podcastelement ? (
                 <ReactLoading
                   type="cubes"
