@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -8,7 +8,7 @@ import classes from "./layout.module.css"
 import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
-import NavigationMobile from "../navigationMobile/navigationMobile"
+import Loader from "../loader/loader"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +20,12 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(()=>{
+    setTimeout(() => setIsLoading(false), 5000
+    )})
 
   const [contactModalIsOpen, setContactModalIsOpen] = useState(false)
   const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false)
@@ -66,12 +72,10 @@ const Layout = ({ children }) => {
 
   return (
     <Context.Provider value={value}>
-      
-      <div
+      {isLoading ? <Loader /> : (<><div
         className={classes.Layout__main}
         onClickCapture={closePodcastsModalHandler}
       >
-        
         <div>{children}</div>
         <Navigation />
         <MainSection />
@@ -90,7 +94,8 @@ const Layout = ({ children }) => {
         >
           {data.site.siteMetadata.developer}
         </a>
-      </Footer>
+      </Footer></>)}
+  
     </Context.Provider>
   )
 }

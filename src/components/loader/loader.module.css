@@ -1,0 +1,35 @@
+.Loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary_white);
+    animation: loader 3s ease-in-out;
+    -webkit-animation: loader 5s ease-in-out;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg.Loader__logo {
+width: 25%;
+height: 25%;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+@-webkit-keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
