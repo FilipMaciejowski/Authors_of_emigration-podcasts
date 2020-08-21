@@ -17,25 +17,13 @@ const PodcastsSection = ({closeNavMobile}) => {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
         edges {
           node {
-            id
-            name
-            quote{
-              childMarkdownRemark{
-                  html
-                }
+            ...authorDetails
             }
           }
         }
       }
-    }
   `)
 
-  
-
-
-
-
-  
 const [activePage, setActivePage] = useState()
  
 
@@ -102,8 +90,8 @@ const [activePage, setActivePage] = useState()
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           {currentEls.map(({ node }) => (
-            <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}>
-             {/*  {!node.podcastelement ? (
+            <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}/>
+             /*  {!node.podcastelement ? (
                 <ReactLoading
                   type="blank"
                   color="#919BA2"
@@ -127,8 +115,7 @@ const [activePage, setActivePage] = useState()
                       unpublished_episode={element.unpublishedEpisode}
                     />
                   ))
-              )} */}
-            </AuthorSection>
+              )} */
           ))}
         </div>
         <div className={classes.Pagination__container}>
@@ -142,28 +129,16 @@ const [activePage, setActivePage] = useState()
   )
 }
 
-export const podcastDetails = graphql`
-  fragment podcastDetails on ContentfulPodcastElement {
-    id
-    title
-    authorName
-    unpublished
-    slug
-    slug
-    episode
-    unpublishedEpisode
-    publishDate
-    photo{
-      fluid{
-        src
-      }
-    }
-    description{
-      childMarkdownRemark{
-        html
-      }
-    }
-  }
+export const authorDetails = graphql`
+fragment authorDetails on ContentfulAuthorSection{
+  id
+ name
+ quote{
+   childMarkdownRemark{
+     html
+   }
+ }
+}
   `
 
 export default PodcastsSection
