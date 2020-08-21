@@ -11,7 +11,7 @@ const EpisodesList = ({ episodes, mobile }) => {
   return (
     <div key={Math.random()}className={mobile ? classes.EposidesList__main_mobile : classes.EposidesList__main}>
       <ul className={mobile ? classes.List_mobile : classes.List}>
-        {episodes.node.podcastelement.sort(sortEpisodeElements).map(element =>
+        {episodes.node.podcasts.sort(sortEpisodeElements).map(element =>
           !element.unpublished ? (
             <Link
               className={mobile ? classes.List__element_link_mobile : classes.List__element_link}

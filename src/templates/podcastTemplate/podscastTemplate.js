@@ -13,6 +13,7 @@ import classes from "./podcastTemplate.module.css"
 export const myQuery = graphql`
   query($slug: String!) {
     PodcastContent: contentfulPodcastElement(slug: { eq: $slug }) {
+      slug
       authorName
       episode
       body{

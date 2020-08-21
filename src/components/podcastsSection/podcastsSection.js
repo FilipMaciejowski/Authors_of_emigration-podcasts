@@ -16,12 +16,41 @@ const PodcastsSection = ({closeNavMobile}) => {
     query Author_of_emigration {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
         edges {
-          node {
-            ...authorDetails
+            node{
+              id
+              name
+              quote{
+                childMarkdownRemark{
+                  html
+                }
+              }
+              podcasts{
+                id
+                slug
+                title
+                authorName
+                unpublished
+                episode
+                unpublishedEpisode
+                publishDate
+                photo{
+                  fluid{
+                    src
+                  }
+                }
+                description{
+                  childMarkdownRemark{
+                    html
+                  }
+                }
+                body{
+                  json
+                }
+              }
+            }
             }
           }
         }
-      }
   `)
 
 const [activePage, setActivePage] = useState()
@@ -90,8 +119,8 @@ const [activePage, setActivePage] = useState()
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           {currentEls.map(({ node }) => (
-            <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}/>
-             /*  {!node.podcastelement ? (
+            <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}>
+             {!node.podcasts ? (
                 <ReactLoading
                   type="blank"
                   color="#919BA2"
@@ -115,7 +144,8 @@ const [activePage, setActivePage] = useState()
                       unpublished_episode={element.unpublishedEpisode}
                     />
                   ))
-              )} */
+              )}
+              </AuthorSection>
           ))}
         </div>
         <div className={classes.Pagination__container}>
@@ -129,16 +159,5 @@ const [activePage, setActivePage] = useState()
   )
 }
 
-export const authorDetails = graphql`
-fragment authorDetails on ContentfulAuthorSection{
-  id
- name
- quote{
-   childMarkdownRemark{
-     html
-   }
- }
-}
-  `
 
 export default PodcastsSection
