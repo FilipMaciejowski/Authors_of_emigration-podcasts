@@ -13,8 +13,6 @@ const AuthorSection = ({ author, quote, children }) => {
             className={classes.Contentful__wrapper}
             dangerouslySetInnerHTML={{ __html: quote }}
           ></div>
-
-       
           </div>
         
         

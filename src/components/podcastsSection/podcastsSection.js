@@ -7,9 +7,7 @@ import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
-const PodcastsSection = ({closeNavMobile}) => {
-  
-  const data = useStaticQuery(graphql`
+export const data = graphql`
     query Author_of_emigration {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
         edges {
@@ -44,8 +42,12 @@ const PodcastsSection = ({closeNavMobile}) => {
         }
       }
     }
-  `)
+  `
+
+const PodcastsSection = ({closeNavMobile, data}) => {
   
+  
+const [activePage, setActivePage] = useState()
  
 
   useEffect(()=>{
@@ -55,9 +57,9 @@ const PodcastsSection = ({closeNavMobile}) => {
     }else if(currentPage > 0){
       setActivePage(+sessionStorage.getItem('currentPage', activePage))
     }
-  }, [])
+  }, [activePage])
 
-  const [activePage, setActivePage] = useState()
+  
   
   
   const sortEpisodeElements = (podcastA, podcastB) => {
@@ -129,10 +131,8 @@ const PodcastsSection = ({closeNavMobile}) => {
                       key={element.id}
                       episode={element.episode}
                       date={element.publishDate}
-                      image={element.image}
                       title={element.authorName}
-                      description={element.description.childMarkdownRemark.
-                        html
+                      description={element.description.childMarkdownRemark.html
                       }
                       image={element.photo.fluid.src}
                       page={element.slug}
