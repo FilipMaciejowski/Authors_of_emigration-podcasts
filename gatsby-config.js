@@ -29,32 +29,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    /* {resolve: `@contentful/gatsby-transformer-contentful-richtext`,
-    options: {
-      renderNode: {
-        [BLOCKS.PARAGRAPH]: node => {
-          return `<p classes.Podcast__paragraph_main>${node.data.PodcastContent.body.value}</p>`
-        }
-      },
-      renderNode: {
-        [INLINES.HYPERLINK]: node => {
-          if (node.data.uri.includes("https://widget.spreaker.com/")) {
-            return 
-              `<iframe
-                src={node.data.uri}
-                width="100%"
-                height="200px"
-                frameBorder="0"
-              ></iframe>`
-          } else if (
-            (typeof node.data.uri === "string")
-          ) {
-            return `<a className={classes.Paragraph_link} href={node.data.uri}>{node.content[0].value}</a>`
-          }
-        },
-      },
-    } 
-    }, */
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -85,8 +60,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fafafa`,
+        theme_color: `#fafafa`,
         display: `minimal-ui`,
         icon: `src/assets/images/Icon_TE.png`, // This path is relative to the root of the site.
       },
