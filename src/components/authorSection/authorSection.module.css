@@ -1,4 +1,4 @@
-.AuthorSection__layout{
+.AuthorSection__layout {
   width: 100%;
   margin: 3rem auto 0 auto;
   height: auto;
@@ -7,7 +7,7 @@
 .AuthorSection__layout h1 {
   font-size: 1.35rem;
   color: var(--main_black);
-  text-decoration:underline;
+  text-decoration: underline;
   text-decoration-color: var(--ministry_grey);
   text-align: center;
   margin-bottom: 0;
@@ -16,65 +16,70 @@
 .AuthorSection__layout_container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem .75rem 0 .75rem;
+  padding: 2rem 0.75rem 0 0.75rem;
   background-color: var(--main_white);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(244, 241, 241);
-  
 }
 
 .AuthorSection__header_container {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .AuthorSection__header_container p {
   margin-bottom: 0;
-  font-size: .75rem;
-  text-align: left;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--main_black);
 }
 
-
-.AuthorSection__header_container p:before{
+.AuthorSection__header_container p:before {
   position: relative;
-  top:0;
-  left:-.125rem;
+  top: 0;
+  left: -0.125rem;
   content: "„";
   font-size: 2rem;
   font-weight: 500;
+  color: var(--primary_black);
 }
-.AuthorSection__header_container p:after{
+.AuthorSection__header_container p:after {
   position: relative;
-  top: -.75rem;
+  top: -0.5rem;
   right: 0;
-  content: '„';
+  content: "„";
   font-size: 2rem;
   font-weight: 500;
+  line-height: 25%;
+  color: var(--primary_black);
 }
 
-
-
-
-@media(min-width: 850px){
-  .AuthorSection__header_container{
+@media (min-width: 850px) {
+  .AuthorSection__header_container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: auto;
+    margin-bottom: 2rem;
+  }
+  .AuthorSection__layout h1 {
+    text-align: center;
+    margin-bottom: 1.25rem;
   }
 
+  .AuthorSection__header_container p {
+    text-align: center;
+  }
   .Quote {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    width: 95%;
+    text-align: center;
   }
-
 }
 
-@media(max-width: 849px){
+@media (max-width: 849px) {
   .AuthorSection__layout_container {
     justify-content: space-around;
   }
@@ -82,7 +87,7 @@
   .AuthorSection__layout h1 {
     margin-bottom: 1rem;
   }
-  .AuthorSection__header_container{
+  .AuthorSection__header_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,10 +97,6 @@
   }
   .Quote {
     width: 85%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    text-align: center;
   }
 }
-
