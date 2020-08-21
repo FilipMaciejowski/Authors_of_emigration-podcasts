@@ -6,10 +6,13 @@
 
 .AuthorSection__layout h1 {
   font-size: 1.35rem;
+  
   color: var(--main_black);
   text-decoration:underline;
   text-decoration-color: var(--ministry_grey);
   text-align: center;
+  
+  margin-bottom: 0;
 }
 
 .AuthorSection__layout_container {
@@ -30,26 +33,30 @@
   .AuthorSection__layout_container {
     justify-content: space-around;
   }
-  /* .AuthorSection__header_container{
+  .AuthorSection__header_container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4rem;
+    height: auto;
     border: 1px solid red;
-  } */
+  }
 
-  .Contentful__wrapper {
-    display: flex; 
-    justify-content: flex-end;
-    
-  }
-  .AuthorSection__header_container p {
+  .Quote {
     width: 50%;
-    font-size: .75rem;
-    margin-bottom: 0;
-    font-size: 1.25rem;
-    border: 1px solid blue;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
+
+  .AuthorSection__header_container p {
+    margin-bottom: 0;
+    font-size: .75rem;
+    text-align: left;
+  }
+
+  
+
 }
 
 

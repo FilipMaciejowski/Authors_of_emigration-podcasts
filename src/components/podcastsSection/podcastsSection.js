@@ -113,12 +113,13 @@ const PodcastsSection = ({closeNavMobile}) => {
         <div className={classes.Content__container}>
           {currentEls.map(({ node }) => (
             <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}>
+              {console.log(node.podcastelement)}
               {!node.podcastelement ? (
                 <ReactLoading
-                  type="cubes"
+                  type="blank"
                   color="#919BA2"
-                  width="75px"
-                  height="35px"
+                  width="3rem"
+                  height="3rem"
                 ></ReactLoading>
               ) : (
                 node.podcastelement
