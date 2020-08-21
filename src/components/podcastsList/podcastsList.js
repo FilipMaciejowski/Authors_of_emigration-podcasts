@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+/* import React, { useState, useEffect } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
@@ -103,3 +103,4 @@ const PodcastsList = ({ mobile, openModal}) => {
 }
 
 export default PodcastsList
+ */

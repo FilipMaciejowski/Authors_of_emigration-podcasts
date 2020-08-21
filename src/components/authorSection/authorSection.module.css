@@ -6,12 +6,10 @@
 
 .AuthorSection__layout h1 {
   font-size: 1.35rem;
-  
   color: var(--main_black);
   text-decoration:underline;
   text-decoration-color: var(--ministry_grey);
   text-align: center;
-  
   margin-bottom: 0;
 }
 
@@ -25,49 +23,85 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: rgb(244, 241, 241);
-  border: 1px solid rgb(235, 235, 235);
+  
+}
+
+.AuthorSection__header_container {
+  margin-bottom: 2rem;
+}
+
+.AuthorSection__header_container p {
+  margin-bottom: 0;
+  font-size: .75rem;
+  text-align: left;
 }
 
 
-@media(min-width: 865px){
+.AuthorSection__header_container p:before{
+  position: relative;
+  top:0;
+  left:-.125rem;
+  content: "„";
+  font-size: 2rem;
+  font-weight: 500;
+}
+.AuthorSection__header_container p:after{
+  position: relative;
+  top: -.75rem;
+  right: 0;
+  content: '„';
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+
+
+
+@media(min-width: 850px){
   .AuthorSection__layout_container {
     justify-content: space-around;
   }
+
+
   .AuthorSection__header_container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: auto;
-    border: 1px solid red;
   }
 
   .Quote {
     width: 50%;
-    border: 1px solid green;
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
 
-  .AuthorSection__header_container p {
-    margin-bottom: 0;
-    font-size: .75rem;
-    text-align: left;
+}
+
+@media(max-width: 849px){
+  .AuthorSection__layout_container {
+    justify-content: center;
   }
 
-  
-
-}
-
-
-/* @media(max-width: 850px){
-  .AuthorSection__layout_container{
-    justify-content: space-around;
+  .AuthorSection__layout h1 {
+    margin-bottom: 1rem;
   }
-.AuthorSection__layout h1 {
-  text-align: center;
+  .AuthorSection__header_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 1.5rem;
+    
+  }
+  .Quote {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
 }
-
-}
- */
 

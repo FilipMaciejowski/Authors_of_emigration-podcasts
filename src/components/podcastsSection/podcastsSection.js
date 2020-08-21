@@ -7,7 +7,12 @@ import classes from "./podcastSection.module.css"
 import AuthorSection from "../authorSection/authorSection"
 import PodcastElement from "../podcastElement/podcastElement"
 
-export const data = graphql`
+
+
+const PodcastsSection = ({closeNavMobile}) => {
+
+  const data = useStaticQuery(graphql`
+
     query Author_of_emigration {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
         edges {
@@ -18,34 +23,18 @@ export const data = graphql`
               childMarkdownRemark{
                   html
                 }
-              }
-            podcastelement {
-              id
-              authorName
-              episode
-              publishDate
-              unpublishedEpisode
-              unpublished
-              description {
-                childMarkdownRemark{
-                  html
-                }
-              }
-              photo {
-                fluid {
-                  src
-                }
-              }
-              slug
             }
           }
         }
       }
     }
-  `
+  `)
 
-const PodcastsSection = ({closeNavMobile, data}) => {
   
+
+
+
+
   
 const [activePage, setActivePage] = useState()
  
@@ -59,8 +48,6 @@ const [activePage, setActivePage] = useState()
     }
   }, [activePage])
 
-  
-  
   
   const sortEpisodeElements = (podcastA, podcastB) => {
     return podcastA.episode - podcastB.episode
@@ -109,14 +96,14 @@ const [activePage, setActivePage] = useState()
   const indexOfFirstEl = indexOfLastEl - 4
   const currentEls = data.Section.edges.slice(indexOfFirstEl, indexOfLastEl)
   
+  
   return (
     <>
       <main className={classes.Content__main}>
         <div className={classes.Content__container}>
           {currentEls.map(({ node }) => (
             <AuthorSection key={node.id} author={node.name} quote={node.quote.childMarkdownRemark.html}>
-              {console.log(node.podcastelement)}
-              {!node.podcastelement ? (
+             {/*  {!node.podcastelement ? (
                 <ReactLoading
                   type="blank"
                   color="#919BA2"
@@ -124,7 +111,7 @@ const [activePage, setActivePage] = useState()
                   height="3rem"
                 ></ReactLoading>
               ) : (
-                node.podcastelement
+                node.podcasts
                   .sort(sortEpisodeElements)
                   .map(element => (
                     <PodcastElement
@@ -139,9 +126,8 @@ const [activePage, setActivePage] = useState()
                       unpublished={element.unpublished}
                       unpublished_episode={element.unpublishedEpisode}
                     />
-                    
                   ))
-              )}
+              )} */}
             </AuthorSection>
           ))}
         </div>
@@ -155,5 +141,29 @@ const [activePage, setActivePage] = useState()
     </>
   )
 }
+
+export const podcastDetails = graphql`
+  fragment podcastDetails on ContentfulPodcastElement {
+    id
+    title
+    authorName
+    unpublished
+    slug
+    slug
+    episode
+    unpublishedEpisode
+    publishDate
+    photo{
+      fluid{
+        src
+      }
+    }
+    description{
+      childMarkdownRemark{
+        html
+      }
+    }
+  }
+  `
 
 export default PodcastsSection

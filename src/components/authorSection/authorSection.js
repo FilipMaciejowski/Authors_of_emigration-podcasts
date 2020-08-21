@@ -8,14 +8,11 @@ const AuthorSection = ({ author, quote, children }) => {
       <div className={classes.AuthorSection__header_container}>
         <h1>{author.toUpperCase()}</h1>
         <div className={classes.Quote}>
-        
           <div
             className={classes.Contentful__wrapper}
             dangerouslySetInnerHTML={{ __html: quote }}
           ></div>
-          </div>
-        
-        
+        </div>
       </div>
       <div className={classes.AuthorSection__layout_container}>{children}</div>
     </div>
