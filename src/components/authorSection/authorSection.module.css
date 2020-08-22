@@ -31,12 +31,13 @@
 
 .AuthorSection__header_container p {
   margin-bottom: 0;
-  font-size: 0.85rem;
+  font-size: 1.125rem;
+  font-style: italic;
   text-align: center;
   color: var(--main_black);
 }
 
-.AuthorSection__header_container p:before {
+/* .AuthorSection__header_container p:before {
   position: relative;
   top: 0;
   left: -0.125rem;
@@ -54,7 +55,7 @@
   font-weight: 500;
   line-height: 25%;
   color: var(--primary_black);
-}
+} */
 
 @media (min-width: 850px) {
   .AuthorSection__header_container {
