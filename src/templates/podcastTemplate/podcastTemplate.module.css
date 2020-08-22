@@ -31,6 +31,42 @@
   margin-left: -320px;
 }
 
+.Header__conintainer{
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.Header__conintainer a{
+  text-decoration: none;
+  color: var(--second_grey);
+  font-weight: 600;
+  
+}
+p.Home{
+font-size: 1rem;
+transition: color .2s;
+}
+
+p.Home::before{
+  content:"\140A";
+  position: relative;
+  top: 1px;
+  left: 0;
+  font-weight: 900;
+}
+
+
+.Header__conintainer a:hover p.Home{
+  color: var(--primary_black);
+}
+
+.Header__conintainer p{
+  margin-bottom: 0;
+
+}
 .Header__layout.Scroll {
   height: 4.25rem;
   width: 640px;

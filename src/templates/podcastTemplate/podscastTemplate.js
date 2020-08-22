@@ -67,9 +67,13 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     <div ref={ref} className={classes.Template__observer_helper}></div>
       <div className={classes.Template__layout}>
         <header className={inView ? classes.Header__layout : [classes.Header__layout, classes.Scroll].join(" ")}>
+          <div className={classes.Header__conintainer}>
+          <Link to="/mainPage"><p className={classes.Home}> Strona 
+główna </p></Link>
           <Link to="/mainPage">
             <SVGContainer mainClass="Logo__template" newClass="Image_resize" />
           </Link>
+          </div>
         </header>
         <main className={classes.Template__text}>
           {aboutProject ? (
