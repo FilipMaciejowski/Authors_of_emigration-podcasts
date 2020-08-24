@@ -1,11 +1,12 @@
 .SocialMedia {
-  margin: 3rem auto 4rem auto;
+  margin: 2.25rem auto 5rem auto;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+  
 }
 
 .SocialMedia p {
