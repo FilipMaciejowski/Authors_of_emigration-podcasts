@@ -6,10 +6,12 @@ const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
 
 module.exports = {
   siteMetadata: {
-    title: `Twórcy Emigracji`,
-    description: `Podcasty `,
+    title: `Tworcy Emigracji`,
+    description: `Podcasty o twórcach emigracji`,
     author: `Dawid Dziedziczak`,
     developer: `filip.maciejowski@gmail.com`,
+    siteUrl: `https://tworcyemigracji.pl`,
+    keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty']
   },
 
   pathPrefix: `/Tworcy_emigracji`,
