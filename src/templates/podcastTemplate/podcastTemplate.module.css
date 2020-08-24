@@ -139,8 +139,15 @@
 }
 
 .Podcast__paragraph_main {
-  font-size: calc(0.85rem - 15%);
+  font-size: calc(0.85rem - 10%);
   line-height: 1.25rem;
+}
+
+@media(max-width: 600px){
+  .Podcast__paragraph_main{
+    font-size: calc(0.85rem - 5%);
+  }
+  
 }
 
 .Italic {

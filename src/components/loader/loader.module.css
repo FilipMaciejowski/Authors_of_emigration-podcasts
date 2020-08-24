@@ -12,14 +12,14 @@
 
 @media (max-width: 400px) {
   svg.Loader__logo {
-    width: 15rem;
-    height: 15rem;
+    width: 10.5rem;
+    height: 10.5rem;
   }
 }
 @media (min-width: 401px) {
   svg.Loader__logo {
-    width: 17.5rem;
-    height: 17.5rem;
+    width: 13.5rem;
+    height: 13.5rem;
   }
 }
 @media (min-width: 800px) {
