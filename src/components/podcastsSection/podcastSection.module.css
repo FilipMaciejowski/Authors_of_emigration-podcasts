@@ -88,12 +88,12 @@
   color: var(--second_grey);
 }
 
-/* .Link__prev  {
- transform: translateX(-15.25%) translateY(-1.85%);
+.Link__prev  {
+  transform: translateX(-12.5%);
 }
 .Link__next {
-  transform: translateX(6.25%) translateY(-1.85%);
-} */
+ 
+}
 
 .Disabled{
   opacity: 0.2;
