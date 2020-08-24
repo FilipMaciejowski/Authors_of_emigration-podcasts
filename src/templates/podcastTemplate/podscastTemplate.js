@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useInView } from "react-intersection-observer"
 import ReactLoading from "react-loading"
 import { Link, graphql } from "gatsby"
 import { INLINES, BLOCKS} from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { FacebookShareButton, FacebookIcon } from "react-share"
+import SocialMediaButtons from "../../components/socialMediaButtons/socialMediaButtons"
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
+
 
 import classes from "./podcastTemplate.module.css"
 
@@ -75,6 +78,7 @@ główna </p></Link>
           </Link>
           </div>
         </header>
+        <SocialMediaButtons author={data.PodcastContent.authorName} episode={data.PodcastContent.episode} slug={data.PodcastContent.slug}/>
         <main className={classes.Template__text}>
           {aboutProject ? (
             children

@@ -1,0 +1,35 @@
+.SocialMedia {
+  margin: 3rem auto 4rem auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.SocialMedia p {
+margin-bottom: 0;
+}
+
+.SocialMedia_line {
+  width: 5rem;
+  height: 1px;
+  margin: .5rem auto;
+  background-color: var(--main_black);
+}
+.SocialMediaButtons__container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.socialMediaButton {
+  width: auto;
+  height: auto;
+  margin: 0.25rem 0.5rem;
+  outline: none;
+  transform: translateY(12.5%);
+}
