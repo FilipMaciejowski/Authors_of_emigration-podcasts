@@ -29,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main_grey);
   overflow-anchor: none;
+  
 }
 
 article,

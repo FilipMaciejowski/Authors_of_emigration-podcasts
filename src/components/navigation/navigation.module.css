@@ -17,7 +17,7 @@
 
 .Navigation__container {
   width: var(--main_width);
-  max-width: 100%;
+  max-width: 90%;
   height: 6.5rem;
   padding: 0 1rem;
   margin: 0 auto;
@@ -25,7 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .Navigation__line {
