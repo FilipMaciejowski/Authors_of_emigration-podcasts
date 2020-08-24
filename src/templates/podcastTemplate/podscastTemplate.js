@@ -78,7 +78,7 @@ główna </p></Link>
           </Link>
           </div>
         </header>
-        <SocialMediaButtons author={data.PodcastContent.authorName} episode={data.PodcastContent.episode} slug={data.PodcastContent.slug}/>
+        {aboutProject ? null : <SocialMediaButtons author={data.PodcastContent.authorName} episode={data.PodcastContent.episode} slug={data.PodcastContent.slug}/>}
         <main className={classes.Template__text}>
           {aboutProject ? (
             children
