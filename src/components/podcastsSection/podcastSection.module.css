@@ -89,11 +89,9 @@
 }
 
 .Link__prev  {
-  transform: translateX(-12.5%);
+  transform: translate(-12.5%, -25%);
 }
-.Link__next {
- 
-}
+
 
 .Disabled{
   opacity: 0.2;
