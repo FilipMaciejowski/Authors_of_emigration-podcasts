@@ -91,9 +91,6 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     } else if (slug.includes("2")) {
       nextSplitString.splice(-1, 1, "3")
       prevSplitString.splice(-1, 1, "1")
-    
-      console.log(nextSplitString)
-
       linkEpisode = (
         <>
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${prevSplitString.join("")}`}>
