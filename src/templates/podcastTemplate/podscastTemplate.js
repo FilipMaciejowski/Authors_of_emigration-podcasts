@@ -25,11 +25,15 @@ export const myQuery = graphql`
     }
   }
 `
+
+
 const Text = ({ children }) => (
   <p className={classes.Podcast__paragraph_main}>{children}</p>
 )
 
 const PodcastTemplate = ({ data, aboutProject, children }) => {
+
+
 
   const [ref, inView] = useInView({
     rootMargin: "0px 0px 0px 0px",
@@ -65,6 +69,32 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     },
   }
 
+  
+    
+    
+
+    const nextEpisodeHandler = () => {
+      const slug = data.PodcastContent.slug
+      const nextSplitString = slug.split("")
+      const prevSplitString = slug.split("")
+      let linkEpisode;
+      if(slug.includes("1")){
+        nextSplitString.splice(-1,1,"2")
+        linkEpisode = <div className={classes.Link__episode_container}><Link to={`/podcasts/${nextSplitString.join("")}`}><p className={classes.NextEpisode}>Następny odcinek</p></Link></div>
+      }else if(slug.includes("2")){
+        nextSplitString.splice(-1,1,"3")
+        prevSplitString.splice(-1,1, "1")
+        linkEpisode = <div className={classes.Link__episode_container}><Link to={`/podcasts/${nextSplitString.join("")}`}><p className={classes.NextEpisode}>Następny odcinek</p></Link>
+        <Link to={`/podcasts/${prevSplitString.join("")}`}><p className={classes.PreviousEpisode}>Poprzedni odcinek</p></Link></div>
+      }else if(slug.includes("3")){
+      prevSplitString.splice(-1,1,"2")
+      linkEpisode  = <div className={classes.Link__episode_container}><Link to={`/podcasts/${prevSplitString.join("")}`}><p className={classes.PreviousEpisode}>Poprzedni odcinek</p></Link></div>
+      }
+      return linkEpisode;
+    }
+
+
+
   return (
     <>
     <div ref={ref} className={classes.Template__observer_helper}></div>
@@ -84,11 +114,14 @@ główna </p></Link>
             children
           ) : (
             <div>
+              <div className={classes.Podcast__paragraph_heading}>
               <h1 className={classes.Podcast__paragraph_heading}>
                 {data.PodcastContent.authorName} Odc.{" "}
                 {data.PodcastContent.episode}
               </h1>
-
+             {nextEpisodeHandler()}
+              {/* <Link to={`/podcasts/${nextEpisodeHandler()}`}><p className={classes.NextEpisode}>Następny odcinek</p></Link> */}
+              </div>
               {documentToReactComponents(
                 data.PodcastContent.body.json,
                 options
