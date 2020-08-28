@@ -29,7 +29,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main_grey);
   overflow-anchor: none;
-  
+}
+
+.preload * {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
 article,

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { useInView } from "react-intersection-observer"
 
 import SVGContainer from "../SVGContainer/SVGContainer"
@@ -15,18 +15,22 @@ const Navigation = () => {
     threshold: 0.98
   })
 
+  useEffect(()=>{
+    const body = document.body
+    body.classList.remove('preload')
+  })
 
   return (
     <>
     <div ref={ref} className={classes.Nav__observer_helper}></div>
     <div
       className={
-        !inView ? [classes.Navigation__main, classes.Scroll].join(" ") : classes.Navigation__main
+        inView ? classes.Navigation__main : [classes.Navigation__main, classes.Scroll].join(" ")
       }
     >
       <nav
         className={
-          !inView ? [classes.Navigation__container, classes.Scroll].join(" ") :  classes.Navigation__container
+          inView ? classes.Navigation__container : [classes.Navigation__container, classes.Scroll].join(" ")
         }
       >
         <SVGContainer
