@@ -7,7 +7,7 @@ import Loader from "../components/loader/loader"
 const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(()=>{
-    setTimeout(() => setIsLoading(false), 3000
+    setTimeout(() => setIsLoading(false), 2500
     )})
 
   return (
