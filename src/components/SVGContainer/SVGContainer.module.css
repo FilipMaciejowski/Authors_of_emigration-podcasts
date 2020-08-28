@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
 }
-
 .OnLoad{
   width: 153px;
   height: auto;
@@ -21,11 +20,10 @@ img.Logo {
   -moz-transition: transform 0.75s ease;
   -o-transition: transform 0.75s ease;
   transition: transform 0.75s ease;
+  
 }
 
 @media (min-width: 600px) {
-  /* .Logo__container.Resize {
-  transform: scale(0.75) */
   img.Logo.Resize {
     -webkit-tranform: scale(0.8);
     transform: scale(0.8);
