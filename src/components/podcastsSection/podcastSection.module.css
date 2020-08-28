@@ -96,10 +96,10 @@
 }
 
 .Link__first {
-  transform: translateX(-2.5%);
+  transform: translate(-2.5%, 50%);
 }
 .Link__last {
- transform: translateX(12.5%);
+ transform: translate(12.5%);
 }
 .Link__next {
   transform: translateX(7.5%);
