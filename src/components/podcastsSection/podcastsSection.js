@@ -106,6 +106,8 @@ const [activePage, setActivePage] = useState()
     linkClass: classes.Pagination__link,
     linkClassPrev: classes.Link__prev,
     linkClassNext: classes.Link__next,
+    linkClassFirst: classes.Link__first,
+    linkClassLast: classes.Link__last,
     activeLinkClass: classes.Active,
   }
 

@@ -34,7 +34,8 @@
   display: flex; 
   align-items: center;
   justify-content: center;
-  max-width: 10rem;
+  width: auto;
+  /* border: 1px solid red; */
   height: 3rem;
   margin: 0 auto;
 }
@@ -60,6 +61,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  /* border: 1px solid red; */
   
 }
 
@@ -69,9 +71,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid blue; */
 }
 
-.Pagination__element:hover {
+.Pagination__element:hover{
   background-color: var(--main_grey);
   border-radius: 50%;
   cursor: pointer;
@@ -89,11 +92,19 @@
 }
 
 .Link__prev  {
-  transform: translate(-12.5%, 2.5%);
+  transform: translateX(-5%);
+}
+
+.Link__first {
+  transform: translateX(-2.5%);
+}
+.Link__last {
+ transform: translateX(12.5%);
 }
 .Link__next {
-  transform: translateY(2.5%);
+  transform: translateX(7.5%);
 }
+
 
 .Disabled{
   opacity: 0.2;
