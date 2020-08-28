@@ -215,9 +215,20 @@
   font-weight: 900;
 }
 
+
+p.Unpublished{
+  margin: 8.5rem auto 8.5rem auto;
+  text-align: center;
+  color: var(--primary_grey);
+  font-size: 3rem;
+  height: 1em;
+}
 @media(max-width: 500px){
   .Link__episode_container{
     flex-direction: column;
     height: 4.25rem;
+  }
+  p.Unpublished{
+    font-size: 1.5rem;
   }
 }

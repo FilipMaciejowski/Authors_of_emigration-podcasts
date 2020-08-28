@@ -17,6 +17,8 @@ export const myQuery = graphql`
     PodcastContent: contentfulPodcastElement(slug: { eq: $slug }) {
       slug
       authorName
+      unpublished
+      unpublishedEpisode
       episode
       body {
         json
@@ -24,7 +26,6 @@ export const myQuery = graphql`
     }
   }
 `
-
 const Text = ({ children }) => (
   <p className={classes.Podcast__paragraph_main}>{children}</p>
 )
@@ -82,15 +83,17 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     if (slug.includes("1")) {
       nextSplitString.splice(-1, 1, "2")
       linkEpisode = (
-       
-          <Link className={classes.ToggleEpisode__link} to={`/podcasts/${nextSplitString.join("")}`}>
-            <p className={classes.ToggleEpisode}>Następny odcinek</p>
-          </Link>
-       
+       data.PodcastContent.unpublished ? null : 
+        <Link className={classes.ToggleEpisode__link} to={`/podcasts/${nextSplitString.join("")}`}>
+        <p className={classes.ToggleEpisode}>Następny odcinek</p>
+      </Link>
       )
     } else if (slug.includes("2")) {
       nextSplitString.splice(-1, 1, "3")
       prevSplitString.splice(-1, 1, "1")
+    
+      console.log(nextSplitString)
+
       linkEpisode = (
         <>
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${prevSplitString.join("")}`}>
@@ -98,8 +101,9 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
           </Link>
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${nextSplitString.join("")}`}>
             <p className={classes.NextEpisode}>Następny odcinek</p>
-          </Link>
-          </>
+          </Link>{
+          }
+        </>
 
       )
     } else if (slug.includes("3")) {
@@ -148,7 +152,8 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
         <main className={classes.Template__text}>
           {aboutProject ? (
             children
-          ) : (
+          ) : data.PodcastContent.unpublished ? 
+          <p className={classes.Unpublished}>{data.PodcastContent.unpublishedEpisode} odcinek wkrótce!!!</p> : (
             <div>
               <h1 className={classes.Podcast__paragraph_heading}>
                 {data.PodcastContent.authorName} Odc.{" "}
