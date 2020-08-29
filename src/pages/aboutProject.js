@@ -3,6 +3,7 @@ import { StaticQuery, graphql} from "gatsby"
 
 import PodcastTemplate from "../templates/podcastTemplate/podscastTemplate"
 import Ministry from "../components/ministry/ministry"
+import Head from "../components/head"
 
 const AboutProject = (data) => {
 
@@ -26,7 +27,7 @@ const AboutProject = (data) => {
     `
 }
 
-    render={ data => (<PodcastTemplate aboutProject={true}>
+    render={ data => (<PodcastTemplate aboutProject={true}><Head title="O projekcie"/>
         <h1 style={styles[0]}>O projekcie:</h1>
         <p style={styles2[1]}>
           Strona została stworzona na potrzeby realizacji trzymiesięcznego

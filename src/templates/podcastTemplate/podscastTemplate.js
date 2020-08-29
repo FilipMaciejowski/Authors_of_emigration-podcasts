@@ -4,11 +4,11 @@ import ReactLoading from "react-loading"
 import { Link, graphql } from "gatsby"
 import { INLINES, BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { FacebookShareButton, FacebookIcon } from "react-share"
 import SocialMediaButtons from "../../components/socialMediaButtons/socialMediaButtons"
 
 import Footer from "../../components/footer/footer"
 import SVGContainer from "../../components/SVGContainer/SVGContainer"
+import Head from "../../components/head"
 
 import classes from "./podcastTemplate.module.css"
 
@@ -118,6 +118,7 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
 
   return (
     <>
+    <Head title={`${data.PodcastContent.authorName} ${data.PodcastContent.episode}`} />
       <div ref={ref} className={classes.Template__observer_helper}></div>
       <div className={classes.Template__layout}>
         <header

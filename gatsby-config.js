@@ -6,7 +6,7 @@ const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
 
 module.exports = {
   siteMetadata: {
-    title: `Tworcy Emigracji`,
+    title: `Twórcy Emigracji`,
     description: `Podcasty o twórcach emigracji`,
     author: `Dawid Dziedziczak`,
     developer: `filip.maciejowski@gmail.com`,
@@ -65,7 +65,7 @@ module.exports = {
         background_color: `#fafafa`,
         theme_color: `#fafafa`,
         display: `minimal-ui`,
-        icon: `src/assets/images/Icon_TE.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/Icon_TE.png`
       },
       
     },

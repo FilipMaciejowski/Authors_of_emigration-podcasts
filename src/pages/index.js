@@ -3,6 +3,7 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layout/layout"
 import Loader from "../components/loader/loader"
+import Head from "../components/head"
 
 const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -12,8 +13,10 @@ const IndexPage = () => {
 
   return (
     <>
+    
     {isLoading ? <Loader/> : <Layout>
-      <SEO title="Tworcy Emigracji" />
+      <Head title="Strona Główna"/>
+      <SEO title="Twórcy emigracji" />
     </Layout>}
     </>
   )

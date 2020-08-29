@@ -8,7 +8,7 @@ import classes from "./layout.module.css"
 import Context from "../context"
 import MainSection from "../mainSection/mainSection"
 import Navigation from "../navigation/navigation"
-import Loader from "../loader/loader"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
