@@ -118,7 +118,7 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
 
   return (
     <>
-    <Head title={`${data.PodcastContent.authorName}`} />
+    <Head title={aboutProject ? "O projekcie" : `${data.PodcastContent.authorNamedata.PodcastContent.episode}`} />
       <div ref={ref} className={classes.Template__observer_helper}></div>
       <div className={classes.Template__layout}>
         <header
