@@ -36,7 +36,11 @@ const removeClassHoverHandler = () => {
   return (
     <>
       <header className={classes.Header__main}>
+<<<<<<< HEAD
         <div role="button" tabIndex={0} className={classes.Header__neon_container} onMouseEnter={addClassHoverHandler} onMouseLeave={removeClassHoverHandler}> 
+=======
+        <div className={classes.Header__neon_container} role="button" tabIndex={0} onKeyDown={addClassHoverHandler} onMouseEnter={addClassHoverHandler} onMouseLeave={removeClassHoverHandler}> 
+>>>>>>> 2fbc646c147352422518d6a8f2efb11f29d02a26
         <p className={noenHoverClass.join(" ")}>
           p<span  className={classes.Letter_1}>o</span>lo
           <span className={letter_n_hoverClass.join(" ")}>n</span>ia

@@ -23,7 +23,7 @@ if (containerSize === "Footer__container_narrow") {
         >
           <a
             href="https://www.facebook.com/Tw%C3%B3rcy-emigracji-101510721629906"
-            target="_blank" rel="noreferrer"
+            target="_blank" rel="noreferrer" 
           >
             <div className={classes.Facebook}>
               <svg

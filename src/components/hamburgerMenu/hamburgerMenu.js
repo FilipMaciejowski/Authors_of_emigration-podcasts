@@ -15,7 +15,11 @@ const HamburgerMenu = () => {
         <div className={classes.Navigation__hamburger_container}>
           <div role="button"
           tabIndex={0}
+<<<<<<< HEAD
             onClick={context.toggleMobileNav}
+=======
+            onClick={context.toggleMobileNav} 
+>>>>>>> 2fbc646c147352422518d6a8f2efb11f29d02a26
             onKeyDown={context.toggleMobileNav}
             className={
               context.mobileNavIsOpen
