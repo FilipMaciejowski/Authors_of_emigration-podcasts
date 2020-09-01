@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import EpisodesList from "../episodesList/episodesList"
 import classes from "./podcastsList.module.css"
-import { node } from "prop-types"
 
-const PodcastsList = ({ mobile, openModal}) => {
+const PodcastsList = ({ mobile, openModal }) => {
   const data = useStaticQuery(graphql`
     query list {
       Section: allContentfulAuthorSection(sort: { fields: date, order: DESC }) {
@@ -33,8 +32,8 @@ const PodcastsList = ({ mobile, openModal}) => {
   const getSiblings = (elem) => {
     const siblings = []
     let sibling = elem.parentNode.firstChild
-  
-    while(sibling) {
+
+    while (sibling) {
       if (sibling.nodeType === 1 && sibling !== elem) {
         siblings.push(sibling);
       }
@@ -42,7 +41,7 @@ const PodcastsList = ({ mobile, openModal}) => {
     }
     return siblings;
   }
-  
+
   const openEpisodesListHandler = e => {
     const SelectedAuthor = e.target
     const AuthorsOfEmigration = getSiblings(SelectedAuthor)
@@ -52,28 +51,27 @@ const PodcastsList = ({ mobile, openModal}) => {
     })
 
     AuthorsOfEmigration.forEach(author => {
-      if(author.classList.contains(classes.Clicked)){
+      if (author.classList.contains(classes.Clicked)) {
         author.classList.remove(classes.Clicked)
-      }else{
+      } else {
         SelectedAuthor.classList.add(classes.Clicked)
       }
     })
     setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
-    if(mobile){
+    if (mobile) {
     }
   }
 
   const authors = data.Section.edges.map(({ node }) => {
     return (
-      <li
-        className={mobile ? classes.Author_mobile : classes.Author}
-        onClick={e => openEpisodesListHandler(e)}
+      <button onClick={e => openEpisodesListHandler(e)}
+        onKeyDown={e => openEpisodesListHandler(e)} className={mobile ? classes.Author_mobile : classes.Author}
         key={node.id}
-        data-id={node.id}
-      >
+        data-id={node.id}>
         {node.name}
-      </li>
+      </button>
+
     )
   })
 
@@ -96,8 +94,8 @@ const PodcastsList = ({ mobile, openModal}) => {
           {authors}
         </ul>
       </div>
-      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false}  episodes={episodesAuthors} /> : null}
-      
+      {episodesListIsOpen ? <EpisodesList mobile={mobile ? true : false} episodes={episodesAuthors} /> : null}
+
     </>
   )
 }

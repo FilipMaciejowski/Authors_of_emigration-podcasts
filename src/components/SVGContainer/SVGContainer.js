@@ -1,14 +1,14 @@
-import React,{useState, useEffect} from  "react"
+import React, { useState, useEffect } from "react"
 
 import classes from "./SVGContainer.module.css"
 
 
-const SVGContainer = ({scroll, imageClass, mainClass, onScrollClass}) => {
+const SVGContainer = ({ scroll, imageClass, mainClass, onScrollClass }) => {
   const [assignedMainClass, setAssignedMainClass] = useState()
 
-  useEffect(()=>{
+  useEffect(() => {
     setAssignedMainClass(classes.OnLoad)
-    })
+  }, [])
 
   return (
     <div className={assignedMainClass && !scroll ? assignedMainClass : [classes[mainClass], classes[onScrollClass]].join(' ')}>

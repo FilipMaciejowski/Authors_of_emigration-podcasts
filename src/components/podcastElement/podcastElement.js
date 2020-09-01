@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+
 
 
 import classes from "./podcastElement.module.css"
@@ -78,7 +78,7 @@ const PodcastElement = ({
         <div className={classes.PodcastElement__container}>
           <div className={classes.PodcastElement__image_container}>
             <div className={classes.Image_wrapper}>
-              <img src={image}></img>
+              <img  alt={title} src={image}></img>
             </div>
           </div>
           <div className={classes.PodcastElement__content}>

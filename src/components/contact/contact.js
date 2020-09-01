@@ -5,7 +5,7 @@ import Context from "../context"
 
 const Contact = ({ mobile }) => {
 
-  
+
   return (
     <Context.Consumer>
       {context =>
@@ -16,23 +16,23 @@ const Contact = ({ mobile }) => {
                 dawid.dziedziczak@gmail.com
               </a>
             </p>
-            <span className={classes.Close_button}role="button" onClick={context.closeContactModal}>
+            <span className={classes.Close_button} tabIndex={0} role="button" onClick={context.closeContactModal} onKeyDown={context.closeContactModal} aria-label="Open Contact">
             </span>
           </div>
         ) : (
-          <div className={classes.Contact__layout}>
-            <div>
-              <div role="button" onClick={context.closeContactModal} className={classes.Close}></div>
-            </div>
-            <div className={classes.Contact__text_container}>
-              <p className={classes.Contact__text}>
-                <a href="mailto: dawid.dziedziczak@gmail.com">
-                  dawid.dziedziczak@gmail.com
+            <div className={classes.Contact__layout}>
+              <div>
+                <div role="button" onClick={context.closeContactModal} onKeyDown={context.closeContactModal} aria-label="Close Contact" tabIndex={0} className={classes.Close}></div>
+              </div>
+              <div className={classes.Contact__text_container}>
+                <p className={classes.Contact__text}>
+                  <a href="mailto: dawid.dziedziczak@gmail.com">
+                    dawid.dziedziczak@gmail.com
                 </a>
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
-        )
+          )
       }
     </Context.Consumer>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FacebookShareButton, FacebookMessengerShareButton, TwitterShareButton, EmailShareButton,  FacebookIcon, FacebookMessengerIcon, TwitterIcon, EmailIcon} from "react-share"
+import { FacebookShareButton, TwitterShareButton, EmailShareButton,  FacebookIcon, TwitterIcon, EmailIcon} from "react-share"
 import classes from "./SocialMediaButtons.module.css"
 
 const SocialMediaButtons = ({author, episode, slug}) => {

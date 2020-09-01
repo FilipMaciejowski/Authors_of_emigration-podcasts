@@ -133,6 +133,10 @@ button, input, optgroup, select, textarea {
   margin: 0;
 }
 
+button:active, button:visited {
+  outline: none;
+}
+
 optgroup {
   font-weight: 700;
 }

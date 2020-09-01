@@ -3,7 +3,7 @@ import { StaticQuery, graphql} from "gatsby"
 
 import PodcastTemplate from "../templates/podcastTemplate/podscastTemplate"
 import Ministry from "../components/ministry/ministry"
-import Head from "../components/head"
+
 
 const AboutProject = (data) => {
 

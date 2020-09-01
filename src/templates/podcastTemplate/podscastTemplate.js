@@ -59,6 +59,7 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
               width="100%"
               height="200px"
               frameBorder="0"
+              title={node.data.authorName}
             ></iframe>
           )
         } else if (typeof node.data.uri === "string") {
@@ -110,7 +111,6 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${prevSplitString.join("")}`}>
             <p className={classes.PreviousEpisode}>Poprzedni odcinek</p>
           </Link>
-        
       )
     }
     return linkEpisode
