@@ -17,6 +17,13 @@
   font-size: .85rem;
   font-weight: 500;
   height: 50%;
+  border: none;
+  background-color: var(--main_white);
+  outline: none;
+}
+
+.Navigation__list_link:active {
+  outline: none;
 }
 
 

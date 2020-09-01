@@ -1,17 +1,20 @@
 require('dotenv').config({
-  path: `.env`, // or '.env'
+  path: `.env`, 
 });
 
-module.exports = {
-  siteMetadata: {
+const siteMetadata = 
+  {
     title: `Twórcy Emigracji`,
     description: `Podcasty o twórcach emigracji`,
     author: `Dawid Dziedziczak`,
     developer: `filip.maciejowski@gmail.com`,
     siteUrl: `https://tworcyemigracji.pl`,
-    keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty']
-  },
+    keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty'],
+    favicon: `src/assets/images/Icon_TE.png`
+  }
 
+module.exports = {
+  siteMetadata: siteMetadata,
   pathPrefix: `/Tworcy_emigracji`,
   plugins: [
     {
@@ -63,13 +66,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `tworcyemigracji.pl`,
+        short_name: `TE`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#fafafa`,
-        display: `minimal-ui`,
-        icon: `src/assets/images/Icon_TE.png`
+        display: `standalone`,
+        icon: siteMetadata.favicon
       },
 
     },

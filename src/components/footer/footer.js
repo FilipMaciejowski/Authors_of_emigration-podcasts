@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React from "react"
 
 import classes from "./footer.module.css"
 
@@ -23,7 +23,7 @@ if (containerSize === "Footer__container_narrow") {
         >
           <a
             href="https://www.facebook.com/Tw%C3%B3rcy-emigracji-101510721629906"
-            target="_blank" rel="noopener"
+            target="_blank" rel="noreferrer"
           >
             <div className={classes.Facebook}>
               <svg
@@ -40,7 +40,7 @@ if (containerSize === "Footer__container_narrow") {
           </a>
           <a
             href="https://www.instagram.com/tworcyemigracji.pl"
-            target="_blank" rel="noopener"
+            target="_blank" rel="noreferrer"
           >
             <div className={classes.Instagram}>
               <svg

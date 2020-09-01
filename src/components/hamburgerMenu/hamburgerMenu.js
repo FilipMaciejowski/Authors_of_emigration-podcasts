@@ -14,7 +14,9 @@ const HamburgerMenu = () => {
       {context => (
         <div className={classes.Navigation__hamburger_container}>
           <div role="button"
+          tabIndex={0}
             onClick={context.toggleMobileNav}
+            onKeyDown={context.toggleMobileNav}
             className={
               context.mobileNavIsOpen
                 ? [classes.Navigation__hamburger, classes.closeBurger].join(" ")

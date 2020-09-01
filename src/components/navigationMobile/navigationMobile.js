@@ -19,17 +19,15 @@ const NavigationMobile = () => {
           }
         >
           <ul>
-            <li onClick={context.openPodcastsModal}>
-              <button className={classes.Button__PodcastsModal_mobile}>Podcasty</button>
-              {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
+            <li>
+            <button onClick={context.openPodcastsModal} className={classes.Button__PodcastsModal_mobile}>Podcasty{context.podcastsModalIsOpen ? <PodcastsList mobile={true} /> : null}</button>
             </li>
             <li>
-              <Link to="/aboutProject">O projekcie</Link>
+            <Link to="/aboutProject">O projekcie</Link>
             </li>
             <li>
-              <button className={classes.Button__PodcastsModal_mobile} onClick={context.openContactModal} keydown={context.openContactModal}>Kontakt</button>
+            <button className={classes.Button__PodcastsModal_mobile} onClick={context.openContactModal} onKeyDown={context.openContactModal}>Kontakt{context.contactModalIsOpen ? <Contact mobile={true} /> : null}</button>
             </li>
-              {context.contactModalIsOpen ? <Contact mobile={true} /> : null}
           </ul>
         </nav>
       )}

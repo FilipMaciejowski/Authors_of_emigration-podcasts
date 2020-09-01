@@ -15,14 +15,11 @@ const Navbar = () => {
       {context => (
         <>
           <ul className={classes.Navigation__list}>
-            <li onClick={context.openPodcastsModal}>
-              <a className={classes.Navigation__list_link}>Podcasty</a>
-              {context.podcastsModalIsOpen ? (
+              <button onKeyDown={context.openPodcastsModal} onClick={context.openPodcastsModal} className={classes.Navigation__list_link}>Podcasty {context.podcastsModalIsOpen ? (
                 <PodcastsList
                   mobile={false}
                 />)
-              : null}
-            </li>
+              : null}</button>
             <li>
               <Link
                 className={classes.Navigation__list_link}
@@ -33,9 +30,10 @@ const Navbar = () => {
             </li>
             <li
               className={classes.Different}
-              onClick={event => context.openContactModal(event)}
             >
-              <a className={classes.Navigation__list_link}>Kontakt</a>
+              <button className={classes.Navigation__list_link} 
+              onKeyDown={event => context.openContactModal(event)}
+              onClick={event => context.openContactModal(event)}>Kontakt</button>
               {context.contactModalIsOpen ? <Contact mobile={false} /> : null}
             </li>
           </ul>
