@@ -53,10 +53,7 @@
     overflow-y: auto;
     opacity: 1;
   }
-  button.Author, button.Author_mobile {
-    display: flex;
-    justify-content: flex-end;
-  }
+
 }
 
 .PodcastsList__main.Close {
@@ -92,13 +89,29 @@
   height: 100%;
 }
 
-button.Author, button.Author_mobile {
+ button.Author_mobile {
   list-style: none;
   height: auto;
   width: 100%;
   background-color: var(--main_white);
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: var(--primary_grey);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  border: none;
+  outline: none;
+}
+
+button.Author{
+  list-style: none;
+  height: auto;
+  width: 100%;
+  background-color: var(--main_white);
+  display: flex;
+  justify-content: flex-start;
   text-decoration: none;
   color: var(--primary_grey);
   font-size: 0.75rem;
