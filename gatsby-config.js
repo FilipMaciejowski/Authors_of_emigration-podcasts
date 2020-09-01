@@ -2,8 +2,6 @@ require('dotenv').config({
   path: `.env`, // or '.env'
 });
 
-const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
-
 module.exports = {
   siteMetadata: {
     title: `Twórcy Emigracji`,
@@ -31,7 +29,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -73,7 +71,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/Icon_TE.png`
       },
-      
+
     },
     {
       resolve: `gatsby-plugin-offline`,
@@ -81,17 +79,17 @@ module.exports = {
         workboxConfig: {
           importWorkboxFrom: `cdn`,
         },
-          precachePages: [`/mainPage/`, `/`],
+        precachePages: [`/mainPage/`, `/`],
       },
     },
     {
-      resolve: 'gatsby-plugin-htaccess', 
+      resolve: 'gatsby-plugin-htaccess',
       options: {
         RewriteBase: '/custom/',
         https: true,
         www: false,
         SymLinksIfOwnerMatch: true,
-        host: 'tworcyemigracji.pl', // if 'www' is set to 'false', be sure to also remove it here!
+        host: 'tworcyemigracji.pl',
         ErrorDocument: `
           ErrorDocument 401 /error_pages/401.html
           ErrorDocument 404 /error_pages/404.html
@@ -103,7 +101,7 @@ module.exports = {
             from: 'tworcyemigracji.pl',
             to: 'tworcyemigracji.pl',
           },
-          
+
         ]
       },
     },

@@ -128,11 +128,11 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
               : [classes.Header__layout, classes.Scroll].join(" ")
           }
         >
-          <div className={classes.Header__conintainer}>
+          <div className={classes.Header__container}>
             <Link className={classes.Home_link} to="/mainPage">
               <p className={classes.Home}>Strona główna </p>
             </Link>
-            <Link to="/mainPage">
+            <Link className={classes.Home_link} to="/mainPage">
               <SVGContainer
                 mainClass="Logo__template"
                 newClass="Image_resize"
