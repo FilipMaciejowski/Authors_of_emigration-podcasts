@@ -53,10 +53,7 @@
     overflow-y: auto;
     opacity: 1;
   }
-  button.Author, button.Author_mobile {
-    display: flex;
-    justify-content: flex-end;
-  }
+
 }
 
 .PodcastsList__main.Close {
@@ -92,7 +89,7 @@
   height: 100%;
 }
 
-button.Author_mobile {
+ button.Author_mobile {
   list-style: none;
   height: auto;
   width: 100%;
@@ -108,7 +105,7 @@ button.Author_mobile {
   outline: none;
 }
 
-button.Author {
+button.Author{
   list-style: none;
   height: auto;
   width: 100%;
