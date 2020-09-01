@@ -15,7 +15,6 @@ query {
 `)
     return (
         <Helmet><title>{ `${data.site.siteMetadata.title} | ${title}`}</title>
-        <link rel="canonical" href="https://…"/>
         </Helmet> 
     )
 }

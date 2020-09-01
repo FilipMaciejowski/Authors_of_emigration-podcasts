@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title, pathname }) {
           ? [
               {
                 rel: "canonical",
-                href: "https://tworcyemigracji.pl",
+                href: "https://…",
               },
             ]
           : []
