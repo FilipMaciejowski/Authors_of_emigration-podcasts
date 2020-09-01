@@ -15,11 +15,7 @@ const Navigation = () => {
     threshold: 0.98
   })
 
-  useEffect(()=>{
-    const body = document.body
-    body.classList.remove('preload')
-  })
-
+  
   return (
     <>
     <div ref={ref} className={classes.Nav__observer_helper}></div>
