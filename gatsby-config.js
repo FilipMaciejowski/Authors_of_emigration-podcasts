@@ -48,6 +48,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://tworcyemigracji.pl`,
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
     {
