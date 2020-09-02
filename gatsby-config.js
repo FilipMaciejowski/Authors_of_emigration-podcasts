@@ -39,13 +39,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    /* {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `authors`,
-        path: `${__dirname}/src/content/podcasts`,
-      },
-    }, */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
