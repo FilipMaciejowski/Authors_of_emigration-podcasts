@@ -18,7 +18,7 @@
 
 .PodcastsList__list_mobile li {
   list-style: none;
-  height: 2.5rem;
+  height: 3.5rem;
   background-color: var(--main_white);
   display: flex;
   align-items: center;
@@ -27,13 +27,13 @@
   font-size: 0.85rem;
 }
 
-.PodcastsList__list_mobile li a {
+.PodcastsList__list_mobile span {
   text-decoration: none;
   color: var(--primary_grey);
   font-size: 0.85rem;
   font-weight: 500;
+  height: 2.5rem;
   width: auto;
-  height: auto;
 }
 
 @media (min-width: 600px) {
@@ -89,9 +89,9 @@
   height: 100%;
 }
 
- button.Author_mobile {
+ span.Author_mobile {
   list-style: none;
-  height: auto;
+  height: 1.75rem;
   width: 100%;
   background-color: var(--main_white);
   display: flex;
@@ -105,7 +105,7 @@
   outline: none;
 }
 
-button.Author{
+span.Author{
   list-style: none;
   height: auto;
   width: 100%;
@@ -121,19 +121,20 @@ button.Author{
   outline: none;
 }
 
-.Author_mobile.Clicked {
+span.Author_mobile.Clicked {
   color: var(--main_black);
   font-weight: 600;
   outline: 0;
   border: none;
 }
 
-button.Author.Clicked {
+span.Author.Clicked {
   background-color: var(--second_grey);
   color: var(--main_white);
 }
 
-.PodcastsList__list button.Author:hover {
+
+.PodcastsList__list span.Author:hover {
   color: var(--main_black);
   cursor: pointer;
   background-color: var(--main_grey);
@@ -145,11 +146,7 @@ button.Author.Clicked {
   font-weight: 600;
 }
 
-.PodcastsList__list button.Author:hover .Indicator {
+.PodcastsList__list span.Author:hover .Indicator {
   color: var(--main_black);
 }
 
-.PodcastsList__list button.Author.Clicked:visited {
-  outline-color: var(--main_black);
-  outline: 0;
-}

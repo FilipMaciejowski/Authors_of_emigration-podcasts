@@ -19,24 +19,14 @@ const NavigationMobile = () => {
           }
         >
           <ul>
-<<<<<<< HEAD
-            <li>
-            <button onClick={context.openPodcastsModal} className={classes.Button__PodcastsModal_mobile}>Podcasty{context.podcastsModalIsOpen ? <PodcastsList mobile={true} /> : null}</button>
-=======
-            <li  >
-              <button onClick={context.openPodcastsModal} onKeyDown={context.openPodcastsModal} className={classes.Button__PodcastsModal_mobile}>Podcasty</button>
-              {context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}
->>>>>>> 2fbc646c147352422518d6a8f2efb11f29d02a26
+            <li >
+              <button onClick={context.openPodcastsModal} onKeyDown={context.openPodcastsModal} className={classes.Button__PodcastsModal_mobile}>Podcasty{context.podcastsModalIsOpen ? <PodcastsList mobile={true}/> : null}</button>
             </li>
             <li>
             <Link to="/aboutProject">O projekcie</Link>
             </li>
             <li>
-<<<<<<< HEAD
-            <button className={classes.Button__PodcastsModal_mobile} onClick={context.openContactModal} onKeyDown={context.openContactModal}>Kontakt{context.contactModalIsOpen ? <Contact mobile={true} /> : null}</button>
-=======
-              <button className={classes.Button__PodcastsModal_mobile} onClick={context.openContactModal} onKeyDown={context.openContactModal}>Kontakt</button>
->>>>>>> 2fbc646c147352422518d6a8f2efb11f29d02a26
+        <button className={classes.Button__PodcastsModal_mobile} onClick={context.openContactModal} onKeyDown={context.openContactModal}>Kontakt{context.contactModalIsOpen ? <Contact mobile={true}/> : null}</button>
             </li>
           </ul>
         </nav>

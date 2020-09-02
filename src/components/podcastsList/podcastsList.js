@@ -59,19 +59,18 @@ const PodcastsList = ({ mobile, openModal }) => {
     })
     setEpisodesListIsOpen(true)
     setEpisodesAuthors(filerEdges[0])
-    if (mobile) {
-    }
   }
 
   const authors = data.Section.edges.map(({ node }) => {
     return (
-      <button onClick={e => openEpisodesListHandler(e)}
+    
+      <span onClick={e => openEpisodesListHandler(e)}
         onKeyDown={e => openEpisodesListHandler(e)} className={mobile ? classes.Author_mobile : classes.Author}
         key={node.id}
         data-id={node.id}>
         {node.name}
-      </button>
-
+      </span>
+    
     )
   })
 

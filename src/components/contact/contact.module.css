@@ -79,8 +79,9 @@ p {
   align-items: center;
   justify-content: space-between;
   width: auto;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   transform: translateX(5%);
+  
 }
 
 .Contact__text_container{
