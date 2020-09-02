@@ -14,6 +14,7 @@ const HamburgerMenu = () => {
       {context => (
         <div className={classes.Navigation__hamburger_container}>
           <div role="button"
+          aria-label="hamburger button"
           tabIndex={0}
             onClick={context.toggleMobileNav} 
             onKeyDown={context.toggleMobileNav}

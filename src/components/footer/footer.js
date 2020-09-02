@@ -24,6 +24,7 @@ if (containerSize === "Footer__container_narrow") {
           <a
             href="https://www.facebook.com/Tw%C3%B3rcy-emigracji-101510721629906"
             target="_blank" rel="noreferrer" 
+            aria-label="Fgacebook"
           >
             <div className={classes.Facebook}>
               <svg
@@ -41,6 +42,7 @@ if (containerSize === "Footer__container_narrow") {
           <a
             href="https://www.instagram.com/tworcyemigracji.pl"
             target="_blank" rel="noreferrer"
+            aria-label="Instagram"
           >
             <div className={classes.Instagram}>
               <svg
