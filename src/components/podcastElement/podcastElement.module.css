@@ -61,10 +61,10 @@ cursor: pointer;
   justify-content: flex-start;
 }
 
-.Podcast__content_title.Small h5{
+.Podcast__content_title.Small .Title{
   font-size: calc(0.9rem - 25.5%);
   margin: 0 0.5rem 0.5rem 0;
-
+  text-decoration: none;
 }
 
 .PodcastElement__content p {

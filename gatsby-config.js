@@ -59,13 +59,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        
         name: `tworcyemigracji.pl`,
         short_name: `TE`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#fafafa`,
         display: `standalone`,
-        icon: siteMetadata.favicon
+        icon: siteMetadata.favicon,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
 
     },

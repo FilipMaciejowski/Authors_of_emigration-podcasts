@@ -91,14 +91,14 @@ const PodcastElement = ({
               )}
             >
               {unpublished ? (
-                <h5>{title}</h5>
+                <h1 className={classes.Title}>{title}</h1>
               ) : (
-                <h5>
+                <h1 className={classes.Title}>
                   <Link to={`/podcasts/${page}`}>{title}</Link>
-                </h5>
+                </h1>
               )}
               <div>
-                <h5>odc. {episode}</h5>
+                <h1 className={classes.Title}>odc. {episode}</h1>
               </div>
             </div>
             {unpublishedContent}
