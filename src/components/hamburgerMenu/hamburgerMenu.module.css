@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: flex-end;
   z-index: 10;
+  outline: none;
 }
 
 .Navigation__hamburger {
@@ -23,7 +24,17 @@
   -webkit-box-shadow: 1px 1px 4px -1px rgba(107,107,107,1);
 -moz-box-shadow: 1px 1px 4px -1px rgba(107,107,107,1);
 box-shadow: 1px 1px 4px -1px rgba(107,107,107,1);
+outline: none;
 }
+
+.Navigation__hamburger_container:active{
+  outline: none;
+}
+
+.Navigation__hamburger:active{
+  outline: none;
+}
+
 
 .Navigation__hamburger:hover {
   background-color: var(--main_white);
