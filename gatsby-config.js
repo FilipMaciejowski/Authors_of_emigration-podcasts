@@ -2,8 +2,9 @@ require('dotenv').config({
   path: `.env`, 
 });
 
-const siteMetadata = 
-  {
+
+module.exports = {
+  siteMetadata: {
     title: `Twórcy Emigracji`,
     description: `Podcasty o twórcach emigracji`,
     author: `Dawid Dziedziczak`,
@@ -11,10 +12,7 @@ const siteMetadata =
     siteUrl: `https://tworcyemigracji.pl`,
     keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty'],
     favicon: `src/assets/images/Icon_TE.png`
-  }
-
-module.exports = {
-  siteMetadata: siteMetadata,
+  },
   pathPrefix: `/Tworcy_emigracji`,
   plugins: [
     {
