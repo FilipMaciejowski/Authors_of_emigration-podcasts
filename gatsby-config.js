@@ -2,17 +2,19 @@ require('dotenv').config({
   path: `.env`, 
 });
 
+const siteMetadata = {
+  title: `Twórcy Emigracji`,
+  description: `Kultura: Podcasty o polskich twórcach emigracji`,
+  author: `Dawid Dziedziczak`,
+  developer: `filip.maciejowski@gmail.com`,
+  siteUrl: `https://tworcyemigracji.pl`,
+  keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty'],
+  favicon: `src/assets/images/Icon_TE.png`,
+  image: `src/assets/images/Icon_TE.png`
+}
 
 module.exports = {
-  siteMetadata: {
-    title: `Twórcy Emigracji`,
-    description: `Podcasty o twórcach emigracji`,
-    author: `Dawid Dziedziczak`,
-    developer: `filip.maciejowski@gmail.com`,
-    siteUrl: `https://tworcyemigracji.pl`,
-    keywords: ['emigracja', 'kultura polska', 'sztuka', 'twórcy emigracji', 'artyści', 'podcasty'],
-    favicon: `src/assets/images/Icon_TE.png`
-  },
+  siteMetadata: siteMetadata,
   pathPrefix: `/Tworcy_emigracji`,
   plugins: [
     {
@@ -69,7 +71,6 @@ module.exports = {
           purpose: `maskable`,
         },
       },
-
     },
     {
       resolve: `gatsby-plugin-offline`,

@@ -56,7 +56,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `tworcyemigracji.pl`,
         },
         {
           name: "keywords",
