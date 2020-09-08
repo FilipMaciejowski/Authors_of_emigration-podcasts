@@ -10,7 +10,7 @@
   position: absolute;
   z-index:2;
   top: 15.5rem;
-  right: 1.2125rem;
+  right: .75rem;
   transform: translate(-1%, -1%);
   overflow-y: auto;
   background-color: var(--main_white);
