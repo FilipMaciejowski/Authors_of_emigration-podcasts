@@ -14,7 +14,7 @@ Content of podcasts: dawid.dziedziczak@gmail.com
 - **JavaScript**
 - **React.js**
 - **Gatsby.js**
-- **GraphQL
+- **GraphQL**
 - **Contentful**
 - **Css-modules**
 - **TypeScript**
