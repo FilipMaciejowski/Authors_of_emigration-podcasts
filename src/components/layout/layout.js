@@ -22,8 +22,6 @@ const Layout = ({ children }) => {
   `)
 
  
-  
-
   const [contactModalIsOpen, setContactModalIsOpen] = useState(false)
   const [podcastsModalIsOpen, setPodcastsModalIsOpen] = useState(false)
   const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)

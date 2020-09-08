@@ -5,6 +5,7 @@
   border-radius: 3px;
   -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
+  -os-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   position: absolute;
   z-index:2;
@@ -21,9 +22,6 @@
   margin: 2rem 0;
   border: 1px solid var(--primary_grey);
   border-radius: 3px;
-  -webkit-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
-  -moz-box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
-  box-shadow: 10px 14px 11px -4px rgba(125, 125, 125, 0.38);
   font-size: 0.85rem;
   color: grey;
   overflow-y: auto;
