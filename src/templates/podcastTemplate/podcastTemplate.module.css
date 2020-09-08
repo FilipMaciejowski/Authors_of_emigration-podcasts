@@ -196,6 +196,8 @@
   width: auto;
 }
 
+ 
+
 .Link__episode_container a.ToggleEpisode__link:hover {
   color: var(--second_grey);
   font-weight: 900;

@@ -80,13 +80,15 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
     const slug = data.PodcastContent.slug
     const nextSplitString = slug.split("")
     const prevSplitString = slug.split("")
-    let linkEpisode
+    let linkEpisode;
     if (slug.includes("1")) {
       nextSplitString.splice(-1, 1, "2")
       linkEpisode = (
        data.PodcastContent.unpublished ? null : 
         <Link className={classes.ToggleEpisode__link} to={`/podcasts/${nextSplitString.join("")}`}>
-        <p className={classes.ToggleEpisode}>Następny odcinek</p>
+        <p className={classes.ToggleEpisode}>Następny odcinek <svg width="10" height="10" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.9353 16.4852L4.03579 29.3843C3.21522 30.2052 1.88481 30.2052 1.06464 29.3843C0.244404 28.564 0.244404 27.2337 1.06464 26.4135L12.4787 14.9998L1.06497 3.58643C0.244736 2.76586 0.244736 1.43566 1.06497 0.615424C1.88521 -0.205141 3.21555 -0.205141 4.03612 0.615424L16.9357 13.5147C17.3458 13.9251 17.5506 14.4623 17.5506 14.9997C17.5506 15.5374 17.3454 16.075 16.9353 16.4852Z" fill="#767676"/>
+    </svg></p>
       </Link>
       )
     } else if (slug.includes("2")) {
@@ -95,10 +97,14 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
       linkEpisode = (
         <>
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${prevSplitString.join("")}`}>
-            <p className={classes.PreviousEpisode}>Poprzedni odcinek</p>
+            <p className={classes.PreviousEpisode}><svg width="10" height="10" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.06466 16.4852L13.9642 29.3843C14.7848 30.2052 16.1152 30.2052 16.9354 29.3843C17.7556 28.564 17.7556 27.2337 16.9354 26.4135L5.52125 14.9998L16.935 3.58643C17.7553 2.76586 17.7553 1.43566 16.935 0.615424C16.1148 -0.205141 14.7845 -0.205141 13.9639 0.615424L1.06433 13.5147C0.654214 13.9251 0.449387 14.4623 0.449387 14.9997C0.449387 15.5374 0.654613 16.075 1.06466 16.4852Z" fill="#767676"/>
+    </svg> Poprzedni odcinek</p> 
           </Link>
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${nextSplitString.join("")}`}>
-            <p className={classes.NextEpisode}>Następny odcinek</p>
+            <p className={classes.NextEpisode}>Następny odcinek <svg width="10" height="10" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.9353 16.4852L4.03579 29.3843C3.21522 30.2052 1.88481 30.2052 1.06464 29.3843C0.244404 28.564 0.244404 27.2337 1.06464 26.4135L12.4787 14.9998L1.06497 3.58643C0.244736 2.76586 0.244736 1.43566 1.06497 0.615424C1.88521 -0.205141 3.21555 -0.205141 4.03612 0.615424L16.9357 13.5147C17.3458 13.9251 17.5506 14.4623 17.5506 14.9997C17.5506 15.5374 17.3454 16.075 16.9353 16.4852Z" fill="#767676"/>
+    </svg></p>
           </Link>{
           }
         </>
@@ -109,7 +115,9 @@ const PodcastTemplate = ({ data, aboutProject, children }) => {
       linkEpisode = (
         
           <Link className={classes.ToggleEpisode__link} to={`/podcasts/${prevSplitString.join("")}`}>
-            <p className={classes.PreviousEpisode}>Poprzedni odcinek</p>
+            <p className={classes.PreviousEpisode}> <svg width="10" height="10" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.06466 16.4852L13.9642 29.3843C14.7848 30.2052 16.1152 30.2052 16.9354 29.3843C17.7556 28.564 17.7556 27.2337 16.9354 26.4135L5.52125 14.9998L16.935 3.58643C17.7553 2.76586 17.7553 1.43566 16.935 0.615424C16.1148 -0.205141 14.7845 -0.205141 13.9639 0.615424L1.06433 13.5147C0.654214 13.9251 0.449387 14.4623 0.449387 14.9997C0.449387 15.5374 0.654613 16.075 1.06466 16.4852Z" fill="#767676"/>
+    </svg> Poprzedni odcinek</p>
           </Link>
       )
     }
