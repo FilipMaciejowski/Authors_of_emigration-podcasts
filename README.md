@@ -7,7 +7,7 @@
 
 ## Description:
 Web-based podcast application written with React.js and Gatsby.js. In production and use. Scholarship from Polish Ministry of Culture and Heritage.
-Content of podcasts: dawid.dziedziczak@gmail.com 
+Content of podcasts: dawid.dziedziczak@gmail.com.
 
 ## Technology stack:
 
